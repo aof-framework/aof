@@ -1,14 +1,16 @@
 # AI Orchestration Framework (AOF)
 
-**Version:** v1.0 LTS · **Release date:** 2026-09-05
+**Versi:** v1.0 LTS · **Tanggal rilis:** 2026-09-05
 
-AOF defines a governed, risk-aware model for coordinating AI and non-AI actors through explicit goals, tasks, authority, policy, decisions, actions, evidence, and verification. Humans and organizations remain the governance root; agents operate within delegated authority and accountable boundaries.
+AOF mendefinisikan model orkestrasi dengan tata kelola dan kontrol risiko untuk mengoordinasikan aktor AI dan non-AI melalui `Goal`, `Task`, `Authority`, `Policy`, `Decision`, `Action`, `Evidence`, dan `Verification` yang eksplisit. Manusia dan organisasi tetap menjadi Governance Root; Agent beroperasi dalam batas kewenangan yang didelegasikan dan dapat dipertanggungjawabkan.
 
-The primary reference domain is the Secure Software Development Lifecycle (S-SDLC). AOF can also support other orchestration domains and remains model-, tool-, platform-, transport-, and implementation-agnostic.
+Domain rujukan utamanya adalah Secure Software Development Lifecycle (S-SDLC). AOF juga dapat diterapkan pada domain orkestrasi lain dan tetap independen terhadap model, tool, platform, transport, protokol, serta implementasi.
 
-## How AOF works
+Dokumentasi ini menggunakan Bahasa Indonesia sebagai bahasa utama. Istilah teknis kanonis, identifier, nama komponen, state, dan normative keywords dipertahankan dalam English sesuai konvensi spesifikasi AOF.
 
-An agent's output is an **untrusted proposal**. Technical capability, reasoning, or a proposed plan does not grant permission to act. AOF separates these concepts:
+## Cara kerja AOF
+
+Keluaran Agent merupakan **Untrusted Proposal**. Kemampuan teknis, reasoning, atau rencana yang diusulkan tidak dengan sendirinya memberikan izin untuk bertindak. AOF memisahkan konsep berikut:
 
 ```text
 Reasoning != Decision != Authority != Action
@@ -16,80 +18,80 @@ Capability != Authority
 Claim != Evidence != Verification
 ```
 
-The reference implementation demonstrates this governed path:
+Reference Implementation memperagakan alur eksekusi dengan tata kelola berikut:
 
 ```text
 Request -> Untrusted Proposal -> Safety Kernel -> ExecutionContract
         -> Effect Boundary -> Trace -> Evidence -> Verification -> ConformanceReport
 ```
 
-The Safety Kernel evaluates six gates: **Capability, Authority, Policy, State, Risk, and Verification**. Execution is allowed only when every gate passes. A failed gate denies execution; an unresolved mandatory gate keeps it pending without permission to execute.
+Safety Kernel mengevaluasi enam gate: **Capability, Authority, Policy, State, Risk, dan Verification**. Eksekusi hanya diizinkan ketika seluruh gate berstatus `Pass`. Gate yang berstatus `Fail` menghasilkan `Deny`; gate wajib yang belum terselesaikan menghasilkan `Pending` tanpa izin eksekusi.
 
-AOF supports bounded autonomy with risk-proportional controls. Human governance does not require human approval for every low-risk operation.
+AOF mendukung otonomi terbatas dengan kontrol yang sebanding dengan risiko. Human governance tidak mengharuskan persetujuan manusia untuk setiap operasi berisiko rendah.
 
-## Start here
+## Panduan membaca
 
-| Resource | Purpose |
+| Dokumen | Isi dan kegunaan |
 | --- | --- |
-| [LTS declaration](release/AOF-v1.0-LTS-Declaration.md) | Final release status, frozen boundaries, and claim constraints |
-| [Framework specification](specification/AOF-v1.0-Framework-Specification.md) | Normative semantics, requirements, invariants, and profiles; primarily Bahasa Indonesia with English technical terms |
-| [Canonical schemas](schemas/README.md) | 22 structural contracts using JSON Schema Draft 2020-12 |
-| [Executable Conformance Suite](conformance/README.md) | Requirement-to-test traceability and evidence-based conformance evaluation |
-| [Reference implementation](reference-implementation/README.md) | Python implementation of the governed execution path |
-| [LTS audit report](audit/AOF-v1.0-LTS-Release-Audit-Report.md) | Results of release audit gates A1–A6 |
-| [Changelog](CHANGELOG.md) | Release history and repository documentation changes |
+| [Deklarasi LTS](release/AOF-v1.0-LTS-Declaration.md) | Status rilis final, batas semantik yang dibekukan, dan batasan klaim |
+| [Spesifikasi framework](specification/AOF-v1.0-Framework-Specification.md) | Semantik normatif, Requirement, Invariant, dan Profile |
+| [Canonical Schemas](schemas/README.md) | 22 kontrak struktural menggunakan JSON Schema Draft 2020-12 |
+| [Executable Conformance Suite](conformance/README.md) | Ketertelusuran Requirement ke Test dan evaluasi Conformance berbasis Evidence |
+| [Reference Implementation](reference-implementation/README.md) | Implementasi Python untuk alur eksekusi dengan tata kelola |
+| [Laporan audit LTS](audit/AOF-v1.0-LTS-Release-Audit-Report.md) | Hasil audit rilis pada gate A1–A6 |
+| [Changelog](CHANGELOG.md) | Riwayat rilis dan perubahan dokumentasi repository |
 
-The frozen specification is the normative semantic authority. The LTS declaration records the final release decision. Earlier candidate, freeze-hold, or blocked labels retained in component documents and historical audit records should be read in that context.
+Spesifikasi yang dibekukan menjadi sumber otoritatif untuk semantik normatif. Deklarasi LTS mencatat keputusan rilis final. Label candidate, freeze-hold, atau blocked dari tahap sebelumnya yang masih tersimpan dalam dokumen komponen dan catatan audit historis perlu dibaca dalam konteks tersebut.
 
-## Repository layout
+## Struktur repository
 
 ```text
-specification/             Frozen framework specification
-schemas/                   Canonical contracts, fixtures, and validation records
-conformance/               Evaluation engines, tests, profiles, and traceability
-reference-implementation/  Runtime, adapters, tests, and evidence
-audit/                     Release audit findings and validation records
-release/                   LTS declaration, release notes, and manifest
-README.md                  Project overview and reading guide
-CHANGELOG.md               Documented change history
-SHA256SUMS.txt             Original packaged-release checksums
+specification/             Spesifikasi framework yang dibekukan
+schemas/                   Kontrak kanonis, fixture, dan catatan validasi
+conformance/               Engine evaluasi, test, profile, dan ketertelusuran
+reference-implementation/  Runtime, adapter, test, dan evidence
+audit/                     Temuan audit rilis dan catatan validasi
+release/                   Deklarasi LTS, catatan rilis, dan manifest
+README.md                  Gambaran proyek dan panduan membaca
+CHANGELOG.md               Riwayat perubahan yang terdokumentasi
+SHA256SUMS.txt             Checksum paket rilis asli
 ```
 
-This checkout contains expanded component files. The [release manifest](release/AOF-v1.0-LTS-Release-Manifest.json) and [root checksums](SHA256SUMS.txt) describe the original packaged release, including ZIP artifacts that are absent from this checkout. The root checksum list also records the original release README; it is not a checksum inventory for this edited working tree.
+Checkout ini berisi berkas komponen yang telah diekstrak. [Release manifest](release/AOF-v1.0-LTS-Release-Manifest.json) dan [checksum di root](SHA256SUMS.txt) mendeskripsikan paket rilis asli, termasuk artefak ZIP yang tidak tersedia dalam checkout ini. Daftar checksum tersebut juga mencatat README rilis asli, sehingga tidak merepresentasikan inventaris checksum working tree yang telah diedit.
 
-## Adoption and conformance
+## Adopsi dan Conformance
 
-AOF can be introduced at the start of an S-SDLC or integrated incrementally into an existing workflow through scoped governance controls and adapters.
+AOF dapat diterapkan sejak awal S-SDLC atau diintegrasikan secara bertahap ke workflow yang sudah berjalan melalui kontrol tata kelola dengan scope yang eksplisit dan adapter.
 
-| Adoption mode | Executable Conformance Suite | Reference implementation direct E2E coverage |
+| Mode adopsi | Executable Conformance Suite | Cakupan E2E langsung pada Reference Implementation |
 | --- | --- | --- |
-| `AOFNative` | Supported | Yes |
-| `AdapterBasedBrownfield` | Supported | Yes |
-| `Hybrid` | Supported | Not claimed |
-| `InFlightIncremental` | Supported | Not claimed |
+| `AOFNative` | Didukung | Ya |
+| `AdapterBasedBrownfield` | Didukung | Ya |
+| `Hybrid` | Didukung | Tidak diklaim |
+| `InFlightIncremental` | Didukung | Tidak diklaim |
 
-Conformance claims must identify their scope and profile and provide supporting evidence. Scoped adoption preserves all mandatory requirements applicable to that scope.
+Klaim Conformance harus menyatakan scope dan Profile serta menyertakan Evidence pendukung. Adopsi dengan scope terbatas tetap mempertahankan seluruh Requirement wajib yang berlaku dalam scope tersebut.
 
-The [profile definitions](conformance/profiles/profile-definitions.json) distinguish base profiles (`AOF-Core`, `AOF-Governed`, `AOF-Assured`), the `AOF-Secure-SDLC` domain profile, and the `AOF-High-Assurance` strengthening profile. Profiles are not a universal maturity ladder.
+[Definisi Profile](conformance/profiles/profile-definitions.json) membedakan BaseProfile (`AOF-Core`, `AOF-Governed`, `AOF-Assured`), DomainProfile `AOF-Secure-SDLC`, dan StrengtheningProfile `AOF-High-Assurance`. Profile tidak membentuk jenjang Maturity universal.
 
 ```text
 SchemaValidity != SemanticValidity != AOFConformance
 Conformance != Maturity
 ```
 
-JSON Schema is the canonical structural contract. OpenAPI is excluded from the v1.0 LTS canonical release path. Compact runtime objects are reference projections; canonical interchange requires the documented [runtime-to-canonical mapping](reference-implementation/architecture/LTS-A5-RUNTIME-CANONICAL-MAPPING.json).
+JSON Schema menjadi kontrak struktural kanonis. OpenAPI tidak termasuk dalam jalur rilis kanonis v1.0 LTS. Objek runtime ringkas merupakan proyeksi referensi; pertukaran data dalam bentuk kanonis memerlukan [pemetaan runtime ke kontrak kanonis](reference-implementation/architecture/LTS-A5-RUNTIME-CANONICAL-MAPPING.json) yang terdokumentasi.
 
-## Recorded release validation
+## Hasil validasi rilis yang tercatat
 
-The [release notes](release/RELEASE-NOTES.md) and final audit report the following results for the released baseline:
+[Catatan rilis](release/RELEASE-NOTES.md) dan laporan audit final mencatat hasil berikut untuk baseline yang dirilis:
 
-| Check | Recorded result |
+| Pemeriksaan | Hasil tercatat |
 | --- | --- |
-| Canonical schema fidelity | 22 / 22 contracts |
-| Schema reference failures / fixture mismatches | 0 / 0 |
-| Executable Conformance Suite | 170 tests passing reproducibly |
-| Reference implementation | 95 tests passing reproducibly |
-| LTS audit gates | A1–A6 completed; A5 passed with a release claim constraint |
-| Known release blockers | 0 at declaration time |
+| Kesesuaian schema kanonis | 22 / 22 kontrak |
+| Kegagalan referensi schema / ketidaksesuaian fixture | 0 / 0 |
+| Executable Conformance Suite | 170 test lulus secara reproducible |
+| Reference Implementation | 95 test lulus secara reproducible |
+| Gate audit LTS | A1–A6 selesai; A5 lulus dengan batasan klaim rilis |
+| Release blocker yang diketahui | 0 pada saat deklarasi |
 
-These are recorded release results, not a claim that tests have been rerun for every checkout. Future maintenance in the v1.0 LTS lineage must preserve frozen semantics unless an explicitly governed specification revision changes them.
+Angka tersebut merupakan hasil validasi rilis yang tercatat, bukan pernyataan bahwa test telah dijalankan ulang pada setiap checkout. Pemeliharaan berikutnya dalam lini v1.0 LTS harus mempertahankan semantik yang dibekukan, kecuali terdapat revisi spesifikasi melalui tata kelola perubahan yang eksplisit.

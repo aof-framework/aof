@@ -1,50 +1,53 @@
 # Changelog
 
-This changelog summarizes documented AOF releases and subsequent repository changes. Release entries are based on the linked release records; internal implementation phases are not separate framework releases.
+Changelog ini merangkum rilis AOF yang terdokumentasi dan perubahan repository setelahnya. Setiap entri rilis mengacu pada catatan rilis yang ditautkan; fase implementasi internal tidak diperlakukan sebagai rilis framework tersendiri.
 
-## Unreleased
+Bahasa Indonesia digunakan sebagai bahasa utama. Istilah teknis kanonis, identifier, nama komponen, state, dan normative keywords dipertahankan dalam English sesuai konvensi spesifikasi AOF.
 
-### Documentation
+## Belum dirilis
 
-- Expanded the root README with an AOF overview, governed execution flow, reading guide, repository layout, adoption coverage, and recorded validation results.
-- Clarified the relationship between the normative specification, final LTS declaration, and historical component status labels.
-- Clarified that the release manifest and root checksums describe the original package, whose ZIP artifacts are absent from this expanded checkout.
-- Added this changelog using the existing release notes and audit records.
+### Dokumentasi
+
+- Melengkapi README di root dengan gambaran AOF, alur eksekusi dengan tata kelola, panduan membaca, struktur repository, cakupan adopsi, dan hasil validasi yang tercatat.
+- Memperjelas hubungan antara spesifikasi normatif, deklarasi LTS final, dan label status historis pada dokumen komponen.
+- Menjelaskan bahwa release manifest dan checksum di root mendeskripsikan paket asli, sedangkan artefak ZIP tidak tersedia dalam checkout yang berisi komponen hasil ekstraksi ini.
+- Menambahkan changelog berdasarkan catatan rilis dan audit yang tersedia.
+- Menyesuaikan README dan CHANGELOG agar menggunakan Bahasa Indonesia sebagai bahasa utama dengan mempertahankan istilah teknis English sesuai konvensi AOF.
 
 ## v1.0 LTS — 2026-09-05
 
-First frozen long-term-support release baseline of the AI Orchestration Framework.
+Baseline rilis Long-Term Support (LTS) pertama AI Orchestration Framework dengan semantik yang dibekukan.
 
-### Included
+### Komponen rilis
 
-- Frozen framework specification for governed, risk-aware orchestration, with humans and organizations as the governance root and agents as bounded operational actors.
-- 22 canonical JSON Schema contracts covering core, governance, execution, assurance and outcome, and conformance objects.
-- Executable Conformance Suite with requirement mapping, semantic checks, governance and execution tests, assurance, conformance aggregation, and incremental adoption coverage.
-- Reference implementation covering the Safety Kernel, execution contracts, effect boundary, state, trace, evidence, verification, and conformance reporting.
-- Six-gate LTS release audit, declaration, release manifest, and packaged-release checksums.
+- Spesifikasi framework yang dibekukan untuk orkestrasi dengan tata kelola dan kontrol risiko, dengan manusia dan organisasi sebagai Governance Root serta Agent sebagai Bounded Operational Actor.
+- 22 kontrak JSON Schema kanonis yang mencakup objek Core, Governance, Execution, Assurance & Outcome, dan Conformance.
+- Executable Conformance Suite yang mencakup pemetaan Requirement, pemeriksaan semantik, pengujian Governance dan Execution, Assurance, agregasi Conformance, serta adopsi bertahap.
+- Reference Implementation yang mencakup Safety Kernel, ExecutionContract, Effect Boundary, State, Trace, Evidence, Verification, dan pelaporan Conformance.
+- Audit rilis LTS dengan enam gate, deklarasi, release manifest, dan checksum paket rilis.
 
-### Corrections incorporated before release
+### Perbaikan sebelum rilis
 
-- Realigned the `Evidence`, `Verification`, `EscalationPackage`, and `Outcome` schemas with the frozen Appendix E contracts and regenerated the affected Phase 4 fixtures.
-- Corrected `Goal.provenance` requiredness to match Appendix E.9.
-- Rebuilt conformance traceability against the frozen requirement and invariant registries and 51 reference test definitions, correcting historical mapping defects without changing executable test behavior.
+- Menyelaraskan schema `Evidence`, `Verification`, `EscalationPackage`, dan `Outcome` dengan kontrak Appendix E yang dibekukan serta membuat ulang fixture Phase 4 yang terdampak.
+- Memperbaiki ketentuan wajib untuk `Goal.provenance` agar sesuai dengan Appendix E.9.
+- Membangun ulang ketertelusuran Conformance berdasarkan registry Requirement dan Invariant yang dibekukan serta 51 definisi reference test, sekaligus memperbaiki pemetaan historis tanpa mengubah perilaku executable test.
 
-Details: [schema release notes](schemas/RELEASE-NOTES.md) and [conformance traceability notes](conformance/README.md#lts-a3-traceability-hardening).
+Rincian: [catatan rilis schema](schemas/RELEASE-NOTES.md) dan [catatan ketertelusuran Conformance](conformance/README.md#lts-a3-traceability-hardening).
 
-### Validation recorded at release
+### Validasi yang tercatat saat rilis
 
-- Canonical schema fidelity: 22 / 22; schema reference failures and fixture mismatches: 0.
-- Executable Conformance Suite: 170 tests passing reproducibly.
-- Reference implementation: 95 tests passing reproducibly.
-- Audit gates A1–A6 completed; A5 passed with a release claim constraint.
-- Known release blockers: 0 at declaration time.
+- Kesesuaian schema kanonis: 22 / 22; kegagalan referensi schema dan ketidaksesuaian fixture: 0.
+- Executable Conformance Suite: 170 test lulus secara reproducible.
+- Reference Implementation: 95 test lulus secara reproducible.
+- Gate audit A1–A6 selesai; A5 lulus dengan batasan klaim rilis.
+- Release blocker yang diketahui: 0 pada saat deklarasi.
 
-### Compatibility and scope
+### Kompatibilitas dan cakupan
 
-- Preserved frozen v1.0 semantics and transport-, protocol-, implementation-, and workflow-agnostic adoption.
-- Established JSON Schema as the canonical structural contract; OpenAPI is excluded from the canonical release path.
-- Limited reference implementation direct E2E claims to `AOFNative` and `AdapterBasedBrownfield`. The Conformance Suite also supports `Hybrid` and `InFlightIncremental` adoption modes.
-- Identified compact runtime objects as reference projections requiring explicit mapping for canonical interchange.
-- Preserved the distinction between schema validity, semantic validity, and AOF conformance; conformance claims remain scoped and evidence-backed.
+- Mempertahankan semantik v1.0 yang dibekukan serta adopsi yang independen terhadap transport, protokol, implementasi, dan workflow.
+- Menetapkan JSON Schema sebagai kontrak struktural kanonis; OpenAPI tidak termasuk dalam jalur rilis kanonis.
+- Membatasi klaim E2E langsung Reference Implementation pada `AOFNative` dan `AdapterBasedBrownfield`. Conformance Suite juga mendukung mode adopsi `Hybrid` dan `InFlightIncremental`.
+- Menetapkan objek runtime ringkas sebagai proyeksi referensi yang memerlukan pemetaan eksplisit untuk pertukaran data dalam bentuk kanonis.
+- Mempertahankan perbedaan antara SchemaValidity, SemanticValidity, dan AOFConformance; klaim Conformance tetap memiliki scope yang eksplisit dan didukung Evidence.
 
-Sources: [release notes](release/RELEASE-NOTES.md), [LTS declaration](release/AOF-v1.0-LTS-Declaration.md), and [final LTS audit report](audit/AOF-v1.0-LTS-Release-Audit-Report.md).
+Sumber: [catatan rilis](release/RELEASE-NOTES.md), [deklarasi LTS](release/AOF-v1.0-LTS-Declaration.md), dan [laporan audit LTS final](audit/AOF-v1.0-LTS-Release-Audit-Report.md).
