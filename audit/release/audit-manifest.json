@@ -50,5 +50,13 @@
       "sha256": "dc8a4251a0976c31e85d8b69a2a8f4f6e2e09b6c31ed177aac4a0343970f102b"
     }
   },
-  "result": "PASS"
+  "result": "PASS",
+  "record_context": "Historical audit evidence before the LTS declaration; original candidate identity and hashes retained.",
+  "current_release": {
+    "release": "v1.0 LTS",
+    "status": "RELEASED",
+    "release_date": "2026-09-05",
+    "declaration": "release/AOF-v1.0-LTS-Declaration.md",
+    "path_base": "repository_root"
+  }
 }

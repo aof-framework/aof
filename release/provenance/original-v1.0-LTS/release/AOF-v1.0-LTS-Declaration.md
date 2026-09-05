@@ -1,10 +1,9 @@
 # AI Orchestration Framework (AOF) v1.0 LTS — Declaration
 
-**Release:** AOF v1.0 LTS\
-**Release date:** 2026-09-05\
-**Status:** RELEASED\
-**SHA-256 spesifikasi saat ini (LTS-Editorial-1):** `bc83ce35231460283348105744ae82d7ed87662e37923985959a1781eb6b3d17`
-**SHA-256 baseline asli (provenance):** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
+**Release:** AOF v1.0 LTS  
+**Release date:** 2026-09-05  
+**Status:** LONG-TERM SUPPORT RELEASE  
+**Normative frozen specification SHA-256:** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
 
 ## Declaration
 
@@ -88,7 +87,8 @@ At declaration time:
 
 ## LTS baseline
 
-Manifest dan checksum aktif mendeskripsikan berkas revisi editorial saat ini. Metadata paket asli tetap tersedia dalam [arsip provenance](provenance/original-v1.0-LTS/README.md). [Catatan revisi editorial](EDITORIAL-REVISION.md) menjelaskan pemisahan keduanya; tanggal deklarasi dan semantik v1.0 tetap dipertahankan.
+The files and SHA-256 values in `SHA256SUMS.txt` and `release/AOF-v1.0-LTS-Release-Manifest.json`
+define the packaged AOF v1.0 LTS release baseline.
 
 Future maintenance releases in the v1.0 LTS line MUST preserve the frozen v1.0 semantics unless
 a separately governed specification revision explicitly changes them.

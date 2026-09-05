@@ -1,9 +1,11 @@
 # AI ORCHESTRATION FRAMEWORK
 
-## Framework Specification v1.0
+## Framework Specification v1.0 LTS
 
-**Status:** Release Candidate — Public-Readiness Hardened / Semantic Freeze Candidate
-Freeze Hold **Version:** 1.0 RC-Final-Public-Readiness-Hardening
+**Status:** RELEASED
+**Version:** v1.0 LTS
+**Release date:** 2026-09-05
+**Editorial revision:** LTS-Editorial-1
 **Language:** Bahasa Indonesia dengan English Technical Terms\
 **Framework Type:** Governed, Risk-Aware, Model-Agnostic, Tool-Agnostic,
 Platform-Agnostic\
@@ -12,6 +14,8 @@ Platform-Agnostic\
 **Specification Role:** Normative Umbrella Specification
 
 ------------------------------------------------------------------------
+
+> **Status rilis saat ini: AOF v1.0 LTS — RELEASED.** [Deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md) menetapkan keputusan rilis final. Revisi `LTS-Editorial-1` menyelaraskan metadata dan konteks historis tanpa mengubah semantik normatif. Appendix G–W merekam proses sebelum rilis; keputusan RC, freeze hold, atau kegagalan di dalamnya bukan status rilis saat ini. Lihat [catatan revisi editorial](../release/EDITORIAL-REVISION.md) untuk provenance dan checksum.
 
 ## Document Convention
 
@@ -25192,6 +25196,8 @@ for `RC-Final` packaging and formal Semantic Freeze decision.
 
 # Appendix P --- RC-Final Packaging Record
 
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
+
 ## P.1 Release Candidate Identity
 
 This cumulative artifact is packaged as:
@@ -25269,6 +25275,8 @@ semantic changes require explicit versioned change control.
 ------------------------------------------------------------------------
 
 # Appendix Q --- RC-Final Public-Readiness Hardening
+
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
 
 ## Q.1 Objective
 
@@ -25350,6 +25358,8 @@ Pass ini MUST NOT:
 
 # Appendix R --- Public-Readiness Hardening Validation
 
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
+
 ## R.1 Results
 
 -   reconciliation-note residue in public artifact: **0**;
@@ -25377,6 +25387,8 @@ One or more public-readiness blockers remain.
 ------------------------------------------------------------------------
 
 # Appendix S --- Public-Readiness Hardening Closure
+
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
 
 ## S.1 Residual Placeholder Remediation
 
@@ -25416,6 +25428,8 @@ semantic requirement.
 
 # Appendix T --- Final Public-Readiness Validation
 
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
+
 **Decision: `PUBLIC-READINESS HARDENING FAILED`.**
 
 -   reconciliation-note residue: **0**;
@@ -25434,6 +25448,8 @@ Blocking public-readiness findings remain.
 ------------------------------------------------------------------------
 
 # Appendix U --- Public-Readiness Release Gate Closure
+
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
 
 ## U.1 Canonical Definition Cleanup
 
@@ -25461,6 +25477,8 @@ One or more blockers remain; Semantic Freeze MUST remain on hold.
 
 # Appendix V --- Public-Readiness Final Mechanical Closure
 
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
+
 **Decision: `PUBLIC-READINESS HARDENING FAILED`.**
 
 - displayed formula blocks checked: **986**;
@@ -25475,6 +25493,8 @@ Mechanical blocker remains; Semantic Freeze stays on hold.
 ------------------------------------------------------------------------
 
 # Appendix W --- Public-Readiness Hardening Final Gate
+
+> **Catatan historis — bukan status rilis saat ini.** Bagian ini merekam tahap sebelum deklarasi AOF v1.0 LTS. Keputusan dan istilah di dalamnya dipertahankan sebagai provenance; status final adalah **RELEASED**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).
 
 **Decision: `PUBLIC-READINESS HARDENING PASSED`.**
 

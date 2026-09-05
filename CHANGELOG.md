@@ -6,6 +6,13 @@ Bahasa Indonesia digunakan sebagai bahasa utama. Istilah teknis kanonis, identif
 
 ## Belum dirilis
 
+### Konsistensi metadata — LTS-Editorial-1
+
+- Menyeragamkan status rilis aktif menjadi `v1.0 LTS — RELEASED` dengan tanggal rilis tetap `2026-09-05`.
+- Menyelaraskan hasil audit aktif A4 dan A5 dengan deklarasi final serta memberi konteks historis pada Appendix G–W dan artefak audit.
+- Memisahkan hash spesifikasi revisi editorial dari provenance baseline asli; memperbarui manifest dan checksum aktif.
+- Menyimpan metadata paket asli dalam arsip provenance tanpa mengubah Requirement, Invariant, kontrak schema, atau perilaku runtime.
+
 ### Dokumentasi
 
 - Melengkapi README di root dengan gambaran AOF, alur eksekusi dengan tata kelola, panduan membaca, struktur repository, cakupan adopsi, dan hasil validasi yang tercatat.

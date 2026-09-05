@@ -1,8 +1,16 @@
 # AOF v1.0 Schema Package — Release Notes
 
-Release: **1.0**  
-Date: **2026-09-04**  
-Status: **Final Consolidated Schema Package**
+**Release:** v1.0 LTS\
+**Status:** RELEASED\
+**Tanggal rilis:** 2026-09-05\
+
+Bagian dari [rilis AOF v1.0 LTS](../release/AOF-v1.0-LTS-Declaration.md). Hash baseline dan hasil pengujian terdahulu di bawah merupakan provenance rilis asli. Identitas berkas spesifikasi saat ini tersedia dalam [manifest rilis](../release/AOF-v1.0-LTS-Release-Manifest.json) dan [catatan revisi editorial](../release/EDITORIAL-REVISION.md).
+
+Versi komponen: **1.0**\
+Tanggal konsolidasi awal: **2026-09-04**\
+Tahap konsolidasi awal: **Final Consolidated Schema Package**
+
+## Catatan konsolidasi awal (historis)
 
 This release consolidates Phase 1 through Phase 5 into one canonical JSON Schema package.
 

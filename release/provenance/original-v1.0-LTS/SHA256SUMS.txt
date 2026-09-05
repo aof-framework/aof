@@ -1,0 +1,9 @@
+5c493e3727ec69d7271d5d0d56ceb3901464358930d1d9b0e1e2b677cefb746c  README.md
+44a5bb83b68e806e5be66a2327a0c6362b8401d559a1826492348ea7db3f2a0e  audit/AOF-v1.0-LTS-Release-Audit.zip
+306c9929c95f72efaf599b734ecf23af18fc7bed524d6b22ae44c05a04bf29f4  conformance/AOF-v1.0-Executable-Conformance-Suite.zip
+b5a64cf59210b59ab38f685a71587b7d7bf67a90d923a84c3571184bcc9da0e2  reference-implementation/AOF-v1.0-Reference-Implementation.zip
+96c397555ca5042f6867a276247be9641a0559ab0c56b0457754e38fad456abf  release/AOF-v1.0-LTS-Declaration.md
+bd4e44da573294c566f499ca80a831f1a2d0aec9e963bac608919d3a7e8ae639  release/AOF-v1.0-LTS-Release-Manifest.json
+34515f77f74233979a42cb78d18cb8bad5867db71a038b5fceb794bbcf64feca  release/RELEASE-NOTES.md
+d9a433c5d5549e61600eb34d84fe8e4d9802b4211542765fb810c8a56baeb975  schemas/AOF-v1.0-Canonical-Schemas.zip
+57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5  specification/AOF-v1.0-Framework-Specification.md

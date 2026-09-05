@@ -1,6 +1,8 @@
 # AOF v1.0 — LTS Release Audit Report
 
-**Gate:** LTS-A6 — Cross-Artifact Consistency & Release Hygiene  
+> **Catatan audit historis.** Hasil audit di bawah dipertahankan sebagai evidence. Tahap deklarasi setelah audit telah selesai: **AOF v1.0 LTS — RELEASED**, tanggal 2026-09-05. Lihat [deklarasi final](../release/AOF-v1.0-LTS-Declaration.md) dan [revisi editorial](../release/EDITORIAL-REVISION.md).
+
+**Gate:** LTS-A6 — Cross-Artifact Consistency & Release Hygiene\
 **Result:** PASS
 
 A6 treats the frozen specification, LTS-A2 hardened schemas, LTS-A4 audited Conformance Suite,

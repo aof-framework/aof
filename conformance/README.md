@@ -1,9 +1,14 @@
 # AOF v1.0 Executable Conformance Suite
 
-**Package version:** 1.0.0  
-**Status:** RELEASE-CANDIDATE  
-**Normative source:** frozen AOF v1.0 Framework Specification  
-**Frozen specification SHA-256:** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
+**Release:** v1.0 LTS\
+**Status:** RELEASED\
+**Tanggal rilis:** 2026-09-05\
+
+Bagian dari [rilis AOF v1.0 LTS](../release/AOF-v1.0-LTS-Declaration.md). Hash baseline dan hasil pengujian terdahulu di bawah merupakan provenance rilis asli. Identitas berkas spesifikasi saat ini tersedia dalam [manifest rilis](../release/AOF-v1.0-LTS-Release-Manifest.json) dan [catatan revisi editorial](../release/EDITORIAL-REVISION.md).
+
+**Package version:** 1.0.0\
+**Normative source:** frozen AOF v1.0 Framework Specification\
+**SHA-256 baseline spesifikasi asli (provenance):** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
 
 This is the consolidated executable conformance package produced from Phases 1â€“6.
 
@@ -20,7 +25,7 @@ This is the consolidated executable conformance package produced from Phases 1â€
 - conformance aggregation;
 - brownfield/incremental adoption compatibility.
 
-## Runtime validation
+## Hasil validasi rilis asli
 
 `170 passed in 0.24s`
 
@@ -44,3 +49,7 @@ Invariant registry, and the 51 frozen reference CT definitions. Historical Phase
 were corrected without changing executable test behavior.
 
 LTS-A3 result: **PASS**.
+
+## Status audit LTS-A4
+
+Hasil final: **PASS**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md).

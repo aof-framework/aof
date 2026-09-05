@@ -1,7 +1,13 @@
 # AOF v1.0 Reference Implementation — RI-5
 
-**Phase:** RI-5 — End-to-End & Brownfield Validation  
-**Frozen specification SHA-256:** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
+**Release:** v1.0 LTS\
+**Status:** RELEASED\
+**Tanggal rilis:** 2026-09-05\
+
+Bagian dari [rilis AOF v1.0 LTS](../release/AOF-v1.0-LTS-Declaration.md). Hash baseline dan hasil pengujian terdahulu di bawah merupakan provenance rilis asli. Identitas berkas spesifikasi saat ini tersedia dalam [manifest rilis](../release/AOF-v1.0-LTS-Release-Manifest.json) dan [catatan revisi editorial](../release/EDITORIAL-REVISION.md).
+
+**Phase:** RI-5 — End-to-End & Brownfield Validation\
+**SHA-256 baseline spesifikasi asli (provenance):** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
 
 RI-1 through RI-4 are retained.
 
@@ -21,12 +27,12 @@ Key properties:
 - Evidence can support Verification but is not Verification itself.
 - Conformance claims remain explicitly scoped.
 
-RI-5 is the final Reference Implementation phase before LTS Release Audit.
+RI-5 telah menyelesaikan LTS Release Audit dan menjadi bagian dari rilis AOF v1.0 LTS.
 
 
 ## LTS-A5 audit status
 
-Result: **BLOCKED**. Direct E2E Reference Implementation coverage is claimed for `AOFNative`
+Hasil final: **PASS_WITH_RELEASE_CLAIM_CONSTRAINT**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md). Direct E2E Reference Implementation coverage is claimed for `AOFNative`
 and `AdapterBasedBrownfield`. `Hybrid` and `InFlightIncremental` remain supported adoption modes
 in the Conformance Suite but are not claimed as dedicated RI-5 E2E adapter implementations.
 Runtime compact contracts are reference projections; canonical interchange uses explicit mapping.

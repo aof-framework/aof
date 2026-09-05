@@ -1,6 +1,6 @@
 # AI Orchestration Framework (AOF)
 
-**Versi:** v1.0 LTS · **Tanggal rilis:** 2026-09-05
+**Versi:** v1.0 LTS · **Status:** RELEASED · **Tanggal rilis:** 2026-09-05
 
 AOF mendefinisikan model orkestrasi dengan tata kelola dan kontrol risiko untuk mengoordinasikan aktor AI dan non-AI melalui `Goal`, `Task`, `Authority`, `Policy`, `Decision`, `Action`, `Evidence`, dan `Verification` yang eksplisit. Manusia dan organisasi tetap menjadi Governance Root; Agent beroperasi dalam batas kewenangan yang didelegasikan dan dapat dipertanggungjawabkan.
 
@@ -54,10 +54,10 @@ audit/                     Temuan audit rilis dan catatan validasi
 release/                   Deklarasi LTS, catatan rilis, dan manifest
 README.md                  Gambaran proyek dan panduan membaca
 CHANGELOG.md               Riwayat perubahan yang terdokumentasi
-SHA256SUMS.txt             Checksum paket rilis asli
+SHA256SUMS.txt             Checksum berkas repository saat ini
 ```
 
-Checkout ini berisi berkas komponen yang telah diekstrak. [Release manifest](release/AOF-v1.0-LTS-Release-Manifest.json) dan [checksum di root](SHA256SUMS.txt) mendeskripsikan paket rilis asli, termasuk artefak ZIP yang tidak tersedia dalam checkout ini. Daftar checksum tersebut juga mencatat README rilis asli, sehingga tidak merepresentasikan inventaris checksum working tree yang telah diedit.
+Checkout ini berisi komponen hasil ekstraksi dengan metadata `LTS-Editorial-1`. [Manifest aktif](release/AOF-v1.0-LTS-Release-Manifest.json) dan [checksum aktif](SHA256SUMS.txt) menunjuk berkas saat ini. Metadata serta checksum paket asli disimpan terpisah dalam [arsip provenance](release/provenance/original-v1.0-LTS/README.md); ZIP historis tidak tersedia dalam checkout ini. [Catatan revisi editorial](release/EDITORIAL-REVISION.md) menjelaskan perubahan tanpa perubahan semantik AOF.
 
 ## Adopsi dan Conformance
 

@@ -1,0 +1,4 @@
+# Keep release checksum bytes stable across Windows and Unix checkouts.
+* text=auto eol=lf
+# Original release evidence must retain its exact bytes.
+release/provenance/original-v1.0-LTS/** -text -whitespace

@@ -1,7 +1,7 @@
 {
   "package": "AOF v1.0 Canonical Machine-Readable Schemas",
   "package_version": "1.0",
-  "status": "FINAL CONSOLIDATED SCHEMA PACKAGE",
+  "status": "RELEASED",
   "schema_draft": "JSON Schema Draft 2020-12",
   "namespace": "https://aof.dev/schema/v1.0",
   "frozen_specification": {
@@ -198,5 +198,16 @@
       "phase": 5,
       "status": "PASS"
     }
-  ]
+  ],
+  "release": "v1.0 LTS",
+  "release_status": "RELEASED",
+  "release_date": "2026-09-05",
+  "editorial_revision": "LTS-Editorial-1",
+  "current_specification": {
+    "path": "specification/AOF-v1.0-Framework-Specification.md",
+    "path_base": "repository_root",
+    "sha256": "bc83ce35231460283348105744ae82d7ed87662e37923985959a1781eb6b3d17",
+    "semantic_change": false
+  },
+  "provenance_note": "Referensi frozen specification sebelumnya menyatakan baseline asli; current_specification menyatakan berkas revisi editorial saat ini."
 }

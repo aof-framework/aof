@@ -1,6 +1,11 @@
-# AOF v1.0 Executable Conformance Suite — Release Candidate
+# AOF v1.0 Executable Conformance Suite — v1.0 LTS
 
-Status: **RELEASE-CANDIDATE**
+**Release:** v1.0 LTS\
+**Status:** RELEASED\
+**Tanggal rilis:** 2026-09-05\
+
+Bagian dari [rilis AOF v1.0 LTS](../release/AOF-v1.0-LTS-Declaration.md). Hash baseline dan hasil pengujian terdahulu di bawah merupakan provenance rilis asli. Identitas berkas spesifikasi saat ini tersedia dalam [manifest rilis](../release/AOF-v1.0-LTS-Release-Manifest.json) dan [catatan revisi editorial](../release/EDITORIAL-REVISION.md).
+
 
 Frozen specification SHA-256: `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
 
@@ -25,4 +30,4 @@ The executable suite operationalizes AOF semantics; it does not replace the norm
 
 ## LTS-A4 Conformance Suite Audit
 
-Result: **BLOCKED**. Two clean executions produced the same 170-test pass count.
+Hasil final: **PASS**, sesuai [deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md). Dua eksekusi audit menghasilkan 170 test lulus. Label `BLOCKED` pada catatan sebelumnya telah digantikan oleh keputusan audit final.
