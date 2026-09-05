@@ -1,0 +1,41 @@
+{
+  "framework": "AI Orchestration Framework (AOF)",
+  "release": "v1.0 LTS",
+  "release_date": "2026-09-05",
+  "status": "LONG-TERM SUPPORT RELEASE",
+  "normative_specification": {
+    "path": "specification/AOF-v1.0-Framework-Specification.md",
+    "sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "authority": "Normative frozen semantic baseline"
+  },
+  "artifacts": {
+    "canonical_schemas": {
+      "path": "schemas/AOF-v1.0-Canonical-Schemas.zip",
+      "sha256": "d9a433c5d5549e61600eb34d84fe8e4d9802b4211542765fb810c8a56baeb975",
+      "contracts": 22,
+      "audit_gate": "LTS-A2 PASS"
+    },
+    "executable_conformance_suite": {
+      "path": "conformance/AOF-v1.0-Executable-Conformance-Suite.zip",
+      "sha256": "306c9929c95f72efaf599b734ecf23af18fc7bed524d6b22ae44c05a04bf29f4",
+      "tests": "170 passing reproducibly",
+      "audit_gate": "LTS-A4 PASS"
+    },
+    "reference_implementation": {
+      "path": "reference-implementation/AOF-v1.0-Reference-Implementation.zip",
+      "sha256": "b5a64cf59210b59ab38f685a71587b7d7bf67a90d923a84c3571184bcc9da0e2",
+      "tests": "95 passing reproducibly",
+      "audit_gate": "LTS-A5 PASS_WITH_RELEASE_CLAIM_CONSTRAINT"
+    },
+    "lts_release_audit": {
+      "path": "audit/AOF-v1.0-LTS-Release-Audit.zip",
+      "sha256": "44a5bb83b68e806e5be66a2327a0c6362b8401d559a1826492348ea7db3f2a0e",
+      "gates": "A1-A6 complete; A6 PASS"
+    }
+  },
+  "canonical_machine_readable_contract": "JSON Schema",
+  "openapi_status": "Excluded from AOF v1.0 LTS canonical release artifacts, dependencies, profiles, and criteria.",
+  "reference_implementation_claim_constraint": "The Reference Implementation directly validates AOFNative and AdapterBasedBrownfield. Hybrid and InFlightIncremental are supported adoption modes in the Executable Conformance Suite and are not claimed as dedicated Reference Implementation E2E adapter implementations.",
+  "known_release_blockers": 0,
+  "declaration": "release/AOF-v1.0-LTS-Declaration.md"
+}

@@ -1,0 +1,266 @@
+{
+  "phase": "Phase 3 \u2014 Governance & Execution Tests",
+  "policy": "LTS-A3 publication-grade mapping. Only frozen-source-supported identifiers are asserted; behavioral reference CTs are distinguished from direct invariant-to-CT edges.",
+  "rows": [
+    {
+      "test_id": "ECT-GEX-001",
+      "title": "Delegation Conserves Parent Authority",
+      "invariants": [
+        "AOF-INV-038"
+      ],
+      "reference_tests": [
+        "CT-AGT-005"
+      ],
+      "source_anchor": "Appendix A / AOF-INV-038; CT-AGT-005",
+      "disposition": "ExplicitFrozenTrace",
+      "requirement_ids": [
+        "AOF-AGT-012",
+        "AOF-AGT-016",
+        "AOF-AGT-024",
+        "AOF-AUTH-011",
+        "AOF-AUTH-018"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-002",
+      "title": "Revocation Before Effect Blocks Action",
+      "invariants": [
+        "AOF-INV-008"
+      ],
+      "reference_tests": [
+        "CT-AUTH-002",
+        "CT-LC-005"
+      ],
+      "source_anchor": "AOF-INV-008; AOF-AUTH-016; AOF-LC-021",
+      "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+      "requirement_ids": [
+        "AOF-ARCH-012",
+        "AOF-ARCH-015",
+        "AOF-AUTH-003",
+        "AOF-AUTH-016",
+        "AOF-LC-021"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-003",
+      "title": "Expired Authority Blocks Effect",
+      "invariants": [
+        "AOF-INV-054"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-054; AOF-ARCH-008; AOF-AUTH-016; AOF-LC-021",
+      "disposition": "CanonicalInvariant+DirectRequirements_NoDirectCT",
+      "requirement_ids": [
+        "AOF-ARCH-008",
+        "AOF-AUTH-016",
+        "AOF-LC-021"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-004",
+      "title": "Deny Dominates Conflicting Allow",
+      "invariants": [
+        "AOF-INV-058"
+      ],
+      "reference_tests": [
+        "CT-POL-001"
+      ],
+      "source_anchor": "AOF-INV-058; CT-POL-001",
+      "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+      "requirement_ids": [],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-005",
+      "title": "Unknown Mandatory Policy Fails Controlled",
+      "invariants": [
+        "AOF-INV-007"
+      ],
+      "reference_tests": [
+        "CT-POL-002"
+      ],
+      "source_anchor": "AOF-INV-007 / POL-INV-04; AOF-POL-002; CT-POL-002",
+      "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+      "requirement_ids": [
+        "AOF-POL-002",
+        "AOF-POL-006",
+        "AOF-POL-009"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-006",
+      "title": "Risk Ceiling Cannot Be Exceeded",
+      "invariants": [
+        "AOF-INV-047"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-047; authority constraints / non-acceptable risk semantics",
+      "disposition": "CanonicalInvariant_NoDirectCT",
+      "requirement_ids": [
+        "AOF-RISK-012"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-007",
+      "title": "Consequential Effect Requires ExecutionContract",
+      "invariants": [],
+      "reference_tests": [],
+      "source_anchor": "Appendix E.20 ExecutionContract; reference implementation control contract",
+      "disposition": "ReferenceImplementationContract_NoDirectFrozenInvariantOrCT",
+      "requirement_ids": [],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-008",
+      "title": "Single-Use ExecutionContract Rejects Replay",
+      "invariants": [
+        "AOF-INV-136"
+      ],
+      "reference_tests": [
+        "CT-SEC-003"
+      ],
+      "source_anchor": "AOF-INV-136 Replay Control; CT-SEC-003; Appendix E.20 single_use",
+      "disposition": "CanonicalReplayInvariant+SchemaAnchor",
+      "requirement_ids": [],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-009",
+      "title": "Stale Decision State Blocks Effect",
+      "invariants": [
+        "AOF-INV-016",
+        "AOF-INV-102"
+      ],
+      "reference_tests": [
+        "CT-LC-002",
+        "CT-STATE-001"
+      ],
+      "source_anchor": "AOF-INV-016 State Freshness; AOF-INV-102 TOCTOU Control",
+      "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+      "requirement_ids": [
+        "AOF-ST-018"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-010",
+      "title": "Unauthorized State Transition Is Rejected",
+      "invariants": [
+        "AOF-INV-096"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-096; AOF-ST-002; AOF-LC-015",
+      "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+      "requirement_ids": [
+        "AOF-LC-015",
+        "AOF-ST-002",
+        "AOF-ST-017"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-011",
+      "title": "Retry Is Bounded",
+      "invariants": [
+        "AOF-INV-127"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-127; AOF-FR-009; AOF-LC-010",
+      "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+      "requirement_ids": [
+        "AOF-FR-009",
+        "AOF-LC-010"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-012",
+      "title": "Retry Cannot Expand Authority",
+      "invariants": [
+        "AOF-INV-047",
+        "AOF-INV-020"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-047 Authority Bound; AOF-INV-020 Retry Governance",
+      "disposition": "CanonicalInvariants_NoDirectCT",
+      "requirement_ids": [
+        "AOF-LC-003",
+        "AOF-LC-010",
+        "AOF-LC-016"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-013",
+      "title": "Material Replan Requires Fresh Decision",
+      "invariants": [
+        "AOF-INV-021",
+        "AOF-INV-101"
+      ],
+      "reference_tests": [
+        "CT-LC-006"
+      ],
+      "source_anchor": "AOF-INV-021 Replan Governance; AOF-INV-101 Replan Consistency; AOF-LC-011",
+      "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+      "requirement_ids": [
+        "AOF-LC-011",
+        "AOF-ST-010"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-014",
+      "title": "Authorized Decision Alone Does Not Permit Effect",
+      "invariants": [
+        "AOF-INV-004",
+        "AOF-INV-014"
+      ],
+      "reference_tests": [],
+      "source_anchor": "AOF-INV-004 Effect Boundary Validation; AOF-ARCH-009",
+      "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+      "requirement_ids": [
+        "AOF-ARCH-009"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-015",
+      "title": "ExecutionContract Does Not Create Authority",
+      "invariants": [],
+      "reference_tests": [],
+      "source_anchor": "Appendix E.20: ExecutionContract != AuthorityGrant",
+      "disposition": "ExactFrozenSchemaFormula_NoCanonicalInvariantOrCT",
+      "requirement_ids": [],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    },
+    {
+      "test_id": "ECT-GEX-016",
+      "title": "Consequential Decision and Effect Remain Traceable",
+      "invariants": [
+        "AOF-INV-103",
+        "AOF-INV-105"
+      ],
+      "reference_tests": [
+        "CT-TRC-001"
+      ],
+      "source_anchor": "AOF-INV-103 Trace Completeness; AOF-INV-105 Correlation; CT-TRC-001",
+      "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+      "requirement_ids": [
+        "AOF-TRC-001",
+        "AOF-TRC-002",
+        "AOF-TRC-003",
+        "AOF-TRC-005",
+        "AOF-TRC-007",
+        "AOF-TRC-009",
+        "AOF-TRC-011",
+        "AOF-TRC-014"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+    }
+  ]
+}

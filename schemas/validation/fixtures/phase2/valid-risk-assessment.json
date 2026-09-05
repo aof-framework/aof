@@ -1,0 +1,31 @@
+{
+  "id": "risk-001",
+  "subject": "action-001",
+  "profile_ref": "risk-profile-prod",
+  "method": "qualitative",
+  "hazards": [
+    {
+      "name": "service outage"
+    }
+  ],
+  "likelihood": "Possible",
+  "impact": {
+    "severity": "High"
+  },
+  "exposure": "Production",
+  "inherent_class": "High",
+  "controls": [
+    "control-staged-deploy"
+  ],
+  "residual_class": "Moderate",
+  "confidence": 0.8,
+  "assessor": "risk-agent-1",
+  "acceptance_ref": null,
+  "reassessment_triggers": [
+    {
+      "on": "state_change"
+    }
+  ],
+  "valid_at": "2026-09-04T00:00:00Z",
+  "provenance": "trace-003"
+}

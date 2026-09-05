@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/governance-enums.schema.json",
+  "title": "AOF Governance Enumerations",
+  "$defs": {
+    "AuthorityStatus": {
+      "type": "string",
+      "enum": [
+        "Requested",
+        "Active",
+        "Suspended",
+        "Revoked",
+        "Expired",
+        "Consumed",
+        "Denied"
+      ],
+      "description": "Canonical Authority lifecycle states, Section 11.5."
+    },
+    "PolicyStatus": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Active",
+        "Suspended",
+        "Deprecated",
+        "Expired",
+        "Retired"
+      ],
+      "description": "Reference Policy lifecycle states, Section 12.7."
+    },
+    "RiskClass": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Moderate",
+        "High",
+        "Critical"
+      ]
+    },
+    "PolicyEffect": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "Allow",
+        "Deny",
+        "RequireVerification",
+        "RequireApproval",
+        "Escalate"
+      ],
+      "x-aof-core-values": [
+        "Allow",
+        "Deny",
+        "RequireVerification",
+        "RequireApproval",
+        "Escalate"
+      ],
+      "description": "Extensible per Section 12.2. Unknown custom effect MUST NOT silently map to Allow."
+    },
+    "ApprovalDecision": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "Approved",
+        "Rejected"
+      ],
+      "description": "Appendix E.23 does not freeze a closed universal ApprovalDecision enum."
+    }
+  }
+}

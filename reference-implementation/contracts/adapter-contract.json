@@ -1,0 +1,23 @@
+{
+  "contract_name": "AOF Runtime Adapter Contract",
+  "contract_version": "1.0.0-ri1",
+  "transport_neutral": true,
+  "required_operations": [
+    "load_context",
+    "invoke_reasoning",
+    "resolve_governance_inputs",
+    "observe_state",
+    "execute_effect",
+    "collect_evidence",
+    "cleanup_or_reconcile"
+  ],
+  "hard_prohibitions": [
+    "adapter_must_not_mint_authority",
+    "adapter_must_not_suppress_deny",
+    "adapter_must_not_convert_pending_to_allow",
+    "adapter_must_not_fabricate_approval",
+    "adapter_must_not_hide_material_state_change",
+    "adapter_must_not_bypass_required_verification",
+    "adapter_must_not_expand_execution_scope"
+  ]
+}

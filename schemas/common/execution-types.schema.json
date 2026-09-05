@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/execution-types.schema.json",
+  "title": "AOF Execution Formal Types",
+  "$defs": {
+    "DecisionType": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "execute",
+        "verify",
+        "approve",
+        "wait",
+        "retry",
+        "replan",
+        "escalate",
+        "reject",
+        "abort",
+        "terminate"
+      ],
+      "x-aof-reference-values": [
+        "execute",
+        "verify",
+        "approve",
+        "wait",
+        "retry",
+        "replan",
+        "escalate",
+        "reject",
+        "abort",
+        "terminate"
+      ],
+      "description": "Section 9.19 states possible Decision types include these values; it does not freeze a closed universal enum."
+    },
+    "DecisionOutcome": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Appendix E.19 references DecisionOutcome as a formal type but does not freeze a closed universal value set."
+    },
+    "TransitionResult": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Appendix E.24 references TransitionResult as a formal type but does not freeze a closed universal value set."
+    },
+    "TraceEventType": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Appendix E.25 references TraceEventType as a formal type but does not freeze a closed universal value set."
+    },
+    "MessageType": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "REQUEST",
+        "PROPOSAL",
+        "RESULT",
+        "EVIDENCE",
+        "VERIFY",
+        "DELEGATE",
+        "ESCALATE",
+        "CONTROL_NOTICE"
+      ],
+      "x-aof-reference-values": [
+        "REQUEST",
+        "PROPOSAL",
+        "RESULT",
+        "EVIDENCE",
+        "VERIFY",
+        "DELEGATE",
+        "ESCALATE",
+        "CONTROL_NOTICE"
+      ],
+      "description": "Section 10.50 says reference message types MAY include these values; therefore this type remains extensible."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-CORE-010",
+  "title": "Safety Kernel Cannot Be Bypassed",
+  "invariants": [
+    "AOF-INV-133"
+  ],
+  "reference_tests": [
+    "CT-SEC-002"
+  ],
+  "facts": {
+    "consequential_effect": true,
+    "safety_kernel_evaluated": true
+  },
+  "expected": {
+    "bypass_succeeded": false,
+    "governed_path": true
+  },
+  "classification": "Semantic+Behavioral+Security"
+}

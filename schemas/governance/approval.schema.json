@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/governance/approval.schema.json",
+  "title": "AOF Approval",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "approver": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "authority_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "decision": {
+          "$ref": "../common/governance-enums.schema.json#/$defs/ApprovalDecision"
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "subject_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "subject",
+        "approver",
+        "authority_ref",
+        "decision",
+        "scope",
+        "subject_version",
+        "conditions",
+        "valid_until",
+        "evidence_refs",
+        "created_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.23 / Section 17.14-17.23",
+    "normative_notes": [
+      "Approval MUST bind to intended subject/scope.",
+      "Approval != AuthorityGrant.",
+      "HumanUnavailable != Approved.",
+      "ApprovalDecision intentionally remains open because Appendix E.23 does not define a closed universal set."
+    ]
+  }
+}

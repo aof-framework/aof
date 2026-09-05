@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-ASR-014",
+  "title": "Verification Does Not Create Authority",
+  "requirements": [],
+  "invariants": [
+    "VER-INV-07"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "verification_result": "Verified",
+    "authority_created": false
+  },
+  "expected": {
+    "authority_created_by_verification": false,
+    "separation_preserved": true
+  }
+}

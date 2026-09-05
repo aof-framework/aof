@@ -1,0 +1,18 @@
+{
+  "test_id": "ECT-GEX-014",
+  "title": "Authorized Decision Alone Does Not Permit Effect",
+  "invariants": [
+    "AOF-INV-121",
+    "AOF-INV-123"
+  ],
+  "reference_tests": [
+    "CT-EC-002"
+  ],
+  "facts": {
+    "authorized_decision": true,
+    "effect_boundary_revalidated": false
+  },
+  "expected": {
+    "effect_allowed": false
+  }
+}

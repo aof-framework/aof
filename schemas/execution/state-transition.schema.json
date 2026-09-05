@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/execution/state-transition.schema.json",
+  "title": "AOF StateTransition",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "state_before_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "expected_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "action_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "state_after_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "actor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "result": {
+          "$ref": "../common/execution-types.schema.json#/$defs/TransitionResult"
+        },
+        "committed_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "scope",
+        "state_before_ref",
+        "expected_version",
+        "decision_ref",
+        "action_ref",
+        "evidence_refs",
+        "state_after_ref",
+        "actor",
+        "result",
+        "committed_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.24",
+    "normative_notes": [
+      "Consequential StateTransition MUST identify before/after State references and governing Decision.",
+      "No Silent State Mutation.",
+      "Expected-version matching and concurrency correctness remain semantic/runtime obligations."
+    ]
+  }
+}

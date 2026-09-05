@@ -1,0 +1,20 @@
+{
+  "test_id": "ECT-GEX-004",
+  "title": "Deny Dominates Conflicting Allow",
+  "invariants": [
+    "AOF-INV-034"
+  ],
+  "reference_tests": [
+    "CT-POL-001"
+  ],
+  "facts": {
+    "policy_effects": [
+      "Allow",
+      "Deny"
+    ]
+  },
+  "expected": {
+    "effective_policy": "Deny",
+    "effect_allowed": false
+  }
+}

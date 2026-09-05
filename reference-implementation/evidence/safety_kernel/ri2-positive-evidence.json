@@ -1,0 +1,549 @@
+{
+  "generated_at": "2026-09-05T04:11:51.162691+00:00",
+  "results": [
+    {
+      "test_id": "SK-001",
+      "expected": "Allow",
+      "observed": {
+        "status": "Allow",
+        "execute_allowed": true,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-002",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Fail",
+            "reason_code": "CAPABILITY_MISSING"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-003",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Fail",
+            "reason_code": "NO_AUTHORITY_GRANT"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-004",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Fail",
+            "reason_code": "AUTHORITY_REVOKED"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-005",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Fail",
+            "reason_code": "AUTHORITY_EXPIRED"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-006",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Fail",
+            "reason_code": "POLICY_DENY"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-007",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pending",
+            "reason_code": "MANDATORY_POLICY_UNKNOWN"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-008",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Fail",
+            "reason_code": "STATE_STALE"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-009",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Fail",
+            "reason_code": "RISK_CEILING_EXCEEDED"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-010",
+      "expected": "Deny",
+      "observed": {
+        "status": "Deny",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Fail",
+            "reason_code": "VERIFICATION_FAILED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-011",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pending",
+            "reason_code": "VERIFICATION_INCONCLUSIVE"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-012",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pending",
+            "reason_code": "AUTHORITY_UNDETERMINED"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-013",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pending",
+            "reason_code": "POLICY_UNDETERMINED"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-014",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pending",
+            "reason_code": "STATE_UNDETERMINED"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-015",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pending",
+            "reason_code": "RISK_UNDETERMINED"
+          },
+          "verification": {
+            "status": "Pass",
+            "reason_code": "VERIFICATION_VERIFIED"
+          }
+        }
+      }
+    },
+    {
+      "test_id": "SK-016",
+      "expected": "Pending",
+      "observed": {
+        "status": "Pending",
+        "execute_allowed": false,
+        "gate_results": {
+          "capability": {
+            "status": "Pass",
+            "reason_code": "CAPABILITY_PRESENT"
+          },
+          "authority": {
+            "status": "Pass",
+            "reason_code": "AUTHORITY_VALID"
+          },
+          "policy": {
+            "status": "Pass",
+            "reason_code": "POLICY_PERMITS"
+          },
+          "state": {
+            "status": "Pass",
+            "reason_code": "STATE_VALID"
+          },
+          "risk": {
+            "status": "Pass",
+            "reason_code": "RISK_PERMITS"
+          },
+          "verification": {
+            "status": "Pending",
+            "reason_code": "VERIFICATION_MISSING"
+          }
+        }
+      }
+    }
+  ]
+}

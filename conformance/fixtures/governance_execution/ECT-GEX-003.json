@@ -1,0 +1,22 @@
+{
+  "test_id": "ECT-GEX-003",
+  "title": "Expired Authority Blocks Effect",
+  "invariants": [
+    "AOF-INV-030"
+  ],
+  "reference_tests": [
+    "CT-AUTH-004"
+  ],
+  "facts": {
+    "grant": {
+      "status": "Active",
+      "valid_from": 1,
+      "valid_until": 10
+    },
+    "effect_time": 11,
+    "other_gates_pass": true
+  },
+  "expected": {
+    "effect_allowed": false
+  }
+}

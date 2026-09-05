@@ -1,0 +1,11 @@
+{
+  "test_id": "ECT-ADP-006",
+  "title": "Scope Cannot Exclude Applicable Mandatory Control",
+  "facts": {
+    "excluded_mandatory_applicable_control": false
+  },
+  "expected": {
+    "scope_abuse": false,
+    "claim_valid": true
+  }
+}

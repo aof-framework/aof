@@ -1,0 +1,94 @@
+{
+  "phase": "Phase 6 — Brownfield / Incremental Adoption Tests",
+  "policy": "Implementation guidance tests preserve frozen semantics and do not redefine normative requirements.",
+  "principles": [
+    "AOF is incrementally adoptable.",
+    "AOF is brownfield compatible.",
+    "AOF is transport agnostic.",
+    "AOF conformance is explicitly scoped.",
+    "ScopedAdoption != WeakConformance.",
+    "PartialAdoption != PartialCompliance."
+  ],
+  "rows": [
+    {
+      "test_id": "ECT-ADP-001",
+      "title": "Greenfield Adoption Is Valid Without Legacy Replacement"
+    },
+    {
+      "test_id": "ECT-ADP-002",
+      "title": "Brownfield Adapter Preserves Existing Workflow"
+    },
+    {
+      "test_id": "ECT-ADP-003",
+      "title": "Hybrid Adoption Uses Common Governance Boundary"
+    },
+    {
+      "test_id": "ECT-ADP-004",
+      "title": "InFlight Incremental Adoption Governs Selected Boundary"
+    },
+    {
+      "test_id": "ECT-ADP-005",
+      "title": "Scoped Adoption Declares Included And Excluded Components"
+    },
+    {
+      "test_id": "ECT-ADP-006",
+      "title": "Scope Cannot Exclude Applicable Mandatory Control"
+    },
+    {
+      "test_id": "ECT-ADP-007",
+      "title": "Adapter Preserves Canonical Semantics"
+    },
+    {
+      "test_id": "ECT-ADP-008",
+      "title": "Adapter Cannot Expand Authority"
+    },
+    {
+      "test_id": "ECT-ADP-009",
+      "title": "Adapter Cannot Suppress Policy Deny"
+    },
+    {
+      "test_id": "ECT-ADP-010",
+      "title": "Conformance Harness Remains Transport Agnostic"
+    },
+    {
+      "test_id": "ECT-ADP-011",
+      "title": "Unrelated Existing Tooling Need Not Be Replaced"
+    },
+    {
+      "test_id": "ECT-ADP-012",
+      "title": "Conformance Claim Cannot Exceed Evidence Scope"
+    },
+    {
+      "test_id": "ECT-ADP-013",
+      "title": "Progressive Governance Stage Is Explicit"
+    },
+    {
+      "test_id": "ECT-ADP-014",
+      "title": "Partial Adoption Does Not Imply Full Compliance"
+    },
+    {
+      "test_id": "ECT-ADP-015",
+      "title": "Brownfield Adapter Exposes Observable Conformance Evidence"
+    },
+    {
+      "test_id": "ECT-ADP-016",
+      "title": "Adapter Cannot Hide Consequential Governance Semantics"
+    },
+    {
+      "test_id": "ECT-ADP-017",
+      "title": "Equivalent Governance Decision Across Adoption Modes"
+    },
+    {
+      "test_id": "ECT-ADP-018",
+      "title": "Brownfield Revocation Blocks Legacy Effect"
+    },
+    {
+      "test_id": "ECT-ADP-019",
+      "title": "Brownfield Trace Correlates Legacy And AOF Events"
+    },
+    {
+      "test_id": "ECT-ADP-020",
+      "title": "ConformanceManifest Explicitly Binds Adoption Scope"
+    }
+  ]
+}

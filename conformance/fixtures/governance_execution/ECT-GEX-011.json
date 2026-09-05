@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-GEX-011",
+  "title": "Retry Is Bounded",
+  "invariants": [
+    "AOF-INV-083"
+  ],
+  "reference_tests": [
+    "CT-RR-001"
+  ],
+  "facts": {
+    "attempt": 4,
+    "max_attempts": 3,
+    "retry_authorized": true
+  },
+  "expected": {
+    "within_retry_bound": false,
+    "retry_allowed": false
+  }
+}

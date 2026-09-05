@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/reference.schema.json",
+  "title": "AOF Reference Primitives",
+  "$defs": {
+    "Reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "uri": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri-reference"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ReferenceOrObject": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Reference"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
+        }
+      ]
+    },
+    "Selector": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true,
+      "description": "Abstract selector; AOF does not freeze one universal selector language."
+    }
+  },
+  "description": "Consolidated reference primitives. Includes Reference, ReferenceOrObject, and abstract Selector. Selector remains intentionally implementation-neutral."
+}

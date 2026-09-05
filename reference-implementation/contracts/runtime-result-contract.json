@@ -1,0 +1,27 @@
+{
+  "DecisionStatus": [
+    "Allow",
+    "Deny",
+    "Pending"
+  ],
+  "ExecutionStatus": [
+    "NotStarted",
+    "Blocked",
+    "Executed",
+    "Partial",
+    "UnknownEffect",
+    "Failed"
+  ],
+  "VerificationStatus": [
+    "Verified",
+    "Failed",
+    "Inconclusive",
+    "NotApplicable"
+  ],
+  "rules": [
+    "Pending != Allow",
+    "UnknownEffect != Success",
+    "Blocked != Executed",
+    "Inconclusive != Verified"
+  ]
+}

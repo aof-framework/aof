@@ -1,0 +1,227 @@
+{
+  "result": "PASS",
+  "contracts_checked": 22,
+  "contracts_passed": 22,
+  "details": [
+    {
+      "contract": "Goal",
+      "section": "E.9",
+      "schema": "core/goal.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Task",
+      "section": "E.10",
+      "schema": "core/task.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Agent",
+      "section": "E.11",
+      "schema": "core/agent.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "ContextDescriptor",
+      "section": "E.12",
+      "schema": "core/context-descriptor.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Resource",
+      "section": "E.13",
+      "schema": "core/resource.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Capability",
+      "section": "E.14",
+      "schema": "core/capability.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "AuthorityGrant",
+      "section": "E.15",
+      "schema": "governance/authority-grant.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Policy",
+      "section": "E.16",
+      "schema": "governance/policy.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "RiskAssessment",
+      "section": "E.17",
+      "schema": "governance/risk-assessment.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "ActionProposal",
+      "section": "E.18",
+      "schema": "execution/action-proposal.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Decision",
+      "section": "E.19",
+      "schema": "execution/decision.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "ExecutionContract",
+      "section": "E.20",
+      "schema": "execution/execution-contract.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Evidence",
+      "section": "E.21",
+      "schema": "assurance/evidence.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Verification",
+      "section": "E.22",
+      "schema": "assurance/verification.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Approval",
+      "section": "E.23",
+      "schema": "governance/approval.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "StateTransition",
+      "section": "E.24",
+      "schema": "execution/state-transition.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "TraceEvent",
+      "section": "E.25",
+      "schema": "execution/trace-event.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "AgentInteractionContract",
+      "section": "E.26",
+      "schema": "execution/agent-interaction-contract.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "EscalationPackage",
+      "section": "E.27",
+      "schema": "assurance/escalation-package.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "Outcome",
+      "section": "E.28",
+      "schema": "assurance/outcome.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "ConformanceManifest",
+      "section": "E.29",
+      "schema": "conformance/conformance-manifest.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    },
+    {
+      "contract": "ConformanceReport",
+      "section": "E.30",
+      "schema": "conformance/conformance-report.schema.json",
+      "missing_fields": [],
+      "extra_contract_fields": [],
+      "canonical_fields_not_required": [],
+      "field_fidelity": "PASS",
+      "required_field_fidelity": "PASS"
+    }
+  ]
+}

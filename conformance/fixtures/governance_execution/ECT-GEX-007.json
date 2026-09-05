@@ -1,0 +1,18 @@
+{
+  "test_id": "ECT-GEX-007",
+  "title": "Consequential Effect Requires ExecutionContract",
+  "invariants": [
+    "AOF-INV-122"
+  ],
+  "reference_tests": [
+    "CT-EC-001"
+  ],
+  "facts": {
+    "execution_contract_valid": false,
+    "other_gates_pass": true
+  },
+  "expected": {
+    "effect_allowed": false,
+    "missing_contract_blocked": true
+  }
+}

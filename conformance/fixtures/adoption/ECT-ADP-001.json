@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-001",
+  "title": "Greenfield Adoption Is Valid Without Legacy Replacement",
+  "facts": {
+    "canonical_controls_present": true,
+    "scope_explicit": true
+  },
+  "expected": {
+    "adoption_valid": true,
+    "replacement_required": false
+  }
+}

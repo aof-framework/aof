@@ -1,0 +1,45 @@
+{
+  "ExecutionContract": {
+    "canonical_schema": "execution/execution-contract.schema.json",
+    "runtime_artifact": "runtime/execution/contracts.py + runtime/execution/effect-boundary-contract.json",
+    "classification": "Reference projection / not byte-identical canonical serialization",
+    "runtime_helpers": [
+      "subject_ref",
+      "subject_state_version",
+      "decision_status",
+      "authorized",
+      "single_use"
+    ],
+    "audit_note": "`authorized` is an execution-boundary marker and MUST NOT be interpreted as AuthorityGrant."
+  },
+  "StateTransition": {
+    "canonical_schema": "execution/state-transition.schema.json",
+    "runtime_artifact": "runtime/state/store.py",
+    "classification": "Runtime state-store projection; canonical StateTransition mapping required at interchange boundary"
+  },
+  "TraceEvent": {
+    "canonical_schema": "execution/trace-event.schema.json",
+    "runtime_artifact": "runtime/trace/recorder.py",
+    "classification": "Runtime event projection; semantically aligned event types, not asserted byte-identical"
+  },
+  "Evidence": {
+    "canonical_schema": "assurance/evidence.schema.json",
+    "runtime_artifact": "runtime/assurance/evidence.py",
+    "classification": "Compact reference Evidence model; adapter/export mapping required for canonical interchange"
+  },
+  "Verification": {
+    "canonical_schema": "assurance/verification.schema.json",
+    "runtime_artifact": "runtime/assurance/verification.py + runtime/assurance/verification-contract.json",
+    "classification": "Reference VerificationResult projection; runtime policy is not universal normative aggregation"
+  },
+  "ConformanceManifest": {
+    "canonical_schema": "conformance/conformance-manifest.schema.json",
+    "runtime_artifact": "runtime/conformance/runner.py",
+    "classification": "Runner input projection; explicit canonical export mapping required"
+  },
+  "ConformanceReport": {
+    "canonical_schema": "conformance/conformance-report.schema.json",
+    "runtime_artifact": "runtime/conformance/runner.py + runtime/conformance/conformance-runner-contract.json",
+    "classification": "Runner output projection; explicit canonical export mapping required"
+  }
+}

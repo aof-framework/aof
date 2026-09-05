@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-019",
+  "title": "Brownfield Trace Correlates Legacy And AOF Events",
+  "facts": {
+    "legacy_event_correlated": true,
+    "aof_decision_trace": true,
+    "effect_trace": true
+  },
+  "expected": {
+    "trace_complete": true
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/conformance-types.schema.json",
+  "title": "AOF Conformance Formal Types",
+  "$defs": {
+    "Applicability": {
+      "type": "string",
+      "enum": [
+        "Applicable",
+        "NotApplicable",
+        "Conditional"
+      ]
+    },
+    "TestResult": {
+      "type": "string",
+      "enum": [
+        "Pass",
+        "Fail",
+        "Blocked",
+        "NotApplicable",
+        "Inconclusive"
+      ],
+      "description": "Blocked and Inconclusive MUST NOT count as Pass."
+    },
+    "RequirementResult": {
+      "type": "string",
+      "enum": [
+        "Satisfied",
+        "Violated",
+        "NotApplicable",
+        "Inconclusive"
+      ]
+    },
+    "ConformanceResult": {
+      "type": "string",
+      "enum": [
+        "Conformant",
+        "NonConformant",
+        "Conditional",
+        "Inconclusive"
+      ]
+    },
+    "AssessmentMode": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Frozen specification does not define a single closed universal assessment-mode set."
+    },
+    "Profile": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "AOF-Core",
+        "AOF-Governed",
+        "AOF-Assured",
+        "AOF-Secure-SDLC",
+        "AOF-High-Assurance"
+      ],
+      "x-aof-reference-values": [
+        "AOF-Core",
+        "AOF-Governed",
+        "AOF-Assured",
+        "AOF-Secure-SDLC",
+        "AOF-High-Assurance"
+      ],
+      "description": "Reference AOF profiles. Kept extensible to permit conformant extensions and composed profile identifiers."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "test_id": "ECT-GEX-001",
+  "title": "Delegation Conserves Parent Authority",
+  "invariants": [
+    "AOF-INV-031"
+  ],
+  "reference_tests": [
+    "CT-AUTH-003"
+  ],
+  "facts": {
+    "parent_operations": [
+      "read",
+      "write"
+    ],
+    "child_operations": [
+      "read"
+    ],
+    "parent_resources": [
+      "repo"
+    ],
+    "child_resources": [
+      "repo"
+    ],
+    "parent_risk_ceiling": 3,
+    "child_risk_ceiling": 2
+  },
+  "expected": {
+    "delegation_valid": true
+  }
+}

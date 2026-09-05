@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-GEX-010",
+  "title": "Unauthorized State Transition Is Rejected",
+  "invariants": [
+    "AOF-INV-079"
+  ],
+  "reference_tests": [
+    "CT-ST-001"
+  ],
+  "facts": {
+    "transition_in_state_machine": true,
+    "transition_authorized": false
+  },
+  "expected": {
+    "transition_allowed": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/core/context-descriptor.schema.json",
+  "title": "AOF ContextDescriptor",
+  "description": "Machine-readable Context Descriptor contract corresponding to Appendix E.12.",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trust_level": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "data_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "disclosure_scope": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "retention": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "redaction_policy_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "classification",
+        "trust_level",
+        "purpose",
+        "source_refs",
+        "data_refs",
+        "disclosure_scope",
+        "retention",
+        "redaction_policy_ref"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.12 / Section 8.12",
+    "normative_notes": [
+      "Context payload MAY be stored separately from the descriptor.",
+      "Context possession does not create control authority."
+    ]
+  }
+}

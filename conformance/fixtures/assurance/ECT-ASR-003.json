@@ -1,0 +1,21 @@
+{
+  "test_id": "ECT-ASR-003",
+  "title": "Evidence Presence Does Not Establish Sufficiency",
+  "requirements": [
+    "AOF-EVD-006"
+  ],
+  "invariants": [
+    "EVD-INV-04"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "evidence_present": true,
+    "criteria_coverage_complete": false,
+    "admissible": true,
+    "verifier_eligible": true
+  },
+  "expected": {
+    "sufficient": false,
+    "verified": false
+  }
+}

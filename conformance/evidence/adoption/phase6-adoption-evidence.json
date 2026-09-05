@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-09-04T19:22:56.446684+00:00",
+  "subject": "AOF Phase 6 reference adoption evaluator",
+  "results": [
+    {
+      "test_id": "ECT-ADP-001",
+      "result": "Pass",
+      "observed": {
+        "adoption_valid": true,
+        "replacement_required": false
+      },
+      "expected": {
+        "adoption_valid": true,
+        "replacement_required": false
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-001",
+          "facts": {
+            "canonical_controls_present": true,
+            "scope_explicit": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-002",
+      "result": "Pass",
+      "observed": {
+        "adoption_valid": true,
+        "replacement_required": false
+      },
+      "expected": {
+        "adoption_valid": true,
+        "replacement_required": false
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-002",
+          "facts": {
+            "existing_workflow_preserved": true,
+            "adapter_exposes_aof_semantics": true,
+            "mandatory_controls_enforced": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-003",
+      "result": "Pass",
+      "observed": {
+        "adoption_valid": true
+      },
+      "expected": {
+        "adoption_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-003",
+          "facts": {
+            "native_components": true,
+            "adapter_components": true,
+            "common_governance_boundary": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-004",
+      "result": "Pass",
+      "observed": {
+        "adoption_valid": true
+      },
+      "expected": {
+        "adoption_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-004",
+          "facts": {
+            "existing_pipeline_continues": true,
+            "selected_boundary_governed": true,
+            "migration_stage_explicit": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-005",
+      "result": "Pass",
+      "observed": {
+        "scope_valid": true
+      },
+      "expected": {
+        "scope_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-005",
+          "facts": {
+            "included_components": [
+              "ai-code-review"
+            ],
+            "excluded_components": [
+              "legacy-issue-tracker"
+            ],
+            "profile": "AOF-Secure-SDLC"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-006",
+      "result": "Pass",
+      "observed": {
+        "scope_abuse": false,
+        "claim_valid": true
+      },
+      "expected": {
+        "scope_abuse": false,
+        "claim_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-006",
+          "facts": {
+            "excluded_mandatory_applicable_control": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-007",
+      "result": "Pass",
+      "observed": {
+        "equivalent": true
+      },
+      "expected": {
+        "equivalent": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-007",
+          "facts": {
+            "identity_preserved": true,
+            "authority_semantics_preserved": true,
+            "policy_semantics_preserved": true,
+            "state_semantics_preserved": true,
+            "trace_semantics_preserved": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-008",
+      "result": "Pass",
+      "observed": {
+        "authority_expanded_by_adapter": false,
+        "valid": true
+      },
+      "expected": {
+        "authority_expanded_by_adapter": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-008",
+          "facts": {
+            "adapter_inserted": true,
+            "authority_expanded": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-009",
+      "result": "Pass",
+      "observed": {
+        "deny_suppressed": false,
+        "valid": true
+      },
+      "expected": {
+        "deny_suppressed": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-009",
+          "facts": {
+            "policy_deny": true,
+            "deny_propagated": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-010",
+      "result": "Pass",
+      "observed": {
+        "transport_dependency_violation": false,
+        "valid": true
+      },
+      "expected": {
+        "transport_dependency_violation": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-010",
+          "facts": {
+            "requires_http_or_rest": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-011",
+      "result": "Pass",
+      "observed": {
+        "replacement_required": false,
+        "valid": true
+      },
+      "expected": {
+        "replacement_required": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-011",
+          "facts": {
+            "requires_replacing_unrelated_tooling": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-012",
+      "result": "Pass",
+      "observed": {
+        "claim_overreach": false,
+        "valid": true
+      },
+      "expected": {
+        "claim_overreach": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-012",
+          "facts": {
+            "claim_scope": 2,
+            "evidence_scope": 2
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-013",
+      "result": "Pass",
+      "observed": {
+        "stage_valid": true
+      },
+      "expected": {
+        "stage_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-013",
+          "facts": {
+            "stage_controls_explicit": true,
+            "known_gaps_declared": true,
+            "claim_limited_to_current_stage": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-014",
+      "result": "Pass",
+      "observed": {
+        "weak_compliance_claim": false,
+        "valid": true
+      },
+      "expected": {
+        "weak_compliance_claim": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-014",
+          "facts": {
+            "partial_adoption": true,
+            "claims_full_compliance": false,
+            "all_applicable_mandatory_controls_satisfied": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-015",
+      "result": "Pass",
+      "observed": {
+        "observable": true
+      },
+      "expected": {
+        "observable": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-015",
+          "facts": {
+            "decision_observable": true,
+            "state_observable": true,
+            "effect_observable": true,
+            "evidence_collectable": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-016",
+      "result": "Pass",
+      "observed": {
+        "hidden_consequential_semantics": false,
+        "valid": true
+      },
+      "expected": {
+        "hidden_consequential_semantics": false,
+        "valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-016",
+          "facts": {
+            "hidden_fields_change_governance_outcome": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-017",
+      "result": "Pass",
+      "observed": {
+        "semantic_equivalence": true
+      },
+      "expected": {
+        "semantic_equivalence": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-017",
+          "facts": {
+            "native_decision": "Deny",
+            "adapter_decision": "Deny",
+            "hybrid_decision": "Deny"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-018",
+      "result": "Pass",
+      "observed": {
+        "revocation_enforced": true
+      },
+      "expected": {
+        "revocation_enforced": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-018",
+          "facts": {
+            "authority_revoked": true,
+            "adapter_receives_revocation": true,
+            "effect_occurs": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-019",
+      "result": "Pass",
+      "observed": {
+        "trace_complete": true
+      },
+      "expected": {
+        "trace_complete": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-019",
+          "facts": {
+            "legacy_event_correlated": true,
+            "aof_decision_trace": true,
+            "effect_trace": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ADP-020",
+      "result": "Pass",
+      "observed": {
+        "manifest_valid": true
+      },
+      "expected": {
+        "manifest_valid": true
+      },
+      "evidence": [
+        {
+          "type": "AdoptionObservation",
+          "test_id": "ECT-ADP-020",
+          "facts": {
+            "subject": "sut-1",
+            "subject_version": "3.2",
+            "profile": "AOF-Secure-SDLC",
+            "scope": {
+              "component": "ai-code-review"
+            },
+            "assessment_mode": "AdapterBasedBrownfield"
+          }
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

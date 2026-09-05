@@ -1,0 +1,30 @@
+{
+  "test_id": "ECT-CONF-012",
+  "title": "Applicable NonMandatory Failure Still Produces NonConformant",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [],
+    "requirements": [
+      {
+        "requirement_id": "AOF-EXAMPLE-001",
+        "normative_level": "SHOULD",
+        "applicability": "Applicable",
+        "tests": [
+          {
+            "test_id": "T1",
+            "result": "Fail"
+          }
+        ],
+        "evidence_refs": [
+          "ev-1"
+        ]
+      }
+    ]
+  },
+  "expected": "NonConformant"
+}

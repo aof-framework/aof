@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/execution/decision.schema.json",
+  "title": "AOF Decision",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "type": {
+          "$ref": "../common/execution-types.schema.json#/$defs/DecisionType"
+        },
+        "subject": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "state_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "authority_result_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "policy_result_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "risk_result_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "verification_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "approval_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "outcome": {
+          "$ref": "../common/execution-types.schema.json#/$defs/DecisionOutcome"
+        },
+        "rationale": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "actor",
+        "type",
+        "subject",
+        "input_refs",
+        "state_ref",
+        "authority_result_ref",
+        "policy_result_ref",
+        "risk_result_ref",
+        "verification_refs",
+        "approval_refs",
+        "outcome",
+        "rationale",
+        "valid_until",
+        "created_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.19 / Section 9.19",
+    "normative_notes": [
+      "Decision schema MUST preserve references to applicable governance results for consequential Decision.",
+      "Private chain-of-thought MUST NOT be required.",
+      "Reasoning != Decision; Proposal != AuthorizedDecision."
+    ]
+  }
+}

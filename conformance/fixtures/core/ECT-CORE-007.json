@@ -1,0 +1,21 @@
+{
+  "test_id": "ECT-CORE-007",
+  "title": "Technical Access Is Not Authority",
+  "invariants": [
+    "AOF-INV-037"
+  ],
+  "reference_tests": [
+    "CT-AGT-004",
+    "CT-HG-001"
+  ],
+  "facts": {
+    "technical_access": true,
+    "authority": false,
+    "execute": false
+  },
+  "expected": {
+    "execute_allowed": false,
+    "blocked_without_authority": true
+  },
+  "classification": "Semantic+Behavioral"
+}

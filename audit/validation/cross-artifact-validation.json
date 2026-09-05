@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "frozen_spec_hash_exact": true,
+    "schema_spec_identity": true,
+    "conformance_spec_identity": true,
+    "reference_spec_identity": true,
+    "A2_pass": true,
+    "A3_pass": true,
+    "A4_pass": true,
+    "A5_acceptable": true,
+    "all_zip_integrity": true,
+    "all_internal_sha_manifests_valid": true,
+    "schema_fidelity_22_of_22": true,
+    "conformance_reproducible_170": true,
+    "reference_reproducible_95": true,
+    "reference_claim_constraint_preserved": true,
+    "critical_semantic_boundaries_present": true,
+    "no_machine_openapi_swagger_dependency": true,
+    "no_release_cache_temp_residue": true
+  },
+  "transport_hits": [],
+  "residue": [],
+  "result": "PASS"
+}

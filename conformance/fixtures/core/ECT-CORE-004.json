@@ -1,0 +1,22 @@
+{
+  "test_id": "ECT-CORE-004",
+  "title": "Human Unavailability Does Not Create Approval",
+  "invariants": [
+    "AOF-INV-118",
+    "AOF-INV-015"
+  ],
+  "reference_tests": [
+    "CT-HG-004",
+    "CT-LC-010"
+  ],
+  "facts": {
+    "human_unavailable": true,
+    "approval": false,
+    "pending": true
+  },
+  "expected": {
+    "approved": false,
+    "pending_or_controlled": true
+  },
+  "classification": "Semantic+Behavioral"
+}

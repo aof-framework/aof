@@ -1,0 +1,187 @@
+{
+  "phase": "Phase 2 — Core Semantic Tests",
+  "policy": "Do not infer Requirement mapping where frozen specification states no direct mapping asserted.",
+  "rows": [
+    {
+      "test_id": "ECT-CORE-001",
+      "title": "Capability Does Not Grant Authority",
+      "invariants": [
+        "AOF-INV-030"
+      ],
+      "reference_tests": [
+        "CT-AUTH-001",
+        "CT-AGT-001"
+      ],
+      "requirement_ids": [
+        "AOF-AUTH-001",
+        "AOF-AUTH-004",
+        "AOF-AUTH-007",
+        "AOF-AUTH-009",
+        "AOF-AUTH-010",
+        "AOF-AUTH-012",
+        "AOF-AUTH-013",
+        "AOF-AUTH-017",
+        "AOF-AUTH-021"
+      ],
+      "requirement_mapping_status": "ExplicitSourceMapping",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-002",
+      "title": "Proposal Is Not Authorized Decision",
+      "invariants": [
+        "AOF-INV-036"
+      ],
+      "reference_tests": [],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic"
+    },
+    {
+      "test_id": "ECT-CORE-003",
+      "title": "Agent Output Remains Untrusted Proposal",
+      "invariants": [
+        "AOF-INV-036",
+        "AOF-INV-042"
+      ],
+      "reference_tests": [],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic"
+    },
+    {
+      "test_id": "ECT-CORE-004",
+      "title": "Human Unavailability Does Not Create Approval",
+      "invariants": [
+        "AOF-INV-118",
+        "AOF-INV-015"
+      ],
+      "reference_tests": [
+        "CT-HG-004",
+        "CT-LC-010"
+      ],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-005",
+      "title": "Pending Is Not Pass",
+      "invariants": [
+        "AOF-INV-015"
+      ],
+      "reference_tests": [
+        "CT-LC-001"
+      ],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-006",
+      "title": "Policy Prompt Is Not Policy Enforcement",
+      "invariants": [
+        "AOF-INV-041",
+        "AOF-INV-131"
+      ],
+      "reference_tests": [
+        "CT-AGT-003",
+        "CT-SEC-001"
+      ],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic+Security"
+    },
+    {
+      "test_id": "ECT-CORE-007",
+      "title": "Technical Access Is Not Authority",
+      "invariants": [
+        "AOF-INV-037"
+      ],
+      "reference_tests": [
+        "CT-AGT-004",
+        "CT-HG-001"
+      ],
+      "requirement_ids": [
+        "AOF-AGT-010",
+        "AOF-AGT-018",
+        "AOF-AGT-021"
+      ],
+      "requirement_mapping_status": "ExplicitSourceMapping",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-008",
+      "title": "Approval Is Not AuthorityGrant",
+      "invariants": [
+        "AOF-INV-114"
+      ],
+      "reference_tests": [],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic"
+    },
+    {
+      "test_id": "ECT-CORE-009",
+      "title": "Mandatory Control Failure Fails Controlled",
+      "invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_tests": [
+        "CT-LC-008",
+        "CT-FR-002"
+      ],
+      "requirement_ids": [
+        "AOF-FR-001",
+        "AOF-FR-004"
+      ],
+      "requirement_mapping_status": "ExplicitSourceMapping",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-010",
+      "title": "Safety Kernel Cannot Be Bypassed",
+      "invariants": [
+        "AOF-INV-133"
+      ],
+      "reference_tests": [
+        "CT-SEC-002"
+      ],
+      "requirement_ids": [
+        "AOF-SEC-003"
+      ],
+      "requirement_mapping_status": "ExplicitSourceMapping",
+      "classification": "Semantic+Behavioral+Security"
+    },
+    {
+      "test_id": "ECT-CORE-011",
+      "title": "Unknown Mandatory Policy Is Not Implicit Allow",
+      "invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_tests": [
+        "CT-POL-002"
+      ],
+      "requirement_ids": [
+        "AOF-FR-001",
+        "AOF-FR-004"
+      ],
+      "requirement_mapping_status": "ExplicitSourceMapping",
+      "classification": "Semantic+Behavioral"
+    },
+    {
+      "test_id": "ECT-CORE-012",
+      "title": "AI Agent Is Not Governance Root",
+      "invariants": [
+        "AOF-INV-042",
+        "AOF-INV-132"
+      ],
+      "reference_tests": [
+        "CT-AGT-008"
+      ],
+      "requirement_ids": [],
+      "requirement_mapping_status": "InvariantMapped_NoDirectRequirementMappingAsserted",
+      "classification": "Semantic"
+    }
+  ]
+}

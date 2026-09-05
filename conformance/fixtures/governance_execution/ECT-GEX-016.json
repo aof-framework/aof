@@ -1,0 +1,18 @@
+{
+  "test_id": "ECT-GEX-016",
+  "title": "Consequential Decision and Effect Remain Traceable",
+  "invariants": [
+    "AOF-INV-092"
+  ],
+  "reference_tests": [
+    "CT-TR-001"
+  ],
+  "facts": {
+    "decision_trace": true,
+    "effect_trace": true
+  },
+  "expected": {
+    "trace_complete": true,
+    "conformance_observable": true
+  }
+}

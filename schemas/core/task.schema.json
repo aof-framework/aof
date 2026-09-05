@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/core/task.schema.json",
+  "title": "AOF Task",
+  "description": "Machine-readable Task contract corresponding to Appendix E.10.",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parent_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "goal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "postconditions": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "risk_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "../common/enums.schema.json#/$defs/TaskState"
+        },
+        "assigned_agent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "parent_id",
+        "goal_id",
+        "input_refs",
+        "preconditions",
+        "postconditions",
+        "constraints",
+        "requirements",
+        "risk_ref",
+        "state",
+        "assigned_agent_ids",
+        "version"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.10 / Section 9.11",
+    "normative_notes": [
+      "Child Task representation MUST preserve inherited mandatory constraints or references thereto.",
+      "Undefined Task transition MUST be rejected; transition validity is semantic and not proven by this structural schema."
+    ]
+  }
+}

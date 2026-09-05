@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/governance/risk-assessment.schema.json",
+  "title": "AOF RiskAssessment",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "profile_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hazards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "likelihood": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": true
+            }
+          ]
+        },
+        "impact": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": true
+            }
+          ]
+        },
+        "exposure": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": true
+            }
+          ]
+        },
+        "inherent_class": {
+          "$ref": "../common/governance-enums.schema.json#/$defs/RiskClass"
+        },
+        "controls": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "residual_class": {
+          "$ref": "../common/governance-enums.schema.json#/$defs/RiskClass"
+        },
+        "confidence": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "assessor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "acceptance_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reassessment_triggers": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "valid_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "provenance": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        }
+      },
+      "required": [
+        "id",
+        "subject",
+        "profile_ref",
+        "method",
+        "hazards",
+        "likelihood",
+        "impact",
+        "exposure",
+        "inherent_class",
+        "controls",
+        "residual_class",
+        "confidence",
+        "assessor",
+        "acceptance_ref",
+        "reassessment_triggers",
+        "valid_at",
+        "provenance"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.17 / Section 13.17-13.41",
+    "normative_notes": [
+      "RiskAssessment != RiskAcceptance.",
+      "Risk does not grant Authority or Policy permission.",
+      "AOF does not freeze one universal numeric risk-scoring formula."
+    ]
+  }
+}

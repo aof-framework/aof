@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/enums.schema.json",
+  "title": "AOF Phase 1 Canonical Enumerations",
+  "$defs": {
+    "TaskState": {
+      "type": "string",
+      "enum": [
+        "Created",
+        "Qualified",
+        "Ready",
+        "Assigned",
+        "Executing",
+        "Waiting",
+        "Verifying",
+        "Completed",
+        "Failed",
+        "Rejected",
+        "Escalated",
+        "Cancelled",
+        "Containing",
+        "Reconciling",
+        "Recovering"
+      ],
+      "description": "Canonical Task states plus recovery-related Task-level substates explicitly permitted by Section 9.11."
+    },
+    "AgentType": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "LLM",
+        "Deterministic",
+        "Human",
+        "Hybrid",
+        "ExternalService"
+      ],
+      "description": "Section 10.3 defines these five reference AgentType values and permits implementation-specific extension types. Therefore the schema intentionally does not close the string domain."
+    },
+    "AgentState": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Appendix E.11 references AgentState but the frozen specification does not define a closed canonical AgentState enumeration. This schema intentionally preserves it as a non-empty formal identifier."
+    }
+  }
+}

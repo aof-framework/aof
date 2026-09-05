@@ -1,0 +1,16 @@
+{
+  "phase": "RI-3 \u2014 Execution / State / Trace Runtime",
+  "frozen_spec_sha256_verified": true,
+  "ri1_retained": true,
+  "ri2_retained": true,
+  "primary_fixture_count": 7,
+  "pytest_exit_code": 0,
+  "pytest_summary": "53 passed in 0.10s",
+  "all_primary_expectations_match": true,
+  "effect_boundary_revalidation": true,
+  "single_use_replay_protection": true,
+  "state_version_freshness": true,
+  "trace_runtime": true,
+  "unknown_effect_preserved": true,
+  "result": "PASS"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "trace-001",
+  "event_type": "ACTION_EFFECT",
+  "timestamp": "2026-09-04T15:01:00Z",
+  "sequence": 101,
+  "actor": "execution-gateway",
+  "session_id": "session-001",
+  "task_id": "task-001",
+  "decision_id": "decision-001",
+  "action_id": "action-001",
+  "input_refs": [
+    "exec-001"
+  ],
+  "evidence_refs": [
+    "effect-evidence-1"
+  ],
+  "state_before_ref": "state-42",
+  "state_after_ref": "state-43",
+  "result": {
+    "status": "success"
+  },
+  "correlation": {
+    "request_id": "req-123"
+  },
+  "classification": "internal",
+  "integrity": {
+    "digest": "sha256:abc"
+  }
+}

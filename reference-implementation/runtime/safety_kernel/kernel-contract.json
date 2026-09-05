@@ -1,0 +1,20 @@
+{
+  "kernel": "AOF Safety Kernel Reference",
+  "version": "1.0.0-ri2",
+  "predicate": "C && H && P && S && R && V",
+  "gates": [
+    "CapabilityGate",
+    "AuthorityEvaluator",
+    "PolicyEvaluator",
+    "StateValidator",
+    "RiskGate",
+    "VerificationGate"
+  ],
+  "aggregation": {
+    "Fail": "Deny",
+    "Pending": "Pending",
+    "AllPass": "Allow"
+  },
+  "execute_on_allow_only": true,
+  "implicit_allow": false
+}

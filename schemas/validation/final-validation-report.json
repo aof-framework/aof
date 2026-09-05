@@ -1,0 +1,648 @@
+{
+  "package": "AOF v1.0 Canonical Machine-Readable Schemas",
+  "phase": "Phase 6 — Final Consolidation",
+  "timestamp": "2026-09-04T16:15:51.636607+00:00",
+  "frozen_specification_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "schema_draft": "JSON Schema Draft 2020-12",
+  "canonical_contracts": {
+    "expected": 22,
+    "actual": 22,
+    "complete": true
+  },
+  "schema_files_total": 30,
+  "meta_schema_validation": {
+    "result": "PASS",
+    "files_checked": 30
+  },
+  "$id_uniqueness": {
+    "result": "PASS",
+    "unique_ids": 30,
+    "duplicates": {}
+  },
+  "$ref_validation": {
+    "result": "PASS",
+    "references_checked": 163,
+    "failed": []
+  },
+  "fixture_replay": {
+    "result": "PASS",
+    "fixtures_checked": 45,
+    "details": [
+      {
+        "phase": 2,
+        "fixture": "valid-authority.json",
+        "schema": "governance/authority-grant.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 2,
+        "fixture": "valid-policy.json",
+        "schema": "governance/policy.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 2,
+        "fixture": "valid-risk-assessment.json",
+        "schema": "governance/risk-assessment.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 2,
+        "fixture": "valid-approval.json",
+        "schema": "governance/approval.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 2,
+        "fixture": "invalid-authority-status.json",
+        "schema": "governance/authority-grant.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'MagicActive' is not one of ['Requested', 'Active', 'Suspended', 'Revoked', 'Expired', 'Consumed', 'Denied']"
+        ]
+      },
+      {
+        "phase": 2,
+        "fixture": "invalid-policy-status.json",
+        "schema": "governance/policy.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'MagicActive' is not one of ['Draft', 'Active', 'Suspended', 'Deprecated', 'Expired', 'Retired']"
+        ]
+      },
+      {
+        "phase": 2,
+        "fixture": "invalid-risk-class.json",
+        "schema": "governance/risk-assessment.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'Extreme' is not one of ['Low', 'Moderate', 'High', 'Critical']"
+        ]
+      },
+      {
+        "phase": 2,
+        "fixture": "invalid-missing-approval-authority.json",
+        "schema": "governance/approval.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'authority_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 2,
+        "fixture": "valid-custom-policy-effect.json",
+        "schema": "governance/policy.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-action-proposal.json",
+        "schema": "execution/action-proposal.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-decision.json",
+        "schema": "execution/decision.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-execution-contract.json",
+        "schema": "execution/execution-contract.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-state-transition.json",
+        "schema": "execution/state-transition.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-trace-event.json",
+        "schema": "execution/trace-event.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-agent-interaction-contract.json",
+        "schema": "execution/agent-interaction-contract.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-custom-decision-type.json",
+        "schema": "execution/decision.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "valid-custom-message-type.json",
+        "schema": "execution/agent-interaction-contract.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 3,
+        "fixture": "invalid-decision-missing-authority-result.json",
+        "schema": "execution/decision.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'authority_result_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 3,
+        "fixture": "invalid-contract-missing-authority-ref.json",
+        "schema": "execution/execution-contract.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'authority_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 3,
+        "fixture": "invalid-transition-missing-before-state.json",
+        "schema": "execution/state-transition.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'state_before_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 3,
+        "fixture": "invalid-trace-negative-sequence.json",
+        "schema": "execution/trace-event.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "-1 is less than the minimum of 0"
+        ]
+      },
+      {
+        "phase": 3,
+        "fixture": "invalid-aic-missing-disclosure-scope.json",
+        "schema": "execution/agent-interaction-contract.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'disclosure_scope' is a required property"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-evidence.json",
+        "schema": "assurance/evidence.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-verification.json",
+        "schema": "assurance/verification.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-escalation-package.json",
+        "schema": "assurance/escalation-package.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-outcome.json",
+        "schema": "assurance/outcome.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "invalid-verification-result.json",
+        "schema": "assurance/verification.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'ProbablyVerified' is not one of ['Verified', 'Rejected', 'Inconclusive']"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "invalid-verification-independence.json",
+        "schema": "assurance/verification.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'VI9' is not one of ['VI0', 'VI1', 'VI2', 'VI3']"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "invalid-evidence-missing-provenance.json",
+        "schema": "assurance/evidence.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'provenance' is a required property"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "invalid-escalation-missing-state.json",
+        "schema": "assurance/escalation-package.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'current_state_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "invalid-outcome-missing-trace.json",
+        "schema": "assurance/outcome.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'trace_ref' is a required property"
+        ]
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-custom-verification-mode.json",
+        "schema": "assurance/verification.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-custom-outcome-status.json",
+        "schema": "assurance/outcome.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-custom-escalation-reason.json",
+        "schema": "assurance/escalation-package.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 4,
+        "fixture": "valid-inconclusive-verification.json",
+        "schema": "assurance/verification.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 5,
+        "fixture": "valid-conformance-manifest.json",
+        "schema": "conformance/conformance-manifest.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 5,
+        "fixture": "valid-conformance-report.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 5,
+        "fixture": "valid-custom-profile.json",
+        "schema": "conformance/conformance-manifest.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 5,
+        "fixture": "valid-conditional-report.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      },
+      {
+        "phase": 5,
+        "fixture": "invalid-manifest-missing-scope.json",
+        "schema": "conformance/conformance-manifest.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'scope' is a required property"
+        ]
+      },
+      {
+        "phase": 5,
+        "fixture": "invalid-report-bad-applicability.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'Optional' is not one of ['Applicable', 'NotApplicable', 'Conditional']"
+        ]
+      },
+      {
+        "phase": 5,
+        "fixture": "invalid-report-bad-requirement-result.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'Pass' is not one of ['Satisfied', 'Violated', 'NotApplicable', 'Inconclusive']"
+        ]
+      },
+      {
+        "phase": 5,
+        "fixture": "invalid-report-bad-final-result.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'Passed' is not one of ['Conformant', 'NonConformant', 'Conditional', 'Inconclusive']"
+        ]
+      },
+      {
+        "phase": 5,
+        "fixture": "invalid-report-missing-evidence-refs.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": false,
+        "actual_valid": false,
+        "result": "PASS",
+        "errors": [
+          "'evidence_refs' is a required property"
+        ]
+      },
+      {
+        "phase": 5,
+        "fixture": "valid-not-applicable-structural.json",
+        "schema": "conformance/conformance-report.schema.json",
+        "expected_valid": true,
+        "actual_valid": true,
+        "result": "PASS",
+        "errors": []
+      }
+    ]
+  },
+  "canonical_contract_byte_identity": {
+    "result": "PASS",
+    "details": {
+      "Goal": {
+        "source_phase": 1,
+        "path": "core/goal.schema.json",
+        "source_sha256": "d7928ea2f472e40cd20d0f67940e4591221ce2f714f6ad519bc64c2dc3cd7710",
+        "final_sha256": "d7928ea2f472e40cd20d0f67940e4591221ce2f714f6ad519bc64c2dc3cd7710",
+        "byte_identical": true
+      },
+      "Task": {
+        "source_phase": 1,
+        "path": "core/task.schema.json",
+        "source_sha256": "1d33bcaab113d714eb73288649dfd8ad4d7feb187b4159fc6ea90fa35c93f38a",
+        "final_sha256": "1d33bcaab113d714eb73288649dfd8ad4d7feb187b4159fc6ea90fa35c93f38a",
+        "byte_identical": true
+      },
+      "Agent": {
+        "source_phase": 1,
+        "path": "core/agent.schema.json",
+        "source_sha256": "2bf8e8347d7058ec3b7d001c5d93017d2784cb966110aacfce54a83e80faa901",
+        "final_sha256": "2bf8e8347d7058ec3b7d001c5d93017d2784cb966110aacfce54a83e80faa901",
+        "byte_identical": true
+      },
+      "ContextDescriptor": {
+        "source_phase": 1,
+        "path": "core/context-descriptor.schema.json",
+        "source_sha256": "d24450c245786e99338d99a02a66fb4dc58a47cb9e69c2f51d57232abd2b4281",
+        "final_sha256": "d24450c245786e99338d99a02a66fb4dc58a47cb9e69c2f51d57232abd2b4281",
+        "byte_identical": true
+      },
+      "Resource": {
+        "source_phase": 1,
+        "path": "core/resource.schema.json",
+        "source_sha256": "bcee690441988c8f0cc59ea07f679d015f7ec1a6b6a33eee3f10d2956d63e83e",
+        "final_sha256": "bcee690441988c8f0cc59ea07f679d015f7ec1a6b6a33eee3f10d2956d63e83e",
+        "byte_identical": true
+      },
+      "Capability": {
+        "source_phase": 1,
+        "path": "core/capability.schema.json",
+        "source_sha256": "8c4947e0de37c14cf43480164cf97a2ac4ffd317935e7d9e5f0b89050067687c",
+        "final_sha256": "8c4947e0de37c14cf43480164cf97a2ac4ffd317935e7d9e5f0b89050067687c",
+        "byte_identical": true
+      },
+      "AuthorityGrant": {
+        "source_phase": 2,
+        "path": "governance/authority-grant.schema.json",
+        "source_sha256": "c4190c825048c6df64eca1862133f1ab3686adb2ec374f4b03708430144d1437",
+        "final_sha256": "c4190c825048c6df64eca1862133f1ab3686adb2ec374f4b03708430144d1437",
+        "byte_identical": true
+      },
+      "Policy": {
+        "source_phase": 2,
+        "path": "governance/policy.schema.json",
+        "source_sha256": "1fec85e9f0a480823f8e2b8a446b03e46c9f4eb3bc1892e632eff1869c5b6a08",
+        "final_sha256": "1fec85e9f0a480823f8e2b8a446b03e46c9f4eb3bc1892e632eff1869c5b6a08",
+        "byte_identical": true
+      },
+      "RiskAssessment": {
+        "source_phase": 2,
+        "path": "governance/risk-assessment.schema.json",
+        "source_sha256": "570c3282564e677e919c72458ca44a0afe67cec2900616c68abfb9225d778103",
+        "final_sha256": "570c3282564e677e919c72458ca44a0afe67cec2900616c68abfb9225d778103",
+        "byte_identical": true
+      },
+      "Approval": {
+        "source_phase": 2,
+        "path": "governance/approval.schema.json",
+        "source_sha256": "2455ba10fe1df876392ca218c0f376617265406f53420ddd259331c083d61988",
+        "final_sha256": "2455ba10fe1df876392ca218c0f376617265406f53420ddd259331c083d61988",
+        "byte_identical": true
+      },
+      "ActionProposal": {
+        "source_phase": 3,
+        "path": "execution/action-proposal.schema.json",
+        "source_sha256": "03b267bc39daceabf104c851ebf6f7ceab91d8b36ef9e528f57fbab9296606f4",
+        "final_sha256": "03b267bc39daceabf104c851ebf6f7ceab91d8b36ef9e528f57fbab9296606f4",
+        "byte_identical": true
+      },
+      "Decision": {
+        "source_phase": 3,
+        "path": "execution/decision.schema.json",
+        "source_sha256": "3bae1b8a387b8ac30520e2cf9574a99819a0164af884c397fb9ddb3abec85e06",
+        "final_sha256": "3bae1b8a387b8ac30520e2cf9574a99819a0164af884c397fb9ddb3abec85e06",
+        "byte_identical": true
+      },
+      "ExecutionContract": {
+        "source_phase": 3,
+        "path": "execution/execution-contract.schema.json",
+        "source_sha256": "f879442e6b016d0b70a8842b9a65d7114c7aabe310ae6aa7cc065cde29e406cb",
+        "final_sha256": "f879442e6b016d0b70a8842b9a65d7114c7aabe310ae6aa7cc065cde29e406cb",
+        "byte_identical": true
+      },
+      "StateTransition": {
+        "source_phase": 3,
+        "path": "execution/state-transition.schema.json",
+        "source_sha256": "466ea2bf7356e41e1c41c88d78933628712eccd2c7d235dac91cfb491d4b52db",
+        "final_sha256": "466ea2bf7356e41e1c41c88d78933628712eccd2c7d235dac91cfb491d4b52db",
+        "byte_identical": true
+      },
+      "TraceEvent": {
+        "source_phase": 3,
+        "path": "execution/trace-event.schema.json",
+        "source_sha256": "0a62fe7486e12d15eec3ef1f9c25c9d25074ee8f7acaaf481a2a0492490951d8",
+        "final_sha256": "0a62fe7486e12d15eec3ef1f9c25c9d25074ee8f7acaaf481a2a0492490951d8",
+        "byte_identical": true
+      },
+      "AgentInteractionContract": {
+        "source_phase": 3,
+        "path": "execution/agent-interaction-contract.schema.json",
+        "source_sha256": "ffd48e92601d8663660f4e151ceba0088b68940a1b5937b72c57f11388f9ae6f",
+        "final_sha256": "ffd48e92601d8663660f4e151ceba0088b68940a1b5937b72c57f11388f9ae6f",
+        "byte_identical": true
+      },
+      "Evidence": {
+        "source_phase": 4,
+        "path": "assurance/evidence.schema.json",
+        "source_sha256": "2a444abeb40cfba2738f0e840940f8b13b42a986b5a6c0be515900cacac5330e",
+        "final_sha256": "2a444abeb40cfba2738f0e840940f8b13b42a986b5a6c0be515900cacac5330e",
+        "byte_identical": true
+      },
+      "Verification": {
+        "source_phase": 4,
+        "path": "assurance/verification.schema.json",
+        "source_sha256": "d5b28ccf2ef1a9c4bee89bd840d94eb1bf5d61005611d678aad9dbaebacfa766",
+        "final_sha256": "d5b28ccf2ef1a9c4bee89bd840d94eb1bf5d61005611d678aad9dbaebacfa766",
+        "byte_identical": true
+      },
+      "EscalationPackage": {
+        "source_phase": 4,
+        "path": "assurance/escalation-package.schema.json",
+        "source_sha256": "ce1685d63b3781fb94af1bf81bf7a1aebd5603944b100651afd072b9e3853ad9",
+        "final_sha256": "ce1685d63b3781fb94af1bf81bf7a1aebd5603944b100651afd072b9e3853ad9",
+        "byte_identical": true
+      },
+      "Outcome": {
+        "source_phase": 4,
+        "path": "assurance/outcome.schema.json",
+        "source_sha256": "bdc571583c041238426c0dcb9254c9a61bdfa550a53dc0f4f26ad7543faa8120",
+        "final_sha256": "bdc571583c041238426c0dcb9254c9a61bdfa550a53dc0f4f26ad7543faa8120",
+        "byte_identical": true
+      },
+      "ConformanceManifest": {
+        "source_phase": 5,
+        "path": "conformance/conformance-manifest.schema.json",
+        "source_sha256": "db853e021425405909ff8ff915f39ecd4e05e764ed10bd160e38428c669d56b7",
+        "final_sha256": "db853e021425405909ff8ff915f39ecd4e05e764ed10bd160e38428c669d56b7",
+        "byte_identical": true
+      },
+      "ConformanceReport": {
+        "source_phase": 5,
+        "path": "conformance/conformance-report.schema.json",
+        "source_sha256": "9af20fbe7de5d1b0f0cacea621c027d3160f90b82c81a6a1b09f8f53e4abca9e",
+        "final_sha256": "9af20fbe7de5d1b0f0cacea621c027d3160f90b82c81a6a1b09f8f53e4abca9e",
+        "byte_identical": true
+      }
+    }
+  },
+  "semantic_sentinels": {
+    "canonical_contract_count_22": true,
+    "all_contracts_byte_identical_to_phase_sources": true,
+    "frozen_spec_checksum_verified": true,
+    "schema_validity_not_claimed_as_conformance": true,
+    "proposal_decision_boundary_documented": true,
+    "approval_authority_boundary_documented": true,
+    "risk_assessment_acceptance_boundary_documented": true,
+    "claim_evidence_verification_boundary_documented": true,
+    "trace_state_boundary_documented": true,
+    "conformance_maturity_boundary_documented": true
+  },
+  "result": "PASS"
+}

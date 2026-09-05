@@ -1,0 +1,23 @@
+{
+  "id": "report-001",
+  "manifest_ref": "manifest-001",
+  "requirements": [
+    {
+      "requirement_id": "AOF-CONF-003",
+      "applicability": "Applicable",
+      "result": "Satisfied",
+      "test_refs": [
+        "CT-CONF-003"
+      ],
+      "limitations": []
+    }
+  ],
+  "coverage": {
+    "mandatory_applicable": 1,
+    "satisfied": 1
+  },
+  "exceptions": [],
+  "assessor": "assessor-001",
+  "final_result": "Conformant",
+  "timestamp": "2026-09-04T16:40:00Z"
+}

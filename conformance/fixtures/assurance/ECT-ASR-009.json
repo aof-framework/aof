@@ -1,0 +1,24 @@
+{
+  "test_id": "ECT-ASR-009",
+  "title": "Self Verification Cannot Satisfy Required Independence",
+  "requirements": [
+    "AOF-VER-003",
+    "AOF-VER-015"
+  ],
+  "invariants": [
+    "VER-INV-04"
+  ],
+  "reference_tests": [
+    "CT-VER-001"
+  ],
+  "facts": {
+    "independence_required": true,
+    "verification_mode": "Self",
+    "verifier_independent": false,
+    "verification_result": "Verified"
+  },
+  "expected": {
+    "independence_satisfied": false,
+    "verified_at_required_level": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": "ECT-ADP-020",
+  "title": "ConformanceManifest Explicitly Binds Adoption Scope",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "3.2",
+    "profile": "AOF-Secure-SDLC",
+    "scope": {
+      "component": "ai-code-review"
+    },
+    "assessment_mode": "AdapterBasedBrownfield"
+  },
+  "expected": {
+    "manifest_valid": true
+  }
+}

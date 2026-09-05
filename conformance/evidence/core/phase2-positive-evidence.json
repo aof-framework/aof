@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-09-04T17:44:56.313034+00:00",
+  "subject": "AOF Phase 2 reference semantic evaluator",
+  "results": [
+    {
+      "test_id": "ECT-CORE-001",
+      "result": "Pass",
+      "observed": {
+        "authority_created_by_capability": false,
+        "execute_allowed": false
+      },
+      "expected": {
+        "authority_created_by_capability": false,
+        "execute_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-001",
+          "facts": {
+            "capability": true,
+            "authority": false,
+            "policy": true,
+            "state": true,
+            "risk": true,
+            "verification": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-002",
+      "result": "Pass",
+      "observed": {
+        "authorized_decision": false,
+        "proposal_only": true
+      },
+      "expected": {
+        "authorized_decision": false,
+        "proposal_only": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-002",
+          "facts": {
+            "proposal": true,
+            "decision_authorized": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-003",
+      "result": "Pass",
+      "observed": {
+        "agent_output_trusted_as_authority": false,
+        "treated_as_untrusted_proposal": true
+      },
+      "expected": {
+        "agent_output_trusted_as_authority": false,
+        "treated_as_untrusted_proposal": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-003",
+          "facts": {
+            "agent_output": true,
+            "authority_from_agent_output": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-004",
+      "result": "Pass",
+      "observed": {
+        "approved": false,
+        "pending_or_controlled": true
+      },
+      "expected": {
+        "approved": false,
+        "pending_or_controlled": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-004",
+          "facts": {
+            "human_unavailable": true,
+            "approval": false,
+            "pending": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-005",
+      "result": "Pass",
+      "observed": {
+        "implicit_pass": false,
+        "blocked": true
+      },
+      "expected": {
+        "implicit_pass": false,
+        "blocked": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-005",
+          "facts": {
+            "mandatory_gate": "Pending",
+            "execute": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-006",
+      "result": "Pass",
+      "observed": {
+        "policy_changed_by_prompt": false,
+        "authority_changed_by_prompt": false
+      },
+      "expected": {
+        "policy_changed_by_prompt": false,
+        "authority_changed_by_prompt": false
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-006",
+          "facts": {
+            "untrusted_prompt": true,
+            "policy_changed": false,
+            "authority_changed": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-007",
+      "result": "Pass",
+      "observed": {
+        "execute_allowed": false,
+        "blocked_without_authority": true
+      },
+      "expected": {
+        "execute_allowed": false,
+        "blocked_without_authority": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-007",
+          "facts": {
+            "technical_access": true,
+            "authority": false,
+            "execute": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-008",
+      "result": "Pass",
+      "observed": {
+        "authority_created_by_approval": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "authority_created_by_approval": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-008",
+          "facts": {
+            "approval": true,
+            "authority_created": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-009",
+      "result": "Pass",
+      "observed": {
+        "implicit_permit": false,
+        "fail_controlled": true
+      },
+      "expected": {
+        "implicit_permit": false,
+        "fail_controlled": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-009",
+          "facts": {
+            "mandatory_control_failure": true,
+            "execute": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-010",
+      "result": "Pass",
+      "observed": {
+        "bypass_succeeded": false,
+        "governed_path": true
+      },
+      "expected": {
+        "bypass_succeeded": false,
+        "governed_path": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-010",
+          "facts": {
+            "consequential_effect": true,
+            "safety_kernel_evaluated": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-011",
+      "result": "Pass",
+      "observed": {
+        "implicit_allow": false,
+        "controlled": true
+      },
+      "expected": {
+        "implicit_allow": false,
+        "controlled": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-011",
+          "facts": {
+            "mandatory_policy": "Unknown",
+            "execute": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-CORE-012",
+      "result": "Pass",
+      "observed": {
+        "agent_became_governance_root": false,
+        "bounded_actor": true
+      },
+      "expected": {
+        "agent_became_governance_root": false,
+        "bounded_actor": true
+      },
+      "evidence": [
+        {
+          "type": "SemanticObservation",
+          "test_id": "ECT-CORE-012",
+          "facts": {
+            "ai_agent": true,
+            "governance_root": false
+          }
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

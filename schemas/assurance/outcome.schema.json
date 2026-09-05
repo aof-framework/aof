@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/assurance/outcome.schema.json",
+  "title": "AOF Outcome",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "../common/assurance-types.schema.json#/$defs/OutcomeStatus"
+        },
+        "goal_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "goal_state": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "result_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "verification_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "residual_risk_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "trace_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "completed_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "session_id",
+        "status",
+        "goal_ref",
+        "goal_state",
+        "result_refs",
+        "evidence_refs",
+        "verification_refs",
+        "residual_risk_refs",
+        "trace_refs",
+        "completed_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.28",
+    "normative_notes": [
+      "Successful Outcome MUST NOT be representable solely by arbitrary Agent declaration when mandatory Verification remains unresolved.",
+      "Outcome + Evidence + Trace remain distinct governance artifacts."
+    ],
+    "lts_a2_hardened": true
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/core/agent.schema.json",
+  "title": "AOF Agent",
+  "description": "Machine-readable Agent contract corresponding to Appendix E.11 and Section 10.",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "$ref": "../common/enums.schema.json#/$defs/AgentType"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "capability_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          },
+          "uniqueItems": true
+        },
+        "authority_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          },
+          "uniqueItems": true
+        },
+        "context_scope": {
+          "$ref": "../common/reference.schema.json#/$defs/ReferenceOrObject"
+        },
+        "memory_policy": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "policy_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          },
+          "uniqueItems": true
+        },
+        "risk_profile_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "../common/enums.schema.json#/$defs/AgentState"
+        },
+        "interface_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "roles",
+        "capability_refs",
+        "authority_refs",
+        "context_scope",
+        "memory_policy",
+        "policy_refs",
+        "risk_profile_ref",
+        "state",
+        "interface_ref"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.11 / Section 10",
+    "normative_notes": [
+      "capability_refs and authority_refs MUST remain separate.",
+      "Agent type does not determine Authority.",
+      "Agent MUST NOT self-authorize; this is a semantic control and is not proven by schema validity."
+    ]
+  }
+}

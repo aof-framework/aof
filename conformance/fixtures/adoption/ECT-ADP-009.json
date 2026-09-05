@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-009",
+  "title": "Adapter Cannot Suppress Policy Deny",
+  "facts": {
+    "policy_deny": true,
+    "deny_propagated": true
+  },
+  "expected": {
+    "deny_suppressed": false,
+    "valid": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-ASR-018",
+  "title": "Missing Required Evidence Cannot Verify",
+  "requirements": [
+    "AOF-VER-008"
+  ],
+  "invariants": [
+    "VER-INV-02"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "required_evidence_present": false,
+    "verification_result": "Verified"
+  },
+  "expected": {
+    "verified": false,
+    "controlled_non_success": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_specification_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "source_checkpoint": "AOF-v1.0-Conformance-Test-Suite-Phase6-Brownfield-Incremental-Adoption.zip",
+  "source_checkpoint_sha256": "fc1d9614eb6ee9f8e88c6ff75c713609968c69b18a3a2832305f9955455ac9e7",
+  "consolidation_policy": [
+    "Retain validated Phase 1-6 artifacts.",
+    "Remove runtime/development cache residue.",
+    "Do not change frozen framework semantics.",
+    "Do not add OpenAPI or transport-specific requirements.",
+    "Re-run cumulative executable suite before packaging."
+  ]
+}

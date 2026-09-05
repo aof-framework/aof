@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/core/capability.schema.json",
+  "title": "AOF Capability",
+  "description": "Machine-readable Capability contract corresponding to Appendix E.14 and Section 10.6-10.9.",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "resource_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "observed_evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "operations",
+        "resource_types",
+        "constraints",
+        "observed_evidence_refs"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.14 / Section 10.6-10.9",
+    "normative_notes": [
+      "Capability declaration MUST NOT create Authority.",
+      "Observed capability evidence may support qualification but does not grant Authority."
+    ]
+  }
+}

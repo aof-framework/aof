@@ -1,0 +1,18 @@
+{
+  "test_id": "ECT-CORE-003",
+  "title": "Agent Output Remains Untrusted Proposal",
+  "invariants": [
+    "AOF-INV-036",
+    "AOF-INV-042"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "agent_output": true,
+    "authority_from_agent_output": false
+  },
+  "expected": {
+    "agent_output_trusted_as_authority": false,
+    "treated_as_untrusted_proposal": true
+  },
+  "classification": "Semantic"
+}

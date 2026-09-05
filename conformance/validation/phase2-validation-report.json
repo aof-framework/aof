@@ -1,0 +1,13 @@
+{
+  "phase": "Phase 2 — Core Semantic Tests",
+  "frozen_spec_sha256_verified": true,
+  "phase1_baseline_retained": true,
+  "executable_core_test_count": 12,
+  "positive_fixture_count": 12,
+  "negative_mutation_count": 12,
+  "additional_kernel_predicate_tests": 2,
+  "pytest_exit_code": 0,
+  "positive_evaluator_pass_count": 12,
+  "result": "PASS",
+  "pytest_summary": "TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit."
+}

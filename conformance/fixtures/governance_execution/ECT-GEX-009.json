@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-GEX-009",
+  "title": "Stale Decision State Blocks Effect",
+  "invariants": [
+    "AOF-INV-078"
+  ],
+  "reference_tests": [
+    "CT-ST-002"
+  ],
+  "facts": {
+    "decision_state_version": 7,
+    "current_state_version": 8,
+    "other_gates_pass": true
+  },
+  "expected": {
+    "state_fresh": false,
+    "effect_allowed": false
+  }
+}

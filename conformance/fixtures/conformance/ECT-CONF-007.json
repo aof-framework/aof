@@ -1,0 +1,37 @@
+{
+  "test_id": "ECT-CONF-007",
+  "title": "Explicit Exception Produces Conditional Result",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Governed",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [
+      "AOF-AUTH-001"
+    ],
+    "exceptions": [
+      {
+        "id": "ex-1"
+      }
+    ],
+    "requirements": [
+      {
+        "requirement_id": "AOF-AUTH-001",
+        "normative_level": "MUST",
+        "applicability": "Applicable",
+        "tests": [
+          {
+            "test_id": "T1",
+            "result": "Pass"
+          }
+        ],
+        "evidence_refs": [
+          "ev-1"
+        ]
+      }
+    ]
+  },
+  "expected": "Conditional"
+}

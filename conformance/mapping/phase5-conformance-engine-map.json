@@ -1,0 +1,95 @@
+{
+  "phase": "Phase 5 — Conformance Engine Tests",
+  "canonical_chain": "Requirement -> TestResult -> RequirementResult -> ConformanceResult",
+  "rules": [
+    "Conformant only when all applicable mandatory requirements are Satisfied.",
+    "Applicable mandatory violation => NonConformant.",
+    "Blocked/Inconclusive mandatory evaluation => Inconclusive.",
+    "NotApplicable requires defensible applicability rationale.",
+    "NotApplicable MUST NOT be used to omit a requirement required by claimed profile/scope.",
+    "Conformance claim is bound to subject, subject_version, profile, and scope.",
+    "Conformance != Maturity."
+  ],
+  "rows": [
+    {
+      "test_id": "ECT-CONF-001",
+      "title": "All Applicable Mandatory Requirements Satisfied Produces Conformant",
+      "expected_conformance_result": "Conformant"
+    },
+    {
+      "test_id": "ECT-CONF-002",
+      "title": "Applicable Mandatory Failure Produces NonConformant",
+      "expected_conformance_result": "NonConformant"
+    },
+    {
+      "test_id": "ECT-CONF-003",
+      "title": "Blocked Mandatory Requirement Produces Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-004",
+      "title": "Inconclusive Mandatory Requirement Produces Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-005",
+      "title": "Missing Mandatory Requirement Prevents Conformant",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-006",
+      "title": "Conditional Applicability Produces Conditional Result",
+      "expected_conformance_result": "Conditional"
+    },
+    {
+      "test_id": "ECT-CONF-007",
+      "title": "Explicit Exception Produces Conditional Result",
+      "expected_conformance_result": "Conditional"
+    },
+    {
+      "test_id": "ECT-CONF-008",
+      "title": "Missing Required Evidence Prevents Satisfaction",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-009",
+      "title": "Missing Subject Binding Produces Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-010",
+      "title": "Missing Profile Binding Produces Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-011",
+      "title": "Missing Scope Binding Produces Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-012",
+      "title": "Applicable NonMandatory Failure Still Produces NonConformant",
+      "expected_conformance_result": "NonConformant"
+    },
+    {
+      "test_id": "ECT-CONF-013",
+      "title": "NotApplicable Requirement Does Not Count As Failure",
+      "expected_conformance_result": "Conformant"
+    },
+    {
+      "test_id": "ECT-CONF-014",
+      "title": "Applicable Requirement With Only NotApplicable Tests Is Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    },
+    {
+      "test_id": "ECT-CONF-015",
+      "title": "Limitations Prevent Unconditional Conformant",
+      "expected_conformance_result": "Conditional"
+    },
+    {
+      "test_id": "ECT-CONF-016",
+      "title": "No Executable Result For Applicable Mandatory Requirement Is Inconclusive",
+      "expected_conformance_result": "Inconclusive"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "escalation-001",
+  "subject": "task-001",
+  "reason": "CriticalRiskRequiresHumanDecision",
+  "decision_required": "RiskAcceptanceOrAbort",
+  "failure_refs": [
+    "failure-001"
+  ],
+  "risk_refs": [
+    "risk-001"
+  ],
+  "evidence_refs": [
+    "evidence-001"
+  ],
+  "authority_refs": [
+    "auth-001"
+  ],
+  "policy_refs": [
+    "policy-001"
+  ],
+  "attempt_history_refs": [],
+  "options": [],
+  "created_at": "2026-09-04T16:02:00Z"
+}

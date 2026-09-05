@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-008",
+  "title": "Adapter Cannot Expand Authority",
+  "facts": {
+    "adapter_inserted": true,
+    "authority_expanded": false
+  },
+  "expected": {
+    "authority_expanded_by_adapter": false,
+    "valid": true
+  }
+}

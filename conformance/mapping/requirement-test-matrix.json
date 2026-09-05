@@ -1,0 +1,3819 @@
+{
+  "matrix_version": "1.0-phase1",
+  "mapping_policy": "Conservative: only explicit/candidate CT traceability from frozen specification; no domain-similarity inference.",
+  "count": 332,
+  "rows": [
+    {
+      "requirement_id": "AOF-AGT-001",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-002",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-003",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-004",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-005",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-006",
+      "normative_level": "SHOULD",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-003"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-007",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-008",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-009",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-010",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-011",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-012",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-005"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-013",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-014",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-015",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-016",
+      "normative_level": "SHOULD",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-017",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-018",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-019",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-007"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-020",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-021",
+      "normative_level": "SHOULD",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-022",
+      "normative_level": "SHOULD",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-011"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-023",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-024",
+      "normative_level": "SHOULD",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-005"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-025",
+      "normative_level": "MUST",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AGT-026",
+      "normative_level": "MUST NOT",
+      "domain": "AGT",
+      "test_ids": [
+        "CT-AGT-008"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-001",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-002",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-003",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-004",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-005",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-006",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-007",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-008",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-009",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-010",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-011",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-012",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-013",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-014",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-015",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-016",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ARCH-017",
+      "normative_level": "Unclassified",
+      "domain": "ARCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-001",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-002",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-003",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-004",
+      "normative_level": "MAY",
+      "domain": "AUTH",
+      "test_ids": [
+        "CT-AUTH-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-005",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-006",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-007",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [
+        "CT-AUTH-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-008",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-009",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-010",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-011",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-012",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [
+        "CT-AUTH-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-013",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-014",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-015",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-016",
+      "normative_level": "MUST NOT",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-017",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-018",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-019",
+      "normative_level": "SHOULD",
+      "domain": "AUTH",
+      "test_ids": [
+        "CT-AUTH-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-020",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-AUTH-021",
+      "normative_level": "MUST",
+      "domain": "AUTH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-001",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-002",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-003",
+      "normative_level": "MUST NOT",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-004",
+      "normative_level": "MUST NOT",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-005",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-006",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-007",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-008",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-009",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-010",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-011",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-012",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-013",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-014",
+      "normative_level": "MUST NOT",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-015",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-016",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-017",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-018",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-019",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-020",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-021",
+      "normative_level": "SHOULD",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-CONF-022",
+      "normative_level": "MUST",
+      "domain": "CONF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-001",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-002",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-003",
+      "normative_level": "MUST NOT",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-004",
+      "normative_level": "MUST NOT",
+      "domain": "EVD",
+      "test_ids": [
+        "CT-EVD-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-005",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-006",
+      "normative_level": "MUST NOT",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-007",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-008",
+      "normative_level": "SHOULD",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-009",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-010",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-011",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-012",
+      "normative_level": "SHOULD",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-013",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-014",
+      "normative_level": "MUST NOT",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-015",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-016",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-017",
+      "normative_level": "MUST NOT",
+      "domain": "EVD",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-EVD-018",
+      "normative_level": "MUST",
+      "domain": "EVD",
+      "test_ids": [
+        "CT-EVD-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-001",
+      "normative_level": "MUST NOT",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-002",
+      "normative_level": "MUST NOT",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-003",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-004",
+      "normative_level": "MUST NOT",
+      "domain": "FR",
+      "test_ids": [
+        "CT-FR-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-005",
+      "normative_level": "MUST NOT",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-006",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-007",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-008",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-009",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [
+        "CT-FR-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-010",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-011",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-012",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [
+        "CT-FR-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-013",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-014",
+      "normative_level": "MUST NOT",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-015",
+      "normative_level": "SHOULD",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-016",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-017",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-018",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-019",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [
+        "CT-FR-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-FR-020",
+      "normative_level": "MUST",
+      "domain": "FR",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-001",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-002",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-003",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-007"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-004",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-005",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-006",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-007",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-008"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-008",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-005"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-009",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-006"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-010",
+      "normative_level": "MUST NOT",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-011",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-012",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-013",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-014",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-006"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-015",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-016",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-017",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-018",
+      "normative_level": "SHOULD",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-019",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-020",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-021",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-006"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-022",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-023",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [
+        "CT-HG-005"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-HG-024",
+      "normative_level": "MUST",
+      "domain": "HG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-001",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-002",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-003",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-004",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-005",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-006",
+      "normative_level": "SHOULD",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-007",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-003"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-008",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-009",
+      "normative_level": "SHOULD",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-010",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-011",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-012",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-013",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-014",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-015",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-016",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-017",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-008"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-018",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-019",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-020",
+      "normative_level": "MUST NOT",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-021",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-022",
+      "normative_level": "SHOULD",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-023",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [
+        "CT-LC-009"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-LC-024",
+      "normative_level": "MUST",
+      "domain": "LC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-001",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-002",
+      "normative_level": "MUST NOT",
+      "domain": "POL",
+      "test_ids": [
+        "CT-POL-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-003",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-004",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-005",
+      "normative_level": "MUST NOT",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-006",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [
+        "CT-POL-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-007",
+      "normative_level": "MUST NOT",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-008",
+      "normative_level": "MUST NOT",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-009",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [
+        "CT-POL-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-010",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-011",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-012",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-013",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-014",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-015",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-016",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-017",
+      "normative_level": "SHOULD",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-POL-018",
+      "normative_level": "MUST",
+      "domain": "POL",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-001",
+      "normative_level": "MUST",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-001",
+        "CT-PRF-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-002",
+      "normative_level": "MUST NOT",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-003"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-003",
+      "normative_level": "MUST",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-004",
+      "normative_level": "MUST",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-005",
+      "normative_level": "MUST",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-003"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-PRF-006",
+      "normative_level": "MUST NOT",
+      "domain": "PRF",
+      "test_ids": [
+        "CT-PRF-001",
+        "CT-PRF-004"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-001",
+      "normative_level": "MUST NOT",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-002",
+      "normative_level": "MUST",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-003",
+      "normative_level": "MUST NOT",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-004",
+      "normative_level": "MUST",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-005",
+      "normative_level": "SHOULD",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-006",
+      "normative_level": "MUST NOT",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-007",
+      "normative_level": "MUST NOT",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REF-008",
+      "normative_level": "SHOULD",
+      "domain": "REF",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-001",
+      "normative_level": "MUST",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-002",
+      "normative_level": "MUST NOT",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-003",
+      "normative_level": "MUST NOT",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-004",
+      "normative_level": "MUST",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-005",
+      "normative_level": "MUST",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-006",
+      "normative_level": "MUST NOT",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-REG-007",
+      "normative_level": "MUST",
+      "domain": "REG",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-001",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-002",
+      "normative_level": "MUST NOT",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-003",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-004",
+      "normative_level": "MUST NOT",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-005",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-006",
+      "normative_level": "MUST NOT",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-007",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [
+        "CT-RISK-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-008",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [
+        "CT-RISK-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-009",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-010",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-011",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-012",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-013",
+      "normative_level": "SHOULD",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-014",
+      "normative_level": "SHOULD",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-015",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-016",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [
+        "CT-RISK-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-017",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [
+        "CT-RISK-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-RISK-018",
+      "normative_level": "MUST",
+      "domain": "RISK",
+      "test_ids": [
+        "CT-RISK-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-001",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-002",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-003",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-004",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-005",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-006",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-007",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-008",
+      "normative_level": "MUST NOT",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-009",
+      "normative_level": "MUST NOT",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-010",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-011",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-012",
+      "normative_level": "SHOULD",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-013",
+      "normative_level": "MUST NOT",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-014",
+      "normative_level": "SHOULD",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-015",
+      "normative_level": "SHOULD",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-016",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-017",
+      "normative_level": "SHOULD",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-018",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-019",
+      "normative_level": "SHOULD",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-020",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-021",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SCH-022",
+      "normative_level": "MUST",
+      "domain": "SCH",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-001",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-002",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-003",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-004",
+      "normative_level": "MUST NOT",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-005",
+      "normative_level": "MUST NOT",
+      "domain": "SEC",
+      "test_ids": [
+        "CT-SEC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-006",
+      "normative_level": "MUST NOT",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-007",
+      "normative_level": "MUST NOT",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-008",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-009",
+      "normative_level": "SHOULD",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-010",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-011",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-012",
+      "normative_level": "SHOULD",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-013",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-014",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-015",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-016",
+      "normative_level": "SHOULD",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-017",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-018",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-019",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [
+        "CT-SEC-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-020",
+      "normative_level": "SHOULD",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-021",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-SEC-022",
+      "normative_level": "MUST",
+      "domain": "SEC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-001",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-002",
+      "normative_level": "MUST NOT",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-003",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-004",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-005",
+      "normative_level": "MUST NOT",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-006",
+      "normative_level": "MUST NOT",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-007",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [
+        "CT-STATE-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-008",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-009",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-010",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-011",
+      "normative_level": "SHOULD",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-012",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-013",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-014",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-015",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-016",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-017",
+      "normative_level": "MUST",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-ST-018",
+      "normative_level": "SHOULD",
+      "domain": "ST",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-001",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [
+        "CT-TRC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-002",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [
+        "CT-TRC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-003",
+      "normative_level": "SHOULD",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-004",
+      "normative_level": "MUST NOT",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-005",
+      "normative_level": "MUST NOT",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-006",
+      "normative_level": "MUST NOT",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-007",
+      "normative_level": "SHOULD",
+      "domain": "TRC",
+      "test_ids": [
+        "CT-TRC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-008",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-009",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-010",
+      "normative_level": "SHOULD",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-011",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-012",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-013",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-014",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [
+        "CT-TRC-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-015",
+      "normative_level": "MUST",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRC-016",
+      "normative_level": "MUST NOT",
+      "domain": "TRC",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-001",
+      "normative_level": "MUST",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-002",
+      "normative_level": "SHOULD",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-003",
+      "normative_level": "SHOULD",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-004",
+      "normative_level": "MUST",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-005",
+      "normative_level": "MUST NOT",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-006",
+      "normative_level": "MUST",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-TRM-007",
+      "normative_level": "MUST",
+      "domain": "TRM",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-001",
+      "normative_level": "MUST NOT",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-002",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-003",
+      "normative_level": "MUST NOT",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-004",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-005",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-006",
+      "normative_level": "MUST NOT",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-007",
+      "normative_level": "MUST NOT",
+      "domain": "VER",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-008",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-009",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-010",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-011",
+      "normative_level": "MUST NOT",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-012",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-013",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-002"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-014",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-015",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-016",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-017",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [
+        "CT-VER-001"
+      ],
+      "mapping_status": "MappedReferenceCandidate",
+      "mapping_basis": "explicit/candidate traceability present in frozen specification",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    },
+    {
+      "requirement_id": "AOF-VER-018",
+      "normative_level": "MUST",
+      "domain": "VER",
+      "test_ids": [],
+      "mapping_status": "PendingExecutableMapping",
+      "mapping_basis": "no explicit CT mapping asserted; Phase 2+ executable mapping required",
+      "evidence_classes": [],
+      "verification_methods": [],
+      "applicability": "ToBeEvaluatedByProfileAndScope"
+    }
+  ]
+}

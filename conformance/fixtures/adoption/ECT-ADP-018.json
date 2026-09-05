@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-018",
+  "title": "Brownfield Revocation Blocks Legacy Effect",
+  "facts": {
+    "authority_revoked": true,
+    "adapter_receives_revocation": true,
+    "effect_occurs": false
+  },
+  "expected": {
+    "revocation_enforced": true
+  }
+}

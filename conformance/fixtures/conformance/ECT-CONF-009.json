@@ -1,0 +1,15 @@
+{
+  "test_id": "ECT-CONF-009",
+  "title": "Missing Subject Binding Produces Inconclusive",
+  "facts": {
+    "subject": null,
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [],
+    "requirements": []
+  },
+  "expected": "Inconclusive"
+}

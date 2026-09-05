@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-003",
+  "title": "Hybrid Adoption Uses Common Governance Boundary",
+  "facts": {
+    "native_components": true,
+    "adapter_components": true,
+    "common_governance_boundary": true
+  },
+  "expected": {
+    "adoption_valid": true
+  }
+}

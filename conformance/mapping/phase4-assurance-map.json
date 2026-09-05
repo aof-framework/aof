@@ -1,0 +1,246 @@
+{
+  "phase": "Phase 4 \u2014 Assurance Tests",
+  "policy": "LTS-A3 canonical invariant normalization: domain aliases converted to AOF-INV identifiers; no heuristic direct mapping asserted.",
+  "direct_reference_tests": [
+    "CT-EVD-001",
+    "CT-VER-001",
+    "CT-VER-002",
+    "CT-LC-003"
+  ],
+  "rows": [
+    {
+      "test_id": "ECT-ASR-001",
+      "title": "Claim Is Not Evidence",
+      "requirement_ids": [],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-002",
+      "title": "Evidence Is Not Verification",
+      "requirement_ids": [],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-003",
+      "title": "Evidence Presence Does Not Establish Sufficiency",
+      "requirement_ids": [
+        "AOF-EVD-006"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-004",
+      "title": "Consequential Evidence Preserves Provenance",
+      "requirement_ids": [
+        "AOF-EVD-001"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-005",
+      "title": "Stale Evidence Cannot Support Fresh Verification",
+      "requirement_ids": [
+        "AOF-EVD-003"
+      ],
+      "invariants": [],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-006",
+      "title": "Inadmissible Evidence Cannot Produce Verified",
+      "requirement_ids": [
+        "AOF-EVD-004",
+        "AOF-EVD-018"
+      ],
+      "invariants": [],
+      "reference_tests": [
+        "CT-EVD-001"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-007",
+      "title": "Material Contradiction Remains Visible to Verification",
+      "requirement_ids": [
+        "AOF-EVD-005",
+        "AOF-EVD-014"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-008",
+      "title": "Inconclusive Is Not Verified",
+      "requirement_ids": [
+        "AOF-LC-007",
+        "AOF-VER-007",
+        "AOF-VER-010",
+        "AOF-VER-012",
+        "AOF-VER-013"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [
+        "CT-VER-002",
+        "CT-LC-003"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-009",
+      "title": "Self Verification Cannot Satisfy Required Independence",
+      "requirement_ids": [
+        "AOF-VER-001",
+        "AOF-VER-002",
+        "AOF-VER-003",
+        "AOF-VER-005",
+        "AOF-VER-006",
+        "AOF-VER-008",
+        "AOF-VER-009",
+        "AOF-VER-011",
+        "AOF-VER-014",
+        "AOF-VER-015",
+        "AOF-VER-017"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [
+        "CT-VER-001"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-010",
+      "title": "Circular Verification Cannot Claim Strong Independence",
+      "requirement_ids": [
+        "AOF-VER-006"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-011",
+      "title": "Verification Requires Explicit Criteria",
+      "requirement_ids": [
+        "AOF-VER-002"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-012",
+      "title": "Verification Is Bound to Subject and Version",
+      "requirement_ids": [
+        "AOF-VER-009"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-013",
+      "title": "Material Subject Change Requires Reverification",
+      "requirement_ids": [
+        "AOF-VER-010",
+        "AOF-VER-012",
+        "AOF-VER-013"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [
+        "CT-VER-002"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-014",
+      "title": "Verification Does Not Create Authority",
+      "requirement_ids": [],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-015",
+      "title": "Verification Does Not Create Approval",
+      "requirement_ids": [],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-016",
+      "title": "Execution Success Is Not Verified Outcome",
+      "requirement_ids": [
+        "AOF-VER-012"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-017",
+      "title": "Successful Completion Requires Goal and Assurance",
+      "requirement_ids": [
+        "AOF-LC-007",
+        "AOF-VER-012"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [
+        "CT-LC-003"
+      ],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    },
+    {
+      "test_id": "ECT-ASR-018",
+      "title": "Missing Required Evidence Cannot Verify",
+      "requirement_ids": [
+        "AOF-VER-008"
+      ],
+      "invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_tests": [],
+      "requirement_mapping_status": "FrozenSourceDerived_orExplicitSupportingRequirement"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "AOF Effect Boundary Reference Contract",
+  "version": "1.0.0-ri3",
+  "required_pre_effect_checks": [
+    "execution_contract_exists",
+    "execution_contract_not_replayed",
+    "decision_status_is_allow",
+    "execution_contract_authorized",
+    "current_state_exists",
+    "current_state_version_matches_contract",
+    "safety_kernel_revalidation_passes"
+  ],
+  "rules": [
+    "ValidAtCheck != ValidAtEffect",
+    "ExecutionContract != AuthorityGrant",
+    "SingleUseExecutionContractRejectsReplay",
+    "StateFreshnessRequiredAtEffect",
+    "UnknownEffect != Success"
+  ]
+}

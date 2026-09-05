@@ -1,0 +1,24 @@
+{
+  "test_id": "ECT-CORE-001",
+  "title": "Capability Does Not Grant Authority",
+  "invariants": [
+    "AOF-INV-030"
+  ],
+  "reference_tests": [
+    "CT-AUTH-001",
+    "CT-AGT-001"
+  ],
+  "facts": {
+    "capability": true,
+    "authority": false,
+    "policy": true,
+    "state": true,
+    "risk": true,
+    "verification": true
+  },
+  "expected": {
+    "authority_created_by_capability": false,
+    "execute_allowed": false
+  },
+  "classification": "Semantic+Behavioral"
+}

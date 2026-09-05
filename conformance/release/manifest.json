@@ -1,0 +1,67 @@
+{
+  "package": "AOF v1.0 Executable Conformance Suite",
+  "package_version": "1.0.0",
+  "release_status": "RELEASE-CANDIDATE",
+  "specification": {
+    "name": "AOF Framework Specification v1.0",
+    "sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5"
+  },
+  "test_architecture": {
+    "phases_completed": 6,
+    "phase_status": {
+      "1": "PASS",
+      "2": "PASS",
+      "3": "PASS",
+      "4": "PASS",
+      "5": "PASS",
+      "6": "PASS"
+    },
+    "executable_catalog_counts": {
+      "phase2": 12,
+      "phase3": 16,
+      "phase4": 18,
+      "phase5": 19,
+      "phase6": 20
+    },
+    "canonical_requirement_registry_count": 332,
+    "runtime_pytest_passed": 170
+  },
+  "implementation_modes": [
+    "AOFNative",
+    "AdapterBasedBrownfield",
+    "Hybrid",
+    "InFlightIncremental"
+  ],
+  "canonical_result_enums": {
+    "TestResult": [
+      "Pass",
+      "Fail",
+      "Blocked",
+      "NotApplicable",
+      "Inconclusive"
+    ],
+    "RequirementResult": [
+      "Satisfied",
+      "Violated",
+      "NotApplicable",
+      "Inconclusive"
+    ],
+    "ConformanceResult": [
+      "Conformant",
+      "NonConformant",
+      "Conditional",
+      "Inconclusive"
+    ]
+  },
+  "semantic_boundaries": [
+    "SchemaValidity != SemanticValidity != AOFConformance",
+    "Capability != Authority",
+    "Proposal != AuthorizedDecision",
+    "Pending != Pass",
+    "ValidAtCheck != ValidAtEffect",
+    "Claim != Evidence != Verification",
+    "Conformance != Maturity",
+    "ScopedAdoption != WeakConformance",
+    "PartialAdoption != PartialCompliance"
+  ]
+}

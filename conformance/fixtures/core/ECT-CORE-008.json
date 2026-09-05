@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-CORE-008",
+  "title": "Approval Is Not AuthorityGrant",
+  "invariants": [
+    "AOF-INV-114"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "approval": true,
+    "authority_created": false
+  },
+  "expected": {
+    "authority_created_by_approval": false,
+    "separation_preserved": true
+  },
+  "classification": "Semantic"
+}

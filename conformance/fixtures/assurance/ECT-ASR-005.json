@@ -1,0 +1,18 @@
+{
+  "test_id": "ECT-ASR-005",
+  "title": "Stale Evidence Cannot Support Fresh Verification",
+  "requirements": [
+    "AOF-EVD-003"
+  ],
+  "invariants": [],
+  "reference_tests": [],
+  "facts": {
+    "age": 20,
+    "freshness_limit": 10,
+    "other_verification_conditions": true
+  },
+  "expected": {
+    "fresh": false,
+    "verified": false
+  }
+}

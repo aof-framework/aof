@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "test_id": "EXE-001",
+      "expected_status": "Executed",
+      "observed_status": "Executed",
+      "effect_occurred": true,
+      "trace": [
+        {
+          "event_type": "EffectBoundaryRevalidation",
+          "execution_ref": "contract:EXE-001",
+          "subject_ref": "subject:1",
+          "decision_status": "Allow",
+          "execute_allowed": true,
+          "state_version": "1",
+          "trace_id": "trace:1"
+        },
+        {
+          "event_type": "EffectDispatchStarted",
+          "execution_ref": "contract:EXE-001",
+          "subject_ref": "subject:1",
+          "state_version": "1",
+          "trace_id": "trace:2"
+        },
+        {
+          "event_type": "EffectDispatchCompleted",
+          "execution_ref": "contract:EXE-001",
+          "subject_ref": "subject:1",
+          "effect_status": "Executed",
+          "effect_known": true,
+          "trace_refs": [
+            "trace:test-effect-executed"
+          ],
+          "trace_id": "trace:3"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-002",
+      "expected_status": "Blocked",
+      "observed_status": "Blocked",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBoundaryRevalidation",
+          "execution_ref": "contract:EXE-002",
+          "subject_ref": "subject:1",
+          "decision_status": "Deny",
+          "execute_allowed": false,
+          "state_version": "1",
+          "trace_id": "trace:1"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-003",
+      "expected_status": "Blocked",
+      "observed_status": "Blocked",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBoundaryRevalidation",
+          "execution_ref": "contract:EXE-003",
+          "subject_ref": "subject:1",
+          "decision_status": "Deny",
+          "execute_allowed": false,
+          "state_version": "1",
+          "trace_id": "trace:1"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-004",
+      "expected_status": "Pending",
+      "observed_status": "Pending",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBoundaryRevalidation",
+          "execution_ref": "contract:EXE-004",
+          "subject_ref": "subject:1",
+          "decision_status": "Pending",
+          "execute_allowed": false,
+          "state_version": "1",
+          "trace_id": "trace:1"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-005",
+      "expected_status": "Blocked",
+      "observed_status": "Blocked",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBlocked",
+          "execution_ref": "contract:EXE-005",
+          "reason": "STATE_STALE_AT_EFFECT",
+          "trace_id": "trace:1"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-006",
+      "expected_status": "Blocked",
+      "observed_status": "Blocked",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBlocked",
+          "execution_ref": "contract:EXE-006",
+          "reason": "DECISION_NOT_ALLOW",
+          "trace_id": "trace:1"
+        }
+      ]
+    },
+    {
+      "test_id": "EXE-007",
+      "expected_status": "Blocked",
+      "observed_status": "Blocked",
+      "effect_occurred": false,
+      "trace": [
+        {
+          "event_type": "EffectBlocked",
+          "execution_ref": "contract:EXE-007",
+          "reason": "EXECUTION_CONTRACT_NOT_AUTHORIZED",
+          "trace_id": "trace:1"
+        }
+      ]
+    }
+  ]
+}

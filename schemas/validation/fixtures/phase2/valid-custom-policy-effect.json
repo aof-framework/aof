@@ -1,0 +1,29 @@
+{
+  "id": "pol-001",
+  "version": "1",
+  "scope": {
+    "environment": "production"
+  },
+  "subject_selector": {
+    "role": "deployer"
+  },
+  "resource_selector": {
+    "environment": "production"
+  },
+  "action_selector": {
+    "operation": "Deploy"
+  },
+  "condition": {
+    "risk_class": [
+      "High",
+      "Critical"
+    ]
+  },
+  "effect": "RequireConstraint",
+  "priority": 100,
+  "source": "org-policy",
+  "valid_from": "2026-09-04T00:00:00Z",
+  "valid_until": null,
+  "status": "Active",
+  "provenance": "trace-002"
+}

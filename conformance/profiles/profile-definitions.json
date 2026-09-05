@@ -1,0 +1,49 @@
+{
+  "profile_model": "EffectiveProfile = BaseProfile ∪ DomainProfile ∪ StrengtheningProfile",
+  "profiles": [
+    {
+      "id": "AOF-Core",
+      "kind": "BaseProfile",
+      "includes": [],
+      "summary": "Minimum governed orchestration semantics."
+    },
+    {
+      "id": "AOF-Governed",
+      "kind": "BaseProfile",
+      "includes": [
+        "AOF-Core"
+      ],
+      "summary": "Core plus explicit governance controls."
+    },
+    {
+      "id": "AOF-Assured",
+      "kind": "BaseProfile",
+      "includes": [
+        "AOF-Governed"
+      ],
+      "summary": "Governed plus Evidence, Verification, independence, completion and accountability."
+    },
+    {
+      "id": "AOF-Secure-SDLC",
+      "kind": "DomainProfile",
+      "includes": [
+        "applicable AOF-Core semantics"
+      ],
+      "summary": "Secure software development domain profile; composes with governed/assured controls according to claimed scope."
+    },
+    {
+      "id": "AOF-High-Assurance",
+      "kind": "StrengtheningProfile",
+      "includes": [
+        "applicable base/domain profile"
+      ],
+      "summary": "Strengthening profile for consequential/high-impact orchestration."
+    }
+  ],
+  "rules": [
+    "Profile composition MUST NOT remove mandatory requirements from applicable base/profile scope.",
+    "AOF-Secure-SDLC MUST NOT be treated as a universal linear maturity level.",
+    "AOF-High-Assurance strengthens rather than replaces applicable controls.",
+    "Claimed profile composition MUST be explicit."
+  ]
+}

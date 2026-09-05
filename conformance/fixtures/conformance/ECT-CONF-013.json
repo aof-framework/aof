@@ -1,0 +1,40 @@
+{
+  "test_id": "ECT-CONF-013",
+  "title": "NotApplicable Requirement Does Not Count As Failure",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [
+      "AOF-AUTH-001"
+    ],
+    "requirements": [
+      {
+        "requirement_id": "AOF-AUTH-001",
+        "normative_level": "MUST",
+        "applicability": "Applicable",
+        "tests": [
+          {
+            "test_id": "T1",
+            "result": "Pass"
+          }
+        ],
+        "evidence_refs": [
+          "ev-1"
+        ]
+      },
+      {
+        "requirement_id": "AOF-VER-001",
+        "normative_level": "SHOULD",
+        "applicability": "NotApplicable",
+        "applicability_rationale": "Outside declared scope",
+        "required_by_claimed_scope": false,
+        "tests": []
+      }
+    ]
+  },
+  "expected": "Conformant"
+}

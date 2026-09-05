@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/execution/action-proposal.schema.json",
+  "title": "AOF ActionProposal",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "expected_effect": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "risk_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "actor",
+        "task_id",
+        "operation",
+        "target",
+        "parameters",
+        "preconditions",
+        "expected_effect",
+        "risk_ref",
+        "evidence_refs",
+        "created_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.18",
+    "normative_notes": [
+      "Proposal != AuthorizedDecision.",
+      "Proposal MUST NOT contain a field that semantically means self-granted permission.",
+      "Schema cannot prove absence of semantically disguised self-authorization; this remains a semantic/conformance obligation."
+    ]
+  }
+}

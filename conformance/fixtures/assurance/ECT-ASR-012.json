@@ -1,0 +1,22 @@
+{
+  "test_id": "ECT-ASR-012",
+  "title": "Verification Is Bound to Subject and Version",
+  "requirements": [
+    "AOF-VER-009"
+  ],
+  "invariants": [
+    "VER-INV-05"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "verified_subject_id": "artifact-1",
+    "consumed_subject_id": "artifact-1",
+    "verified_subject_version": "v1",
+    "consumed_subject_version": "v1",
+    "verification_result": "Verified"
+  },
+  "expected": {
+    "binding_valid": true,
+    "verified_for_consumed_subject": true
+  }
+}

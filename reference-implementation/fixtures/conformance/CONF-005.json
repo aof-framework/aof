@@ -1,0 +1,32 @@
+{
+  "test_id": "CONF-005",
+  "expected": "Conditional",
+  "manifest": {
+    "id": "manifest:5",
+    "subject": "system:1",
+    "subject_version": "1",
+    "profile": "AOF-Core",
+    "scope": {
+      "components": [
+        "runtime"
+      ]
+    },
+    "mandatory_requirement_ids": [
+      "REQ-1"
+    ],
+    "limitations": [
+      "legacy subsystem excluded from this claim"
+    ],
+    "requirements": [
+      {
+        "id": "REQ-1",
+        "test_results": [
+          "Pass"
+        ],
+        "evidence_refs": [
+          "ev:1"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "evidence-001",
+  "source": "tool-run-001",
+  "claim_refs": [
+    "claim-release-001"
+  ],
+  "content_ref": "artifact://build-42/test-report",
+  "content_digest": "sha256:abc",
+  "provenance": {
+    "trace_ref": "trace-100"
+  },
+  "integrity": {
+    "digest": "sha256:abc"
+  },
+  "freshness": {
+    "observed_window": "current"
+  },
+  "confidence": 0.99,
+  "classification": "internal",
+  "scope": {
+    "artifact": "build-42"
+  },
+  "observed_at": "2026-09-04T16:00:00Z",
+  "relations": {
+    "derived_from": [],
+    "corroborates": [],
+    "contradicts": [],
+    "supersedes": []
+  }
+}

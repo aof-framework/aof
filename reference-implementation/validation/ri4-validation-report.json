@@ -1,0 +1,14 @@
+{
+  "phase": "RI-4 \u2014 Evidence + Verification + Conformance Runner",
+  "frozen_spec_sha256_verified": true,
+  "ri1_retained": true,
+  "ri2_retained": true,
+  "ri3_retained": true,
+  "assurance_fixture_count": 8,
+  "conformance_fixture_count": 6,
+  "pytest_exit_code": 0,
+  "pytest_summary": "77 passed in 0.22s",
+  "all_assurance_expectations_match": true,
+  "all_conformance_expectations_match": true,
+  "result": "PASS"
+}

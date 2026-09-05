@@ -1,0 +1,25 @@
+{
+  "version": "1.0-phase1",
+  "purpose": "Protocol-neutral interface between AOF conformance tests and an implementation under test.",
+  "implementation_modes": [
+    "AOFNative",
+    "AdapterBasedBrownfield",
+    "Hybrid"
+  ],
+  "required_capabilities": [
+    "load_fixture",
+    "submit_or_inject_test_input",
+    "observe_control_decision",
+    "observe_state_transition",
+    "observe_effect_or_non_effect",
+    "collect_trace_and_evidence",
+    "cleanup_or_reconcile"
+  ],
+  "transport": "Unspecified / implementation-defined",
+  "rules": [
+    "Harness MUST NOT require REST or OpenAPI.",
+    "Harness MUST observe behavior without granting authority that the implementation would not otherwise possess.",
+    "Harness MUST preserve test isolation where practical.",
+    "Harness MUST bind evidence to subject/version/profile/scope."
+  ]
+}

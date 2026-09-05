@@ -1,0 +1,34 @@
+{
+  "name": "AOF v1.0 Reference Runtime Architecture",
+  "phase": "RI-1",
+  "planes": {
+    "ControlPlane": [
+      "Orchestrator",
+      "SafetyKernelInterface",
+      "GovernanceGateCoordinator"
+    ],
+    "ReasoningPlane": [
+      "ReasoningAdapter",
+      "AgentInvocation",
+      "ProposalCapture"
+    ],
+    "EffectPlane": [
+      "ExecutionContractConsumer",
+      "EffectAdapter",
+      "EffectBoundary"
+    ],
+    "AssurancePlane": [
+      "TraceRecorder",
+      "EvidenceCollector",
+      "VerificationInterface",
+      "ConformanceExporter"
+    ]
+  },
+  "implementation_modes": [
+    "AOFNative",
+    "AdapterBasedBrownfield",
+    "Hybrid",
+    "InFlightIncremental"
+  ],
+  "transport_neutral": true
+}

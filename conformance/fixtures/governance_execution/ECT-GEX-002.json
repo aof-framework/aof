@@ -1,0 +1,27 @@
+{
+  "test_id": "ECT-GEX-002",
+  "title": "Revocation Before Effect Blocks Action",
+  "invariants": [
+    "AOF-INV-121"
+  ],
+  "reference_tests": [
+    "CT-AUTH-005",
+    "CT-FR-004"
+  ],
+  "facts": {
+    "grant_at_decision": {
+      "status": "Active"
+    },
+    "decision_time": 10,
+    "grant_at_effect": {
+      "status": "Revoked"
+    },
+    "effect_time": 11,
+    "other_gates_pass": true
+  },
+  "expected": {
+    "valid_at_decision": true,
+    "valid_at_effect": false,
+    "effect_allowed": false
+  }
+}

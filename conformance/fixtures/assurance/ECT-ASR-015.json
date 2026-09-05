@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-ASR-015",
+  "title": "Verification Does Not Create Approval",
+  "requirements": [],
+  "invariants": [
+    "VER-INV-08"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "verification_result": "Verified",
+    "approval_created": false
+  },
+  "expected": {
+    "approval_created_by_verification": false,
+    "separation_preserved": true
+  }
+}

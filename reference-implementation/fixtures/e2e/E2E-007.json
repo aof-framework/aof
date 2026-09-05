@@ -1,0 +1,37 @@
+{
+  "test_id": "E2E-007",
+  "name": "native-verification-pending",
+  "mode": "AOFNative",
+  "expected_effect_status": "Pending",
+  "initial_facts": {
+    "capability_present": true,
+    "authority_granted": true,
+    "scope_match": true,
+    "policy_permits": true,
+    "state_valid": true,
+    "state_transition_authorized": true,
+    "risk_permits": true,
+    "risk_acceptance_required": false,
+    "verification_required": true,
+    "verification_status": "Verified"
+  },
+  "effect_facts": {
+    "capability_present": true,
+    "authority_granted": true,
+    "scope_match": true,
+    "policy_permits": true,
+    "state_valid": true,
+    "state_transition_authorized": true,
+    "risk_permits": true,
+    "risk_acceptance_required": false,
+    "verification_required": true,
+    "verification_status": "Inconclusive"
+  },
+  "request": {
+    "request_id": "request:E2E-007",
+    "task_ref": "task:demo",
+    "agent_ref": "agent:demo",
+    "context_descriptor_ref": "context:demo",
+    "subject_ref": "subject:demo"
+  }
+}

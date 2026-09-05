@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-CORE-011",
+  "title": "Unknown Mandatory Policy Is Not Implicit Allow",
+  "invariants": [
+    "AOF-INV-128"
+  ],
+  "reference_tests": [
+    "CT-POL-002"
+  ],
+  "facts": {
+    "mandatory_policy": "Unknown",
+    "execute": false
+  },
+  "expected": {
+    "implicit_allow": false,
+    "controlled": true
+  },
+  "classification": "Semantic+Behavioral"
+}

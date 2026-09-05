@@ -1,0 +1,21 @@
+{
+  "test_id": "CT-<DOMAIN>-NNN",
+  "title": "",
+  "requirement_ids": [],
+  "profile": [],
+  "test_class": "Behavioral",
+  "applicability": {
+    "rule": "",
+    "result": "Applicable",
+    "rationale": ""
+  },
+  "preconditions": [],
+  "fixtures": [],
+  "steps": [],
+  "expected_result": [],
+  "prohibited_result": [],
+  "evidence_required": [],
+  "cleanup": [],
+  "environment": {},
+  "result": null
+}

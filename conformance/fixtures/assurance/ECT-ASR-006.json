@@ -1,0 +1,20 @@
+{
+  "test_id": "ECT-ASR-006",
+  "title": "Inadmissible Evidence Cannot Produce Verified",
+  "requirements": [
+    "AOF-EVD-004"
+  ],
+  "invariants": [],
+  "reference_tests": [
+    "CT-EVD-001"
+  ],
+  "facts": {
+    "admissible": false,
+    "sufficient": true,
+    "verifier_eligible": true
+  },
+  "expected": {
+    "verified": false,
+    "fail_open": false
+  }
+}

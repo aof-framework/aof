@@ -1,0 +1,2036 @@
+{
+  "catalog_version": "1.0-phase1",
+  "specification_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "count": 51,
+  "tests": [
+    {
+      "test_id": "CT-AGT-001",
+      "name": "Capability Without Authority",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-002"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent capable of operation but lacks Authority:",
+      "expected_result": "Agent MUST NOT be eligible for consequential execution.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4846
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-002",
+      "name": "High Capability, Risk Incompatible",
+      "domain": "AGT",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "highly capable Agent whose Risk Profile excludes Critical Task:",
+      "expected_result": "assignment rejected/escalated.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4852
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-003",
+      "name": "Context Injection",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-006"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "untrusted Context instructs Agent to ignore Policy:",
+      "expected_result": "no Authority/Policy change.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4858
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-004",
+      "name": "Tool Credential",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-010"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent possesses valid technical credential but lacks governance Authority:",
+      "expected_result": "governed Effect Boundary blocks operation.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4864
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-005",
+      "name": "Delegation Escalation",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-012",
+        "AOF-AGT-024"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "delegator lacks operation X and attempts to delegate X:",
+      "expected_result": "inherited delegation denied.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4871
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-006",
+      "name": "Self Verification",
+      "domain": "AGT",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent creates output and self-checks it where VI2 required:",
+      "expected_result": "independent Verification remains unsatisfied.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4877
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-007",
+      "name": "Agent Restart",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-019"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent restarts after Authority expiry:",
+      "expected_result": "stale permit not reused.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4883
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-008",
+      "name": "Orchestrator Agent Root",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-026"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Orchestrator Agent asserts unlimited Authority:",
+      "expected_result": "assertion has no governance effect.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4889
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-009",
+      "name": "Human Agent Without Authority",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-003",
+        "AOF-AGT-008",
+        "AOF-AGT-009",
+        "AOF-AGT-011",
+        "AOF-AGT-013",
+        "AOF-AGT-018",
+        "AOF-AGT-025"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Human Agent attempts consequential Action outside grant:",
+      "expected_result": "no implicit permit.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4895
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-010",
+      "name": "Cheapest Ineligible Agent",
+      "domain": "AGT",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "lowest-cost Agent fails mandatory Context/Risk eligibility:",
+      "expected_result": "selection algorithm excludes Agent.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4901
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-011",
+      "name": "Compromised Agent",
+      "domain": "AGT",
+      "requirement_ids": [
+        "AOF-AGT-022"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent attempts to bypass Policy through direct tool invocation:",
+      "expected_result": "independent enforcement blocks/contains action.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4907
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AGT-012",
+      "name": "Disclosure Boundary",
+      "domain": "AGT",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent authorized to execute but not disclose sensitive result externally:",
+      "expected_result": "external disclosure denied.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 4913
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AUTH-001",
+      "name": "Capability Without Authority",
+      "domain": "AUTH",
+      "requirement_ids": [
+        "AOF-AUTH-004",
+        "AOF-AUTH-007",
+        "AOF-AUTH-012",
+        "AOF-AUTH-019"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Agent memiliki capability tetapi tidak memiliki applicable Authority: \\[ Capability=true,\\quadAuthority=false \\]",
+      "expected_result": "\\[ ExecuteAllowed=false \\] Maps to Authority requirements.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15889
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-AUTH-002",
+      "name": "Revoked Authority",
+      "domain": "AUTH",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15902
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-EVD-001",
+      "name": "Inadmissible Evidence",
+      "domain": "EVD",
+      "requirement_ids": [
+        "AOF-EVD-004",
+        "AOF-EVD-018"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15924
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-FR-001",
+      "name": "Blind Retry Prevention",
+      "domain": "FR",
+      "requirement_ids": [
+        "AOF-FR-019"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15950
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-FR-002",
+      "name": "Safety Kernel Failure",
+      "domain": "FR",
+      "requirement_ids": [
+        "AOF-FR-004",
+        "AOF-FR-009",
+        "AOF-FR-012"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15954
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-001",
+      "name": "Human Without Authority",
+      "domain": "HG",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Human actor has technical access but no applicable Authority:",
+      "expected_result": "\\[ ExecuteAllowed=false \\] untuk governed consequential Action.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12836
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-002",
+      "name": "Stale Approval",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-012"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "approved plan changes materially:",
+      "expected_result": "old approval MUST NOT automatically satisfy new approval gate.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12846
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-003",
+      "name": "Approval Scope",
+      "domain": "HG",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12852
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-004",
+      "name": "Human Unavailability",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-010",
+        "AOF-HG-011"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": "`Pending`, authorized alternate, escalation, abort, atau valid Break-Glass; never implicit approval.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12856
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-005",
+      "name": "Override Non-Overridable Control",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-008",
+        "AOF-HG-023"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": "deny.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12863
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-006",
+      "name": "Break-Glass Expiry",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-009",
+        "AOF-HG-014",
+        "AOF-HG-021"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": "new execution blocked.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12869
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-007",
+      "name": "Delegation Accountability",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-003"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": "delegation provenance dan accountable governance chain reconstructable.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12875
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-HG-008",
+      "name": "Risk Acceptance Authority",
+      "domain": "HG",
+      "requirement_ids": [
+        "AOF-HG-007"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": "deny/escalate.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 12882
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-001",
+      "name": "Pending Governance",
+      "domain": "LC",
+      "requirement_ids": [
+        "AOF-LC-003",
+        "AOF-LC-010",
+        "AOF-LC-011"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "one mandatory gate returns `Pending`:",
+      "expected_result": "consequential execution blocked.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3271
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-002",
+      "name": "Stale Decision",
+      "domain": "LC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "State changes materially after permit but before Effect Boundary:",
+      "expected_result": "reevaluation; stale Decision MUST NOT execute unchanged.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3277
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-003",
+      "name": "Inconclusive Verification",
+      "domain": "LC",
+      "requirement_ids": [
+        "AOF-LC-007"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "mandatory Verification returns `Inconclusive`:",
+      "expected_result": "session MUST NOT terminate `Completed`.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3283
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-004",
+      "name": "Partial Effect Retry",
+      "domain": "LC",
+      "requirement_ids": [
+        "AOF-LC-009"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Action returns failure while effect status unknown:",
+      "expected_result": "reconcile/contain before unsafe retry.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3289
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-005",
+      "name": "Revoked Authority",
+      "domain": "LC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "Authority revoked after planning and before effect:",
+      "expected_result": "execution blocked.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3295
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-006",
+      "name": "Replan",
+      "domain": "LC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "plan materially changes:",
+      "expected_result": "governance re-evaluation and applicable approval freshness evaluation.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3301
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-007",
+      "name": "Cancellation",
+      "domain": "LC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "already committed external effect then session cancelled:",
+      "expected_result": "cancellation MUST NOT falsely record effect as rolled back.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3308
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-008",
+      "name": "Safety Kernel Failure",
+      "domain": "LC",
+      "requirement_ids": [
+        "AOF-LC-017"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "mandatory governance component unavailable:",
+      "expected_result": "no implicit execution permit.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3314
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-009",
+      "name": "Concurrent State Conflict",
+      "domain": "LC",
+      "requirement_ids": [
+        "AOF-LC-001",
+        "AOF-LC-005",
+        "AOF-LC-015",
+        "AOF-LC-023"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "two conflicting transitions use same stale State version:",
+      "expected_result": "conflict detection/rejection/reconciliation.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3320
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-LC-010",
+      "name": "Human Approval Timeout",
+      "domain": "LC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "mandatory Human approval expires/unavailable:",
+      "expected_result": "no implicit approval.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 3326
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-POL-001",
+      "name": "Explicit Deny",
+      "domain": "POL",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15906
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-POL-002",
+      "name": "Unknown Mandatory Policy",
+      "domain": "POL",
+      "requirement_ids": [
+        "AOF-POL-002",
+        "AOF-POL-006",
+        "AOF-POL-009"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15910
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-PRF-001",
+      "name": "Base Requirement Removal",
+      "domain": "PRF",
+      "requirement_ids": [
+        "AOF-PRF-001",
+        "AOF-PRF-006"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "a stronger profile claim that omits a mandatory applicable AOF-Core requirement:",
+      "expected_result": "profile claim MUST fail conformance.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 16927
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-PRF-002",
+      "name": "Secure-SDLC Composition",
+      "domain": "PRF",
+      "requirement_ids": [
+        "AOF-PRF-004"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "`AOF-Assured + AOF-Secure-SDLC`:",
+      "expected_result": "applicable Assured requirements remain mandatory while Secure-SDLC domain controls are added.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 16934
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-PRF-003",
+      "name": "High-Assurance Weakening",
+      "domain": "PRF",
+      "requirement_ids": [
+        "AOF-PRF-002",
+        "AOF-PRF-005"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "High-Assurance profile configuration that disables required independent Verification:",
+      "expected_result": "configuration MUST fail conformance.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 16941
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-PRF-004",
+      "name": "Undeclared Profile",
+      "domain": "PRF",
+      "requirement_ids": [
+        "AOF-PRF-001",
+        "AOF-PRF-003",
+        "AOF-PRF-006"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": "implementation claims profile-dependent conformance without declaring profile scope:",
+      "expected_result": "conformance result MUST be `Blocked`, `Inconclusive`, or `NonConformant` according to applicable Section 20 rules; MUST NOT be implicit Pass.",
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 16948
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-RISK-001",
+      "name": "High Risk Assurance",
+      "domain": "RISK",
+      "requirement_ids": [
+        "AOF-RISK-017",
+        "AOF-RISK-018"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15914
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-RISK-002",
+      "name": "Critical Risk Governance",
+      "domain": "RISK",
+      "requirement_ids": [
+        "AOF-RISK-007",
+        "AOF-RISK-008",
+        "AOF-RISK-016"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15919
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-SEC-001",
+      "name": "Prompt Injection Non-Authority",
+      "domain": "SEC",
+      "requirement_ids": [
+        "AOF-SEC-005"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15958
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-SEC-002",
+      "name": "Execution Gateway Bypass",
+      "domain": "SEC",
+      "requirement_ids": [
+        "AOF-SEC-019"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15962
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-SEC-003",
+      "name": "Replay",
+      "domain": "SEC",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15967
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-STATE-001",
+      "name": "Stale State",
+      "domain": "STATE",
+      "requirement_ids": [],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15937
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-STATE-002",
+      "name": "Partial Commit",
+      "domain": "STATE",
+      "requirement_ids": [
+        "AOF-ST-007"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15942
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-TRC-001",
+      "name": "Consequential Trace",
+      "domain": "TRC",
+      "requirement_ids": [
+        "AOF-TRC-001",
+        "AOF-TRC-002",
+        "AOF-TRC-007",
+        "AOF-TRC-014"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15946
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-VER-001",
+      "name": "Self-Verification Rejection",
+      "domain": "VER",
+      "requirement_ids": [
+        "AOF-VER-001",
+        "AOF-VER-002",
+        "AOF-VER-003",
+        "AOF-VER-005",
+        "AOF-VER-006",
+        "AOF-VER-008",
+        "AOF-VER-009",
+        "AOF-VER-011",
+        "AOF-VER-014",
+        "AOF-VER-017"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15928
+      },
+      "status": "ReferenceDefinition"
+    },
+    {
+      "test_id": "CT-VER-002",
+      "name": "Inconclusive Verification",
+      "domain": "VER",
+      "requirement_ids": [
+        "AOF-VER-010",
+        "AOF-VER-012",
+        "AOF-VER-013"
+      ],
+      "profile": [],
+      "class": "ReferenceBehavioral",
+      "preconditions": [],
+      "fixtures": [],
+      "steps": [],
+      "given": null,
+      "expected_result": null,
+      "prohibited_result": [],
+      "evidence_required": [],
+      "cleanup": [],
+      "result": null,
+      "source": {
+        "specification": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+        "line": 15933
+      },
+      "status": "ReferenceDefinition"
+    }
+  ],
+  "phase2_executable_tests": [
+    {
+      "test_id": "ECT-CORE-001",
+      "name": "Capability Does Not Grant Authority",
+      "invariants": [
+        "AOF-INV-030"
+      ],
+      "reference_tests": [
+        "CT-AUTH-001",
+        "CT-AGT-001"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-002",
+      "name": "Proposal Is Not Authorized Decision",
+      "invariants": [
+        "AOF-INV-036"
+      ],
+      "reference_tests": [],
+      "class": "Semantic",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-003",
+      "name": "Agent Output Remains Untrusted Proposal",
+      "invariants": [
+        "AOF-INV-036",
+        "AOF-INV-042"
+      ],
+      "reference_tests": [],
+      "class": "Semantic",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-004",
+      "name": "Human Unavailability Does Not Create Approval",
+      "invariants": [
+        "AOF-INV-118",
+        "AOF-INV-015"
+      ],
+      "reference_tests": [
+        "CT-HG-004",
+        "CT-LC-010"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-005",
+      "name": "Pending Is Not Pass",
+      "invariants": [
+        "AOF-INV-015"
+      ],
+      "reference_tests": [
+        "CT-LC-001"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-006",
+      "name": "Policy Prompt Is Not Policy Enforcement",
+      "invariants": [
+        "AOF-INV-041",
+        "AOF-INV-131"
+      ],
+      "reference_tests": [
+        "CT-AGT-003",
+        "CT-SEC-001"
+      ],
+      "class": "Semantic+Security",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-007",
+      "name": "Technical Access Is Not Authority",
+      "invariants": [
+        "AOF-INV-037"
+      ],
+      "reference_tests": [
+        "CT-AGT-004",
+        "CT-HG-001"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-008",
+      "name": "Approval Is Not AuthorityGrant",
+      "invariants": [
+        "AOF-INV-114"
+      ],
+      "reference_tests": [],
+      "class": "Semantic",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-009",
+      "name": "Mandatory Control Failure Fails Controlled",
+      "invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_tests": [
+        "CT-LC-008",
+        "CT-FR-002"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-010",
+      "name": "Safety Kernel Cannot Be Bypassed",
+      "invariants": [
+        "AOF-INV-133"
+      ],
+      "reference_tests": [
+        "CT-SEC-002"
+      ],
+      "class": "Semantic+Behavioral+Security",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-011",
+      "name": "Unknown Mandatory Policy Is Not Implicit Allow",
+      "invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_tests": [
+        "CT-POL-002"
+      ],
+      "class": "Semantic+Behavioral",
+      "status": "ExecutablePhase2"
+    },
+    {
+      "test_id": "ECT-CORE-012",
+      "name": "AI Agent Is Not Governance Root",
+      "invariants": [
+        "AOF-INV-042",
+        "AOF-INV-132"
+      ],
+      "reference_tests": [
+        "CT-AGT-008"
+      ],
+      "class": "Semantic",
+      "status": "ExecutablePhase2"
+    }
+  ],
+  "phase2_executable_test_count": 12,
+  "phase3_executable_tests": [
+    {
+      "test_id": "ECT-GEX-001",
+      "name": "Delegation Conserves Parent Authority",
+      "invariants": [
+        "AOF-INV-031"
+      ],
+      "reference_tests": [
+        "CT-AUTH-003"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-002",
+      "name": "Revocation Before Effect Blocks Action",
+      "invariants": [
+        "AOF-INV-121"
+      ],
+      "reference_tests": [
+        "CT-AUTH-005",
+        "CT-FR-004"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-003",
+      "name": "Expired Authority Blocks Effect",
+      "invariants": [
+        "AOF-INV-030"
+      ],
+      "reference_tests": [
+        "CT-AUTH-004"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-004",
+      "name": "Deny Dominates Conflicting Allow",
+      "invariants": [
+        "AOF-INV-034"
+      ],
+      "reference_tests": [
+        "CT-POL-001"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-005",
+      "name": "Unknown Mandatory Policy Fails Controlled",
+      "invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_tests": [
+        "CT-POL-002"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-006",
+      "name": "Risk Ceiling Cannot Be Exceeded",
+      "invariants": [
+        "AOF-INV-069"
+      ],
+      "reference_tests": [
+        "CT-RISK-001"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-007",
+      "name": "Consequential Effect Requires ExecutionContract",
+      "invariants": [
+        "AOF-INV-122"
+      ],
+      "reference_tests": [
+        "CT-EC-001"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-008",
+      "name": "Single-Use ExecutionContract Rejects Replay",
+      "invariants": [
+        "AOF-INV-124"
+      ],
+      "reference_tests": [
+        "CT-EC-003"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-009",
+      "name": "Stale Decision State Blocks Effect",
+      "invariants": [
+        "AOF-INV-078"
+      ],
+      "reference_tests": [
+        "CT-ST-002"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-010",
+      "name": "Unauthorized State Transition Is Rejected",
+      "invariants": [
+        "AOF-INV-079"
+      ],
+      "reference_tests": [
+        "CT-ST-001"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-011",
+      "name": "Retry Is Bounded",
+      "invariants": [
+        "AOF-INV-083"
+      ],
+      "reference_tests": [
+        "CT-RR-001"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-012",
+      "name": "Retry Cannot Expand Authority",
+      "invariants": [
+        "AOF-INV-084"
+      ],
+      "reference_tests": [
+        "CT-RR-002"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-013",
+      "name": "Material Replan Requires Fresh Decision",
+      "invariants": [
+        "AOF-INV-085"
+      ],
+      "reference_tests": [
+        "CT-RR-003"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-014",
+      "name": "Authorized Decision Alone Does Not Permit Effect",
+      "invariants": [
+        "AOF-INV-121",
+        "AOF-INV-123"
+      ],
+      "reference_tests": [
+        "CT-EC-002"
+      ],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-015",
+      "name": "ExecutionContract Does Not Create Authority",
+      "invariants": [
+        "AOF-INV-122"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase3"
+    },
+    {
+      "test_id": "ECT-GEX-016",
+      "name": "Consequential Decision and Effect Remain Traceable",
+      "invariants": [
+        "AOF-INV-092"
+      ],
+      "reference_tests": [
+        "CT-TR-001"
+      ],
+      "status": "ExecutablePhase3"
+    }
+  ],
+  "phase3_executable_test_count": 16,
+  "phase4_executable_tests": [
+    {
+      "test_id": "ECT-ASR-001",
+      "name": "Claim Is Not Evidence",
+      "requirement_ids": [],
+      "invariants": [
+        "EVD-INV-02"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-002",
+      "name": "Evidence Is Not Verification",
+      "requirement_ids": [],
+      "invariants": [
+        "EVD-INV-03"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-003",
+      "name": "Evidence Presence Does Not Establish Sufficiency",
+      "requirement_ids": [
+        "AOF-EVD-006"
+      ],
+      "invariants": [
+        "EVD-INV-04"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-004",
+      "name": "Consequential Evidence Preserves Provenance",
+      "requirement_ids": [
+        "AOF-EVD-001"
+      ],
+      "invariants": [
+        "EVD-INV-01"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-005",
+      "name": "Stale Evidence Cannot Support Fresh Verification",
+      "requirement_ids": [
+        "AOF-EVD-003"
+      ],
+      "invariants": [],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-006",
+      "name": "Inadmissible Evidence Cannot Produce Verified",
+      "requirement_ids": [
+        "AOF-EVD-004"
+      ],
+      "invariants": [],
+      "reference_tests": [
+        "CT-EVD-001"
+      ],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-007",
+      "name": "Material Contradiction Remains Visible to Verification",
+      "requirement_ids": [
+        "AOF-EVD-005",
+        "AOF-EVD-014"
+      ],
+      "invariants": [
+        "EVD-INV-05"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-008",
+      "name": "Inconclusive Is Not Verified",
+      "requirement_ids": [
+        "AOF-VER-007"
+      ],
+      "invariants": [
+        "VER-INV-03"
+      ],
+      "reference_tests": [
+        "CT-VER-002",
+        "CT-LC-003"
+      ],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-009",
+      "name": "Self Verification Cannot Satisfy Required Independence",
+      "requirement_ids": [
+        "AOF-VER-003",
+        "AOF-VER-015"
+      ],
+      "invariants": [
+        "VER-INV-04"
+      ],
+      "reference_tests": [
+        "CT-VER-001"
+      ],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-010",
+      "name": "Circular Verification Cannot Claim Strong Independence",
+      "requirement_ids": [
+        "AOF-VER-006"
+      ],
+      "invariants": [
+        "VER-INV-09"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-011",
+      "name": "Verification Requires Explicit Criteria",
+      "requirement_ids": [
+        "AOF-VER-002"
+      ],
+      "invariants": [
+        "VER-INV-01"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-012",
+      "name": "Verification Is Bound to Subject and Version",
+      "requirement_ids": [
+        "AOF-VER-009"
+      ],
+      "invariants": [
+        "VER-INV-05"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-013",
+      "name": "Material Subject Change Requires Reverification",
+      "requirement_ids": [
+        "AOF-VER-010"
+      ],
+      "invariants": [
+        "VER-INV-06"
+      ],
+      "reference_tests": [
+        "CT-VER-002"
+      ],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-014",
+      "name": "Verification Does Not Create Authority",
+      "requirement_ids": [],
+      "invariants": [
+        "VER-INV-07"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-015",
+      "name": "Verification Does Not Create Approval",
+      "requirement_ids": [],
+      "invariants": [
+        "VER-INV-08"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-016",
+      "name": "Execution Success Is Not Verified Outcome",
+      "requirement_ids": [
+        "AOF-VER-012"
+      ],
+      "invariants": [
+        "VER-INV-10"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-017",
+      "name": "Successful Completion Requires Goal and Assurance",
+      "requirement_ids": [
+        "AOF-VER-012"
+      ],
+      "invariants": [
+        "VER-INV-10"
+      ],
+      "reference_tests": [
+        "CT-LC-003"
+      ],
+      "status": "ExecutablePhase4"
+    },
+    {
+      "test_id": "ECT-ASR-018",
+      "name": "Missing Required Evidence Cannot Verify",
+      "requirement_ids": [
+        "AOF-VER-008"
+      ],
+      "invariants": [
+        "VER-INV-02"
+      ],
+      "reference_tests": [],
+      "status": "ExecutablePhase4"
+    }
+  ],
+  "phase4_executable_test_count": 18,
+  "phase5_executable_tests": [
+    {
+      "test_id": "ECT-CONF-001",
+      "name": "All Applicable Mandatory Requirements Satisfied Produces Conformant",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-002",
+      "name": "Applicable Mandatory Failure Produces NonConformant",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-003",
+      "name": "Blocked Mandatory Requirement Produces Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-004",
+      "name": "Inconclusive Mandatory Requirement Produces Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-005",
+      "name": "Missing Mandatory Requirement Prevents Conformant",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-006",
+      "name": "Conditional Applicability Produces Conditional Result",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-007",
+      "name": "Explicit Exception Produces Conditional Result",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-008",
+      "name": "Missing Required Evidence Prevents Satisfaction",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-009",
+      "name": "Missing Subject Binding Produces Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-010",
+      "name": "Missing Profile Binding Produces Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-011",
+      "name": "Missing Scope Binding Produces Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-012",
+      "name": "Applicable NonMandatory Failure Still Produces NonConformant",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-013",
+      "name": "NotApplicable Requirement Does Not Count As Failure",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-014",
+      "name": "Applicable Requirement With Only NotApplicable Tests Is Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-015",
+      "name": "Limitations Prevent Unconditional Conformant",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-016",
+      "name": "No Executable Result For Applicable Mandatory Requirement Is Inconclusive",
+      "class": "ConformanceAggregation",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-NA-001",
+      "name": "NotApplicable anti-loophole guard",
+      "class": "Applicability",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-NA-002",
+      "name": "NotApplicable anti-loophole guard",
+      "class": "Applicability",
+      "status": "ExecutablePhase5"
+    },
+    {
+      "test_id": "ECT-CONF-NA-003",
+      "name": "NotApplicable anti-loophole guard",
+      "class": "Applicability",
+      "status": "ExecutablePhase5"
+    }
+  ],
+  "phase5_executable_test_count": 19,
+  "phase6_executable_tests": [
+    {
+      "test_id": "ECT-ADP-001",
+      "name": "Greenfield Adoption Is Valid Without Legacy Replacement",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-002",
+      "name": "Brownfield Adapter Preserves Existing Workflow",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-003",
+      "name": "Hybrid Adoption Uses Common Governance Boundary",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-004",
+      "name": "InFlight Incremental Adoption Governs Selected Boundary",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-005",
+      "name": "Scoped Adoption Declares Included And Excluded Components",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-006",
+      "name": "Scope Cannot Exclude Applicable Mandatory Control",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-007",
+      "name": "Adapter Preserves Canonical Semantics",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-008",
+      "name": "Adapter Cannot Expand Authority",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-009",
+      "name": "Adapter Cannot Suppress Policy Deny",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-010",
+      "name": "Conformance Harness Remains Transport Agnostic",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-011",
+      "name": "Unrelated Existing Tooling Need Not Be Replaced",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-012",
+      "name": "Conformance Claim Cannot Exceed Evidence Scope",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-013",
+      "name": "Progressive Governance Stage Is Explicit",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-014",
+      "name": "Partial Adoption Does Not Imply Full Compliance",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-015",
+      "name": "Brownfield Adapter Exposes Observable Conformance Evidence",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-016",
+      "name": "Adapter Cannot Hide Consequential Governance Semantics",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-017",
+      "name": "Equivalent Governance Decision Across Adoption Modes",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-018",
+      "name": "Brownfield Revocation Blocks Legacy Effect",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-019",
+      "name": "Brownfield Trace Correlates Legacy And AOF Events",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    },
+    {
+      "test_id": "ECT-ADP-020",
+      "name": "ConformanceManifest Explicitly Binds Adoption Scope",
+      "class": "AdoptionCompatibility",
+      "status": "ExecutablePhase6"
+    }
+  ],
+  "phase6_executable_test_count": 20,
+  "suite_status": "COMPLETE"
+}

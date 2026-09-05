@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/base-object.schema.json",
+  "title": "AOF Common Object Envelope",
+  "type": "object",
+  "description": "Consolidated AOF v1.0 common object envelope from Appendix E.4. The final package requires id at the shared envelope level; all 22 canonical contracts already require id explicitly, so this consolidation does not alter canonical contract semantics.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "scope": {
+      "$ref": "reference.schema.json#/$defs/ReferenceOrObject"
+    },
+    "provenance": {
+      "$ref": "reference.schema.json#/$defs/ReferenceOrObject"
+    },
+    "extensions": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": true
+}

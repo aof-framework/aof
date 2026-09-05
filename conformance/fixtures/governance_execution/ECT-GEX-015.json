@@ -1,0 +1,16 @@
+{
+  "test_id": "ECT-GEX-015",
+  "title": "ExecutionContract Does Not Create Authority",
+  "invariants": [
+    "AOF-INV-122"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "execution_contract": true,
+    "authority_created": false
+  },
+  "expected": {
+    "authority_created_by_contract": false,
+    "separation_preserved": true
+  }
+}

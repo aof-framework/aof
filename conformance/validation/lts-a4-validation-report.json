@@ -1,0 +1,49 @@
+{
+  "audit": "LTS-A4 \u2014 Executable Conformance Suite Audit",
+  "timestamp": "2026-09-05T12:37:48.467502+00:00",
+  "source_suite_sha256": "9b4bde2e5fd988d3e188f822255630eb1d242b05527e83662247c460c2eccc32",
+  "frozen_spec_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "inventory": {
+    "requirements": 332,
+    "invariants": 162,
+    "reference_cts": 51,
+    "executable_fixtures": 85,
+    "python_test_modules": 5
+  },
+  "aggregation_edge_case_evidence": {
+    "Blocked != Pass": true,
+    "Inconclusive != Pass": true,
+    "NotApplicable anti-loophole": true,
+    "Mandatory violation => NonConformant": true,
+    "Missing mandatory assessment => Inconclusive": true,
+    "Required evidence missing => Inconclusive": true,
+    "Applicable requirement without tests => Inconclusive": true
+  },
+  "reproducibility": {
+    "run1": "170 passed in 0.17s",
+    "run2": "170 passed in 0.16s"
+  },
+  "findings": {
+    "duplicate_fixture_ids": [],
+    "fixtures_missing_expected": [],
+    "transport_binding_hits": [],
+    "release_residue": [],
+    "invalid_traceability_identifiers": []
+  },
+  "audit_note": "Initial A4 detector incorrectly expected 11 Python test files and searched semantic phrases only in test source. The suite has five parameterized test modules; aggregation cases are represented by fixtures. Audit logic was corrected without modifying suite behavior.",
+  "checks": {
+    "frozen_spec_checksum_matches": true,
+    "fixture_count_85": true,
+    "python_test_modules_present": true,
+    "fixture_ids_unique": true,
+    "all_fixtures_have_expected_result": true,
+    "aggregation_edge_cases_present": true,
+    "traceability_identifiers_resolve": true,
+    "no_openapi_swagger_schema_dependency": true,
+    "no_cache_temp_release_residue": true,
+    "pytest_run1_pass": true,
+    "pytest_run2_pass": true,
+    "reproducible_170_test_count": true
+  },
+  "result": "PASS"
+}

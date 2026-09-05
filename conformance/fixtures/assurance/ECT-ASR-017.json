@@ -1,0 +1,21 @@
+{
+  "test_id": "ECT-ASR-017",
+  "title": "Successful Completion Requires Goal and Assurance",
+  "requirements": [
+    "AOF-VER-012"
+  ],
+  "invariants": [
+    "VER-INV-10"
+  ],
+  "reference_tests": [
+    "CT-LC-003"
+  ],
+  "facts": {
+    "goal_satisfied": true,
+    "required_verification_satisfied": true,
+    "required_assurance_satisfied": true
+  },
+  "expected": {
+    "completion_allowed": true
+  }
+}

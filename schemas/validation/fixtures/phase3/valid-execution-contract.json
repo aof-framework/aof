@@ -1,0 +1,25 @@
+{
+  "id": "exec-001",
+  "task_id": "task-001",
+  "decision_id": "decision-001",
+  "actor": "agent-executor-1",
+  "operation": "Deploy",
+  "target": "resource-prod",
+  "parameter_constraints": {
+    "artifact": "build-42"
+  },
+  "authority_ref": "auth-001",
+  "policy_decision_ref": "policy-result-1",
+  "risk_ref": "risk-001",
+  "state_ref": "state-42",
+  "verification_refs": [
+    "ver-1"
+  ],
+  "approval_refs": [
+    "approval-1"
+  ],
+  "idempotency_key": "deploy-task-001-build-42",
+  "valid_from": "2026-09-04T15:00:15Z",
+  "valid_until": "2026-09-04T15:05:00Z",
+  "single_use": true
+}

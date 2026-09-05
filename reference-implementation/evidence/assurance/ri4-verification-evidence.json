@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "test_id": "ASR-001",
+      "expected": "Verified",
+      "observed": "Verified",
+      "evidence_refs": [
+        "ev:1"
+      ],
+      "reason_codes": []
+    },
+    {
+      "test_id": "ASR-002",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [],
+      "reason_codes": [
+        "REQUIRED_EVIDENCE_MISSING"
+      ]
+    },
+    {
+      "test_id": "ASR-003",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [],
+      "reason_codes": [
+        "EVIDENCE_STALE"
+      ]
+    },
+    {
+      "test_id": "ASR-004",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [],
+      "reason_codes": [
+        "EVIDENCE_VERSION_MISMATCH"
+      ]
+    },
+    {
+      "test_id": "ASR-005",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [],
+      "reason_codes": [
+        "VERIFICATION_INDEPENDENCE_NOT_SATISFIED"
+      ]
+    },
+    {
+      "test_id": "ASR-006",
+      "expected": "Failed",
+      "observed": "Failed",
+      "evidence_refs": [
+        "ev:6"
+      ],
+      "reason_codes": [
+        "MATERIAL_CONTRADICTION"
+      ]
+    },
+    {
+      "test_id": "ASR-007",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [
+        "ev:7"
+      ],
+      "reason_codes": [
+        "EVIDENCE_INSUFFICIENT"
+      ]
+    },
+    {
+      "test_id": "ASR-008",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "evidence_refs": [],
+      "reason_codes": [
+        "EVIDENCE_PROVENANCE_MISSING"
+      ]
+    }
+  ]
+}

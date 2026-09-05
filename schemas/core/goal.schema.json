@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/core/goal.schema.json",
+  "title": "AOF Goal",
+  "description": "Machine-readable Goal contract corresponding to Appendix E.9 and the canonical Goal tuple.",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": true
+              }
+            ]
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "priority": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "provenance": {
+          "$ref": "../common/reference.schema.json#/$defs/ReferenceOrObject"
+        }
+      },
+      "required": [
+        "id",
+        "description",
+        "success_criteria",
+        "constraints",
+        "priority",
+        "provenance"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.9",
+    "normative_notes": [
+      "Success criteria MUST NOT be silently mutated.",
+      "LTS-A2: provenance is required to preserve the complete Appendix E.9 reference shape."
+    ],
+    "lts_a2_hardened": true
+  }
+}

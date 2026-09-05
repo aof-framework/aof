@@ -1,0 +1,23 @@
+{
+  "id": "proposal-001",
+  "actor": "agent-planner-1",
+  "task_id": "task-001",
+  "operation": "Deploy",
+  "target": "resource-prod",
+  "parameters": {
+    "artifact": "build-42"
+  },
+  "preconditions": [
+    {
+      "state": "Ready"
+    }
+  ],
+  "expected_effect": {
+    "deployment": "updated"
+  },
+  "risk_ref": "risk-001",
+  "evidence_refs": [
+    "evidence-plan"
+  ],
+  "created_at": "2026-09-04T15:00:00Z"
+}

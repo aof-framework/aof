@@ -1,0 +1,16 @@
+{
+  "test_id": "ECT-GEX-005",
+  "title": "Unknown Mandatory Policy Fails Controlled",
+  "invariants": [
+    "AOF-INV-128"
+  ],
+  "reference_tests": [
+    "CT-POL-002"
+  ],
+  "facts": {
+    "mandatory_policy_result": "Unknown"
+  },
+  "expected": {
+    "effect_allowed": false
+  }
+}

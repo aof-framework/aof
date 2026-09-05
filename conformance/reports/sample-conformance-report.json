@@ -1,0 +1,25 @@
+{
+  "id": "AOF-CONF-REPORT-PH5-SAMPLE",
+  "manifest_ref": "AOF-CONF-MANIFEST-PH5-SAMPLE",
+  "requirements": [
+    {
+      "requirement_id": "AOF-AUTH-001",
+      "applicability": "Applicable",
+      "result": "Satisfied",
+      "test_refs": [
+        "T1"
+      ],
+      "evidence_refs": [
+        "ev-1"
+      ],
+      "limitations": []
+    }
+  ],
+  "coverage": {
+    "phase": "Phase5ReferenceScenario"
+  },
+  "exceptions": [],
+  "assessor": "reference-engine",
+  "final_result": "Conformant",
+  "timestamp": "2026-09-04T18:45:30.829704+00:00"
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/conformance/conformance-manifest.schema.json",
+  "title": "AOF ConformanceManifest",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specification_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile": {
+          "$ref": "../common/conformance-types.schema.json#/$defs/Profile"
+        },
+        "subject": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "subject_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        },
+        "requirement_registry_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_package_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "test_suite_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_package_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "report_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "assessment_mode": {
+          "$ref": "../common/conformance-types.schema.json#/$defs/AssessmentMode"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "specification_version",
+        "profile",
+        "subject",
+        "subject_version",
+        "scope",
+        "requirement_registry_version",
+        "schema_package_version",
+        "test_suite_version",
+        "evidence_package_ref",
+        "report_ref",
+        "assessment_mode",
+        "created_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.29 / Sections 20-21",
+    "normative_notes": [
+      "Conformance claim MUST bind to an explicit tested scope.",
+      "Profile composition MUST be explicit in ConformanceManifest or equivalent conformance artifact.",
+      "ConformanceManifest does not itself prove conformance."
+    ]
+  }
+}

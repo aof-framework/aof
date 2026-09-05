@@ -1,0 +1,206 @@
+{
+  "results": [
+    {
+      "test_id": "CONF-001",
+      "expected": "Conformant",
+      "observed": "Conformant",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:1",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Pass"
+            ],
+            "evidence_required": true,
+            "evidence_refs": [
+              "ev:1"
+            ],
+            "requirement_result": "Satisfied"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [],
+        "final_result": "Conformant",
+        "timestamp": "2026-09-05T04:59:34.179216+00:00"
+      }
+    },
+    {
+      "test_id": "CONF-002",
+      "expected": "NonConformant",
+      "observed": "NonConformant",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:2",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Fail"
+            ],
+            "evidence_required": true,
+            "evidence_refs": [
+              "ev:1"
+            ],
+            "requirement_result": "Violated"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [],
+        "final_result": "NonConformant",
+        "timestamp": "2026-09-05T04:59:34.179318+00:00"
+      }
+    },
+    {
+      "test_id": "CONF-003",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:3",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Blocked"
+            ],
+            "evidence_required": true,
+            "evidence_refs": [
+              "ev:1"
+            ],
+            "requirement_result": "Inconclusive"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [],
+        "final_result": "Inconclusive",
+        "timestamp": "2026-09-05T04:59:34.179351+00:00"
+      }
+    },
+    {
+      "test_id": "CONF-004",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:4",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Pass"
+            ],
+            "evidence_refs": [
+              "ev:1"
+            ],
+            "requirement_result": "Satisfied"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [],
+        "final_result": "Inconclusive",
+        "timestamp": "2026-09-05T04:59:34.179381+00:00"
+      }
+    },
+    {
+      "test_id": "CONF-005",
+      "expected": "Conditional",
+      "observed": "Conditional",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:5",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Pass"
+            ],
+            "evidence_refs": [
+              "ev:1"
+            ],
+            "requirement_result": "Satisfied"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [
+          "legacy subsystem excluded from this claim"
+        ],
+        "final_result": "Conditional",
+        "timestamp": "2026-09-05T04:59:34.179407+00:00"
+      }
+    },
+    {
+      "test_id": "CONF-006",
+      "expected": "Inconclusive",
+      "observed": "Inconclusive",
+      "report": {
+        "id": "conformance-report:reference",
+        "manifest_ref": "manifest:6",
+        "subject": "system:1",
+        "subject_version": "1",
+        "profile": "AOF-Core",
+        "scope": {
+          "components": [
+            "runtime"
+          ]
+        },
+        "requirements": [
+          {
+            "id": "REQ-1",
+            "test_results": [
+              "Pass"
+            ],
+            "evidence_required": true,
+            "evidence_refs": [],
+            "requirement_result": "Inconclusive"
+          }
+        ],
+        "exceptions": [],
+        "limitations": [],
+        "final_result": "Inconclusive",
+        "timestamp": "2026-09-05T04:59:34.179430+00:00"
+      }
+    }
+  ]
+}

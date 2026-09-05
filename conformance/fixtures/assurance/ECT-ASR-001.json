@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-ASR-001",
+  "title": "Claim Is Not Evidence",
+  "requirements": [],
+  "invariants": [
+    "EVD-INV-02"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "claim_present": true,
+    "claim_treated_as_evidence": false
+  },
+  "expected": {
+    "claim_is_evidence": false,
+    "separation_preserved": true
+  }
+}

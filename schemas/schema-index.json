@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "contracts": {
+    "Goal": {
+      "path": "core/goal.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/goal.schema.json",
+      "sha256": "d7928ea2f472e40cd20d0f67940e4591221ce2f714f6ad519bc64c2dc3cd7710"
+    },
+    "Task": {
+      "path": "core/task.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/task.schema.json",
+      "sha256": "1d33bcaab113d714eb73288649dfd8ad4d7feb187b4159fc6ea90fa35c93f38a"
+    },
+    "Agent": {
+      "path": "core/agent.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/agent.schema.json",
+      "sha256": "2bf8e8347d7058ec3b7d001c5d93017d2784cb966110aacfce54a83e80faa901"
+    },
+    "ContextDescriptor": {
+      "path": "core/context-descriptor.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/context-descriptor.schema.json",
+      "sha256": "d24450c245786e99338d99a02a66fb4dc58a47cb9e69c2f51d57232abd2b4281"
+    },
+    "Resource": {
+      "path": "core/resource.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/resource.schema.json",
+      "sha256": "bcee690441988c8f0cc59ea07f679d015f7ec1a6b6a33eee3f10d2956d63e83e"
+    },
+    "Capability": {
+      "path": "core/capability.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/core/capability.schema.json",
+      "sha256": "8c4947e0de37c14cf43480164cf97a2ac4ffd317935e7d9e5f0b89050067687c"
+    },
+    "AuthorityGrant": {
+      "path": "governance/authority-grant.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/governance/authority-grant.schema.json",
+      "sha256": "c4190c825048c6df64eca1862133f1ab3686adb2ec374f4b03708430144d1437"
+    },
+    "Policy": {
+      "path": "governance/policy.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/governance/policy.schema.json",
+      "sha256": "1fec85e9f0a480823f8e2b8a446b03e46c9f4eb3bc1892e632eff1869c5b6a08"
+    },
+    "RiskAssessment": {
+      "path": "governance/risk-assessment.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/governance/risk-assessment.schema.json",
+      "sha256": "570c3282564e677e919c72458ca44a0afe67cec2900616c68abfb9225d778103"
+    },
+    "Approval": {
+      "path": "governance/approval.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/governance/approval.schema.json",
+      "sha256": "2455ba10fe1df876392ca218c0f376617265406f53420ddd259331c083d61988"
+    },
+    "ActionProposal": {
+      "path": "execution/action-proposal.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/action-proposal.schema.json",
+      "sha256": "03b267bc39daceabf104c851ebf6f7ceab91d8b36ef9e528f57fbab9296606f4"
+    },
+    "Decision": {
+      "path": "execution/decision.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/decision.schema.json",
+      "sha256": "3bae1b8a387b8ac30520e2cf9574a99819a0164af884c397fb9ddb3abec85e06"
+    },
+    "ExecutionContract": {
+      "path": "execution/execution-contract.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/execution-contract.schema.json",
+      "sha256": "f879442e6b016d0b70a8842b9a65d7114c7aabe310ae6aa7cc065cde29e406cb"
+    },
+    "StateTransition": {
+      "path": "execution/state-transition.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/state-transition.schema.json",
+      "sha256": "466ea2bf7356e41e1c41c88d78933628712eccd2c7d235dac91cfb491d4b52db"
+    },
+    "TraceEvent": {
+      "path": "execution/trace-event.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/trace-event.schema.json",
+      "sha256": "0a62fe7486e12d15eec3ef1f9c25c9d25074ee8f7acaaf481a2a0492490951d8"
+    },
+    "AgentInteractionContract": {
+      "path": "execution/agent-interaction-contract.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/execution/agent-interaction-contract.schema.json",
+      "sha256": "ffd48e92601d8663660f4e151ceba0088b68940a1b5937b72c57f11388f9ae6f"
+    },
+    "Evidence": {
+      "path": "assurance/evidence.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/assurance/evidence.schema.json",
+      "sha256": "2a444abeb40cfba2738f0e840940f8b13b42a986b5a6c0be515900cacac5330e"
+    },
+    "Verification": {
+      "path": "assurance/verification.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/assurance/verification.schema.json",
+      "sha256": "d5b28ccf2ef1a9c4bee89bd840d94eb1bf5d61005611d678aad9dbaebacfa766"
+    },
+    "EscalationPackage": {
+      "path": "assurance/escalation-package.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/assurance/escalation-package.schema.json",
+      "sha256": "ce1685d63b3781fb94af1bf81bf7a1aebd5603944b100651afd072b9e3853ad9"
+    },
+    "Outcome": {
+      "path": "assurance/outcome.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/assurance/outcome.schema.json",
+      "sha256": "bdc571583c041238426c0dcb9254c9a61bdfa550a53dc0f4f26ad7543faa8120"
+    },
+    "ConformanceManifest": {
+      "path": "conformance/conformance-manifest.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/conformance/conformance-manifest.schema.json",
+      "sha256": "db853e021425405909ff8ff915f39ecd4e05e764ed10bd160e38428c669d56b7"
+    },
+    "ConformanceReport": {
+      "path": "conformance/conformance-report.schema.json",
+      "$id": "https://aof.dev/schema/v1.0/conformance/conformance-report.schema.json",
+      "sha256": "9af20fbe7de5d1b0f0cacea621c027d3160f90b82c81a6a1b09f8f53e4abca9e"
+    }
+  }
+}

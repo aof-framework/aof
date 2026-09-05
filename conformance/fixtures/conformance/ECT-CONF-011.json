@@ -1,0 +1,13 @@
+{
+  "test_id": "ECT-CONF-011",
+  "title": "Missing Scope Binding Produces Inconclusive",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": null,
+    "mandatory_requirement_ids": [],
+    "requirements": []
+  },
+  "expected": "Inconclusive"
+}

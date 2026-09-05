@@ -1,0 +1,22 @@
+{
+  "test_id": "ASR-004",
+  "name": "version-mismatch",
+  "expected": "Inconclusive",
+  "subject_ref": "subject:1",
+  "subject_version": "2",
+  "criteria_ref": "criteria:1",
+  "verifier_ref": "verifier:1",
+  "subject_actor_ref": "agent:1",
+  "independence_required": true,
+  "evidence": [
+    {
+      "id": "ev:4",
+      "subject_ref": "subject:1",
+      "subject_version": "1",
+      "provenance": {
+        "source": "trace:4"
+      },
+      "supports_criteria": true
+    }
+  ]
+}

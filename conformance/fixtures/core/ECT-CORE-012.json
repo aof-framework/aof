@@ -1,0 +1,20 @@
+{
+  "test_id": "ECT-CORE-012",
+  "title": "AI Agent Is Not Governance Root",
+  "invariants": [
+    "AOF-INV-042",
+    "AOF-INV-132"
+  ],
+  "reference_tests": [
+    "CT-AGT-008"
+  ],
+  "facts": {
+    "ai_agent": true,
+    "governance_root": false
+  },
+  "expected": {
+    "agent_became_governance_root": false,
+    "bounded_actor": true
+  },
+  "classification": "Semantic"
+}

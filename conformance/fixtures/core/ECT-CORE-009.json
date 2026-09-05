@@ -1,0 +1,20 @@
+{
+  "test_id": "ECT-CORE-009",
+  "title": "Mandatory Control Failure Fails Controlled",
+  "invariants": [
+    "AOF-INV-128"
+  ],
+  "reference_tests": [
+    "CT-LC-008",
+    "CT-FR-002"
+  ],
+  "facts": {
+    "mandatory_control_failure": true,
+    "execute": false
+  },
+  "expected": {
+    "implicit_permit": false,
+    "fail_controlled": true
+  },
+  "classification": "Semantic+Behavioral"
+}

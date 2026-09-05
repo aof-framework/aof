@@ -1,0 +1,15 @@
+{
+  "test_id": "ECT-CONF-010",
+  "title": "Missing Profile Binding Produces Inconclusive",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": null,
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [],
+    "requirements": []
+  },
+  "expected": "Inconclusive"
+}

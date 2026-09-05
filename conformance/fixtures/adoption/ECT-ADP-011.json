@@ -1,0 +1,11 @@
+{
+  "test_id": "ECT-ADP-011",
+  "title": "Unrelated Existing Tooling Need Not Be Replaced",
+  "facts": {
+    "requires_replacing_unrelated_tooling": false
+  },
+  "expected": {
+    "replacement_required": false,
+    "valid": true
+  }
+}

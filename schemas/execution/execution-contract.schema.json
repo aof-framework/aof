@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/execution/execution-contract.schema.json",
+  "title": "AOF ExecutionContract",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "operation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "parameter_constraints": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "authority_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "policy_decision_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "risk_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "state_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "verification_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "approval_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "idempotency_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "valid_from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "single_use": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "task_id",
+        "decision_id",
+        "actor",
+        "operation",
+        "target",
+        "parameter_constraints",
+        "authority_ref",
+        "policy_decision_ref",
+        "risk_ref",
+        "state_ref",
+        "verification_refs",
+        "approval_refs",
+        "idempotency_key",
+        "valid_from",
+        "valid_until",
+        "single_use"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.20",
+    "normative_notes": [
+      "ExecutionContract != AuthorityGrant.",
+      "ExecutionContract represents bounded execution eligibility based on underlying controls.",
+      "Validity/freshness, revocation, single-use consumption, parameter binding, and TOCTOU enforcement are behavioral controls not proven by structural validation."
+    ]
+  }
+}

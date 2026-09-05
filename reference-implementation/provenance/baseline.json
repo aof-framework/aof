@@ -1,0 +1,12 @@
+{
+  "frozen_specification_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "schemas_zip_sha256": "1741ad171697ea48922cc91b8e3e2f50639829c337b51208e3116f1655da6da1",
+  "conformance_suite_zip_sha256": "492f79e1d46e113eac6e19e534ed905e0b126535b1a1a7335b774a9da7e18211",
+  "ri_phase": "RI-5",
+  "semantics_policy": "operationalize_without_redefining",
+  "ri2_parent_checkpoint_sha256": "e5af904a990ad043312570cfeeb29930a3e77fa443b09c49a9761bb72c53d7ee",
+  "ri3_parent_checkpoint_sha256": "38a4e9cc19b956e931f49e14353658599e1d31f03dda596a285499e142087bdf",
+  "ri4_parent_checkpoint_sha256": "4415ff74147473ea71a239d0e1cdd12a9925631e66977ee6f0873ea9dcf9244c",
+  "conformance_suite_reference_sha256": "492f79e1d46e113eac6e19e534ed905e0b126535b1a1a7335b774a9da7e18211",
+  "ri5_parent_checkpoint_sha256": "9166644e86c5f4fe6891018b654ef8811321d4a5f46400a69916a498653fc5d4"
+}

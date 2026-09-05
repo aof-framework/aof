@@ -1,0 +1,27 @@
+{
+  "principle": "Evidence MUST bind to evaluated implementation/version/profile where applicable.",
+  "minimum_binding": [
+    "conformance_subject",
+    "subject_version",
+    "profile",
+    "scope",
+    "test_id",
+    "requirement_ids",
+    "execution_timestamp",
+    "environment",
+    "observed_result",
+    "artifact_or_trace_refs"
+  ],
+  "evidence_classes": [
+    "ConfigurationEvidence",
+    "TraceEvidence",
+    "DecisionEvidence",
+    "StateEvidence",
+    "PolicyEvidence",
+    "AuthorityEvidence",
+    "VerificationEvidence",
+    "ExecutionEvidence",
+    "InspectionEvidence"
+  ],
+  "prohibition": "Evidence package MUST NOT require private chain-of-thought."
+}

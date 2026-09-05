@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-GEX-008",
+  "title": "Single-Use ExecutionContract Rejects Replay",
+  "invariants": [
+    "AOF-INV-124"
+  ],
+  "reference_tests": [
+    "CT-EC-003"
+  ],
+  "facts": {
+    "single_use": true,
+    "already_consumed": true,
+    "replay_attempt": true
+  },
+  "expected": {
+    "replay_detected": true,
+    "effect_allowed": false
+  }
+}

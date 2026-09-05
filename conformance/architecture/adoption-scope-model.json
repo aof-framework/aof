@@ -1,0 +1,26 @@
+{
+  "principles": [
+    "AOF is incrementally adoptable.",
+    "AOF is brownfield compatible.",
+    "AOF conformance is explicitly scoped.",
+    "Integration MUST NOT require destructive workflow replacement."
+  ],
+  "adoption_modes": [
+    "Greenfield",
+    "BrownfieldAdapter",
+    "InFlightIncremental"
+  ],
+  "scope_dimensions": [
+    "components",
+    "environments",
+    "resources",
+    "agent_types",
+    "tool_classes",
+    "governance_boundaries",
+    "excluded_functionality",
+    "optional_extensions",
+    "security_assumptions"
+  ],
+  "conformance_rule": "A conformance claim MUST NOT be generalized beyond tested scope.",
+  "anti_loophole_rule": "Mandatory requirement MUST NOT be marked NotApplicable merely to avoid a failed test when profile/scope requires it."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "AOF Reference Verification Contract",
+  "version": "1.0.0-ri4",
+  "statuses": [
+    "Verified",
+    "Failed",
+    "Inconclusive",
+    "NotApplicable"
+  ],
+  "required_bindings": [
+    "subject_ref",
+    "subject_version",
+    "criteria_ref",
+    "verifier_ref"
+  ],
+  "rules": [
+    "Claim != Evidence != Verification",
+    "EvidencePresent != EvidenceSufficient",
+    "Inconclusive != Verified",
+    "Verified(subject@v1) != Verified(subject@v2)",
+    "Verification != Approval",
+    "VerificationDoesNotCreateAuthority"
+  ]
+}

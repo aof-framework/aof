@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-09-04T18:08:55.795214+00:00",
+  "subject": "AOF Phase 3 reference governance/execution evaluator",
+  "results": [
+    {
+      "test_id": "ECT-GEX-001",
+      "result": "Pass",
+      "observed": {
+        "delegation_valid": true
+      },
+      "expected": {
+        "delegation_valid": true
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-001",
+          "facts": {
+            "parent_operations": [
+              "read",
+              "write"
+            ],
+            "child_operations": [
+              "read"
+            ],
+            "parent_resources": [
+              "repo"
+            ],
+            "child_resources": [
+              "repo"
+            ],
+            "parent_risk_ceiling": 3,
+            "child_risk_ceiling": 2
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-002",
+      "result": "Pass",
+      "observed": {
+        "valid_at_decision": true,
+        "valid_at_effect": false,
+        "effect_allowed": false
+      },
+      "expected": {
+        "valid_at_decision": true,
+        "valid_at_effect": false,
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-002",
+          "facts": {
+            "grant_at_decision": {
+              "status": "Active"
+            },
+            "decision_time": 10,
+            "grant_at_effect": {
+              "status": "Revoked"
+            },
+            "effect_time": 11,
+            "other_gates_pass": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-003",
+      "result": "Pass",
+      "observed": {
+        "effect_allowed": false
+      },
+      "expected": {
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-003",
+          "facts": {
+            "grant": {
+              "status": "Active",
+              "valid_from": 1,
+              "valid_until": 10
+            },
+            "effect_time": 11,
+            "other_gates_pass": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-004",
+      "result": "Pass",
+      "observed": {
+        "effective_policy": "Deny",
+        "effect_allowed": false
+      },
+      "expected": {
+        "effective_policy": "Deny",
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-004",
+          "facts": {
+            "policy_effects": [
+              "Allow",
+              "Deny"
+            ]
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-005",
+      "result": "Pass",
+      "observed": {
+        "effect_allowed": false
+      },
+      "expected": {
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-005",
+          "facts": {
+            "mandatory_policy_result": "Unknown"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-006",
+      "result": "Pass",
+      "observed": {
+        "within_risk_ceiling": false,
+        "effect_allowed": false
+      },
+      "expected": {
+        "within_risk_ceiling": false,
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-006",
+          "facts": {
+            "action_risk": 4,
+            "authority_risk_ceiling": 3,
+            "other_gates_pass": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-007",
+      "result": "Pass",
+      "observed": {
+        "effect_allowed": false,
+        "missing_contract_blocked": true
+      },
+      "expected": {
+        "effect_allowed": false,
+        "missing_contract_blocked": true
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-007",
+          "facts": {
+            "execution_contract_valid": false,
+            "other_gates_pass": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-008",
+      "result": "Pass",
+      "observed": {
+        "replay_detected": true,
+        "effect_allowed": false
+      },
+      "expected": {
+        "replay_detected": true,
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-008",
+          "facts": {
+            "single_use": true,
+            "already_consumed": true,
+            "replay_attempt": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-009",
+      "result": "Pass",
+      "observed": {
+        "state_fresh": false,
+        "effect_allowed": false
+      },
+      "expected": {
+        "state_fresh": false,
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-009",
+          "facts": {
+            "decision_state_version": 7,
+            "current_state_version": 8,
+            "other_gates_pass": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-010",
+      "result": "Pass",
+      "observed": {
+        "transition_allowed": false
+      },
+      "expected": {
+        "transition_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-010",
+          "facts": {
+            "transition_in_state_machine": true,
+            "transition_authorized": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-011",
+      "result": "Pass",
+      "observed": {
+        "within_retry_bound": false,
+        "retry_allowed": false
+      },
+      "expected": {
+        "within_retry_bound": false,
+        "retry_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-011",
+          "facts": {
+            "attempt": 4,
+            "max_attempts": 3,
+            "retry_authorized": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-012",
+      "result": "Pass",
+      "observed": {
+        "authority_expanded": false,
+        "retry_allowed": true
+      },
+      "expected": {
+        "authority_expanded": false,
+        "retry_allowed": true
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-012",
+          "facts": {
+            "original_operations": [
+              "read"
+            ],
+            "retry_operations": [
+              "read"
+            ],
+            "original_resources": [
+              "repo"
+            ],
+            "retry_resources": [
+              "repo"
+            ]
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-013",
+      "result": "Pass",
+      "observed": {
+        "new_decision_required": true,
+        "reuse_old_decision_allowed": false
+      },
+      "expected": {
+        "new_decision_required": true,
+        "reuse_old_decision_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-013",
+          "facts": {
+            "goal_changed": false,
+            "resource_scope_changed": true,
+            "risk_changed": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-014",
+      "result": "Pass",
+      "observed": {
+        "effect_allowed": false
+      },
+      "expected": {
+        "effect_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-014",
+          "facts": {
+            "authorized_decision": true,
+            "effect_boundary_revalidated": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-015",
+      "result": "Pass",
+      "observed": {
+        "authority_created_by_contract": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "authority_created_by_contract": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-015",
+          "facts": {
+            "execution_contract": true,
+            "authority_created": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-GEX-016",
+      "result": "Pass",
+      "observed": {
+        "trace_complete": true,
+        "conformance_observable": true
+      },
+      "expected": {
+        "trace_complete": true,
+        "conformance_observable": true
+      },
+      "evidence": [
+        {
+          "type": "GovernanceExecutionObservation",
+          "test_id": "ECT-GEX-016",
+          "facts": {
+            "decision_trace": true,
+            "effect_trace": true
+          }
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

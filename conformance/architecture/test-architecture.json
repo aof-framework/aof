@@ -1,0 +1,88 @@
+{
+  "name": "AOF v1.0 Executable Conformance Test Suite",
+  "phase": "Phase 1 — Test Architecture & Requirement Mapping",
+  "canonical_chain": "Requirement -> Test -> Evidence -> ConformanceResult",
+  "test_case_model": {
+    "formal": "ct=<id,requirements,preconditions,inputs,procedure,expected,evidence,result,environment>",
+    "fields": [
+      "test_id",
+      "requirement_ids",
+      "profile",
+      "preconditions",
+      "fixtures",
+      "steps",
+      "expected_result",
+      "prohibited_result",
+      "evidence_required",
+      "cleanup",
+      "result"
+    ]
+  },
+  "test_classes": [
+    {
+      "id": "Structural",
+      "purpose": "Validate machine-readable object structure and JSON Schema constraints.",
+      "examples": [
+        "schema validity",
+        "required fields",
+        "enum constraints",
+        "reference resolution"
+      ]
+    },
+    {
+      "id": "Semantic",
+      "purpose": "Evaluate AOF invariants and governance meaning not provable by JSON Schema alone.",
+      "examples": [
+        "Capability != Authority",
+        "Approval != AuthorityGrant",
+        "Pending != Pass"
+      ]
+    },
+    {
+      "id": "Behavioral",
+      "purpose": "Exercise observable governed runtime behavior and Effect Boundary decisions.",
+      "examples": [
+        "NoGrant => Deny",
+        "revocation before effect",
+        "stale state rejection",
+        "bounded retry"
+      ]
+    },
+    {
+      "id": "Inspection",
+      "purpose": "Inspect configuration/artifacts where direct runtime stimulation is impractical.",
+      "examples": [
+        "architecture topology",
+        "policy precedence configuration",
+        "trace retention settings"
+      ]
+    }
+  ],
+  "test_result": [
+    "Pass",
+    "Fail",
+    "Blocked",
+    "NotApplicable",
+    "Inconclusive"
+  ],
+  "requirement_result": [
+    "Satisfied",
+    "Violated",
+    "NotApplicable",
+    "Inconclusive"
+  ],
+  "conformance_result": [
+    "Conformant",
+    "NonConformant",
+    "Conditional",
+    "Inconclusive"
+  ],
+  "hard_rules": [
+    "Blocked != Pass",
+    "Inconclusive != Pass",
+    "MandatoryViolation => NonConformant",
+    "Conformance != Maturity",
+    "Conformant != ZeroResidualRisk",
+    "SchemaValidity != SemanticValidity != AOFConformance"
+  ]
+}

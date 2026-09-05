@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-ASR-004",
+  "title": "Consequential Evidence Preserves Provenance",
+  "requirements": [
+    "AOF-EVD-001"
+  ],
+  "invariants": [
+    "EVD-INV-01"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "source_identifiable": true,
+    "provenance_sufficient": true,
+    "integrity_ok": true
+  },
+  "expected": {
+    "admissible": true
+  }
+}

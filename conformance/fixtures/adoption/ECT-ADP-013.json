@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-013",
+  "title": "Progressive Governance Stage Is Explicit",
+  "facts": {
+    "stage_controls_explicit": true,
+    "known_gaps_declared": true,
+    "claim_limited_to_current_stage": true
+  },
+  "expected": {
+    "stage_valid": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "approval-001",
+  "subject": "decision-001",
+  "approver": "human-approver-1",
+  "authority_ref": "auth-approve-prod",
+  "decision": "Approved",
+  "scope": {
+    "environment": "production"
+  },
+  "subject_version": "42",
+  "conditions": [],
+  "valid_until": "2026-09-05T00:00:00Z",
+  "evidence_refs": [
+    "evidence-context"
+  ],
+  "created_at": "2026-09-04T00:00:00Z"
+}

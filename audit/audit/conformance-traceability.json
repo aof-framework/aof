@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "requirements": 332,
+    "canonical_invariants": 162,
+    "reference_cts": 51,
+    "executable_tests": 85,
+    "explicit_frozen_edges": 352
+  },
+  "checks": {
+    "frozen_spec_checksum_matches": true,
+    "requirements_registry_count_332": true,
+    "canonical_invariant_count_162": true,
+    "reference_ct_count_51": true,
+    "executable_fixture_count_85": true,
+    "all_invariant_identifiers_resolve": true,
+    "all_reference_ct_identifiers_resolve": true,
+    "all_requirement_identifiers_resolve": true,
+    "all_executable_tests_have_traceability_disposition": true,
+    "phase3_nonexistent_reference_cts_removed": true,
+    "phase3_rows_publication_grade_16": true,
+    "cumulative_suite_behavior_still_passes": true
+  },
+  "result": "PASS"
+}

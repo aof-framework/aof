@@ -1,0 +1,13 @@
+{
+  "requirement_count": 332,
+  "direct_reference_test_count": 51,
+  "requirements_with_reference_test_candidate": 79,
+  "requirements_pending_executable_mapping": 253,
+  "mandatory_requirement_count_by_text_classification": 267,
+  "mandatory_requirements_with_reference_test_candidate": 69,
+  "metrics": {
+    "requirement_mapping_coverage": 0.23795180722891565,
+    "mandatory_mapping_coverage": 0.25842696629213485
+  },
+  "interpretation": "Phase 1 mapping coverage is a baseline traceability metric, not a conformance score. Unmapped requirements are intentionally retained for Phase 2+ executable/inspection mapping."
+}

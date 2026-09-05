@@ -1,0 +1,31 @@
+{
+  "name": "AOF Reference Conformance Runner Contract",
+  "version": "1.0.0-ri4",
+  "chain": "Requirement -> TestResult -> RequirementResult -> ConformanceResult",
+  "test_results": [
+    "Pass",
+    "Fail",
+    "Blocked",
+    "NotApplicable",
+    "Inconclusive"
+  ],
+  "requirement_results": [
+    "Satisfied",
+    "Violated",
+    "NotApplicable",
+    "Inconclusive"
+  ],
+  "conformance_results": [
+    "Conformant",
+    "NonConformant",
+    "Conditional",
+    "Inconclusive"
+  ],
+  "rules": [
+    "Blocked != Pass",
+    "Inconclusive != Pass",
+    "MandatoryViolation -> NonConformant",
+    "Conformance != Maturity",
+    "ScopedAdoption != WeakConformance"
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "generated_at": "2026-09-04T18:45:30.829091+00:00",
+  "subject": "AOF Phase 5 reference conformance engine",
+  "results": [
+    {
+      "test_id": "ECT-CONF-001",
+      "expected": "Conformant",
+      "observed": {
+        "final_result": "Conformant",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-002",
+      "expected": "NonConformant",
+      "observed": {
+        "final_result": "NonConformant",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Violated",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-003",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Inconclusive",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-004",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Inconclusive",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-005",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": [
+          "Mandatory requirements absent from assessment: AOF-POL-001"
+        ]
+      }
+    },
+    {
+      "test_id": "ECT-CONF-006",
+      "expected": "Conditional",
+      "observed": {
+        "final_result": "Conditional",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          },
+          {
+            "requirement_id": "AOF-VER-001",
+            "applicability": "Conditional",
+            "result": "Satisfied",
+            "test_refs": [
+              "T2"
+            ],
+            "evidence_refs": [
+              "ev-2"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-007",
+      "expected": "Conditional",
+      "observed": {
+        "final_result": "Conditional",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-008",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Inconclusive",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [],
+            "limitations": [
+              "Required evidence not bound."
+            ]
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-009",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [],
+        "notes": [
+          "Subject/version binding missing."
+        ]
+      }
+    },
+    {
+      "test_id": "ECT-CONF-010",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [],
+        "notes": [
+          "Profile binding missing."
+        ]
+      }
+    },
+    {
+      "test_id": "ECT-CONF-011",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [],
+        "notes": [
+          "Scope binding missing."
+        ]
+      }
+    },
+    {
+      "test_id": "ECT-CONF-012",
+      "expected": "NonConformant",
+      "observed": {
+        "final_result": "NonConformant",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-EXAMPLE-001",
+            "applicability": "Applicable",
+            "result": "Violated",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-013",
+      "expected": "Conformant",
+      "observed": {
+        "final_result": "Conformant",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          },
+          {
+            "requirement_id": "AOF-VER-001",
+            "applicability": "NotApplicable",
+            "result": "NotApplicable",
+            "test_refs": [],
+            "evidence_refs": [],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-014",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Inconclusive",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-015",
+      "expected": "Conditional",
+      "observed": {
+        "final_result": "Conditional",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Satisfied",
+            "test_refs": [
+              "T1"
+            ],
+            "evidence_refs": [
+              "ev-1"
+            ],
+            "limitations": []
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "test_id": "ECT-CONF-016",
+      "expected": "Inconclusive",
+      "observed": {
+        "final_result": "Inconclusive",
+        "requirement_evaluations": [
+          {
+            "requirement_id": "AOF-AUTH-001",
+            "applicability": "Applicable",
+            "result": "Inconclusive",
+            "test_refs": [],
+            "evidence_refs": [],
+            "limitations": [
+              "No executable test result supplied."
+            ]
+          }
+        ],
+        "notes": []
+      }
+    }
+  ]
+}

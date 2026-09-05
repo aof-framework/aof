@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/assurance/evidence.schema.json",
+  "title": "AOF Evidence",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "content_ref": {
+          "oneOf": [
+            {
+              "$ref": "../common/reference.schema.json#/$defs/Reference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "content_digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        },
+        "integrity": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "freshness": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "confidence": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "relations": {
+          "type": "object",
+          "properties": {
+            "derived_from": {
+              "type": "array",
+              "items": {
+                "$ref": "../common/reference.schema.json#/$defs/Reference"
+              }
+            },
+            "corroborates": {
+              "type": "array",
+              "items": {
+                "$ref": "../common/reference.schema.json#/$defs/Reference"
+              }
+            },
+            "contradicts": {
+              "type": "array",
+              "items": {
+                "$ref": "../common/reference.schema.json#/$defs/Reference"
+              }
+            },
+            "supersedes": {
+              "type": "array",
+              "items": {
+                "$ref": "../common/reference.schema.json#/$defs/Reference"
+              }
+            }
+          },
+          "required": [
+            "derived_from",
+            "corroborates",
+            "contradicts",
+            "supersedes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "claim_refs",
+        "content_ref",
+        "content_digest",
+        "provenance",
+        "integrity",
+        "freshness",
+        "confidence",
+        "classification",
+        "scope",
+        "observed_at",
+        "relations"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.21",
+    "normative_notes": [
+      "Claim != Evidence.",
+      "Derived Evidence preserves derivation references when required.",
+      "Schema validity does not establish Evidence sufficiency or Verification."
+    ],
+    "lts_a2_hardened": true
+  }
+}

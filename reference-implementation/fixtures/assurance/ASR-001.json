@@ -1,0 +1,22 @@
+{
+  "test_id": "ASR-001",
+  "name": "admissible-verified",
+  "expected": "Verified",
+  "subject_ref": "subject:1",
+  "subject_version": "1",
+  "criteria_ref": "criteria:1",
+  "verifier_ref": "verifier:1",
+  "subject_actor_ref": "agent:1",
+  "independence_required": true,
+  "evidence": [
+    {
+      "id": "ev:1",
+      "subject_ref": "subject:1",
+      "subject_version": "1",
+      "provenance": {
+        "source": "trace:1"
+      },
+      "supports_criteria": true
+    }
+  ]
+}

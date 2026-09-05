@@ -1,0 +1,28 @@
+{
+  "test_id": "ECT-GEX-012",
+  "title": "Retry Cannot Expand Authority",
+  "invariants": [
+    "AOF-INV-084"
+  ],
+  "reference_tests": [
+    "CT-RR-002"
+  ],
+  "facts": {
+    "original_operations": [
+      "read"
+    ],
+    "retry_operations": [
+      "read"
+    ],
+    "original_resources": [
+      "repo"
+    ],
+    "retry_resources": [
+      "repo"
+    ]
+  },
+  "expected": {
+    "authority_expanded": false,
+    "retry_allowed": true
+  }
+}

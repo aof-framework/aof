@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/execution/agent-interaction-contract.schema.json",
+  "title": "AOF AgentInteractionContract",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sender": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "receiver": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "task_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "message_type": {
+          "$ref": "../common/execution-types.schema.json#/$defs/MessageType"
+        },
+        "context_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "authority_context_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/condition.schema.json#/$defs/Condition"
+          }
+        },
+        "expected_output_schema_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "disclosure_scope": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "expires_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "sender",
+        "receiver",
+        "task_ref",
+        "message_type",
+        "context_refs",
+        "authority_context_refs",
+        "constraints",
+        "expected_output_schema_ref",
+        "disclosure_scope",
+        "expires_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.26 / Section 10.49-10.52",
+    "normative_notes": [
+      "Message content MUST NOT implicitly expand receiver Authority.",
+      "Message type is descriptive and MUST NOT override governance semantics.",
+      "ExecutionAuthority != DisclosureAuthority.",
+      "Spoofing/identity assurance remains a security/runtime obligation."
+    ]
+  }
+}

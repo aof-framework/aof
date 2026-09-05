@@ -1,0 +1,31 @@
+{
+  "test_id": "ECT-CONF-008",
+  "title": "Missing Required Evidence Prevents Satisfaction",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [
+      "AOF-AUTH-001"
+    ],
+    "requirements": [
+      {
+        "requirement_id": "AOF-AUTH-001",
+        "normative_level": "MUST",
+        "applicability": "Applicable",
+        "tests": [
+          {
+            "test_id": "T1",
+            "result": "Pass"
+          }
+        ],
+        "evidence_required": true,
+        "evidence_refs": []
+      }
+    ]
+  },
+  "expected": "Inconclusive"
+}

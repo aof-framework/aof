@@ -1,0 +1,267 @@
+{
+  "audit": "LTS-A5 \u2014 Reference Implementation Audit",
+  "timestamp": "2026-09-05T12:43:05.005538+00:00",
+  "source_ri5_sha256": "3258cfdebaa7d4c26a7352bb6d7225e4a1b59e27e29407a0851ddf1adb487902",
+  "hardened_schema_sha256": "d9a433c5d5549e61600eb34d84fe8e4d9802b4211542765fb810c8a56baeb975",
+  "frozen_spec_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "inventory": {
+    "runtime_python_files": 21,
+    "test_modules": 6,
+    "fixture_files": 45,
+    "e2e_fixtures": 8
+  },
+  "reproducibility": {
+    "run1": "95 passed in 0.15s",
+    "run2": "95 passed in 0.11s"
+  },
+  "semantic_boundaries": {
+    "UntrustedProposal": true,
+    "SafetyKernel": true,
+    "effect_time_revalidation": true,
+    "single_use_replay_control": true,
+    "state_version_binding": true,
+    "UnknownEffect_non_success": true,
+    "Evidence_Verification_separation": true,
+    "Brownfield_adapter": true
+  },
+  "direct_e2e_mode_validation": {
+    "AOFNative_direct_e2e": true,
+    "AdapterBasedBrownfield_direct_e2e": true,
+    "Hybrid_direct_e2e": false,
+    "InFlightIncremental_direct_e2e": false
+  },
+  "runtime_to_canonical_mapping": {
+    "ExecutionContract": {
+      "canonical_schema": "execution/execution-contract.schema.json",
+      "runtime_artifact": "runtime/execution/contracts.py + runtime/execution/effect-boundary-contract.json",
+      "classification": "Reference projection / not byte-identical canonical serialization",
+      "runtime_helpers": [
+        "subject_ref",
+        "subject_state_version",
+        "decision_status",
+        "authorized",
+        "single_use"
+      ],
+      "audit_note": "`authorized` is an execution-boundary marker and MUST NOT be interpreted as AuthorityGrant."
+    },
+    "StateTransition": {
+      "canonical_schema": "execution/state-transition.schema.json",
+      "runtime_artifact": "runtime/state/store.py",
+      "classification": "Runtime state-store projection; canonical StateTransition mapping required at interchange boundary"
+    },
+    "TraceEvent": {
+      "canonical_schema": "execution/trace-event.schema.json",
+      "runtime_artifact": "runtime/trace/recorder.py",
+      "classification": "Runtime event projection; semantically aligned event types, not asserted byte-identical"
+    },
+    "Evidence": {
+      "canonical_schema": "assurance/evidence.schema.json",
+      "runtime_artifact": "runtime/assurance/evidence.py",
+      "classification": "Compact reference Evidence model; adapter/export mapping required for canonical interchange"
+    },
+    "Verification": {
+      "canonical_schema": "assurance/verification.schema.json",
+      "runtime_artifact": "runtime/assurance/verification.py + runtime/assurance/verification-contract.json",
+      "classification": "Reference VerificationResult projection; runtime policy is not universal normative aggregation"
+    },
+    "ConformanceManifest": {
+      "canonical_schema": "conformance/conformance-manifest.schema.json",
+      "runtime_artifact": "runtime/conformance/runner.py",
+      "classification": "Runner input projection; explicit canonical export mapping required"
+    },
+    "ConformanceReport": {
+      "canonical_schema": "conformance/conformance-report.schema.json",
+      "runtime_artifact": "runtime/conformance/runner.py + runtime/conformance/conformance-runner-contract.json",
+      "classification": "Runner output projection; explicit canonical export mapping required"
+    }
+  },
+  "canonical_fields": {
+    "ExecutionContract": [
+      "actor",
+      "approval_refs",
+      "authority_ref",
+      "decision_id",
+      "id",
+      "idempotency_key",
+      "operation",
+      "parameter_constraints",
+      "policy_decision_ref",
+      "risk_ref",
+      "single_use",
+      "state_ref",
+      "target",
+      "task_id",
+      "valid_from",
+      "valid_until",
+      "verification_refs"
+    ],
+    "StateTransition": [
+      "action_ref",
+      "actor",
+      "committed_at",
+      "decision_ref",
+      "evidence_refs",
+      "expected_version",
+      "id",
+      "result",
+      "scope",
+      "state_after_ref",
+      "state_before_ref"
+    ],
+    "TraceEvent": [
+      "action_id",
+      "actor",
+      "classification",
+      "correlation",
+      "decision_id",
+      "event_type",
+      "evidence_refs",
+      "id",
+      "input_refs",
+      "integrity",
+      "result",
+      "sequence",
+      "session_id",
+      "state_after_ref",
+      "state_before_ref",
+      "task_id",
+      "timestamp"
+    ],
+    "Evidence": [
+      "claim_refs",
+      "classification",
+      "confidence",
+      "content_digest",
+      "content_ref",
+      "freshness",
+      "id",
+      "integrity",
+      "observed_at",
+      "provenance",
+      "relations",
+      "scope",
+      "source"
+    ],
+    "Verification": [
+      "claim_ref",
+      "confidence",
+      "criteria_refs",
+      "evidence_refs",
+      "id",
+      "independence",
+      "limitations",
+      "method",
+      "profile_ref",
+      "provenance",
+      "result",
+      "subject_version",
+      "verified_at",
+      "verifier"
+    ],
+    "ConformanceManifest": [
+      "assessment_mode",
+      "created_at",
+      "evidence_package_ref",
+      "id",
+      "profile",
+      "report_ref",
+      "requirement_registry_version",
+      "schema_package_version",
+      "scope",
+      "specification_version",
+      "subject",
+      "subject_version",
+      "test_suite_version"
+    ],
+    "ConformanceReport": [
+      "assessor",
+      "coverage",
+      "exceptions",
+      "final_result",
+      "id",
+      "manifest_ref",
+      "requirements",
+      "timestamp"
+    ]
+  },
+  "reference_policy_choices": {
+    "verification_contradiction_behavior": {
+      "observed": "Verification engine can return Failed on material contradiction.",
+      "classification": "Reference policy choice unless frozen criteria/profile explicitly requires this aggregation.",
+      "lts_disposition": "Document as reference behavior; do not claim universal AOF normative rule."
+    },
+    "conditional_precedence": {
+      "observed": "Conformance runner applies Conditional for exceptions/limitations after mandatory/nonmandatory violation/inconclusive gates.",
+      "classification": "Reference aggregation implementation aligned with suite behavior, not a new frozen semantic.",
+      "lts_disposition": "Keep behavior; label as reference engine policy."
+    },
+    "contract_consumption": {
+      "observed": "Single-use ExecutionContract is consumed immediately before adapter dispatch.",
+      "classification": "Safety-first reference implementation choice.",
+      "lts_disposition": "Do not universalize exact consumption timing beyond replay-prevention semantics."
+    },
+    "authorized_marker": {
+      "observed": "Runtime ExecutionContract includes `authorized` helper marker.",
+      "classification": "Implementation helper only.",
+      "lts_disposition": "MUST NOT be documented as AuthorityGrant or source of Authority."
+    }
+  },
+  "e2e_fixture_expectations": [
+    [
+      "E2E-001.json",
+      null
+    ],
+    [
+      "E2E-002.json",
+      null
+    ],
+    [
+      "E2E-003.json",
+      null
+    ],
+    [
+      "E2E-004.json",
+      null
+    ],
+    [
+      "E2E-005.json",
+      null
+    ],
+    [
+      "E2E-006.json",
+      null
+    ],
+    [
+      "E2E-007.json",
+      null
+    ],
+    [
+      "E2E-008.json",
+      null
+    ]
+  ],
+  "release_claim_constraint": "Reference Implementation E2E validation MUST claim direct execution coverage for AOFNative and AdapterBasedBrownfield only. Hybrid and InFlightIncremental remain conformance-suite adoption modes unless dedicated RI E2E implementations are added.",
+  "findings": {
+    "transport_dependency_hits": [],
+    "release_residue": [],
+    "transport_neutrality_negative_tests": [
+      "tests/test_ri1.py::test_no_openapi_dependency"
+    ]
+  },
+  "checks": {
+    "frozen_spec_checksum_matches": true,
+    "hardened_schema_baseline_available": true,
+    "ri_cumulative_run1_pass": true,
+    "ri_cumulative_run2_pass": true,
+    "ri_reproducible_95_test_count": true,
+    "semantic_boundary_markers_present": true,
+    "native_e2e_directly_validated": true,
+    "brownfield_e2e_directly_validated": true,
+    "runtime_canonical_mapping_explicit_for_7_targets": true,
+    "reference_policy_choices_explicitly_classified": true,
+    "no_openapi_swagger_runtime_dependency": true,
+    "release_residue_clean": true
+  },
+  "result": "PASS_WITH_RELEASE_CLAIM_CONSTRAINT",
+  "audit_note": "The only lexical OpenAPI hit was the negative test `test_no_openapi_dependency`; it is evidence of transport neutrality, not a runtime dependency."
+}

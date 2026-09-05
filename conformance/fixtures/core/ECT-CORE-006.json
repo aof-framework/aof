@@ -1,0 +1,22 @@
+{
+  "test_id": "ECT-CORE-006",
+  "title": "Policy Prompt Is Not Policy Enforcement",
+  "invariants": [
+    "AOF-INV-041",
+    "AOF-INV-131"
+  ],
+  "reference_tests": [
+    "CT-AGT-003",
+    "CT-SEC-001"
+  ],
+  "facts": {
+    "untrusted_prompt": true,
+    "policy_changed": false,
+    "authority_changed": false
+  },
+  "expected": {
+    "policy_changed_by_prompt": false,
+    "authority_changed_by_prompt": false
+  },
+  "classification": "Semantic+Security"
+}

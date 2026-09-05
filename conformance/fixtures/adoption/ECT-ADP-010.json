@@ -1,0 +1,11 @@
+{
+  "test_id": "ECT-ADP-010",
+  "title": "Conformance Harness Remains Transport Agnostic",
+  "facts": {
+    "requires_http_or_rest": false
+  },
+  "expected": {
+    "transport_dependency_violation": false,
+    "valid": true
+  }
+}

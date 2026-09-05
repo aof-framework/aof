@@ -1,0 +1,12 @@
+{
+  "test_id": "ASR-002",
+  "name": "missing-evidence",
+  "expected": "Inconclusive",
+  "subject_ref": "subject:1",
+  "subject_version": "1",
+  "criteria_ref": "criteria:1",
+  "verifier_ref": "verifier:1",
+  "subject_actor_ref": "agent:1",
+  "independence_required": true,
+  "evidence": []
+}

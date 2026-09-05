@@ -1,0 +1,22 @@
+{
+  "test_id": "ECT-ASR-008",
+  "title": "Inconclusive Is Not Verified",
+  "requirements": [
+    "AOF-VER-007"
+  ],
+  "invariants": [
+    "VER-INV-03"
+  ],
+  "reference_tests": [
+    "CT-VER-002",
+    "CT-LC-003"
+  ],
+  "facts": {
+    "verification_result": "Inconclusive",
+    "other_completion_conditions": true
+  },
+  "expected": {
+    "verified": false,
+    "successful_completion": false
+  }
+}

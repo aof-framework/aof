@@ -1,0 +1,11 @@
+{
+  "test_id": "ECT-ADP-016",
+  "title": "Adapter Cannot Hide Consequential Governance Semantics",
+  "facts": {
+    "hidden_fields_change_governance_outcome": false
+  },
+  "expected": {
+    "hidden_consequential_semantics": false,
+    "valid": true
+  }
+}

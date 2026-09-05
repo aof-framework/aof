@@ -1,0 +1,11 @@
+{
+  "SchemaValidity != SemanticValidity != AOFConformance": true,
+  "Capability != Authority": true,
+  "Proposal != AuthorizedDecision": true,
+  "Pending != Pass": true,
+  "ValidAtCheck != ValidAtEffect": true,
+  "Claim != Evidence != Verification": true,
+  "Conformance != Maturity": true,
+  "ScopedAdoption != WeakConformance": true,
+  "PartialAdoption != PartialCompliance": true
+}

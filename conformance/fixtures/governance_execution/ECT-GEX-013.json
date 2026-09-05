@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-GEX-013",
+  "title": "Material Replan Requires Fresh Decision",
+  "invariants": [
+    "AOF-INV-085"
+  ],
+  "reference_tests": [
+    "CT-RR-003"
+  ],
+  "facts": {
+    "goal_changed": false,
+    "resource_scope_changed": true,
+    "risk_changed": false
+  },
+  "expected": {
+    "new_decision_required": true,
+    "reuse_old_decision_allowed": false
+  }
+}

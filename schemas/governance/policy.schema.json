@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/governance/policy.schema.json",
+  "title": "AOF Policy",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "subject_selector": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "resource_selector": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "action_selector": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "condition": {
+          "$ref": "../common/condition.schema.json#/$defs/Expression"
+        },
+        "effect": {
+          "$ref": "../common/governance-enums.schema.json#/$defs/PolicyEffect"
+        },
+        "priority": {
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "valid_from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "status": {
+          "$ref": "../common/governance-enums.schema.json#/$defs/PolicyStatus"
+        },
+        "provenance": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "scope",
+        "subject_selector",
+        "resource_selector",
+        "action_selector",
+        "condition",
+        "effect",
+        "priority",
+        "source",
+        "valid_from",
+        "valid_until",
+        "status",
+        "provenance"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.16 / Section 12.2-12.18",
+    "normative_notes": [
+      "Policy constrains Authority but does not create Authority.",
+      "Core effects are Allow, Deny, RequireVerification, RequireApproval, Escalate; extension effects MAY exist.",
+      "Default restrictive precedence is semantic evaluation, not structural validation.",
+      "No universal Policy DSL is invented."
+    ]
+  }
+}

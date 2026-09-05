@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-012",
+  "title": "Conformance Claim Cannot Exceed Evidence Scope",
+  "facts": {
+    "claim_scope": 2,
+    "evidence_scope": 2
+  },
+  "expected": {
+    "claim_overreach": false,
+    "valid": true
+  }
+}

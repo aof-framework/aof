@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/assurance/escalation-package.schema.json",
+  "title": "AOF EscalationPackage",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_state_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "decision_required": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failure_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "risk_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "authority_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "policy_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "attempt_history_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/reference.schema.json#/$defs/Reference"
+          }
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "subject",
+        "reason",
+        "current_state_ref",
+        "decision_required",
+        "failure_refs",
+        "risk_refs",
+        "evidence_refs",
+        "authority_refs",
+        "policy_refs",
+        "attempt_history_refs",
+        "options",
+        "created_at"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.27",
+    "normative_notes": [
+      "Escalation package preserves sufficient context without unnecessary sensitive disclosure.",
+      "Escalation does not itself imply approval or expanded Authority."
+    ],
+    "lts_a2_hardened": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": "ECT-CONF-NA-003",
+  "requirement": {
+    "requirement_id": "AOF-X-003",
+    "applicability": "NotApplicable",
+    "applicability_rationale": "Declared N/A",
+    "required_by_claimed_scope": true
+  },
+  "expected": false
+}

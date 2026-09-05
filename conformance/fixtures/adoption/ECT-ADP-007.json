@@ -1,0 +1,14 @@
+{
+  "test_id": "ECT-ADP-007",
+  "title": "Adapter Preserves Canonical Semantics",
+  "facts": {
+    "identity_preserved": true,
+    "authority_semantics_preserved": true,
+    "policy_semantics_preserved": true,
+    "state_semantics_preserved": true,
+    "trace_semantics_preserved": true
+  },
+  "expected": {
+    "equivalent": true
+  }
+}

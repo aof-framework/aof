@@ -1,0 +1,22 @@
+{
+  "id": "auth-001",
+  "subject": "agent-1",
+  "operations": [
+    "Deploy"
+  ],
+  "resources": [
+    "resource-prod"
+  ],
+  "scope": {
+    "environment": "production"
+  },
+  "constraints": [],
+  "issuer": "governance-root",
+  "delegable": false,
+  "delegation_depth": null,
+  "valid_from": "2026-09-04T00:00:00Z",
+  "valid_until": null,
+  "status": "Active",
+  "parent_grant_id": null,
+  "provenance": "trace-001"
+}

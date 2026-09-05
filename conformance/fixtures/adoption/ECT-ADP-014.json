@@ -1,0 +1,13 @@
+{
+  "test_id": "ECT-ADP-014",
+  "title": "Partial Adoption Does Not Imply Full Compliance",
+  "facts": {
+    "partial_adoption": true,
+    "claims_full_compliance": false,
+    "all_applicable_mandatory_controls_satisfied": false
+  },
+  "expected": {
+    "weak_compliance_claim": false,
+    "valid": true
+  }
+}

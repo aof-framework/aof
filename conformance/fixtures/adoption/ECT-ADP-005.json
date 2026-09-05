@@ -1,0 +1,16 @@
+{
+  "test_id": "ECT-ADP-005",
+  "title": "Scoped Adoption Declares Included And Excluded Components",
+  "facts": {
+    "included_components": [
+      "ai-code-review"
+    ],
+    "excluded_components": [
+      "legacy-issue-tracker"
+    ],
+    "profile": "AOF-Secure-SDLC"
+  },
+  "expected": {
+    "scope_valid": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-CORE-005",
+  "title": "Pending Is Not Pass",
+  "invariants": [
+    "AOF-INV-015"
+  ],
+  "reference_tests": [
+    "CT-LC-001"
+  ],
+  "facts": {
+    "mandatory_gate": "Pending",
+    "execute": false
+  },
+  "expected": {
+    "implicit_pass": false,
+    "blocked": true
+  },
+  "classification": "Semantic+Behavioral"
+}

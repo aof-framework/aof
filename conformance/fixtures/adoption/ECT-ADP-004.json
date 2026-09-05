@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-004",
+  "title": "InFlight Incremental Adoption Governs Selected Boundary",
+  "facts": {
+    "existing_pipeline_continues": true,
+    "selected_boundary_governed": true,
+    "migration_stage_explicit": true
+  },
+  "expected": {
+    "adoption_valid": true
+  }
+}

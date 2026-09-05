@@ -1,0 +1,18 @@
+{
+  "test_id": "SK-009",
+  "name": "risk-ceiling",
+  "facts": {
+    "capability_present": true,
+    "authority_granted": true,
+    "scope_match": true,
+    "policy_permits": true,
+    "state_valid": true,
+    "state_transition_authorized": true,
+    "risk_permits": true,
+    "risk_acceptance_required": false,
+    "verification_required": true,
+    "verification_status": "Verified",
+    "risk_ceiling_exceeded": true
+  },
+  "expected_decision": "Deny"
+}

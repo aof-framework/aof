@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-ASR-002",
+  "title": "Evidence Is Not Verification",
+  "requirements": [],
+  "invariants": [
+    "EVD-INV-03"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "evidence_present": true,
+    "verified_without_evaluation": false
+  },
+  "expected": {
+    "evidence_implies_verified": false,
+    "separation_preserved": true
+  }
+}

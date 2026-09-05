@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-ri5",
+  "path": [
+    "Request",
+    "Context",
+    "Reasoning",
+    "Proposal",
+    "Decision",
+    "ExecutionContract",
+    "EffectBoundary",
+    "Effect",
+    "Trace",
+    "Evidence",
+    "Verification",
+    "ConformanceReport"
+  ],
+  "modes": [
+    "AOFNative",
+    "AdapterBasedBrownfield"
+  ],
+  "equivalence_basis": "observable governance semantics",
+  "rules": [
+    "AOFAdoption != BigBangMigration",
+    "AdapterAuthority <= ExistingAuthorizedAuthority",
+    "ScopedAdoption != WeakConformance",
+    "PartialAdoption != PartialCompliance",
+    "ClaimScope <= EvidenceScope"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": "ECT-ADP-017",
+  "title": "Equivalent Governance Decision Across Adoption Modes",
+  "facts": {
+    "native_decision": "Deny",
+    "adapter_decision": "Deny",
+    "hybrid_decision": "Deny"
+  },
+  "expected": {
+    "semantic_equivalence": true
+  }
+}

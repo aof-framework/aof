@@ -1,0 +1,13 @@
+{
+  "test_id": "ECT-ADP-015",
+  "title": "Brownfield Adapter Exposes Observable Conformance Evidence",
+  "facts": {
+    "decision_observable": true,
+    "state_observable": true,
+    "effect_observable": true,
+    "evidence_collectable": true
+  },
+  "expected": {
+    "observable": true
+  }
+}

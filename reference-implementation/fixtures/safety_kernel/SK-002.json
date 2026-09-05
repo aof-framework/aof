@@ -1,0 +1,17 @@
+{
+  "test_id": "SK-002",
+  "name": "missing-capability",
+  "facts": {
+    "capability_present": false,
+    "authority_granted": true,
+    "scope_match": true,
+    "policy_permits": true,
+    "state_valid": true,
+    "state_transition_authorized": true,
+    "risk_permits": true,
+    "risk_acceptance_required": false,
+    "verification_required": true,
+    "verification_status": "Verified"
+  },
+  "expected_decision": "Deny"
+}

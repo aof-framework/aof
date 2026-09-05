@@ -1,0 +1,13 @@
+{
+  "test_id": "ECT-ADP-002",
+  "title": "Brownfield Adapter Preserves Existing Workflow",
+  "facts": {
+    "existing_workflow_preserved": true,
+    "adapter_exposes_aof_semantics": true,
+    "mandatory_controls_enforced": true
+  },
+  "expected": {
+    "adoption_valid": true,
+    "replacement_required": false
+  }
+}

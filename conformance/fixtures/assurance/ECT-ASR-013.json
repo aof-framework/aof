@@ -1,0 +1,21 @@
+{
+  "test_id": "ECT-ASR-013",
+  "title": "Material Subject Change Requires Reverification",
+  "requirements": [
+    "AOF-VER-010"
+  ],
+  "invariants": [
+    "VER-INV-06"
+  ],
+  "reference_tests": [
+    "CT-VER-002"
+  ],
+  "facts": {
+    "verified_subject_version": "v1",
+    "current_subject_version": "v2"
+  },
+  "expected": {
+    "reverification_required": true,
+    "old_verification_reusable": false
+  }
+}

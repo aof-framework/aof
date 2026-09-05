@@ -1,0 +1,20 @@
+{
+  "test_id": "ECT-ASR-011",
+  "title": "Verification Requires Explicit Criteria",
+  "requirements": [
+    "AOF-VER-002"
+  ],
+  "invariants": [
+    "VER-INV-01"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "explicit_criteria": false,
+    "evidence_evaluated": true,
+    "verification_result": "Verified"
+  },
+  "expected": {
+    "verification_valid": false,
+    "verified": false
+  }
+}

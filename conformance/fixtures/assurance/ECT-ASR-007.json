@@ -1,0 +1,21 @@
+{
+  "test_id": "ECT-ASR-007",
+  "title": "Material Contradiction Remains Visible to Verification",
+  "requirements": [
+    "AOF-EVD-005",
+    "AOF-EVD-014"
+  ],
+  "invariants": [
+    "EVD-INV-05"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "material_contradiction": true,
+    "reported_to_verification": true,
+    "verification_result": "Inconclusive"
+  },
+  "expected": {
+    "contradiction_visible": true,
+    "verified": false
+  }
+}

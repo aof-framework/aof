@@ -1,0 +1,19 @@
+{
+  "test_id": "ECT-GEX-006",
+  "title": "Risk Ceiling Cannot Be Exceeded",
+  "invariants": [
+    "AOF-INV-069"
+  ],
+  "reference_tests": [
+    "CT-RISK-001"
+  ],
+  "facts": {
+    "action_risk": 4,
+    "authority_risk_ceiling": 3,
+    "other_gates_pass": true
+  },
+  "expected": {
+    "within_risk_ceiling": false,
+    "effect_allowed": false
+  }
+}

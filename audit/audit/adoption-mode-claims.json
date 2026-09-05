@@ -1,0 +1,10 @@
+{
+  "direct_e2e": {
+    "AOFNative_direct_e2e": true,
+    "AdapterBasedBrownfield_direct_e2e": true,
+    "Hybrid_direct_e2e": false,
+    "InFlightIncremental_direct_e2e": false
+  },
+  "constraint_preserved": true,
+  "release_claim": "Reference Implementation E2E validation MUST claim direct execution coverage for AOFNative and AdapterBasedBrownfield only. Hybrid and InFlightIncremental remain conformance-suite adoption modes unless dedicated RI E2E implementations are added."
+}

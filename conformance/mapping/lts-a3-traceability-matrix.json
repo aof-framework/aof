@@ -1,0 +1,3698 @@
+{
+  "audit_gate": "LTS-A3",
+  "timestamp": "2026-09-05T07:51:28.871081+00:00",
+  "frozen_spec_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "policy": {
+    "canonical_chain": "Invariant -> Requirement -> Test -> Evidence",
+    "no_heuristic_direct_edge_rule": true,
+    "behavioral_reference_cts_are_not_relabelled_as_frozen_direct_edges": true,
+    "absence_of_direct_mapping_is_explicitly_preserved": true
+  },
+  "counts": {
+    "requirements": 332,
+    "canonical_invariants": 162,
+    "reference_cts": 51,
+    "executable_tests": 85,
+    "explicit_frozen_edges": 352
+  },
+  "phase3_corrections": {
+    "old_nonexistent_reference_ct_count": 13,
+    "publication_grade_rows": [
+      {
+        "test_id": "ECT-GEX-001",
+        "title": "Delegation Conserves Parent Authority",
+        "invariants": [
+          "AOF-INV-038"
+        ],
+        "reference_tests": [
+          "CT-AGT-005"
+        ],
+        "source_anchor": "Appendix A / AOF-INV-038; CT-AGT-005",
+        "disposition": "ExplicitFrozenTrace",
+        "requirement_ids": [
+          "AOF-AGT-012",
+          "AOF-AGT-016",
+          "AOF-AGT-024",
+          "AOF-AUTH-011",
+          "AOF-AUTH-018"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-002",
+        "title": "Revocation Before Effect Blocks Action",
+        "invariants": [
+          "AOF-INV-008"
+        ],
+        "reference_tests": [
+          "CT-AUTH-002",
+          "CT-LC-005"
+        ],
+        "source_anchor": "AOF-INV-008; AOF-AUTH-016; AOF-LC-021",
+        "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+        "requirement_ids": [
+          "AOF-ARCH-012",
+          "AOF-ARCH-015",
+          "AOF-AUTH-003",
+          "AOF-AUTH-016",
+          "AOF-LC-021"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-003",
+        "title": "Expired Authority Blocks Effect",
+        "invariants": [
+          "AOF-INV-054"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-054; AOF-ARCH-008; AOF-AUTH-016; AOF-LC-021",
+        "disposition": "CanonicalInvariant+DirectRequirements_NoDirectCT",
+        "requirement_ids": [
+          "AOF-ARCH-008",
+          "AOF-AUTH-016",
+          "AOF-LC-021"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-004",
+        "title": "Deny Dominates Conflicting Allow",
+        "invariants": [
+          "AOF-INV-058"
+        ],
+        "reference_tests": [
+          "CT-POL-001"
+        ],
+        "source_anchor": "AOF-INV-058; CT-POL-001",
+        "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+        "requirement_ids": [],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-005",
+        "title": "Unknown Mandatory Policy Fails Controlled",
+        "invariants": [
+          "AOF-INV-007"
+        ],
+        "reference_tests": [
+          "CT-POL-002"
+        ],
+        "source_anchor": "AOF-INV-007 / POL-INV-04; AOF-POL-002; CT-POL-002",
+        "disposition": "CanonicalInvariant+BehavioralReferenceCT",
+        "requirement_ids": [
+          "AOF-POL-002",
+          "AOF-POL-006",
+          "AOF-POL-009"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-006",
+        "title": "Risk Ceiling Cannot Be Exceeded",
+        "invariants": [
+          "AOF-INV-047"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-047; authority constraints / non-acceptable risk semantics",
+        "disposition": "CanonicalInvariant_NoDirectCT",
+        "requirement_ids": [
+          "AOF-RISK-012"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-007",
+        "title": "Consequential Effect Requires ExecutionContract",
+        "invariants": [],
+        "reference_tests": [],
+        "source_anchor": "Appendix E.20 ExecutionContract; reference implementation control contract",
+        "disposition": "ReferenceImplementationContract_NoDirectFrozenInvariantOrCT",
+        "requirement_ids": [],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-008",
+        "title": "Single-Use ExecutionContract Rejects Replay",
+        "invariants": [
+          "AOF-INV-136"
+        ],
+        "reference_tests": [
+          "CT-SEC-003"
+        ],
+        "source_anchor": "AOF-INV-136 Replay Control; CT-SEC-003; Appendix E.20 single_use",
+        "disposition": "CanonicalReplayInvariant+SchemaAnchor",
+        "requirement_ids": [],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-009",
+        "title": "Stale Decision State Blocks Effect",
+        "invariants": [
+          "AOF-INV-016",
+          "AOF-INV-102"
+        ],
+        "reference_tests": [
+          "CT-LC-002",
+          "CT-STATE-001"
+        ],
+        "source_anchor": "AOF-INV-016 State Freshness; AOF-INV-102 TOCTOU Control",
+        "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+        "requirement_ids": [
+          "AOF-ST-018"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-010",
+        "title": "Unauthorized State Transition Is Rejected",
+        "invariants": [
+          "AOF-INV-096"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-096; AOF-ST-002; AOF-LC-015",
+        "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+        "requirement_ids": [
+          "AOF-LC-015",
+          "AOF-ST-002",
+          "AOF-ST-017"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-011",
+        "title": "Retry Is Bounded",
+        "invariants": [
+          "AOF-INV-127"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-127; AOF-FR-009; AOF-LC-010",
+        "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+        "requirement_ids": [
+          "AOF-FR-009",
+          "AOF-LC-010"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-012",
+        "title": "Retry Cannot Expand Authority",
+        "invariants": [
+          "AOF-INV-047",
+          "AOF-INV-020"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-047 Authority Bound; AOF-INV-020 Retry Governance",
+        "disposition": "CanonicalInvariants_NoDirectCT",
+        "requirement_ids": [
+          "AOF-LC-003",
+          "AOF-LC-010",
+          "AOF-LC-016"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-013",
+        "title": "Material Replan Requires Fresh Decision",
+        "invariants": [
+          "AOF-INV-021",
+          "AOF-INV-101"
+        ],
+        "reference_tests": [
+          "CT-LC-006"
+        ],
+        "source_anchor": "AOF-INV-021 Replan Governance; AOF-INV-101 Replan Consistency; AOF-LC-011",
+        "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+        "requirement_ids": [
+          "AOF-LC-011",
+          "AOF-ST-010"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-014",
+        "title": "Authorized Decision Alone Does Not Permit Effect",
+        "invariants": [
+          "AOF-INV-004",
+          "AOF-INV-014"
+        ],
+        "reference_tests": [],
+        "source_anchor": "AOF-INV-004 Effect Boundary Validation; AOF-ARCH-009",
+        "disposition": "ExplicitFrozenRequirementTrace_NoDirectCT",
+        "requirement_ids": [
+          "AOF-ARCH-009"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-015",
+        "title": "ExecutionContract Does Not Create Authority",
+        "invariants": [],
+        "reference_tests": [],
+        "source_anchor": "Appendix E.20: ExecutionContract != AuthorityGrant",
+        "disposition": "ExactFrozenSchemaFormula_NoCanonicalInvariantOrCT",
+        "requirement_ids": [],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      },
+      {
+        "test_id": "ECT-GEX-016",
+        "title": "Consequential Decision and Effect Remain Traceable",
+        "invariants": [
+          "AOF-INV-103",
+          "AOF-INV-105"
+        ],
+        "reference_tests": [
+          "CT-TRC-001"
+        ],
+        "source_anchor": "AOF-INV-103 Trace Completeness; AOF-INV-105 Correlation; CT-TRC-001",
+        "disposition": "CanonicalInvariants+BehavioralReferenceCT",
+        "requirement_ids": [
+          "AOF-TRC-001",
+          "AOF-TRC-002",
+          "AOF-TRC-003",
+          "AOF-TRC-005",
+          "AOF-TRC-007",
+          "AOF-TRC-009",
+          "AOF-TRC-011",
+          "AOF-TRC-014"
+        ],
+        "requirement_mapping_status": "FrozenSourceDerived_Conservative"
+      }
+    ]
+  },
+  "matrix": [
+    {
+      "executable_test_id": "ECT-ADP-001",
+      "title": "Greenfield Adoption Is Valid Without Legacy Replacement",
+      "fixture": "fixtures/adoption/ECT-ADP-001.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-002",
+      "title": "Brownfield Adapter Preserves Existing Workflow",
+      "fixture": "fixtures/adoption/ECT-ADP-002.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-003",
+      "title": "Hybrid Adoption Uses Common Governance Boundary",
+      "fixture": "fixtures/adoption/ECT-ADP-003.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-004",
+      "title": "InFlight Incremental Adoption Governs Selected Boundary",
+      "fixture": "fixtures/adoption/ECT-ADP-004.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-005",
+      "title": "Scoped Adoption Declares Included And Excluded Components",
+      "fixture": "fixtures/adoption/ECT-ADP-005.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-006",
+      "title": "Scope Cannot Exclude Applicable Mandatory Control",
+      "fixture": "fixtures/adoption/ECT-ADP-006.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-007",
+      "title": "Adapter Preserves Canonical Semantics",
+      "fixture": "fixtures/adoption/ECT-ADP-007.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-008",
+      "title": "Adapter Cannot Expand Authority",
+      "fixture": "fixtures/adoption/ECT-ADP-008.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-009",
+      "title": "Adapter Cannot Suppress Policy Deny",
+      "fixture": "fixtures/adoption/ECT-ADP-009.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-010",
+      "title": "Conformance Harness Remains Transport Agnostic",
+      "fixture": "fixtures/adoption/ECT-ADP-010.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-011",
+      "title": "Unrelated Existing Tooling Need Not Be Replaced",
+      "fixture": "fixtures/adoption/ECT-ADP-011.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-012",
+      "title": "Conformance Claim Cannot Exceed Evidence Scope",
+      "fixture": "fixtures/adoption/ECT-ADP-012.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-013",
+      "title": "Progressive Governance Stage Is Explicit",
+      "fixture": "fixtures/adoption/ECT-ADP-013.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-014",
+      "title": "Partial Adoption Does Not Imply Full Compliance",
+      "fixture": "fixtures/adoption/ECT-ADP-014.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-015",
+      "title": "Brownfield Adapter Exposes Observable Conformance Evidence",
+      "fixture": "fixtures/adoption/ECT-ADP-015.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-016",
+      "title": "Adapter Cannot Hide Consequential Governance Semantics",
+      "fixture": "fixtures/adoption/ECT-ADP-016.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-017",
+      "title": "Equivalent Governance Decision Across Adoption Modes",
+      "fixture": "fixtures/adoption/ECT-ADP-017.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-018",
+      "title": "Brownfield Revocation Blocks Legacy Effect",
+      "fixture": "fixtures/adoption/ECT-ADP-018.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-019",
+      "title": "Brownfield Trace Correlates Legacy And AOF Events",
+      "fixture": "fixtures/adoption/ECT-ADP-019.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ADP-020",
+      "title": "ConformanceManifest Explicitly Binds Adoption Scope",
+      "fixture": "fixtures/adoption/ECT-ADP-020.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/adoption/phase6-adoption-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-ASR-001",
+      "title": "Claim Is Not Evidence",
+      "fixture": "fixtures/assurance/ECT-ASR-001.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-002",
+      "title": "Evidence Is Not Verification",
+      "fixture": "fixtures/assurance/ECT-ASR-002.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-003",
+      "title": "Evidence Presence Does Not Establish Sufficiency",
+      "fixture": "fixtures/assurance/ECT-ASR-003.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-EVD-006"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-004",
+      "title": "Consequential Evidence Preserves Provenance",
+      "fixture": "fixtures/assurance/ECT-ASR-004.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-EVD-001"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-005",
+      "title": "Stale Evidence Cannot Support Fresh Verification",
+      "fixture": "fixtures/assurance/ECT-ASR-005.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-EVD-003"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-006",
+      "title": "Inadmissible Evidence Cannot Produce Verified",
+      "fixture": "fixtures/assurance/ECT-ASR-006.json",
+      "canonical_invariants": [],
+      "reference_cts": [
+        "CT-EVD-001"
+      ],
+      "requirement_ids": [
+        "AOF-EVD-004",
+        "AOF-EVD-018"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-007",
+      "title": "Material Contradiction Remains Visible to Verification",
+      "fixture": "fixtures/assurance/ECT-ASR-007.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-EVD-005",
+        "AOF-EVD-014"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-008",
+      "title": "Inconclusive Is Not Verified",
+      "fixture": "fixtures/assurance/ECT-ASR-008.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [
+        "CT-LC-003",
+        "CT-VER-002"
+      ],
+      "requirement_ids": [
+        "AOF-LC-007",
+        "AOF-VER-007",
+        "AOF-VER-010",
+        "AOF-VER-012",
+        "AOF-VER-013"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-009",
+      "title": "Self Verification Cannot Satisfy Required Independence",
+      "fixture": "fixtures/assurance/ECT-ASR-009.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [
+        "CT-VER-001"
+      ],
+      "requirement_ids": [
+        "AOF-VER-001",
+        "AOF-VER-002",
+        "AOF-VER-003",
+        "AOF-VER-005",
+        "AOF-VER-006",
+        "AOF-VER-008",
+        "AOF-VER-009",
+        "AOF-VER-011",
+        "AOF-VER-014",
+        "AOF-VER-015",
+        "AOF-VER-017"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-010",
+      "title": "Circular Verification Cannot Claim Strong Independence",
+      "fixture": "fixtures/assurance/ECT-ASR-010.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-VER-006"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-011",
+      "title": "Verification Requires Explicit Criteria",
+      "fixture": "fixtures/assurance/ECT-ASR-011.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-VER-002"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-012",
+      "title": "Verification Is Bound to Subject and Version",
+      "fixture": "fixtures/assurance/ECT-ASR-012.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-VER-009"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-013",
+      "title": "Material Subject Change Requires Reverification",
+      "fixture": "fixtures/assurance/ECT-ASR-013.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [
+        "CT-VER-002"
+      ],
+      "requirement_ids": [
+        "AOF-VER-010",
+        "AOF-VER-012",
+        "AOF-VER-013"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-014",
+      "title": "Verification Does Not Create Authority",
+      "fixture": "fixtures/assurance/ECT-ASR-014.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-015",
+      "title": "Verification Does Not Create Approval",
+      "fixture": "fixtures/assurance/ECT-ASR-015.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-016",
+      "title": "Execution Success Is Not Verified Outcome",
+      "fixture": "fixtures/assurance/ECT-ASR-016.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-VER-012"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-017",
+      "title": "Successful Completion Requires Goal and Assurance",
+      "fixture": "fixtures/assurance/ECT-ASR-017.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [
+        "CT-LC-003"
+      ],
+      "requirement_ids": [
+        "AOF-LC-007",
+        "AOF-VER-012"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-ASR-018",
+      "title": "Missing Required Evidence Cannot Verify",
+      "fixture": "fixtures/assurance/ECT-ASR-018.json",
+      "canonical_invariants": [
+        "AOF-INV-162"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-VER-008"
+      ],
+      "evidence_artifacts": [
+        "evidence/assurance/phase4-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CONF-001",
+      "title": "All Applicable Mandatory Requirements Satisfied Produces Conformant",
+      "fixture": "fixtures/conformance/ECT-CONF-001.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-002",
+      "title": "Applicable Mandatory Failure Produces NonConformant",
+      "fixture": "fixtures/conformance/ECT-CONF-002.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-003",
+      "title": "Blocked Mandatory Requirement Produces Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-003.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-004",
+      "title": "Inconclusive Mandatory Requirement Produces Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-004.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-005",
+      "title": "Missing Mandatory Requirement Prevents Conformant",
+      "fixture": "fixtures/conformance/ECT-CONF-005.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-006",
+      "title": "Conditional Applicability Produces Conditional Result",
+      "fixture": "fixtures/conformance/ECT-CONF-006.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-007",
+      "title": "Explicit Exception Produces Conditional Result",
+      "fixture": "fixtures/conformance/ECT-CONF-007.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-008",
+      "title": "Missing Required Evidence Prevents Satisfaction",
+      "fixture": "fixtures/conformance/ECT-CONF-008.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-009",
+      "title": "Missing Subject Binding Produces Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-009.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-010",
+      "title": "Missing Profile Binding Produces Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-010.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-011",
+      "title": "Missing Scope Binding Produces Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-011.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-012",
+      "title": "Applicable NonMandatory Failure Still Produces NonConformant",
+      "fixture": "fixtures/conformance/ECT-CONF-012.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-013",
+      "title": "NotApplicable Requirement Does Not Count As Failure",
+      "fixture": "fixtures/conformance/ECT-CONF-013.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-014",
+      "title": "Applicable Requirement With Only NotApplicable Tests Is Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-014.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-015",
+      "title": "Limitations Prevent Unconditional Conformant",
+      "fixture": "fixtures/conformance/ECT-CONF-015.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-016",
+      "title": "No Executable Result For Applicable Mandatory Requirement Is Inconclusive",
+      "fixture": "fixtures/conformance/ECT-CONF-016.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-NA-001",
+      "title": null,
+      "fixture": "fixtures/conformance/ECT-CONF-NA-001.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-NA-002",
+      "title": null,
+      "fixture": "fixtures/conformance/ECT-CONF-NA-002.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CONF-NA-003",
+      "title": null,
+      "fixture": "fixtures/conformance/ECT-CONF-NA-003.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/conformance/phase5-conformance-evidence.json"
+      ],
+      "traceability_disposition": "ExecutableDerived_NoDirectFrozenTraceLinkAsserted"
+    },
+    {
+      "executable_test_id": "ECT-CORE-001",
+      "title": "Capability Does Not Grant Authority",
+      "fixture": "fixtures/core/ECT-CORE-001.json",
+      "canonical_invariants": [
+        "AOF-INV-030"
+      ],
+      "reference_cts": [
+        "CT-AGT-001",
+        "CT-AUTH-001"
+      ],
+      "requirement_ids": [
+        "AOF-AUTH-001",
+        "AOF-AUTH-004",
+        "AOF-AUTH-007",
+        "AOF-AUTH-009",
+        "AOF-AUTH-010",
+        "AOF-AUTH-012",
+        "AOF-AUTH-013",
+        "AOF-AUTH-017",
+        "AOF-AUTH-021"
+      ],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-002",
+      "title": "Proposal Is Not Authorized Decision",
+      "fixture": "fixtures/core/ECT-CORE-002.json",
+      "canonical_invariants": [
+        "AOF-INV-036"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-003",
+      "title": "Agent Output Remains Untrusted Proposal",
+      "fixture": "fixtures/core/ECT-CORE-003.json",
+      "canonical_invariants": [
+        "AOF-INV-036",
+        "AOF-INV-042"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-004",
+      "title": "Human Unavailability Does Not Create Approval",
+      "fixture": "fixtures/core/ECT-CORE-004.json",
+      "canonical_invariants": [
+        "AOF-INV-015",
+        "AOF-INV-118"
+      ],
+      "reference_cts": [
+        "CT-HG-004",
+        "CT-LC-010"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-005",
+      "title": "Pending Is Not Pass",
+      "fixture": "fixtures/core/ECT-CORE-005.json",
+      "canonical_invariants": [
+        "AOF-INV-015"
+      ],
+      "reference_cts": [
+        "CT-LC-001"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-006",
+      "title": "Policy Prompt Is Not Policy Enforcement",
+      "fixture": "fixtures/core/ECT-CORE-006.json",
+      "canonical_invariants": [
+        "AOF-INV-041",
+        "AOF-INV-131"
+      ],
+      "reference_cts": [
+        "CT-AGT-003",
+        "CT-SEC-001"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-007",
+      "title": "Technical Access Is Not Authority",
+      "fixture": "fixtures/core/ECT-CORE-007.json",
+      "canonical_invariants": [
+        "AOF-INV-037"
+      ],
+      "reference_cts": [
+        "CT-AGT-004",
+        "CT-HG-001"
+      ],
+      "requirement_ids": [
+        "AOF-AGT-010",
+        "AOF-AGT-018",
+        "AOF-AGT-021"
+      ],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-008",
+      "title": "Approval Is Not AuthorityGrant",
+      "fixture": "fixtures/core/ECT-CORE-008.json",
+      "canonical_invariants": [
+        "AOF-INV-114"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-009",
+      "title": "Mandatory Control Failure Fails Controlled",
+      "fixture": "fixtures/core/ECT-CORE-009.json",
+      "canonical_invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_cts": [
+        "CT-FR-002",
+        "CT-LC-008"
+      ],
+      "requirement_ids": [
+        "AOF-FR-001",
+        "AOF-FR-004"
+      ],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-010",
+      "title": "Safety Kernel Cannot Be Bypassed",
+      "fixture": "fixtures/core/ECT-CORE-010.json",
+      "canonical_invariants": [
+        "AOF-INV-133"
+      ],
+      "reference_cts": [
+        "CT-SEC-002"
+      ],
+      "requirement_ids": [
+        "AOF-SEC-003"
+      ],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-011",
+      "title": "Unknown Mandatory Policy Is Not Implicit Allow",
+      "fixture": "fixtures/core/ECT-CORE-011.json",
+      "canonical_invariants": [
+        "AOF-INV-128"
+      ],
+      "reference_cts": [
+        "CT-POL-002"
+      ],
+      "requirement_ids": [
+        "AOF-FR-001",
+        "AOF-FR-004"
+      ],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-CORE-012",
+      "title": "AI Agent Is Not Governance Root",
+      "fixture": "fixtures/core/ECT-CORE-012.json",
+      "canonical_invariants": [
+        "AOF-INV-042",
+        "AOF-INV-132"
+      ],
+      "reference_cts": [
+        "CT-AGT-008"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/core/phase2-positive-evidence.json"
+      ],
+      "traceability_disposition": "FrozenLinked_AtLeastOneSupportedEdge"
+    },
+    {
+      "executable_test_id": "ECT-GEX-001",
+      "title": "Delegation Conserves Parent Authority",
+      "fixture": "fixtures/governance_execution/ECT-GEX-001.json",
+      "canonical_invariants": [
+        "AOF-INV-038"
+      ],
+      "reference_cts": [
+        "CT-AGT-005"
+      ],
+      "requirement_ids": [
+        "AOF-AGT-012",
+        "AOF-AGT-016",
+        "AOF-AGT-024",
+        "AOF-AUTH-011",
+        "AOF-AUTH-018"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ExplicitFrozenTrace"
+    },
+    {
+      "executable_test_id": "ECT-GEX-002",
+      "title": "Revocation Before Effect Blocks Action",
+      "fixture": "fixtures/governance_execution/ECT-GEX-002.json",
+      "canonical_invariants": [
+        "AOF-INV-008"
+      ],
+      "reference_cts": [
+        "CT-AUTH-002",
+        "CT-LC-005"
+      ],
+      "requirement_ids": [
+        "AOF-ARCH-012",
+        "AOF-ARCH-015",
+        "AOF-AUTH-003",
+        "AOF-AUTH-016",
+        "AOF-LC-021"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariant+BehavioralReferenceCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-003",
+      "title": "Expired Authority Blocks Effect",
+      "fixture": "fixtures/governance_execution/ECT-GEX-003.json",
+      "canonical_invariants": [
+        "AOF-INV-054"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-ARCH-008",
+        "AOF-AUTH-016",
+        "AOF-LC-021"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariant+DirectRequirements_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-004",
+      "title": "Deny Dominates Conflicting Allow",
+      "fixture": "fixtures/governance_execution/ECT-GEX-004.json",
+      "canonical_invariants": [
+        "AOF-INV-058"
+      ],
+      "reference_cts": [
+        "CT-POL-001"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariant+BehavioralReferenceCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-005",
+      "title": "Unknown Mandatory Policy Fails Controlled",
+      "fixture": "fixtures/governance_execution/ECT-GEX-005.json",
+      "canonical_invariants": [
+        "AOF-INV-007"
+      ],
+      "reference_cts": [
+        "CT-POL-002"
+      ],
+      "requirement_ids": [
+        "AOF-POL-002",
+        "AOF-POL-006",
+        "AOF-POL-009"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariant+BehavioralReferenceCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-006",
+      "title": "Risk Ceiling Cannot Be Exceeded",
+      "fixture": "fixtures/governance_execution/ECT-GEX-006.json",
+      "canonical_invariants": [
+        "AOF-INV-047"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-RISK-012"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariant_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-007",
+      "title": "Consequential Effect Requires ExecutionContract",
+      "fixture": "fixtures/governance_execution/ECT-GEX-007.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ReferenceImplementationContract_NoDirectFrozenInvariantOrCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-008",
+      "title": "Single-Use ExecutionContract Rejects Replay",
+      "fixture": "fixtures/governance_execution/ECT-GEX-008.json",
+      "canonical_invariants": [
+        "AOF-INV-136"
+      ],
+      "reference_cts": [
+        "CT-SEC-003"
+      ],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalReplayInvariant+SchemaAnchor"
+    },
+    {
+      "executable_test_id": "ECT-GEX-009",
+      "title": "Stale Decision State Blocks Effect",
+      "fixture": "fixtures/governance_execution/ECT-GEX-009.json",
+      "canonical_invariants": [
+        "AOF-INV-016",
+        "AOF-INV-102"
+      ],
+      "reference_cts": [
+        "CT-LC-002",
+        "CT-STATE-001"
+      ],
+      "requirement_ids": [
+        "AOF-ST-018"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariants+BehavioralReferenceCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-010",
+      "title": "Unauthorized State Transition Is Rejected",
+      "fixture": "fixtures/governance_execution/ECT-GEX-010.json",
+      "canonical_invariants": [
+        "AOF-INV-096"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-LC-015",
+        "AOF-ST-002",
+        "AOF-ST-017"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ExplicitFrozenRequirementTrace_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-011",
+      "title": "Retry Is Bounded",
+      "fixture": "fixtures/governance_execution/ECT-GEX-011.json",
+      "canonical_invariants": [
+        "AOF-INV-127"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-FR-009",
+        "AOF-LC-010"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ExplicitFrozenRequirementTrace_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-012",
+      "title": "Retry Cannot Expand Authority",
+      "fixture": "fixtures/governance_execution/ECT-GEX-012.json",
+      "canonical_invariants": [
+        "AOF-INV-020",
+        "AOF-INV-047"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-LC-003",
+        "AOF-LC-010",
+        "AOF-LC-016"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariants_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-013",
+      "title": "Material Replan Requires Fresh Decision",
+      "fixture": "fixtures/governance_execution/ECT-GEX-013.json",
+      "canonical_invariants": [
+        "AOF-INV-021",
+        "AOF-INV-101"
+      ],
+      "reference_cts": [
+        "CT-LC-006"
+      ],
+      "requirement_ids": [
+        "AOF-LC-011",
+        "AOF-ST-010"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariants+BehavioralReferenceCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-014",
+      "title": "Authorized Decision Alone Does Not Permit Effect",
+      "fixture": "fixtures/governance_execution/ECT-GEX-014.json",
+      "canonical_invariants": [
+        "AOF-INV-004",
+        "AOF-INV-014"
+      ],
+      "reference_cts": [],
+      "requirement_ids": [
+        "AOF-ARCH-009"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ExplicitFrozenRequirementTrace_NoDirectCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-015",
+      "title": "ExecutionContract Does Not Create Authority",
+      "fixture": "fixtures/governance_execution/ECT-GEX-015.json",
+      "canonical_invariants": [],
+      "reference_cts": [],
+      "requirement_ids": [],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "ExactFrozenSchemaFormula_NoCanonicalInvariantOrCT"
+    },
+    {
+      "executable_test_id": "ECT-GEX-016",
+      "title": "Consequential Decision and Effect Remain Traceable",
+      "fixture": "fixtures/governance_execution/ECT-GEX-016.json",
+      "canonical_invariants": [
+        "AOF-INV-103",
+        "AOF-INV-105"
+      ],
+      "reference_cts": [
+        "CT-TRC-001"
+      ],
+      "requirement_ids": [
+        "AOF-TRC-001",
+        "AOF-TRC-002",
+        "AOF-TRC-003",
+        "AOF-TRC-005",
+        "AOF-TRC-007",
+        "AOF-TRC-009",
+        "AOF-TRC-011",
+        "AOF-TRC-014"
+      ],
+      "evidence_artifacts": [
+        "evidence/governance_execution/phase3-positive-evidence.json"
+      ],
+      "traceability_disposition": "CanonicalInvariants+BehavioralReferenceCT"
+    }
+  ],
+  "direct_frozen_edges": [
+    {
+      "from": "AOF-INV-004",
+      "to": "AOF-ARCH-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-005",
+      "to": "AOF-ARCH-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-006",
+      "to": "AOF-ARCH-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-008",
+      "to": "AOF-ARCH-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-008",
+      "to": "AOF-ARCH-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-008",
+      "to": "AOF-AUTH-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-008",
+      "to": "AOF-AUTH-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-009",
+      "to": "AOF-AGT-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-009",
+      "to": "AOF-AGT-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-009",
+      "to": "AOF-ARCH-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-009",
+      "to": "AOF-ARCH-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-009",
+      "to": "CT-AGT-003",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-010",
+      "to": "AOF-ARCH-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-011",
+      "to": "AOF-ARCH-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-012",
+      "to": "AOF-ARCH-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-012",
+      "to": "AOF-ARCH-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-013",
+      "to": "AOF-LC-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-017",
+      "to": "AOF-LC-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-017",
+      "to": "AOF-LC-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-017",
+      "to": "CT-LC-003",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-018",
+      "to": "AOF-LC-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-020",
+      "to": "AOF-LC-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-020",
+      "to": "AOF-LC-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-020",
+      "to": "AOF-LC-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-020",
+      "to": "CT-LC-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-021",
+      "to": "AOF-LC-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-021",
+      "to": "CT-LC-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-023",
+      "to": "AOF-LC-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-023",
+      "to": "AOF-LC-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-024",
+      "to": "AOF-LC-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-024",
+      "to": "AOF-LC-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-024",
+      "to": "CT-LC-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-025",
+      "to": "AOF-LC-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-025",
+      "to": "AOF-LC-020",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-025",
+      "to": "AOF-LC-023",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-025",
+      "to": "CT-LC-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-026",
+      "to": "AOF-LC-024",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-027",
+      "to": "AOF-LC-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-027",
+      "to": "AOF-LC-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-027",
+      "to": "CT-LC-004",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-027",
+      "to": "CT-LC-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-028",
+      "to": "AOF-LC-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "AOF-AUTH-021",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-030",
+      "to": "CT-AUTH-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-031",
+      "to": "AOF-AGT-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-032",
+      "to": "AOF-AGT-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-032",
+      "to": "CT-AGT-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "AOF-AGT-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "CT-AGT-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-034",
+      "to": "CT-AGT-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-035",
+      "to": "AOF-AGT-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-037",
+      "to": "AOF-AGT-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-037",
+      "to": "AOF-AGT-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-037",
+      "to": "AOF-AGT-021",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-037",
+      "to": "CT-AGT-004",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-037",
+      "to": "CT-AGT-009",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "AOF-AGT-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "AOF-AGT-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "AOF-AGT-024",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "AOF-AUTH-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "AOF-AUTH-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-038",
+      "to": "CT-AGT-005",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-040",
+      "to": "AOF-AGT-020",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-041",
+      "to": "AOF-AGT-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-041",
+      "to": "AOF-AGT-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-043",
+      "to": "AOF-AGT-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-043",
+      "to": "CT-AGT-007",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-046",
+      "to": "AOF-AGT-023",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-048",
+      "to": "AOF-AUTH-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-048",
+      "to": "CT-AUTH-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-049",
+      "to": "AOF-AUTH-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-050",
+      "to": "AOF-AUTH-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-051",
+      "to": "AOF-AUTH-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-053",
+      "to": "AOF-AUTH-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-055",
+      "to": "AOF-AUTH-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-056",
+      "to": "AOF-POL-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-057",
+      "to": "AOF-POL-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-057",
+      "to": "AOF-POL-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-057",
+      "to": "AOF-POL-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-057",
+      "to": "AOF-POL-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-057",
+      "to": "CT-POL-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-061",
+      "to": "AOF-POL-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-062",
+      "to": "AOF-POL-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-062",
+      "to": "AOF-POL-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-062",
+      "to": "AOF-POL-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-062",
+      "to": "AOF-POL-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-063",
+      "to": "AOF-POL-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-063",
+      "to": "CT-POL-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-064",
+      "to": "AOF-POL-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-066",
+      "to": "AOF-RISK-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-066",
+      "to": "AOF-RISK-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-066",
+      "to": "AOF-RISK-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-069",
+      "to": "AOF-RISK-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-069",
+      "to": "AOF-RISK-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-069",
+      "to": "CT-RISK-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-070",
+      "to": "AOF-RISK-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-070",
+      "to": "AOF-RISK-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-070",
+      "to": "AOF-RISK-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-070",
+      "to": "AOF-RISK-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-070",
+      "to": "CT-RISK-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-071",
+      "to": "AOF-RISK-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-071",
+      "to": "AOF-RISK-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-071",
+      "to": "AOF-RISK-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-071",
+      "to": "CT-RISK-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-072",
+      "to": "AOF-RISK-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-073",
+      "to": "AOF-RISK-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-073",
+      "to": "AOF-RISK-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-074",
+      "to": "AOF-RISK-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-077",
+      "to": "AOF-EVD-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-077",
+      "to": "AOF-EVD-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-077",
+      "to": "AOF-EVD-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-077",
+      "to": "AOF-EVD-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-080",
+      "to": "AOF-EVD-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-081",
+      "to": "AOF-EVD-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-083",
+      "to": "AOF-EVD-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-EVD-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-EVD-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-EVD-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-FR-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-TRC-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-084",
+      "to": "AOF-TRC-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-085",
+      "to": "AOF-VER-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-085",
+      "to": "AOF-VER-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-085",
+      "to": "AOF-VER-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-085",
+      "to": "CT-VER-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-088",
+      "to": "AOF-VER-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-090",
+      "to": "AOF-VER-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-090",
+      "to": "AOF-VER-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-090",
+      "to": "AOF-VER-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-090",
+      "to": "CT-VER-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-091",
+      "to": "AOF-VER-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-091",
+      "to": "AOF-VER-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-091",
+      "to": "AOF-VER-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-091",
+      "to": "CT-VER-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "AOF-VER-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-092",
+      "to": "CT-VER-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-093",
+      "to": "AOF-VER-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-095",
+      "to": "AOF-ST-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-096",
+      "to": "AOF-ST-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-096",
+      "to": "AOF-ST-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-099",
+      "to": "AOF-ST-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-099",
+      "to": "AOF-ST-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-FR-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-FR-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-FR-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-ST-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-ST-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "AOF-ST-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-100",
+      "to": "CT-STATE-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-103",
+      "to": "AOF-TRC-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-103",
+      "to": "AOF-TRC-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-103",
+      "to": "AOF-TRC-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-108",
+      "to": "AOF-TRC-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-108",
+      "to": "AOF-TRC-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-108",
+      "to": "AOF-TRC-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-108",
+      "to": "CT-TRC-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-109",
+      "to": "AOF-TRC-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-110",
+      "to": "AOF-HG-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-110",
+      "to": "AOF-HG-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-112",
+      "to": "AOF-HG-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-112",
+      "to": "AOF-HG-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-112",
+      "to": "CT-HG-007",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-113",
+      "to": "AOF-HG-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-113",
+      "to": "CT-HG-004",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-114",
+      "to": "AOF-HG-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-114",
+      "to": "AOF-HG-020",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-115",
+      "to": "AOF-HG-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-115",
+      "to": "CT-HG-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "AOF-HG-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "AOF-HG-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "AOF-HG-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "AOF-HG-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "AOF-HG-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-116",
+      "to": "CT-HG-005",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-117",
+      "to": "AOF-HG-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-117",
+      "to": "AOF-HG-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-117",
+      "to": "AOF-HG-021",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-117",
+      "to": "CT-HG-006",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-119",
+      "to": "AOF-HG-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-119",
+      "to": "AOF-HG-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-119",
+      "to": "AOF-HG-024",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-119",
+      "to": "CT-HG-008",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-120",
+      "to": "AOF-HG-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-121",
+      "to": "AOF-HG-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-121",
+      "to": "AOF-HG-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-121",
+      "to": "AOF-HG-022",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-121",
+      "to": "CT-HG-004",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-123",
+      "to": "AOF-FR-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-123",
+      "to": "AOF-FR-020",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-125",
+      "to": "AOF-FR-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-125",
+      "to": "AOF-FR-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-126",
+      "to": "AOF-FR-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-126",
+      "to": "AOF-FR-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-126",
+      "to": "AOF-FR-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-126",
+      "to": "AOF-FR-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-126",
+      "to": "CT-FR-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-127",
+      "to": "AOF-FR-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-127",
+      "to": "CT-FR-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-128",
+      "to": "AOF-FR-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-128",
+      "to": "AOF-FR-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-128",
+      "to": "CT-FR-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-129",
+      "to": "AOF-FR-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-129",
+      "to": "AOF-FR-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-129",
+      "to": "CT-FR-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-130",
+      "to": "AOF-FR-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-131",
+      "to": "AOF-SEC-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-131",
+      "to": "AOF-SEC-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-131",
+      "to": "CT-SEC-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-133",
+      "to": "AOF-SEC-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-134",
+      "to": "AOF-SEC-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-134",
+      "to": "AOF-SEC-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-134",
+      "to": "AOF-SEC-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-135",
+      "to": "AOF-SEC-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-137",
+      "to": "AOF-SEC-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-137",
+      "to": "AOF-SEC-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-138",
+      "to": "AOF-SEC-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-138",
+      "to": "AOF-SEC-022",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-139",
+      "to": "AOF-SEC-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-140",
+      "to": "AOF-CONF-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-146",
+      "to": "AOF-CONF-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-146",
+      "to": "AOF-CONF-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-146",
+      "to": "AOF-CONF-017",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-146",
+      "to": "AOF-CONF-022",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-147",
+      "to": "AOF-CONF-004",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-148",
+      "to": "AOF-CONF-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-148",
+      "to": "AOF-CONF-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-006",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-008",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-010",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-019",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-149",
+      "to": "AOF-CONF-020",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-150",
+      "to": "AOF-SCH-011",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-150",
+      "to": "AOF-SCH-014",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-152",
+      "to": "AOF-SCH-007",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-152",
+      "to": "AOF-SCH-018",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-154",
+      "to": "AOF-SCH-002",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-154",
+      "to": "AOF-SCH-003",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-154",
+      "to": "AOF-SCH-012",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-155",
+      "to": "AOF-SCH-013",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-156",
+      "to": "AOF-SCH-001",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-156",
+      "to": "AOF-SCH-009",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-156",
+      "to": "AOF-SCH-015",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-156",
+      "to": "AOF-SCH-016",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-156",
+      "to": "AOF-SCH-021",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-157",
+      "to": "AOF-SCH-005",
+      "type": "InvariantToRequirement",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-159",
+      "to": "CT-PRF-001",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-160",
+      "to": "CT-PRF-003",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-161",
+      "to": "CT-PRF-004",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "AOF-INV-162",
+      "to": "CT-PRF-002",
+      "type": "InvariantToReferenceCT",
+      "source": "Appendix A"
+    },
+    {
+      "from": "CT-AGT-001",
+      "to": "AOF-AGT-002",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-003",
+      "to": "AOF-AGT-006",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-004",
+      "to": "AOF-AGT-010",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-005",
+      "to": "AOF-AGT-024",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-005",
+      "to": "AOF-AGT-012",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-007",
+      "to": "AOF-AGT-019",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-008",
+      "to": "AOF-AGT-026",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-018",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-013",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-008",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-011",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-025",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-003",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-009",
+      "to": "AOF-AGT-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AGT-011",
+      "to": "AOF-AGT-022",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AUTH-001",
+      "to": "AOF-AUTH-012",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AUTH-001",
+      "to": "AOF-AUTH-004",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AUTH-001",
+      "to": "AOF-AUTH-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-AUTH-001",
+      "to": "AOF-AUTH-019",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-EVD-001",
+      "to": "AOF-EVD-004",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-EVD-001",
+      "to": "AOF-EVD-018",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-FR-001",
+      "to": "AOF-FR-019",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-FR-002",
+      "to": "AOF-FR-012",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-FR-002",
+      "to": "AOF-FR-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-FR-002",
+      "to": "AOF-FR-004",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-002",
+      "to": "AOF-HG-012",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-004",
+      "to": "AOF-HG-010",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-004",
+      "to": "AOF-HG-011",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-005",
+      "to": "AOF-HG-008",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-005",
+      "to": "AOF-HG-023",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-006",
+      "to": "AOF-HG-021",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-006",
+      "to": "AOF-HG-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-006",
+      "to": "AOF-HG-014",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-007",
+      "to": "AOF-HG-003",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-HG-008",
+      "to": "AOF-HG-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-001",
+      "to": "AOF-LC-011",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-001",
+      "to": "AOF-LC-003",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-001",
+      "to": "AOF-LC-010",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-003",
+      "to": "AOF-LC-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-004",
+      "to": "AOF-LC-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-008",
+      "to": "AOF-LC-017",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-009",
+      "to": "AOF-LC-005",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-009",
+      "to": "AOF-LC-001",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-009",
+      "to": "AOF-LC-015",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-LC-009",
+      "to": "AOF-LC-023",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-POL-002",
+      "to": "AOF-POL-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-POL-002",
+      "to": "AOF-POL-002",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-POL-002",
+      "to": "AOF-POL-006",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-001",
+      "to": "AOF-PRF-001",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-001",
+      "to": "AOF-PRF-006",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-002",
+      "to": "AOF-PRF-004",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-003",
+      "to": "AOF-PRF-005",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-003",
+      "to": "AOF-PRF-002",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-004",
+      "to": "AOF-PRF-003",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-004",
+      "to": "AOF-PRF-001",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-PRF-004",
+      "to": "AOF-PRF-006",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-RISK-001",
+      "to": "AOF-RISK-017",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-RISK-001",
+      "to": "AOF-RISK-018",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-RISK-002",
+      "to": "AOF-RISK-008",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-RISK-002",
+      "to": "AOF-RISK-016",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-RISK-002",
+      "to": "AOF-RISK-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-SEC-001",
+      "to": "AOF-SEC-005",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-SEC-002",
+      "to": "AOF-SEC-019",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-STATE-002",
+      "to": "AOF-ST-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-TRC-001",
+      "to": "AOF-TRC-014",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-TRC-001",
+      "to": "AOF-TRC-001",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-TRC-001",
+      "to": "AOF-TRC-007",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-TRC-001",
+      "to": "AOF-TRC-002",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-003",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-008",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-017",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-006",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-005",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-001",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-014",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-009",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-011",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-001",
+      "to": "AOF-VER-002",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-002",
+      "to": "AOF-VER-010",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-002",
+      "to": "AOF-VER-013",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    },
+    {
+      "from": "CT-VER-002",
+      "to": "AOF-VER-012",
+      "type": "ReferenceCTToRequirement",
+      "source": "Frozen CT definition"
+    }
+  ],
+  "checks": {
+    "frozen_spec_checksum_matches": true,
+    "requirements_registry_count_332": true,
+    "canonical_invariant_count_162": true,
+    "reference_ct_count_51": true,
+    "executable_fixture_count_85": true,
+    "all_invariant_identifiers_resolve": true,
+    "all_reference_ct_identifiers_resolve": true,
+    "all_requirement_identifiers_resolve": true,
+    "all_executable_tests_have_traceability_disposition": true,
+    "phase3_nonexistent_reference_cts_removed": true,
+    "phase3_rows_publication_grade_16": true,
+    "cumulative_suite_behavior_still_passes": true
+  },
+  "pytest_summary": "170 passed in 0.18s",
+  "result": "PASS"
+}

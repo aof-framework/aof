@@ -1,0 +1,431 @@
+{
+  "generated_at": "2026-09-04T18:37:09.715734+00:00",
+  "subject": "AOF Phase 4 reference assurance evaluator",
+  "results": [
+    {
+      "test_id": "ECT-ASR-001",
+      "result": "Pass",
+      "observed": {
+        "claim_is_evidence": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "claim_is_evidence": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-001",
+          "facts": {
+            "claim_present": true,
+            "claim_treated_as_evidence": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-002",
+      "result": "Pass",
+      "observed": {
+        "evidence_implies_verified": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "evidence_implies_verified": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-002",
+          "facts": {
+            "evidence_present": true,
+            "verified_without_evaluation": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-003",
+      "result": "Pass",
+      "observed": {
+        "sufficient": false,
+        "verified": false
+      },
+      "expected": {
+        "sufficient": false,
+        "verified": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-003",
+          "facts": {
+            "evidence_present": true,
+            "criteria_coverage_complete": false,
+            "admissible": true,
+            "verifier_eligible": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-004",
+      "result": "Pass",
+      "observed": {
+        "admissible": true
+      },
+      "expected": {
+        "admissible": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-004",
+          "facts": {
+            "source_identifiable": true,
+            "provenance_sufficient": true,
+            "integrity_ok": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-005",
+      "result": "Pass",
+      "observed": {
+        "fresh": false,
+        "verified": false
+      },
+      "expected": {
+        "fresh": false,
+        "verified": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-005",
+          "facts": {
+            "age": 20,
+            "freshness_limit": 10,
+            "other_verification_conditions": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-006",
+      "result": "Pass",
+      "observed": {
+        "verified": false,
+        "fail_open": false
+      },
+      "expected": {
+        "verified": false,
+        "fail_open": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-006",
+          "facts": {
+            "admissible": false,
+            "sufficient": true,
+            "verifier_eligible": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-007",
+      "result": "Pass",
+      "observed": {
+        "contradiction_visible": true,
+        "verified": false
+      },
+      "expected": {
+        "contradiction_visible": true,
+        "verified": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-007",
+          "facts": {
+            "material_contradiction": true,
+            "reported_to_verification": true,
+            "verification_result": "Inconclusive"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-008",
+      "result": "Pass",
+      "observed": {
+        "verified": false,
+        "successful_completion": false
+      },
+      "expected": {
+        "verified": false,
+        "successful_completion": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-008",
+          "facts": {
+            "verification_result": "Inconclusive",
+            "other_completion_conditions": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-009",
+      "result": "Pass",
+      "observed": {
+        "independence_satisfied": false,
+        "verified_at_required_level": false
+      },
+      "expected": {
+        "independence_satisfied": false,
+        "verified_at_required_level": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-009",
+          "facts": {
+            "independence_required": true,
+            "verification_mode": "Self",
+            "verifier_independent": false,
+            "verification_result": "Verified"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-010",
+      "result": "Pass",
+      "observed": {
+        "independence_satisfied": false,
+        "strong_independence_claim_allowed": false
+      },
+      "expected": {
+        "independence_satisfied": false,
+        "strong_independence_claim_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-010",
+          "facts": {
+            "verifier_independent": true,
+            "pure_self_reference": true,
+            "same_control_domain_dependency": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-011",
+      "result": "Pass",
+      "observed": {
+        "verification_valid": false,
+        "verified": false
+      },
+      "expected": {
+        "verification_valid": false,
+        "verified": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-011",
+          "facts": {
+            "explicit_criteria": false,
+            "evidence_evaluated": true,
+            "verification_result": "Verified"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-012",
+      "result": "Pass",
+      "observed": {
+        "binding_valid": true,
+        "verified_for_consumed_subject": true
+      },
+      "expected": {
+        "binding_valid": true,
+        "verified_for_consumed_subject": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-012",
+          "facts": {
+            "verified_subject_id": "artifact-1",
+            "consumed_subject_id": "artifact-1",
+            "verified_subject_version": "v1",
+            "consumed_subject_version": "v1",
+            "verification_result": "Verified"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-013",
+      "result": "Pass",
+      "observed": {
+        "reverification_required": true,
+        "old_verification_reusable": false
+      },
+      "expected": {
+        "reverification_required": true,
+        "old_verification_reusable": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-013",
+          "facts": {
+            "verified_subject_version": "v1",
+            "current_subject_version": "v2"
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-014",
+      "result": "Pass",
+      "observed": {
+        "authority_created_by_verification": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "authority_created_by_verification": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-014",
+          "facts": {
+            "verification_result": "Verified",
+            "authority_created": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-015",
+      "result": "Pass",
+      "observed": {
+        "approval_created_by_verification": false,
+        "separation_preserved": true
+      },
+      "expected": {
+        "approval_created_by_verification": false,
+        "separation_preserved": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-015",
+          "facts": {
+            "verification_result": "Verified",
+            "approval_created": false
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-016",
+      "result": "Pass",
+      "observed": {
+        "verified_outcome": false,
+        "completion_allowed": false
+      },
+      "expected": {
+        "verified_outcome": false,
+        "completion_allowed": false
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-016",
+          "facts": {
+            "execution_success": true,
+            "required_verification_satisfied": false,
+            "goal_satisfied": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-017",
+      "result": "Pass",
+      "observed": {
+        "completion_allowed": true
+      },
+      "expected": {
+        "completion_allowed": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-017",
+          "facts": {
+            "goal_satisfied": true,
+            "required_verification_satisfied": true,
+            "required_assurance_satisfied": true
+          }
+        }
+      ],
+      "notes": []
+    },
+    {
+      "test_id": "ECT-ASR-018",
+      "result": "Pass",
+      "observed": {
+        "verified": false,
+        "controlled_non_success": true
+      },
+      "expected": {
+        "verified": false,
+        "controlled_non_success": true
+      },
+      "evidence": [
+        {
+          "type": "AssuranceObservation",
+          "test_id": "ECT-ASR-018",
+          "facts": {
+            "required_evidence_present": false,
+            "verification_result": "Verified"
+          }
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

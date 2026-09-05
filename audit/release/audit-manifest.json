@@ -1,0 +1,54 @@
+{
+  "release": "AOF v1.0 LTS Release Audit Candidate",
+  "audit_gate": "LTS-A6",
+  "generated_at": "2026-09-05T14:38:52.253639+00:00",
+  "frozen_specification_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+  "gate_results": {
+    "A1": "PASS",
+    "A2": "PASS",
+    "A3": "PASS",
+    "A4": "PASS",
+    "A5": "PASS_WITH_RELEASE_CLAIM_CONSTRAINT",
+    "A6": "PASS"
+  },
+  "known_release_blockers": 0,
+  "release_claim_constraints": [
+    "Reference Implementation E2E validation MUST claim direct execution coverage for AOFNative and AdapterBasedBrownfield only. Hybrid and InFlightIncremental remain conformance-suite adoption modes unless dedicated RI E2E implementations are added."
+  ],
+  "openapi_status": "Excluded from AOF v1.0 LTS canonical release artifacts and requirements.",
+  "artifacts": {
+    "frozen_specification": {
+      "file": "Framework Specification v1.0 RC-Final-Public-Readiness-Hardened.md",
+      "sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5"
+    },
+    "canonical_schemas": {
+      "file": "AOF-v1.0-Schemas-LTS-A2-Hardened.zip",
+      "sha256": "d9a433c5d5549e61600eb34d84fe8e4d9802b4211542765fb810c8a56baeb975"
+    },
+    "conformance_suite": {
+      "file": "AOF-v1.0-Conformance-Suite-LTS-A4-Audited.zip",
+      "sha256": "306c9929c95f72efaf599b734ecf23af18fc7bed524d6b22ae44c05a04bf29f4"
+    },
+    "reference_implementation": {
+      "file": "AOF-v1.0-Reference-Implementation-LTS-A5-Audited.zip",
+      "sha256": "b5a64cf59210b59ab38f685a71587b7d7bf67a90d923a84c3571184bcc9da0e2"
+    },
+    "A2_audit": {
+      "file": "AOF-v1.0-LTS-Audit-A2-Canonical-Schema-Fidelity.zip",
+      "sha256": "137903481df8d7eba6b1ce77bc4e2f3ca5a3e4965034d676abfbce0d2c0ac496"
+    },
+    "A3_audit": {
+      "file": "AOF-v1.0-LTS-Audit-A3-Traceability.zip",
+      "sha256": "bbe826631ea7966646e4534922c44906caa944228c2c04d844f47b0c7544fc44"
+    },
+    "A4_audit": {
+      "file": "AOF-v1.0-LTS-Audit-A4-Conformance-Suite.zip",
+      "sha256": "48fac217dc50579eeb22c35408d95463fbcc1c1bc33a80c5fb386052d6cc0ceb"
+    },
+    "A5_audit": {
+      "file": "AOF-v1.0-LTS-Audit-A5-Reference-Implementation.zip",
+      "sha256": "dc8a4251a0976c31e85d8b69a2a8f4f6e2e09b6c31ed177aac4a0343970f102b"
+    }
+  },
+  "result": "PASS"
+}

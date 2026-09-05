@@ -1,0 +1,17 @@
+{
+  "test_id": "ECT-CORE-002",
+  "title": "Proposal Is Not Authorized Decision",
+  "invariants": [
+    "AOF-INV-036"
+  ],
+  "reference_tests": [],
+  "facts": {
+    "proposal": true,
+    "decision_authorized": false
+  },
+  "expected": {
+    "authorized_decision": false,
+    "proposal_only": true
+  },
+  "classification": "Semantic"
+}

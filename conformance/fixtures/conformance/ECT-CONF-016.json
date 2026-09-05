@@ -1,0 +1,25 @@
+{
+  "test_id": "ECT-CONF-016",
+  "title": "No Executable Result For Applicable Mandatory Requirement Is Inconclusive",
+  "facts": {
+    "subject": "sut-1",
+    "subject_version": "1.0",
+    "profile": "AOF-Core",
+    "scope": {
+      "component": "agent-runtime"
+    },
+    "mandatory_requirement_ids": [
+      "AOF-AUTH-001"
+    ],
+    "requirements": [
+      {
+        "requirement_id": "AOF-AUTH-001",
+        "normative_level": "MUST",
+        "applicability": "Applicable",
+        "tests": [],
+        "evidence_refs": []
+      }
+    ]
+  },
+  "expected": "Inconclusive"
+}

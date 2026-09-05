@@ -1,0 +1,14 @@
+{
+  "id": "stx-001",
+  "scope": "session-001",
+  "expected_version": "42",
+  "decision_ref": "decision-001",
+  "action_ref": "action-001",
+  "evidence_refs": [
+    "effect-evidence-1"
+  ],
+  "state_after_ref": "state-43",
+  "actor": "control-plane",
+  "result": "Committed",
+  "committed_at": "2026-09-04T15:01:00Z"
+}

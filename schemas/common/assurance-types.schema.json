@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/common/assurance-types.schema.json",
+  "title": "AOF Assurance Formal Types",
+  "$defs": {
+    "VerificationResult": {
+      "type": "string",
+      "enum": [
+        "Verified",
+        "Rejected",
+        "Inconclusive"
+      ],
+      "description": "Canonical Verification result set from Section 1/Section 15."
+    },
+    "VerificationMode": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "Self",
+        "IndependentAgent",
+        "Deterministic",
+        "Human",
+        "Composite"
+      ],
+      "x-aof-reference-values": [
+        "Self",
+        "IndependentAgent",
+        "Deterministic",
+        "Human",
+        "Composite"
+      ],
+      "description": "Reference verification modes from Section 7/15. Kept extensible because the frozen specification describes modes but does not prohibit additional implementation-specific modes."
+    },
+    "VerificationIndependenceLevel": {
+      "type": "string",
+      "enum": [
+        "VI0",
+        "VI1",
+        "VI2",
+        "VI3"
+      ],
+      "description": "Canonical independence levels used by AOF verification semantics."
+    },
+    "EscalationReason": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Formal escalation reason identifier. Frozen specification does not define a universal closed set."
+    },
+    "OutcomeStatus": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "Completed",
+        "Failed",
+        "Rejected",
+        "Aborted",
+        "Cancelled",
+        "Escalated"
+      ],
+      "x-aof-reference-values": [
+        "Completed",
+        "Failed",
+        "Rejected",
+        "Aborted",
+        "Cancelled",
+        "Escalated"
+      ],
+      "description": "Outcome status remains extensible because the frozen specification does not define one closed universal OutcomeStatus enum."
+    },
+    "VerificationIndependence": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ],
+      "description": "Machine-readable VerificationIndependence representation. Appendix E.22 names the type but does not freeze one closed universal representation."
+    }
+  }
+}

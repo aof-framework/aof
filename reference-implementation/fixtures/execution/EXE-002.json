@@ -1,0 +1,33 @@
+{
+  "test_id": "EXE-002",
+  "name": "revoked-at-effect",
+  "facts": {
+    "capability_present": true,
+    "authority_granted": true,
+    "scope_match": true,
+    "policy_permits": true,
+    "state_valid": true,
+    "state_transition_authorized": true,
+    "risk_permits": true,
+    "risk_acceptance_required": false,
+    "verification_required": true,
+    "verification_status": "Verified",
+    "authority_revoked": true
+  },
+  "contract": {
+    "id": "contract:EXE-002",
+    "subject_ref": "subject:1",
+    "subject_state_version": "1",
+    "decision_status": "Allow",
+    "authorized": true,
+    "single_use": true
+  },
+  "state": {
+    "subject_ref": "subject:1",
+    "state": {
+      "status": "ready"
+    },
+    "version": "1"
+  },
+  "expected_status": "Blocked"
+}

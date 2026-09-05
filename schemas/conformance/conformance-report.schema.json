@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aof.dev/schema/v1.0/conformance/conformance-report.schema.json",
+  "title": "AOF ConformanceReport",
+  "allOf": [
+    {
+      "$ref": "../common/base-object.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest_ref": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "requirements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "requirement_id",
+              "applicability",
+              "result",
+              "test_refs",
+              "evidence_refs",
+              "limitations"
+            ],
+            "properties": {
+              "requirement_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "applicability": {
+                "$ref": "../common/conformance-types.schema.json#/$defs/Applicability"
+              },
+              "result": {
+                "$ref": "../common/conformance-types.schema.json#/$defs/RequirementResult"
+              },
+              "test_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "../common/reference.schema.json#/$defs/Reference"
+                }
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "../common/reference.schema.json#/$defs/Reference"
+                }
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "assessor": {
+          "$ref": "../common/reference.schema.json#/$defs/Reference"
+        },
+        "final_result": {
+          "$ref": "../common/conformance-types.schema.json#/$defs/ConformanceResult"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "manifest_ref",
+        "requirements",
+        "coverage",
+        "exceptions",
+        "assessor",
+        "final_result",
+        "timestamp"
+      ],
+      "additionalProperties": true
+    }
+  ],
+  "unevaluatedProperties": false,
+  "x-aof": {
+    "specification": "AOF v1.0",
+    "frozen_baseline_sha256": "57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5",
+    "source": "Appendix E.30 / Section 20",
+    "normative_notes": [
+      "Conformant requires all applicable mandatory requirements to be Satisfied.",
+      "A failed applicable MUST or MUST NOT requirement MUST prevent unconditional Conformant.",
+      "Inconclusive and Blocked MUST NOT count as Pass.",
+      "NotApplicable MUST have reviewable rationale where required by conformance semantics.",
+      "Conformance != Maturity and Conformant != ZeroResidualRisk.",
+      "Cross-field aggregation rules are semantic/conformance constraints and cannot be fully proven by structural JSON Schema alone."
+    ]
+  }
+}

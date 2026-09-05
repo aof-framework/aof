@@ -1,0 +1,23 @@
+{
+  "id": "outcome-001",
+  "session_id": "session-001",
+  "status": "Completed",
+  "goal_ref": "goal-001",
+  "goal_state": {
+    "satisfied": true
+  },
+  "result_refs": [
+    "result-001"
+  ],
+  "evidence_refs": [
+    "evidence-001"
+  ],
+  "verification_refs": [
+    "verification-001"
+  ],
+  "residual_risk_refs": [],
+  "trace_refs": [
+    "trace-session-001"
+  ],
+  "completed_at": "2026-09-04T16:10:00Z"
+}
