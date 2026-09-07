@@ -1,0 +1,13 @@
+{
+  "revision": "LTS-Editorial-2",
+  "specification_sha256": "6197f71416984cca1811d5cd0cdd30327cccb9026acc5b92509f8f2a3a137974",
+  "engine": "mathjax-full 3.2.2",
+  "packages": [
+    "base",
+    "ams"
+  ],
+  "scope": "Local MathJax parsing and SVG generation; not a claim of identical GitHub deployment configuration.",
+  "formula_count": 985,
+  "parsed_and_rendered": 985,
+  "errors": []
+}

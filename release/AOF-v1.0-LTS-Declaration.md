@@ -3,7 +3,7 @@
 **Release:** AOF v1.0 LTS\
 **Release date:** 2026-09-05\
 **Status:** RELEASED\
-**SHA-256 spesifikasi saat ini (LTS-Editorial-1):** `bc83ce35231460283348105744ae82d7ed87662e37923985959a1781eb6b3d17`
+**SHA-256 spesifikasi saat ini (LTS-Editorial-2):** `6197f71416984cca1811d5cd0cdd30327cccb9026acc5b92509f8f2a3a137974`
 **SHA-256 baseline asli (provenance):** `57ddbd64671eea615535b20f109064d96fb262e781969ef757a6f4d5efa869d5`
 
 ## Declaration

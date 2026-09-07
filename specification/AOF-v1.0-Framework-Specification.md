@@ -5,7 +5,7 @@
 **Status:** RELEASED
 **Version:** v1.0 LTS
 **Release date:** 2026-09-05
-**Editorial revision:** LTS-Editorial-1
+**Editorial revision:** LTS-Editorial-2
 **Language:** Bahasa Indonesia dengan English Technical Terms\
 **Framework Type:** Governed, Risk-Aware, Model-Agnostic, Tool-Agnostic,
 Platform-Agnostic\
@@ -15,7 +15,7 @@ Platform-Agnostic\
 
 ------------------------------------------------------------------------
 
-> **Status rilis saat ini: AOF v1.0 LTS — RELEASED.** [Deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md) menetapkan keputusan rilis final. Revisi `LTS-Editorial-1` menyelaraskan metadata dan konteks historis tanpa mengubah semantik normatif. Appendix G–W merekam proses sebelum rilis; keputusan RC, freeze hold, atau kegagalan di dalamnya bukan status rilis saat ini. Lihat [catatan revisi editorial](../release/EDITORIAL-REVISION.md) untuk provenance dan checksum.
+> **Status rilis saat ini: AOF v1.0 LTS — RELEASED.** [Deklarasi LTS](../release/AOF-v1.0-LTS-Declaration.md) menetapkan keputusan rilis final. Revisi `LTS-Editorial-2` memperbaiki serialisasi formula untuk GitHub dengan mempertahankan makna normatif; pemetaan sebelum–sesudah tercatat dalam catatan revisi math. Appendix G–W merekam proses sebelum rilis; keputusan RC, freeze hold, atau kegagalan di dalamnya bukan status rilis saat ini. Lihat [catatan revisi editorial](../release/EDITORIAL-REVISION.md) untuk provenance dan checksum.
 
 ## Document Convention
 
@@ -55,22 +55,33 @@ mengoordinasikan AI dan non-AI actors melalui explicit `Goal`, `Task`,
 
 Framework berangkat dari prinsip:
 
-\[ Reasoning \neq Decision\neq Authority
-\neq Action\]
+```math
+\mathrm{Reasoning} \neq \mathrm{Decision}\neq \mathrm{Authority}
+\neq \mathrm{Action}
+```
 
 AI atau `Agent` MAY menghasilkan `Proposal`, tetapi `Proposal` tidak
 dengan sendirinya menjadi authorized `Action`.
 
-\[ reason(a,c,t)\rightarrow proposal\]
+```math
+\mathrm{reason}(a,c,t)\rightarrow \mathrm{proposal}
+```
 
-\[ proposal\not\Rightarrow action\]
+```math
+\mathrm{proposal}\not\Rightarrow \mathrm{action}
+```
 
 Framework memandang orchestration sebagai governed control system, bukan
 sekadar agent coordination.
 
-\[ AI Orchestration = Goal Directed Coordination + Bounded Authority +
-Policy Control + Risk Control + Evidence Based Verification +
-Explicit State Transition + Traceable Accountability \]
+```math
+\begin{aligned}
+\mathrm{AI}\ \mathrm{Orchestration} &= \mathrm{Goal}\ \mathrm{Directed}\ \mathrm{Coordination} \\
+&\quad + \mathrm{Bounded}\ \mathrm{Authority} + \mathrm{Policy}\ \mathrm{Control} \\
+&\quad + \mathrm{Risk}\ \mathrm{Control} + \mathrm{Evidence}\ \mathrm{Based}\ \mathrm{Verification} \\
+&\quad + \mathrm{Explicit}\ \mathrm{State}\ \mathrm{Transition} + \mathrm{Traceable}\ \mathrm{Accountability}
+\end{aligned}
+```
 
 AOF v1.0 merupakan evolusi dari v0.1 Conceptual Specification dan v0.2
 Formal Specification. v0.1 menetapkan Human-Directed AI Orchestration,
@@ -171,32 +182,40 @@ bukan mandatory core constructs.
 Human governance menetapkan organizational intent, governance envelope,
 risk tolerance, dan accountability boundary.
 
-\[ HumanAccountability\neq HumanParticipationInEveryAction\]
+```math
+\mathrm{HumanAccountability}\neq \mathrm{HumanParticipationInEveryAction}
+```
 
 Human MAY mendelegasikan bounded operational authority, tetapi
 delegation tidak menghilangkan organizational accountability.
 
 ## P-02 --- Agent as Bounded Actor
 
-\[ Agent=Bounded Actor \]
+```math
+\mathrm{Agent}=\mathrm{Bounded}\ \mathrm{Actor}
+```
 
-\[ Agency(a)\subset eq GovernanceEnvelope(a) \]
+```math
+\mathrm{Agency}(a)\subseteq \mathrm{GovernanceEnvelope}(a)
+```
 
 Tidak ada `Agent` yang secara inherent merupakan sovereign root of
 trust.
 
 ## P-03 --- Reasoning Is Not Authority
 
-\[
-Reasoning\neq Decision\neq Authority\neq Action
-\]
+```math
+\mathrm{Reasoning}\neq \mathrm{Decision}\neq \mathrm{Authority}\neq \mathrm{Action}
+```
 
 LLM output, recommendation, plan, atau `Proposal` MUST NOT diperlakukan
 sebagai permission.
 
 ## P-04 --- Capability-Authority Separation
 
-\[ Capability(a,x)\not\Rightarrow Authority(a,x) \]
+```math
+\mathrm{Capability}(a,x)\not\Rightarrow \mathrm{Authority}(a,x)
+```
 
 Technical access, `Role`, `Trust`, `Memory`, reputation, atau prior
 success MUST NOT menciptakan implicit authority.
@@ -212,9 +231,9 @@ Consequential `Action` MUST dievaluasi terhadap applicable `Policy`.
 
 ## P-07 --- Risk-Proportional Control
 
-\[
-Risk\uparrow\Rightarrow ControlStrength\uparrow
-\]
+```math
+\mathrm{Risk}\uparrow\Rightarrow \mathrm{ControlStrength}\uparrow
+```
 
 Control strength MAY mencakup stronger verification, explicit approval,
 separation of duties, restricted tools, reduced autonomy, atau
@@ -225,7 +244,9 @@ escalation.
 Generated output adalah candidate result sampai applicable assurance
 requirements terpenuhi.
 
-\[ SuccessfulExecution\neq VerifiedOutcome\]
+```math
+\mathrm{SuccessfulExecution}\neq \mathrm{VerifiedOutcome}
+```
 
 ## P-09 --- Verification Independence
 
@@ -261,9 +282,9 @@ diganti.
 
 Framework outcome tidak hanya berupa output.
 
-\[
+```math
 \mathcal{O}(q)\rightarrow\langle o,e,\tau\rangle
-\]
+```
 
 yaitu `Outcome + Evidence + Trace`.
 
@@ -370,8 +391,10 @@ keywords menggunakan English.
 
 AI Orchestration Framework didefinisikan sebagai:
 
-\[ \mathcal{O}=
-\langle A,T,C,R,P,H,V,S,E,D,\Delta\rangle\]
+```math
+\mathcal{O}=
+\langle A,T,C,R,P,H,V,S,E,D,\Delta\rangle
+```
 
 dengan:
 
@@ -385,26 +408,29 @@ dengan:
 -   (S): system `State` space;
 -   (E): `Evidence` space;
 -   (D): `Decision` space;
--   (\Delta): state transition function.
+-   $\Delta$: state transition function.
 
 Request:
 
-\[ q=\langle i,c_0,g\rangle\]
+```math
+q=\langle i,c_0,g\rangle
+```
 
 Execution:
 
-\[
+```math
 \mathcal{O}(q)\rightarrow\langle o,e,\tau\rangle
-\]
+```
 
 ## 6.2 Canonical Control Predicate
 
 Candidate action hanya dapat dieksekusi ketika applicable control
 conditions terpenuhi:
 
-\[ ExecuteAllowed=
+```math
+\mathrm{ExecuteAllowed}=
 C\land H\land P\land S\land R\land V
-\]
+```
 
 dengan (C) = capability validity, (H) = authority validity, (P) = policy
 compliance, (S) = state validity, (R) = risk acceptability, dan (V) =
@@ -412,16 +438,18 @@ applicable verification satisfaction.
 
 Control evaluation menggunakan three-valued semantics:
 
-\[ GateResult={Pass,Fail,Pending} \]
+```math
+\mathrm{GateResult}=\{\mathrm{Pass},\mathrm{Fail},\mathrm{Pending}\}
+```
 
 Unknown atau undetermined control predicate MUST menghasilkan `Pending`,
 bukan implicit allow.
 
 ## 6.3 Canonical Control Loop
 
-\[
-Observe\rightarrow Reason\rightarrow Propose\rightarrow Govern\rightarrow Act\rightarrow Verify\rightarrow Update
-\]
+```math
+\mathrm{Observe}\rightarrow \mathrm{Reason}\rightarrow \mathrm{Propose}\rightarrow \mathrm{Govern}\rightarrow \mathrm{Act}\rightarrow \mathrm{Verify}\rightarrow \mathrm{Update}
+```
 
 `Govern` mencakup applicable `Authority`, `Policy`, `Risk`, dan
 `StateValidation`.
@@ -432,51 +460,67 @@ Observe\rightarrow Reason\rightarrow Propose\rightarrow Govern\rightarrow Act\ri
 
 Canonical constructs:
 
-\[ \mathbb{C}= {
-Agent,Task,Goal,Context,Resource,Capability,Authority,Policy,Decision,Action,Evidence,Verification,Risk,State,Trace
-} \]
+```math
+\mathbb{C}= \{
+\mathrm{Agent},\mathrm{Task},\mathrm{Goal},\mathrm{Context},\mathrm{Resource},\mathrm{Capability},\mathrm{Authority},\mathrm{Policy},\mathrm{Decision},\mathrm{Action},\mathrm{Evidence},\mathrm{Verification},\mathrm{Risk},\mathrm{State},\mathrm{Trace}
+\}
+```
 
 ## 7.1 Classification
 
-\[ Intent={Goal,Task} \]
+```math
+\mathrm{Intent}=\{\mathrm{Goal},\mathrm{Task}\}
+```
 
-\[ Execution={Agent,Capability,Resource,Action} \]
+```math
+\mathrm{Execution}=\{\mathrm{Agent},\mathrm{Capability},\mathrm{Resource},\mathrm{Action}\}
+```
 
-\[ Governance={Authority,Policy,Risk} \]
+```math
+\mathrm{Governance}=\{\mathrm{Authority},\mathrm{Policy},\mathrm{Risk}\}
+```
 
-\[ Assurance={Evidence,Verification} \]
+```math
+\mathrm{Assurance}=\{\mathrm{Evidence},\mathrm{Verification}\}
+```
 
-\[ Control={Context,Decision,State,Trace} \]
+```math
+\mathrm{Control}=\{\mathrm{Context},\mathrm{Decision},\mathrm{State},\mathrm{Trace}\}
+```
 
 ## 7.2 Canonical Relationship
 
-\[
-Goal\rightarrow Task\rightarrow Agent\rightarrow Proposal
-\]
+```math
+\mathrm{Goal}\rightarrow \mathrm{Task}\rightarrow \mathrm{Agent}\rightarrow \mathrm{Proposal}
+```
 
 `Proposal` dievaluasi melalui:
 
-\[ Context+Authority+Policy+Risk+State \]
+```math
+\mathrm{Context}+\mathrm{Authority}+\mathrm{Policy}+\mathrm{Risk}+\mathrm{State}
+```
 
 untuk menghasilkan `Decision`.
 
 Jika permitted:
 
-\[ Decision\rightarrow Action\rightarrow Effect\]
+```math
+\mathrm{Decision}\rightarrow \mathrm{Action}\rightarrow \mathrm{Effect}
+```
 
 Kemudian:
 
-\[
-Action\rightarrow Evidence\rightarrow Verification\rightarrow State
-\]
+```math
+\mathrm{Action}\rightarrow \mathrm{Evidence}\rightarrow \mathrm{Verification}\rightarrow \mathrm{State}
+```
 
 dan seluruh lifecycle direkam dalam `Trace`.
 
 ## 7.3 Accountability Chain
 
-\[
-Goal\rightarrow Task\rightarrow Decision\rightarrow Agent\rightarrow Authority\rightarrow Policy\rightarrow Action\rightarrow Evidence\rightarrow Verification\rightarrow Outcome
-\]
+```math
+\mathrm{Goal}\rightarrow \mathrm{Task}\rightarrow \mathrm{Decision}\rightarrow \mathrm{Agent}\rightarrow \mathrm{Authority}\rightarrow \mathrm{Policy}\rightarrow \mathrm{Action}\rightarrow \mathrm{Evidence}\rightarrow \mathrm{Verification}\rightarrow \mathrm{Outcome}
+```
 
 Consequential action dengan broken accountability chain MUST dianggap
 incomplete untuk conformance sampai required linkage dipulihkan atau
@@ -513,8 +557,10 @@ Architectural objectives adalah:
 
 Canonical architectural principle:
 
-\[ Reasoning Plane \neq Control Plane \neq Effect Plane
-\neq Assurance Plane \]
+```math
+\mathrm{Reasoning}\ \mathrm{Plane} \neq \mathrm{Control}\ \mathrm{Plane} \neq \mathrm{Effect}\ \mathrm{Plane}
+\neq \mathrm{Assurance}\ \mathrm{Plane}
+```
 
 Logical separation MUST dipertahankan walaupun dua atau lebih plane
 secara fisik berada dalam process, host, runtime, atau service yang
@@ -578,9 +624,9 @@ Reference logical architecture:
 
 Architecture MUST preserve the semantic distinction:
 
-\[
-Proposal\neq Decision\neq Action\neq Effect\neq Verification
-\]
+```math
+\mathrm{Proposal}\neq \mathrm{Decision}\neq \mathrm{Action}\neq \mathrm{Effect}\neq \mathrm{Verification}
+```
 
 ------------------------------------------------------------------------
 
@@ -606,7 +652,9 @@ Reference responsibilities:
 -   retry/replan/escalation coordination;
 -   termination evaluation.
 
-\[ Orchestrator\neq UnboundedAgent\]
+```math
+\mathrm{Orchestrator}\neq \mathrm{UnboundedAgent}
+```
 
 `Orchestrator` MUST NOT bypass applicable `Authority`, `Policy`, `Risk`,
 `State`, atau `Verification` controls.
@@ -653,11 +701,15 @@ disclosure.
 
 Untuk agent (a) dan task (t):
 
-\[ VisibleContext(a,t)\subset eq AvailableContext\]
+```math
+\mathrm{VisibleContext}(a,t)\subseteq \mathrm{AvailableContext}
+```
 
 dan SHOULD mendekati:
 
-\[ VisibleContext(a,t)=MinimumContextRequired(a,t) \]
+```math
+\mathrm{VisibleContext}(a,t)=\mathrm{MinimumContextRequired}(a,t)
+```
 
 Context Manager MUST preserve applicable sensitivity dan trust metadata.
 
@@ -678,11 +730,15 @@ Responsibilities SHOULD mencakup:
 -   effect metadata capture;
 -   evidence return.
 
-\[ ControlPermit\not\Rightarrow ExecutionSuccess\]
+```math
+\mathrm{ControlPermit}\not\Rightarrow \mathrm{ExecutionSuccess}
+```
 
 dan:
 
-\[ ExecutionSuccess\not\Rightarrow VerifiedOutcome\]
+```math
+\mathrm{ExecutionSuccess}\not\Rightarrow \mathrm{VerifiedOutcome}
+```
 
 ### 8.3.6 State Store
 
@@ -730,7 +786,9 @@ eksplisit didefinisikan demikian oleh valid `Authority` dan `Policy`.
 
 ### 8.4.1 Reasoning Plane
 
-\[ RP= { Reason, Plan, Generate, Analyze, Recommend } \]
+```math
+\mathrm{RP}= \{ \mathrm{Reason}, \mathrm{Plan}, \mathrm{Generate}, \mathrm{Analyze}, \mathrm{Recommend} \}
+```
 
 Reasoning Plane menghasilkan candidate interpretation, plan,
 decomposition, recommendation, content, atau `Proposal`.
@@ -740,13 +798,16 @@ Reasoning Plane MAY bersifat probabilistic atau nondeterministic.
 Reasoning Plane MUST NOT diasumsikan memiliki authority hanya karena
 mampu menghasilkan valid action specification.
 
-\[ ReasoningCapability\not\Rightarrow ExecutionAuthority
-\]
+```math
+\mathrm{ReasoningCapability}\not\Rightarrow \mathrm{ExecutionAuthority}
+```
 
 ### 8.4.2 Control Plane
 
-\[ CP= { Assign, Authorize, EvaluatePolicy, AssessRisk, ValidateState,
-Approve, Escalate, Retry, Replan, Terminate } \]
+```math
+\mathrm{CP}= \{ \mathrm{Assign}, \mathrm{Authorize}, \mathrm{EvaluatePolicy}, \mathrm{AssessRisk}, \mathrm{ValidateState},
+\mathrm{Approve}, \mathrm{Escalate}, \mathrm{Retry}, \mathrm{Replan}, \mathrm{Terminate} \}
+```
 
 Control Plane mengubah proposal menjadi governed `Decision`.
 
@@ -755,8 +816,9 @@ mechanisms untuk security-critical predicates ketika practical.
 
 ### 8.4.3 Effect Plane
 
-\[ EP= { Read, Write, Execute, Invoke, Modify, Create, Delete, Deploy }
-\]
+```math
+\mathrm{EP}= \{ \mathrm{Read}, \mathrm{Write}, \mathrm{Execute}, \mathrm{Invoke}, \mathrm{Modify}, \mathrm{Create}, \mathrm{Delete}, \mathrm{Deploy} \}
+```
 
 Effect Plane melakukan operation terhadap `Resource`.
 
@@ -765,7 +827,9 @@ identity yang menyebabkan operation.
 
 ### 8.4.4 Assurance Plane
 
-\[ AP= { CollectEvidence, Verify, Validate, Review, Audit } \]
+```math
+\mathrm{AP}= \{ \mathrm{CollectEvidence}, \mathrm{Verify}, \mathrm{Validate}, \mathrm{Review}, \mathrm{Audit} \}
+```
 
 Assurance Plane mengevaluasi claim, result, compliance, atau outcome.
 
@@ -797,14 +861,16 @@ SHOULD meningkat sesuai `Risk`.
 
 Reference Safety Kernel:
 
-\[ K= { AuthorityEvaluator, PolicyEvaluator, StateValidator, RiskGate,
-VerificationGate, TraceRecorder } \]
+```math
+K= \{ \mathrm{AuthorityEvaluator}, \mathrm{PolicyEvaluator}, \mathrm{StateValidator}, \mathrm{RiskGate},
+\mathrm{VerificationGate}, \mathrm{TraceRecorder} \}
+```
 
 Kernel menerima candidate consequential operation (x_c) dalam state (s):
 
-\[
-K(x_c,s)\rightarrow { Permit, Deny, Verify, Approve, Replan, Retry, Escalate, Abort }
-\]
+```math
+K(x_c,s)\rightarrow { \mathrm{Permit}, \mathrm{Deny}, \mathrm{Verify}, \mathrm{Approve}, \mathrm{Replan}, \mathrm{Retry}, \mathrm{Escalate}, \mathrm{Abort} }
+```
 
 Safety Kernel merupakan logical trusted control boundary. Implementation
 MAY membagi kernel menjadi beberapa components atau services, tetapi
@@ -812,7 +878,9 @@ MUST mempertahankan equivalent mediation semantics.
 
 ### 8.6.1 Kernel Mediation
 
-\[ Consequential(x)\Rightarrow MediatedBy(K,x) \]
+```math
+\mathrm{Consequential}(x)\Rightarrow \mathrm{MediatedBy}(K,x)
+```
 
 No direct path MAY memungkinkan consequential effect yang menghindari
 applicable kernel evaluation.
@@ -835,7 +903,9 @@ Prompt instruction MAY membantu agent behavior tetapi MUST NOT menjadi
 satu-satunya enforcement mechanism untuk mandatory consequential
 control.
 
-\[ PromptInstruction\neq EnforcedControl\]
+```math
+\mathrm{PromptInstruction}\neq \mathrm{EnforcedControl}
+```
 
 ------------------------------------------------------------------------
 
@@ -843,9 +913,10 @@ control.
 
 Sebelum consequential action, architecture MUST mengevaluasi:
 
-\[ ExecuteAllowed(a,x,s)=
+```math
+\mathrm{ExecuteAllowed}(a,x,s)=
 C\land H\land P\land S\land R\land V
-\]
+```
 
 dengan:
 
@@ -858,15 +929,21 @@ dengan:
 
 Control predicate menggunakan:
 
-\[ GateResult={Pass,Fail,Pending} \]
+```math
+\mathrm{GateResult}=\{\mathrm{Pass},\mathrm{Fail},\mathrm{Pending}\}
+```
 
 Jika mandatory predicate `Fail`:
 
-\[ ExecuteAllowed=false \]
+```math
+\mathrm{ExecuteAllowed}=\mathrm{false}
+```
 
 Jika mandatory predicate `Pending`:
 
-\[ ExecuteAllowed=Pending \]
+```math
+\mathrm{ExecuteAllowed}=\mathrm{Pending}
+```
 
 `Pending` MUST NOT diperlakukan sebagai `Permit`.
 
@@ -879,8 +956,10 @@ dievaluasi.
 
 Conceptual binding:
 
-\[ permit= Bind( actor, action, resource, parameters, stateVersion,
-authorityVersion, policyContext, riskContext, validity ) \]
+```math
+\mathrm{permit}= \mathrm{Bind}( \mathrm{actor}, \mathrm{action}, \mathrm{resource}, \mathrm{parameters}, \mathrm{stateVersion},
+\mathrm{authorityVersion}, \mathrm{policyContext}, \mathrm{riskContext}, \mathrm{validity} )
+```
 
 Perubahan material terhadap bound attributes SHOULD menginvalidasi
 permit atau memicu reevaluation.
@@ -898,11 +977,11 @@ material internal atau external effect.
 Pada boundary tersebut, implementation MUST memastikan bahwa applicable
 decision masih valid.
 
-\[
-DecisionValid\_{t_1}\not\Rightarrow DecisionValid\_{t_2}
-\]
+```math
+\mathrm{DecisionValid}_{t_1}\not\Rightarrow \mathrm{DecisionValid}_{t_2}
+```
 
-untuk (t_2\>t_1) jika relevant state dapat berubah.
+untuk $t_2 > t_1$ jika relevant state dapat berubah.
 
 High-risk atau time-sensitive operation SHOULD melakukan revalidation
 pada atau sedekat mungkin dengan Effect Boundary.
@@ -916,7 +995,9 @@ authoritative coordination mechanism.
 
 Canonical rule:
 
-\[ AuthoritativeState\neq AgentPrivateMemory\]
+```math
+\mathrm{AuthoritativeState}\neq \mathrm{AgentPrivateMemory}
+```
 
 `Agent` MAY menyimpan working memory, scratch state, atau local
 execution context, tetapi consequential state mutation hanya valid jika
@@ -932,12 +1013,15 @@ contradictory state.
 
 Untuk setiap consequential state transition:
 
-\[ StateChange\Rightarrow TransitionRecord\]
+```math
+\mathrm{StateChange}\Rightarrow \mathrm{TransitionRecord}
+```
 
 dan:
 
-\[ CommittedTransition(s_i,s_j) \Rightarrow Traceable(s_i,s_j)
-\]
+```math
+\mathrm{CommittedTransition}(s_i,s_j) \Rightarrow \mathrm{Traceable}(s_i,s_j)
+```
 
 Trace dan State SHOULD memungkinkan reconstruction terhadap order dan
 causal relationship yang diperlukan.
@@ -976,7 +1060,9 @@ menentukan:
 
 ### 8.12.1 Context Projection
 
-\[ ContextProjection(a,t)=C\_{a,t}\subset eq C\]
+```math
+\mathrm{ContextProjection}(a,t)=C_{a,t}\subseteq C
+```
 
 Projection MUST mempertahankan applicable data minimization dan
 disclosure constraints.
@@ -986,7 +1072,9 @@ disclosure constraints.
 External, retrieved, generated, atau agent-produced content MUST NOT
 secara otomatis memperoleh control authority.
 
-\[ Content\neq InstructionAuthority\]
+```math
+\mathrm{Content}\neq \mathrm{InstructionAuthority}
+```
 
 Architecture SHOULD memisahkan data-bearing content dari control-bearing
 instruction ketika practical.
@@ -1004,16 +1092,18 @@ replan, atau escalation sesuai policy.
 Tool availability menunjukkan technical reachability, bukan
 authorization.
 
-\[ ToolAccess\neq Authority\]
+```math
+\mathrm{ToolAccess}\neq \mathrm{Authority}
+```
 
 Resource interface SHOULD mendeklarasikan supported operations dan
 relevant security characteristics.
 
 Untuk invocation:
 
-\[
-invoke(a,r,x)\rightarrow\langle result,effect,evidence\rangle
-\]
+```math
+\mathrm{invoke}(a,r,x)\rightarrow\langle \mathrm{result},\mathrm{effect},\mathrm{evidence}\rangle
+```
 
 Execution Gateway MUST memastikan bahwa actual operation tidak lebih
 luas daripada governed operation.
@@ -1029,7 +1119,9 @@ sufficiently granular permissions.
 Consequential effect SHOULD menghasilkan sufficient result/effect
 evidence untuk downstream verification dan state reconciliation.
 
-\[ Action\rightarrow Result+EffectEvidence \]
+```math
+\mathrm{Action}\rightarrow \mathrm{Result}+\mathrm{EffectEvidence}
+```
 
 Evidence return SHOULD memungkinkan system membedakan:
 
@@ -1216,7 +1308,9 @@ Framework tidak mewajibkan mechanism tertentu.
 
 Canonical property:
 
-\[ ConcurrentExecution\Rightarrow NoSilentConflictingCommit\]
+```math
+\mathrm{ConcurrentExecution}\Rightarrow \mathrm{NoSilentConflictingCommit}
+```
 
 ------------------------------------------------------------------------
 
@@ -1232,7 +1326,9 @@ Control decision dapat menjadi stale akibat perubahan:
 -   Environment;
 -   approval validity.
 
-\[ Check\_{t_1}\not\Rightarrow Valid\_{t_2} \]
+```math
+\mathrm{Check}_{t_1}\not\Rightarrow \mathrm{Valid}_{t_2}
+```
 
 Architecture MUST menentukan revalidation policy untuk consequential
 operations.
@@ -1253,7 +1349,9 @@ Jika authority direvoke, suspend, expire, atau consumed:
     state/evidence/recovery flow;
 5.  revocation event MUST traceable.
 
-\[ Revoked(h)\Rightarrow\neg NewExecutionUsing(h) \]
+```math
+\mathrm{Revoked}(h)\Rightarrow\neg \mathrm{NewExecutionUsing}(h)
+```
 
 ------------------------------------------------------------------------
 
@@ -1262,7 +1360,9 @@ Jika authority direvoke, suspend, expire, atau consumed:
 Material risk change MUST dapat mempengaruhi pending dan future
 decisions.
 
-\[ Risk\_{t_2}\>Risk\_{t_1} \]
+```math
+\mathrm{Risk}_{t_2}>\mathrm{Risk}_{t_1}
+```
 
 MAY menyebabkan:
 
@@ -1327,7 +1427,9 @@ secara sah mendefinisikannya.
 
 Default safety posture untuk undetermined mandatory control adalah:
 
-\[ Unknown\rightarrow Pending/Deny/Escalate \]
+```math
+\mathrm{Unknown}\rightarrow \mathrm{Pending}/\mathrm{Deny}/\mathrm{Escalate}
+```
 
 bukan implicit permit.
 
@@ -1365,7 +1467,9 @@ tolerance, approval rules, dan accountability structure.
 
 Operational delegation MAY diberikan kepada Agent:
 
-\[ AgentAuthority\subset eq DelegatedGovernanceEnvelope\]
+```math
+\mathrm{AgentAuthority}\subseteq \mathrm{DelegatedGovernanceEnvelope}
+```
 
 Human interaction MAY berada di Control Plane atau Assurance Plane
 sesuai role.
@@ -1548,7 +1652,9 @@ topology lain.
 
 Jika lebih dari satu Orchestrator digunakan:
 
-\[ Authority(O_i)\not\Rightarrow Authority(O_j) \]
+```math
+\mathrm{Authority}(O_i)\not\Rightarrow \mathrm{Authority}(O_j)
+```
 
 Setiap Orchestrator MUST memiliki explicit scope.
 
@@ -1582,7 +1688,9 @@ Setiap waiting atau blocked state SHOULD memiliki salah satu:
 Safety MUST memiliki precedence atas liveness ketika keduanya konflik
 pada consequential action.
 
-\[ SafetyViolationRisk\Rightarrow NoForcedProgress\]
+```math
+\mathrm{SafetyViolationRisk}\Rightarrow \mathrm{NoForcedProgress}
+```
 
 ------------------------------------------------------------------------
 
@@ -1695,53 +1803,77 @@ freeze.
 
 ### ARCH-INV-01 --- Plane Separation
 
-\[ RP\neq CP\neq EP\neq AP\]
+```math
+\mathrm{RP}\neq \mathrm{CP}\neq \mathrm{EP}\neq \mathrm{AP}
+```
 
 ### ARCH-INV-02 --- Kernel Mediation
 
-\[ Consequential(x)\Rightarrow MediatedBy(K,x) \]
+```math
+\mathrm{Consequential}(x)\Rightarrow \mathrm{MediatedBy}(K,x)
+```
 
 ### ARCH-INV-03 --- No Agent Root of Trust
 
-\[ Agent\not\supset eq GovernanceRoot\]
+```math
+\mathrm{Agent}\not\supseteq \mathrm{GovernanceRoot}
+```
 
 ### ARCH-INV-04 --- Effect Boundary Validation
 
-\[ Effect(x)\Rightarrow ValidControlDecision(x) \]
+```math
+\mathrm{Effect}(x)\Rightarrow \mathrm{ValidControlDecision}(x)
+```
 
 ### ARCH-INV-05 --- State Authority
 
-\[ ConsequentialState\neq UncontrolledAgentPrivateState\]
+```math
+\mathrm{ConsequentialState}\neq \mathrm{UncontrolledAgentPrivateState}
+```
 
 ### ARCH-INV-06 --- State--Trace Coherence
 
-\[ StateChange\Rightarrow TraceRecord\]
+```math
+\mathrm{StateChange}\Rightarrow \mathrm{TraceRecord}
+```
 
 ### ARCH-INV-07 --- No Implicit Allow
 
-\[ UnknownMandatoryControl\Rightarrow\neg Permit\]
+```math
+\mathrm{UnknownMandatoryControl}\Rightarrow\neg \mathrm{Permit}
+```
 
 ### ARCH-INV-08 --- Revocation Enforcement
 
-\[ Revoked(h)\Rightarrow\neg NewExecutionUsing(h) \]
+```math
+\mathrm{Revoked}(h)\Rightarrow\neg \mathrm{NewExecutionUsing}(h)
+```
 
 ### ARCH-INV-09 --- Context Non-Authority
 
-\[ ContextContent\not\Rightarrow ControlAuthority\]
+```math
+\mathrm{ContextContent}\not\Rightarrow \mathrm{ControlAuthority}
+```
 
 ### ARCH-INV-10 --- Tool Access Non-Authority
 
-\[ ToolReachability\not\Rightarrow AuthorizedUse\]
+```math
+\mathrm{ToolReachability}\not\Rightarrow \mathrm{AuthorizedUse}
+```
 
 ### ARCH-INV-11 --- Evidence Return
 
-\[ ConsequentialEffect\Rightarrow ObservableResult\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{ObservableResult}
+```
 
 sesuai applicable evidence requirements.
 
 ### ARCH-INV-12 --- Controlled Concurrency
 
-\[ ConcurrentConsequentialCommit\Rightarrow ConflictControlled\]
+```math
+\mathrm{ConcurrentConsequentialCommit}\Rightarrow \mathrm{ConflictControlled}
+```
 
 ------------------------------------------------------------------------
 
@@ -1856,23 +1988,41 @@ Orchestrator / Control Plane
 
 Architecture menghasilkan konsekuensi berikut:
 
-\[ Agent\neq OrchestrationSystem\]
+```math
+\mathrm{Agent}\neq \mathrm{OrchestrationSystem}
+```
 
-\[ Orchestrator\neq RootAuthority\]
+```math
+\mathrm{Orchestrator}\neq \mathrm{RootAuthority}
+```
 
-\[ ToolAccess\neq Authority\]
+```math
+\mathrm{ToolAccess}\neq \mathrm{Authority}
+```
 
-\[ Proposal\neq Decision\]
+```math
+\mathrm{Proposal}\neq \mathrm{Decision}
+```
 
-\[ Permit\neq ExecutionSuccess\]
+```math
+\mathrm{Permit}\neq \mathrm{ExecutionSuccess}
+```
 
-\[ ExecutionSuccess\neq VerifiedOutcome\]
+```math
+\mathrm{ExecutionSuccess}\neq \mathrm{VerifiedOutcome}
+```
 
-\[ AgentMemory\neq AuthoritativeState\]
+```math
+\mathrm{AgentMemory}\neq \mathrm{AuthoritativeState}
+```
 
-\[ PromptPolicy\neq EnforcedPolicy\]
+```math
+\mathrm{PromptPolicy}\neq \mathrm{EnforcedPolicy}
+```
 
-\[ HumanPresence\neq UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\neq \mathrm{UnlimitedAuthority}
+```
 
 ------------------------------------------------------------------------
 
@@ -1903,39 +2053,49 @@ Security, dan Conformance passes selesai.
 
 Canonical architecture v1.0 RC-Architecture dapat diringkas sebagai:
 
-\[ AOFArchitecture= RP+CP+EP+AP \]
+```math
+\mathrm{AOFArchitecture}= \mathrm{RP}+\mathrm{CP}+\mathrm{EP}+\mathrm{AP}
+```
 
 dengan:
 
-\[ CP\supset eq K\]
+```math
+\mathrm{CP}\supseteq K
+```
 
 dan:
 
-\[ K= { AuthorityEvaluator, PolicyEvaluator, StateValidator, RiskGate,
-VerificationGate, TraceRecorder } \]
+```math
+K= \{ \mathrm{AuthorityEvaluator}, \mathrm{PolicyEvaluator}, \mathrm{StateValidator}, \mathrm{RiskGate},
+\mathrm{VerificationGate}, \mathrm{TraceRecorder} \}
+```
 
 serta:
 
-\[ Proposal \rightarrow GovernanceMediation \rightarrow
-Decision \rightarrow EffectBoundary \rightarrow Action
-\rightarrow Evidence \rightarrow Verification
-\rightarrow StateTransition \rightarrow Trace \]
+```math
+\mathrm{Proposal} \rightarrow \mathrm{GovernanceMediation} \rightarrow
+\mathrm{Decision} \rightarrow \mathrm{EffectBoundary} \rightarrow \mathrm{Action}
+\rightarrow \mathrm{Evidence} \rightarrow \mathrm{Verification}
+\rightarrow \mathrm{StateTransition} \rightarrow \mathrm{Trace}
+```
 
 Architectural safety property utama:
 
-\[
-\boxed{ No\ Consequential\ Effect\ Without\ Governed\ Control }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Consequential}\ \mathrm{Effect}\ \mathrm{Without}\ \mathrm{Governed}\ \mathrm{Control} }
+```
 
 Architectural accountability property utama:
 
-\[
-\boxed{ No\ Consequential\ State\ Change\ Without\ Traceable\ Transition }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Consequential}\ \mathrm{State}\ \mathrm{Change}\ \mathrm{Without}\ \mathrm{Traceable}\ \mathrm{Transition} }
+```
 
 Architectural autonomy property utama:
 
-\[ \boxed{ Agent\ Autonomy\subset eq Governance\ Envelope } \]
+```math
+\boxed{ \mathrm{Agent}\ \mathrm{Autonomy}\subseteq \mathrm{Governance}\ \mathrm{Envelope} }
+```
 # 9. Orchestration Lifecycle
 
 ## 9.1 Purpose
@@ -1948,16 +2108,20 @@ dan Trace.
 
 Canonical control loop:
 
-\[
-Observe\rightarrow Reason\rightarrow Propose\rightarrow Govern\rightarrow Act\rightarrow Verify\rightarrow Update
-\]
+```math
+\mathrm{Observe}\rightarrow \mathrm{Reason}\rightarrow \mathrm{Propose}\rightarrow \mathrm{Govern}\rightarrow \mathrm{Act}\rightarrow \mathrm{Verify}\rightarrow \mathrm{Update}
+```
 
 Lifecycle tidak boleh mengubah proposal menjadi consequential effect
 tanpa governed transition.
 
-\[ Proposal\not\Rightarrow Action\]
+```math
+\mathrm{Proposal}\not\Rightarrow \mathrm{Action}
+```
 
-\[ ConsequentialAction\Rightarrow GovernedTransition\]
+```math
+\mathrm{ConsequentialAction}\Rightarrow \mathrm{GovernedTransition}
+```
 
 ------------------------------------------------------------------------
 
@@ -1965,9 +2129,11 @@ tanpa governed transition.
 
 Canonical session:
 
-\[ \omega= \langle
-id,request,goal,tasks,context,agents,state,risk,evidence,trace,outcome
-\rangle\]
+```math
+\omega= \langle
+\mathrm{id},\mathrm{request},\mathrm{goal},\mathrm{tasks},\mathrm{context},\mathrm{agents},\mathrm{state},\mathrm{risk},\mathrm{evidence},\mathrm{trace},\mathrm{outcome}
+\rangle
+```
 
 Session merupakan governed execution scope yang mengikat Goal, Task
 graph, Context, Agent assignments, Authority/Policy evaluation, Risk,
@@ -2003,8 +2169,10 @@ Recovery semantics sebagai first-class lifecycle states.
 
 ## 9.4 Canonical Phases
 
-\[ L= { Intake, Qualification, Planning, Control, Execution,
-Verification, Resolution, Termination } \]
+```math
+L= \{ \mathrm{Intake}, \mathrm{Qualification}, \mathrm{Planning}, \mathrm{Control}, \mathrm{Execution},
+\mathrm{Verification}, \mathrm{Resolution}, \mathrm{Termination} \}
+```
 
 Reference flow:
 
@@ -2035,7 +2203,9 @@ lifecycle.
 
 `Intake` menerima request:
 
-\[ q=\langle intent,context_0,goal\rangle\]
+```math
+q=\langle \mathrm{intent},\mathrm{context}_0,\mathrm{goal}\rangle
+```
 
 Intake SHOULD establish:
 
@@ -2078,8 +2248,9 @@ Possible result:
 Qualification MAY meminta refinement, tetapi MUST preserve governing
 Intent.
 
-\[ QualificationRefinement\not\Rightarrow IntentMutation
-\]
+```math
+\mathrm{QualificationRefinement}\not\Rightarrow \mathrm{IntentMutation}
+```
 
 Material Goal change MUST mengikuti Human Governance rules.
 
@@ -2089,13 +2260,15 @@ Material Goal change MUST mengikuti Human Governance rules.
 
 Planning menghasilkan candidate execution plan dan Task graph.
 
-\[
-Plan=\langle Tasks,Dependencies,Assignments,Controls,Verification,Recovery\rangle
-\]
+```math
+\mathrm{Plan}=\langle \mathrm{Tasks},\mathrm{Dependencies},\mathrm{Assignments},\mathrm{Controls},\mathrm{Verification},\mathrm{Recovery}\rangle
+```
 
 Plan adalah proposal sampai governance validation selesai.
 
-\[ PlanProposal\neq AuthorizedExecutionPlan\]
+```math
+\mathrm{PlanProposal}\neq \mathrm{AuthorizedExecutionPlan}
+```
 
 ------------------------------------------------------------------------
 
@@ -2105,11 +2278,15 @@ Task dependencies SHOULD membentuk explicit dependency structure.
 
 Untuk DAG-based plan:
 
-\[ G_T=(T,E) \]
+```math
+G_T=(T,E)
+```
 
 dengan edge:
 
-\[ (t_i,t_j)\in E\]
+```math
+(t_i,t_j)\in E
+```
 
 berarti (t_j) bergantung pada completion/postcondition (t_i).
 
@@ -2171,9 +2348,11 @@ satisfied.
 
 Reference predicate:
 
-\[ Ready(t)= PreconditionsSatisfied(t) \land
-DependenciesSatisfied(t) \land ContextSufficient(t)
-\land NoKnownBlockingState(t) \]
+```math
+\mathrm{Ready}(t)= \mathrm{PreconditionsSatisfied}(t) \land
+\mathrm{DependenciesSatisfied}(t) \land \mathrm{ContextSufficient}(t)
+\land \mathrm{NoKnownBlockingState}(t)
+```
 
 `Ready` belum berarti Action authorized.
 
@@ -2183,7 +2362,9 @@ DependenciesSatisfied(t) \land ContextSufficient(t)
 
 Assignment mengikat Task ke candidate Agent.
 
-\[ Assign(t,a) \]
+```math
+\mathrm{Assign}(t,a)
+```
 
 MUST mempertimbangkan applicable Agent Requirements dan tidak boleh
 menggunakan Capability sebagai substitute untuk Authority.
@@ -2210,7 +2391,9 @@ Sebelum consequential execution, implementation SHOULD establish
 -   expected effect;
 -   expiry/validity jika applicable.
 
-\[ ExecutionContract\neq AuthorityGrant\]
+```math
+\mathrm{ExecutionContract}\neq \mathrm{AuthorityGrant}
+```
 
 ------------------------------------------------------------------------
 
@@ -2221,7 +2404,9 @@ reasoning, search, planning, atau techniques lain.
 
 Reasoning menghasilkan candidate proposal.
 
-\[ reason(a,t,c)\rightarrow proposal\]
+```math
+\mathrm{reason}(a,t,c)\rightarrow \mathrm{proposal}
+```
 
 Reasoning MUST NOT secara sendiri menciptakan execution permission.
 
@@ -2244,7 +2429,9 @@ Canonical proposal SHOULD bind:
 
 Default trust:
 
-\[ AgentOutput=UntrustedProposal \]
+```math
+\mathrm{AgentOutput}=\mathrm{UntrustedProposal}
+```
 
 ------------------------------------------------------------------------
 
@@ -2254,9 +2441,10 @@ Proposal consequential MUST melewati applicable governance evaluation.
 
 Canonical pre-execution predicate:
 
-\[ ExecuteAllowed=
+```math
+\mathrm{ExecuteAllowed}=
 C\land H\land P\land S\land R\land V
-\]
+```
 
 dengan:
 
@@ -2277,7 +2465,9 @@ Authority, Policy, Risk, atau Verification/Approval gate.
 
 Mandatory control evaluation SHOULD menggunakan:
 
-\[ GateResult\in{Pass,Fail,Pending} \]
+```math
+\mathrm{GateResult}\in{\mathrm{Pass},\mathrm{Fail},\mathrm{Pending}}
+```
 
 Semantics:
 
@@ -2285,7 +2475,9 @@ Semantics:
 -   `Fail` --- condition violated;
 -   `Pending` --- required fact/control result unresolved.
 
-\[ Pending\neq Pass\]
+```math
+\mathrm{Pending}\neq \mathrm{Pass}
+```
 
 Unknown mandatory value MUST NOT become implicit `Pass`.
 
@@ -2326,7 +2518,9 @@ MUST enter `Waiting` atau equivalent until:
 -   valid Break-Glass path;
 -   cancellation/abort.
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 ------------------------------------------------------------------------
 
@@ -2335,7 +2529,9 @@ MUST enter `Waiting` atau equivalent until:
 Sebelum crossing Effect Boundary, implementation MUST memastikan
 Decision masih valid terhadap current authoritative State.
 
-\[ DecisionAt(s_i)\not\Rightarrow ValidAt(s_j) \]
+```math
+\mathrm{DecisionAt}(s_i)\not\Rightarrow \mathrm{ValidAt}(s_j)
+```
 
 jika material State berubah.
 
@@ -2366,7 +2562,9 @@ Controls MAY mencakup:
 Jika applicable Authority revoked/suspended/expired sebelum effect
 commit:
 
-\[ AuthorityInvalid\Rightarrow\neg ExecuteAllowed\]
+```math
+\mathrm{AuthorityInvalid}\Rightarrow\neg \mathrm{ExecuteAllowed}
+```
 
 Execution MUST NOT proceed berdasarkan stale grant.
 
@@ -2376,8 +2574,10 @@ Execution MUST NOT proceed berdasarkan stale grant.
 
 Consequential Action MUST cross controlled Effect Boundary.
 
-\[ Decision \rightarrow EffectBoundary
-\rightarrow Action \]
+```math
+\mathrm{Decision} \rightarrow \mathrm{EffectBoundary}
+\rightarrow \mathrm{Action}
+```
 
 Effect Boundary SHOULD bind:
 
@@ -2395,13 +2595,15 @@ Effect Boundary SHOULD bind:
 
 Execution invokes Resource/Tool/environment.
 
-\[
-invoke(a,r,x)\rightarrow\langle y,effect,evidence\rangle
-\]
+```math
+\mathrm{invoke}(a,r,x)\rightarrow\langle y,\mathrm{effect},\mathrm{evidence}\rangle
+```
 
 Execution result MUST distinguish response/output dari actual effect.
 
-\[ ToolResponse\neq ProvenEffect\]
+```math
+\mathrm{ToolResponse}\neq \mathrm{ProvenEffect}
+```
 
 ------------------------------------------------------------------------
 
@@ -2430,8 +2632,10 @@ effect.
 Setelah Action, system MUST reconcile observed effect dengan
 authoritative State.
 
-\[ ActionEffect \rightarrow StateEvaluation \rightarrow
-ControlledStateTransition \]
+```math
+\mathrm{ActionEffect} \rightarrow \mathrm{StateEvaluation} \rightarrow
+\mathrm{ControlledStateTransition}
+```
 
 Silent consequential State mutation dilarang.
 
@@ -2444,9 +2648,9 @@ Jika claim/outcome memerlukan Verification, lifecycle enters
 
 Verification MUST evaluate claim terhadap criteria dan Evidence.
 
-\[
-V:\langle claim,evidence,criteria\rangle\rightarrow result
-\]
+```math
+V:\langle \mathrm{claim},\mathrm{evidence},\mathrm{criteria}\rangle\rightarrow \mathrm{result}
+```
 
 ------------------------------------------------------------------------
 
@@ -2454,7 +2658,9 @@ V:\langle claim,evidence,criteria\rangle\rightarrow result
 
 Canonical result:
 
-\[ VerificationResult\in { Verified, Rejected, Inconclusive } \]
+```math
+\mathrm{VerificationResult}\in { \mathrm{Verified}, \mathrm{Rejected}, \mathrm{Inconclusive} }
+```
 
 `Inconclusive` MUST NOT diperlakukan sebagai `Verified`.
 
@@ -2504,7 +2710,9 @@ Possible transitions:
 -   `Escalated`;
 -   `Failed` jika required assurance cannot be established.
 
-\[ Inconclusive\neq Pass\]
+```math
+\mathrm{Inconclusive}\neq \mathrm{Pass}
+```
 
 ------------------------------------------------------------------------
 
@@ -2549,7 +2757,9 @@ Failure MAY berasal dari:
 Failure detection MUST NOT itself grant permission untuk bypass
 controls.
 
-\[ Failure\neq PermissionToBypassControl\]
+```math
+\mathrm{Failure}\neq \mathrm{PermissionToBypassControl}
+```
 
 ------------------------------------------------------------------------
 
@@ -2557,11 +2767,15 @@ controls.
 
 AOF MUST distinguish:
 
-\[ FailedAction\not\Rightarrow NoEffect\]
+```math
+\mathrm{FailedAction}\not\Rightarrow \mathrm{NoEffect}
+```
 
 dan:
 
-\[ PartialEffect\not\Rightarrow NoEffect\]
+```math
+\mathrm{PartialEffect}\not\Rightarrow \mathrm{NoEffect}
+```
 
 Jika effect unknown/partial, lifecycle SHOULD enter `Containing` atau
 `Reconciling` sebelum retry.
@@ -2591,8 +2805,9 @@ Containment MUST tetap governed.
 Reconciliation menentukan actual external/system state setelah
 uncertain, partial, atau conflicting effect.
 
-\[ ExpectedState\neq ObservedState\Rightarrow Reconcile
-\]
+```math
+\mathrm{ExpectedState}\neq \mathrm{ObservedState}\Rightarrow \mathrm{Reconcile}
+```
 
 Reconciliation SHOULD menghasilkan updated Evidence dan authoritative
 State decision.
@@ -2604,7 +2819,9 @@ State decision.
 Material failure, partial effect, security event, atau unexpected state
 SHOULD trigger Risk reassessment.
 
-\[ MaterialFailure\Rightarrow ReassessRisk\]
+```math
+\mathrm{MaterialFailure}\Rightarrow \mathrm{ReassessRisk}
+```
 
 Old Risk decision MUST NOT assumed valid jika underlying conditions
 berubah materially.
@@ -2615,9 +2832,11 @@ berubah materially.
 
 Retry bukan default response.
 
-\[ RetryEligible= RetryableFailure \land BudgetAvailable
-\land StateSafe \land AuthorityValid \land
-PolicyValid \land RiskAcceptable \]
+```math
+\mathrm{RetryEligible}= \mathrm{RetryableFailure} \land \mathrm{BudgetAvailable}
+\land \mathrm{StateSafe} \land \mathrm{AuthorityValid} \land
+\mathrm{PolicyValid} \land \mathrm{RiskAcceptable}
+```
 
 Jika prior effect unknown, retry SHOULD wait for reconciliation unless
 operation is demonstrably safe/idempotent under applicable semantics.
@@ -2646,7 +2865,9 @@ constraints, or results changed.
 
 Replan MUST re-enter applicable governance evaluation.
 
-\[ Replan\not\Rightarrow PreserveOldPermit\]
+```math
+\mathrm{Replan}\not\Rightarrow \mathrm{PreserveOldPermit}
+```
 
 Material plan change MAY invalidate prior Human approval.
 
@@ -2674,7 +2895,9 @@ Recovery Action MUST memiliki independent governance eligibility.
 
 Compensation tidak selalu exact rollback.
 
-\[ Compensation\neq GuaranteedRollback\]
+```math
+\mathrm{Compensation}\neq \mathrm{GuaranteedRollback}
+```
 
 Compensation SHOULD be modeled sebagai new governed Action dengan own
 Authority, Policy, Risk, Evidence, dan Verification.
@@ -2688,8 +2911,10 @@ returned success.
 
 Applicable recovery SHOULD be verified.
 
-\[ RecoverySuccess \Rightarrow
-RequiredRecoveryVerificationSatisfied \]
+```math
+\mathrm{RecoverySuccess} \Rightarrow
+\mathrm{RequiredRecoveryVerificationSatisfied}
+```
 
 ------------------------------------------------------------------------
 
@@ -2710,7 +2935,9 @@ Escalation SHOULD include:
 -   recommended options;
 -   deadline jika applicable.
 
-\[ Escalated\neq Resolved\]
+```math
+\mathrm{Escalated}\neq \mathrm{Resolved}
+```
 
 ------------------------------------------------------------------------
 
@@ -2719,7 +2946,9 @@ Escalation SHOULD include:
 Break-Glass MAY digunakan hanya melalui Section 17 Human Governance
 semantics.
 
-\[ BreakGlass\neq UnlimitedAuthority\]
+```math
+\mathrm{BreakGlass}\neq \mathrm{UnlimitedAuthority}
+```
 
 Break-Glass Action tetap subject to applicable non-overridable controls,
 Effect Boundary, Evidence, State, dan Trace.
@@ -2733,7 +2962,9 @@ Decision.
 
 Cancellation tidak otomatis membatalkan already committed effects.
 
-\[ Cancel\neq Rollback\]
+```math
+\mathrm{Cancel}\neq \mathrm{Rollback}
+```
 
 ------------------------------------------------------------------------
 
@@ -2769,9 +3000,11 @@ Rejected item MUST NOT re-enter execution tanpa new valid transition.
 
 Successful completion valid hanya jika:
 
-\[ GoalSatisfied \land RequiredVerificationSatisfied
-\land NoBlockingTask \land NoUnresolvedCriticalRisk
-\land StateConsistent \land TraceComplete \]
+```math
+\mathrm{GoalSatisfied} \land \mathrm{RequiredVerificationSatisfied}
+\land \mathrm{NoBlockingTask} \land \mathrm{NoUnresolvedCriticalRisk}
+\land \mathrm{StateConsistent} \land \mathrm{TraceComplete}
+```
 
 dan applicable Human Governance obligations satisfied.
 
@@ -2792,8 +3025,10 @@ Failure MUST preserve known effect/evidence/state semantics.
 
 Canonical Outcome:
 
-\[ o= \langle status, goalState, results, evidence,
-verification, residualRisk, state, trace \rangle\]
+```math
+o= \langle \mathrm{status}, \mathrm{goalState}, \mathrm{results}, \mathrm{evidence},
+\mathrm{verification}, \mathrm{residualRisk}, \mathrm{state}, \mathrm{trace} \rangle
+```
 
 Terminal status SHOULD distinguish at least:
 
@@ -2807,11 +3042,15 @@ Terminal status SHOULD distinguish at least:
 
 ## 9.53 No Successful Termination With Pending Mandatory Assurance
 
-\[ MandatoryVerification=Pending \Rightarrow
-\neg Completed\]
+```math
+\mathrm{MandatoryVerification}=\mathrm{Pending} \Rightarrow
+\neg \mathrm{Completed}
+```
 
-\[ MandatoryVerification=Inconclusive \Rightarrow
-\neg Completed\]
+```math
+\mathrm{MandatoryVerification}=\mathrm{Inconclusive} \Rightarrow
+\neg \mathrm{Completed}
+```
 
 kecuali applicable governance explicitly defines a different legitimate
 terminal classification yang bukan false success.
@@ -2887,7 +3126,9 @@ Waiting MUST preserve enough State/Trace untuk safe resumption.
 Resume dari `Waiting`, `Escalated`, atau recovery state MUST revalidate
 stale governance dependencies sebelum execution.
 
-\[ Resume\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{Resume}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 ------------------------------------------------------------------------
 
@@ -2895,7 +3136,9 @@ stale governance dependencies sebelum execution.
 
 Risk MAY berubah selama lifecycle.
 
-\[ Risk\_{t_0}\neq Risk\_{t_1} \]
+```math
+\mathrm{Risk}_{t_0}\neq \mathrm{Risk}_{t_1}
+```
 
 Material Risk increase SHOULD trigger stronger controls, additional
 Verification, Human approval, containment, atau escalation sesuai
@@ -2920,7 +3163,9 @@ Policy change MAY invalidate pending Decision.
 Implementation SHOULD define policy-version binding dan reevaluation
 semantics.
 
-\[ PolicyChange\Rightarrow ReevaluateApplicablePendingDecision\]
+```math
+\mathrm{PolicyChange}\Rightarrow \mathrm{ReevaluateApplicablePendingDecision}
+```
 
 jika change material.
 
@@ -2976,8 +3221,10 @@ Security response MUST maintain governed State and Trace where feasible.
 
 Mandatory Safety Kernel component failure MUST fail controlled.
 
-\[ MandatoryControlFailure \Rightarrow
-\neg ImplicitPermit\]
+```math
+\mathrm{MandatoryControlFailure} \Rightarrow
+\neg \mathrm{ImplicitPermit}
+```
 
 Possible result:
 
@@ -3017,7 +3264,9 @@ Retry/replan budgets SHOULD prevent unbounded livelock.
 
 AOF seeks liveness subject to safety/governance constraints.
 
-\[ Liveness\not\Rightarrow PermissionToViolateSafety\]
+```math
+\mathrm{Liveness}\not\Rightarrow \mathrm{PermissionToViolateSafety}
+```
 
 If safe progression impossible, controlled termination is valid.
 
@@ -3027,12 +3276,15 @@ If safe progression impossible, controlled termination is valid.
 
 Every consequential transition SHOULD be representable as:
 
-\[ Transition= Decision + StateChange + TraceRecord \]
+```math
+\mathrm{Transition}= \mathrm{Decision} + \mathrm{StateChange} + \mathrm{TraceRecord}
+```
 
 Jika Action occurred:
 
-\[ Transition= Decision + Action + Evidence + StateChange + TraceRecord
-\]
+```math
+\mathrm{Transition}= \mathrm{Decision} + \mathrm{Action} + \mathrm{Evidence} + \mathrm{StateChange} + \mathrm{TraceRecord}
+```
 
 ------------------------------------------------------------------------
 
@@ -3083,7 +3335,9 @@ deterministic evaluation.
 LLM output MAY assist interpretation but MUST NOT become sole implicit
 authority source.
 
-\[ ProbabilisticReasoning\neq ProbabilisticPermission\]
+```math
+\mathrm{ProbabilisticReasoning}\neq \mathrm{ProbabilisticPermission}
+```
 
 ------------------------------------------------------------------------
 
@@ -3100,8 +3354,10 @@ Implementation MAY optimize governance latency melalui:
 
 Tetapi:
 
-\[ PerformanceOptimization \not\Rightarrow
-GovernanceWeakening \]
+```math
+\mathrm{PerformanceOptimization} \not\Rightarrow
+\mathrm{GovernanceWeakening}
+```
 
 AOF tidak menetapkan universal sub-millisecond latency requirement.
 Deployment/Profile MAY menetapkan `ControlLatencyBudget` sesuai
@@ -3116,7 +3372,9 @@ dan authoritative inputs preserved.
 
 Conceptually:
 
-\[ ControlLatency\approx max(L_C,L_H,L_P,L_S,L_R,L_V) \]
+```math
+\mathrm{ControlLatency}\approx \mathrm{max}(L_C,L_H,L_P,L_S,L_R,L_V)
+```
 
 untuk safely parallelizable checks, bukan necessarily sum seluruh
 latency.
@@ -3203,70 +3461,99 @@ Evidence, Verification, State, dan Trace references as applicable.
 
 ### LC-INV-01 --- Proposal Non-Authority
 
-\[ Proposal\not\Rightarrow Action\]
+```math
+\mathrm{Proposal}\not\Rightarrow \mathrm{Action}
+```
 
 ### LC-INV-02 --- Governed Effect
 
-\[ ConsequentialEffect\Rightarrow GovernedTransition\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{GovernedTransition}
+```
 
 ### LC-INV-03 --- Pending Non-Permit
 
-\[ Pending\neq Pass\]
+```math
+\mathrm{Pending}\neq \mathrm{Pass}
+```
 
 ### LC-INV-04 --- State Freshness
 
-\[ MaterialStateChange\Rightarrow ReevaluateDecision\]
+```math
+\mathrm{MaterialStateChange}\Rightarrow \mathrm{ReevaluateDecision}
+```
 
 ### LC-INV-05 --- Verification Integrity
 
-\[ Inconclusive\neq Verified\]
+```math
+\mathrm{Inconclusive}\neq \mathrm{Verified}
+```
 
 ### LC-INV-06 --- Failure Non-Bypass
 
-\[ Failure\neq PermissionToBypassControl\]
+```math
+\mathrm{Failure}\neq \mathrm{PermissionToBypassControl}
+```
 
 ### LC-INV-07 --- Effect Honesty
 
-\[ FailedAction\not\Rightarrow NoEffect\]
+```math
+\mathrm{FailedAction}\not\Rightarrow \mathrm{NoEffect}
+```
 
 ### LC-INV-08 --- Retry Governance
 
-\[ Retry\Rightarrow ReevaluateEligibility\]
+```math
+\mathrm{Retry}\Rightarrow \mathrm{ReevaluateEligibility}
+```
 
 ### LC-INV-09 --- Replan Governance
 
-\[ Replan\not\Rightarrow PreserveOldPermit\]
+```math
+\mathrm{Replan}\not\Rightarrow \mathrm{PreserveOldPermit}
+```
 
 ### LC-INV-10 --- Recovery Governance
 
-\[ RecoveryAction\Rightarrow GovernedAction\]
+```math
+\mathrm{RecoveryAction}\Rightarrow \mathrm{GovernedAction}
+```
 
 ### LC-INV-11 --- Cancellation Honesty
 
-\[ Cancel\neq Rollback\]
+```math
+\mathrm{Cancel}\neq \mathrm{Rollback}
+```
 
 ### LC-INV-12 --- Successful Termination
 
-\[
-Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
-\]
+```math
+\mathrm{Completed}\Rightarrow \mathrm{GoalSatisfied}\land \mathrm{RequiredAssuranceSatisfied}
+```
 
 ### LC-INV-13 --- Transition Traceability
 
-\[ ConsequentialTransition\Rightarrow TraceRecord\]
+```math
+\mathrm{ConsequentialTransition}\Rightarrow \mathrm{TraceRecord}
+```
 
 ### LC-INV-14 --- Resume Freshness
 
-\[ Resume\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{Resume}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 ### LC-INV-15 --- Fail-Controlled Kernel
 
-\[ MandatoryControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatoryControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 ### LC-INV-16 --- Human Approval Integrity
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 ------------------------------------------------------------------------
 
@@ -3383,42 +3670,46 @@ Section 9 MAY dinyatakan `Freeze Candidate` jika:
 
 Canonical lifecycle:
 
-\[ Observe \rightarrow Reason \rightarrow Propose
-\rightarrow Govern \rightarrow Act \rightarrow
-Verify \rightarrow Update \]
+```math
+\mathrm{Observe} \rightarrow \mathrm{Reason} \rightarrow \mathrm{Propose}
+\rightarrow \mathrm{Govern} \rightarrow \mathrm{Act} \rightarrow
+\mathrm{Verify} \rightarrow \mathrm{Update}
+```
 
 dengan recovery branch:
 
-\[ Failure \rightarrow Contain \rightarrow Reconcile
-\rightarrow ReassessRisk \rightarrow
+```math
+\mathrm{Failure} \rightarrow \mathrm{Contain} \rightarrow \mathrm{Reconcile}
+\rightarrow \mathrm{ReassessRisk} \rightarrow
 
 \begin{cases}
-Retry\\
-Replan\\
-Recover\\
-Escalate\\
-Abort
+\mathrm{Retry}\\
+\mathrm{Replan}\\
+\mathrm{Recover}\\
+\mathrm{Escalate}\\
+\mathrm{Abort}
 \end{cases}
 \rightarrow
-VerifyRecovery \]
+\mathrm{VerifyRecovery}
+```
 
 dan safety property:
 
-\[
-\boxed{ No\ Consequential\ Action\ Without\ Governed\ Transition }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Consequential}\ \mathrm{Action}\ \mathrm{Without}\ \mathrm{Governed}\ \mathrm{Transition} }
+```
 
 assurance property:
 
-\[
-\boxed{ No\ Successful\ Termination\ Without\ Goal\ And\ Assurance\ Satisfaction }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Successful}\ \mathrm{Termination}\ \mathrm{Without}\ \mathrm{Goal}\ \mathrm{And}\ \mathrm{Assurance}\ \mathrm{Satisfaction} }
+```
 
 state property:
 
-\[
-\boxed{ No\ Consequential\ State\ Change\ Without\ Controlled\ Traceable\ Transition }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Consequential}\ \mathrm{State}\ \mathrm{Change}\ \mathrm{Without}\ \mathrm{Controlled}\ \mathrm{Traceable}\ \mathrm{Transition} }
+```
 
 Section 9 dengan demikian menjadi canonical integration lifecycle untuk
 domain Architecture, Authority, Policy, Risk, Evidence, Verification,
@@ -3438,9 +3729,13 @@ Governance, Failure & Recovery, Security, dan Conformance.
 
 Canonical principle:
 
-\[ Agent=BoundedOperationalActor \]
+```math
+\mathrm{Agent}=\mathrm{BoundedOperationalActor}
+```
 
-\[ Agent\neq AutonomousRootOfTrust\]
+```math
+\mathrm{Agent}\neq \mathrm{AutonomousRootOfTrust}
+```
 
 Agent MAY reason, plan, propose, execute, coordinate, atau verify sesuai
 Governance Envelope, tetapi Agent MUST NOT memperoleh permission hanya
@@ -3452,9 +3747,10 @@ dari capability, confidence, role, model intelligence, atau tool access.
 
 Canonical Agent:
 
-\[ a= \langle id, type, role, capabilities, authority, context,
-memory, trust, policies, riskProfile, state, interface \rangle
-\]
+```math
+a= \langle \mathrm{id}, \mathrm{type}, \mathrm{role}, \mathrm{capabilities}, \mathrm{authority}, \mathrm{context},
+\mathrm{memory}, \mathrm{trust}, \mathrm{policies}, \mathrm{riskProfile}, \mathrm{state}, \mathrm{interface} \rangle
+```
 
 Agent representation SHOULD memungkinkan binding ke current
 versions/references dari governance objects yang relevan.
@@ -3476,7 +3772,9 @@ core semantics tidak dilemahkan.
 
 Agent type tidak menentukan Authority.
 
-\[ AgentType\not\Rightarrow Authority\]
+```math
+\mathrm{AgentType}\not\Rightarrow \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -3496,9 +3794,13 @@ Examples:
 
 Role MAY membantu selection dan Policy evaluation, tetapi:
 
-\[ Role\neq Capability\]
+```math
+\mathrm{Role}\neq \mathrm{Capability}
+```
 
-\[ Role\neq Authority\]
+```math
+\mathrm{Role}\neq \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -3509,9 +3811,9 @@ Satu Agent MAY memiliki multiple roles jika governance mengizinkan.
 Multiple roles MUST NOT digunakan untuk menghindari separation-of-duties
 atau verifier independence.
 
-\[
-MultipleRoles\not\Rightarrow MultipleIndependentActors
-\]
+```math
+\mathrm{MultipleRoles}\not\Rightarrow \mathrm{MultipleIndependentActors}
+```
 
 ------------------------------------------------------------------------
 
@@ -3519,7 +3821,9 @@ MultipleRoles\not\Rightarrow MultipleIndependentActors
 
 Capability adalah kemampuan Agent untuk melakukan class of work.
 
-\[ cap(a)={c_1,c_2,\dots,c_n} \]
+```math
+\mathrm{cap}(a)=\{c_1,c_2,\dots,c_n\}
+```
 
 Capability MAY berasal dari:
 
@@ -3538,11 +3842,15 @@ Capability menyatakan ability, bukan permission.
 
 Canonical invariant:
 
-\[ Capability\neq Authority\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}
+```
 
 Agent yang mampu melakukan operation belum tentu authorized.
 
-\[ Capable(a,x)\not\Rightarrow Authorized(a,x) \]
+```math
+\mathrm{Capable}(a,x)\not\Rightarrow \mathrm{Authorized}(a,x)
+```
 
 ------------------------------------------------------------------------
 
@@ -3581,7 +3889,9 @@ Agent Authority berasal dari valid Authority Model.
 
 Agent MUST NOT self-authorize.
 
-\[ SelfDeclaredAuthority\neq EffectiveAuthority\]
+```math
+\mathrm{SelfDeclaredAuthority}\neq \mathrm{EffectiveAuthority}
+```
 
 Effective Authority MAY berubah karena grant, delegation, suspension,
 revocation, expiry, consumption, Policy, State, atau Risk constraints.
@@ -3592,13 +3902,17 @@ revocation, expiry, consumption, Policy, State, atau Risk constraints.
 
 Canonical Agent Governance Envelope:
 
-\[ GE_a= \langle Authority, Policy, RiskLimits, ContextScope,
-ResourceScope, VerificationRequirements, ApprovalRequirements,
-TemporalLimits \rangle\]
+```math
+\mathrm{GE}_a= \langle \mathrm{Authority}, \mathrm{Policy}, \mathrm{RiskLimits}, \mathrm{ContextScope},
+\mathrm{ResourceScope}, \mathrm{VerificationRequirements}, \mathrm{ApprovalRequirements},
+\mathrm{TemporalLimits} \rangle
+```
 
 Agent operation MUST remain within applicable (GE_a).
 
-\[ Agency(a)\subset eq GE_a \]
+```math
+\mathrm{Agency}(a)\subseteq \mathrm{GE}_a
+```
 
 ------------------------------------------------------------------------
 
@@ -3609,9 +3923,9 @@ AOF autonomy adalah bounded operational property.
 Higher autonomy MAY reduce per-action Human interaction, tetapi MUST NOT
 create governance-root status.
 
-\[
-Autonomy\uparrow\not\Rightarrow GovernanceAuthority\uparrow
-\]
+```math
+\mathrm{Autonomy}\uparrow\not\Rightarrow \mathrm{GovernanceAuthority}\uparrow
+```
 
 Autonomy MUST remain constrained oleh Authority, Policy, Risk, State,
 Context, Resource scope, dan Verification requirements.
@@ -3637,9 +3951,11 @@ AOF defines no `UnlimitedAutonomy` level.
 
 ## 10.14 Effective Autonomy
 
-\[ EffectiveAutonomy(a)= ConfiguredAutonomy \cap
-EffectiveAuthority \cap PolicyPermittedScope \cap
-RiskPermittedScope \cap StatePermittedScope \]
+```math
+\mathrm{EffectiveAutonomy}(a)= \mathrm{ConfiguredAutonomy} \cap
+\mathrm{EffectiveAuthority} \cap \mathrm{PolicyPermittedScope} \cap
+\mathrm{RiskPermittedScope} \cap \mathrm{StatePermittedScope}
+```
 
 Context/Resource/Verification constraints further bound executable
 behavior.
@@ -3653,14 +3969,18 @@ permission.
 
 Reference eligibility:
 
-\[ EligibleAgent(a,t)= CapabilityCompatible(a,t) \land
-AuthorityCompatible(a,t) \land PolicyCompatible(a,t)
-\land RiskCompatible(a,t) \land ContextCompatible(a,t)
-\land StateCompatible(a,t) \]
+```math
+\mathrm{EligibleAgent}(a,t)= \mathrm{CapabilityCompatible}(a,t) \land
+\mathrm{AuthorityCompatible}(a,t) \land \mathrm{PolicyCompatible}(a,t)
+\land \mathrm{RiskCompatible}(a,t) \land \mathrm{ContextCompatible}(a,t)
+\land \mathrm{StateCompatible}(a,t)
+```
 
 Jika salah satu mandatory condition unresolved:
 
-\[ EligibleAgent\neq true\]
+```math
+\mathrm{EligibleAgent}\neq \mathrm{true}
+```
 
 sampai applicable resolution diperoleh.
 
@@ -3668,7 +3988,9 @@ sampai applicable resolution diperoleh.
 
 ## 10.16 Capability Compatibility
 
-\[ CapabilityCompatible(a,t) \]
+```math
+\mathrm{CapabilityCompatible}(a,t)
+```
 
 berarti Agent memiliki required capabilities untuk Task dengan
 sufficient qualification sesuai profile/risk.
@@ -3680,7 +4002,9 @@ evaluation evidence, atau governed reasoning.
 
 ## 10.17 Authority Compatibility
 
-\[ AuthorityCompatible(a,t) \]
+```math
+\mathrm{AuthorityCompatible}(a,t)
+```
 
 berarti current effective Authority Agent cukup untuk planned
 responsibility.
@@ -3694,7 +4018,9 @@ Jika Authority perlu granted, grant harus melalui Authority lifecycle.
 
 ## 10.18 Policy Compatibility
 
-\[ PolicyCompatible(a,t) \]
+```math
+\mathrm{PolicyCompatible}(a,t)
+```
 
 berarti assignment/operation tidak bertentangan dengan applicable
 Policy.
@@ -3711,10 +4037,12 @@ material terhadap safe execution.
 
 Reference:
 
-\[ RiskCompatible(a,t)= RiskProfile(a) \succeq
-RequiredRiskHandling(t) \]
+```math
+\mathrm{RiskCompatible}(a,t)= \mathrm{RiskProfile}(a) \succeq
+\mathrm{RequiredRiskHandling}(t)
+```
 
-Interpretasi operator (\succeq) ditentukan deployment/profile,
+Interpretasi operator $\succeq$ ditentukan deployment/profile,
 bukan universal numeric ranking.
 
 High/Critical-risk Task SHOULD require stronger qualification, bounded
@@ -3739,7 +4067,9 @@ failure_limits
 
 Risk Profile MUST NOT grant Authority.
 
-\[ RiskCompatibility\neq AuthorityGrant\]
+```math
+\mathrm{RiskCompatibility}\neq \mathrm{AuthorityGrant}
+```
 
 ------------------------------------------------------------------------
 
@@ -3748,7 +4078,9 @@ Risk Profile MUST NOT grant Authority.
 Agent MUST menerima hanya Context yang legitimate dan necessary untuk
 assigned responsibility.
 
-\[ Context_a\subset eq Context\_{available} \]
+```math
+\mathrm{Context}_a\subseteq \mathrm{Context}_{\mathrm{available}}
+```
 
 dan SHOULD mengikuti Context Least Privilege.
 
@@ -3775,7 +4107,9 @@ Projection MAY include:
 
 Projection MUST NOT be interpreted sebagai transfer of Authority.
 
-\[ ContextPossession\not\Rightarrow Authority\]
+```math
+\mathrm{ContextPossession}\not\Rightarrow \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -3785,7 +4119,9 @@ Context SHOULD carry trust/provenance metadata where material.
 
 External/retrieved/user/tool content MAY be untrusted.
 
-\[ ExternalContent\neq ControlInstruction\]
+```math
+\mathrm{ExternalContent}\neq \mathrm{ControlInstruction}
+```
 
 Untrusted content MUST NOT silently redefine governing Policy,
 Authority, or Intent.
@@ -3814,7 +4150,9 @@ Agent Memory MAY include:
 
 Memory MUST NOT be treated as Authority source.
 
-\[ Memory\neq Authority\]
+```math
+\mathrm{Memory}\neq \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -3835,7 +4173,9 @@ Memory-derived fact MAY become stale.
 Material decision SHOULD validate freshness/provenance sesuai
 Evidence/Context semantics.
 
-\[ RememberedClaim\neq CurrentVerifiedFact\]
+```math
+\mathrm{RememberedClaim}\neq \mathrm{CurrentVerifiedFact}
+```
 
 ------------------------------------------------------------------------
 
@@ -3843,13 +4183,17 @@ Evidence/Context semantics.
 
 Trust adalah contextual assessment, bukan global permission score.
 
-\[ Trust(a,context,task) \]
+```math
+\mathrm{Trust}(a,\mathrm{context},\mathrm{task})
+```
 
 MAY influence selection, supervision, verification, atau risk treatment.
 
 Trust MUST NOT directly create Authority.
 
-\[ TrustIncrease\not\Rightarrow AuthorityIncrease\]
+```math
+\mathrm{TrustIncrease}\not\Rightarrow \mathrm{AuthorityIncrease}
+```
 
 ------------------------------------------------------------------------
 
@@ -3857,9 +4201,13 @@ Trust MUST NOT directly create Authority.
 
 Self-reported confidence MAY be informative metadata.
 
-\[ Confidence\neq Verification\]
+```math
+\mathrm{Confidence}\neq \mathrm{Verification}
+```
 
-\[ HighConfidence\not\Rightarrow ExecuteAllowed\]
+```math
+\mathrm{HighConfidence}\not\Rightarrow \mathrm{ExecuteAllowed}
+```
 
 Confidence MUST NOT replace Evidence atau required Verification.
 
@@ -3899,8 +4247,10 @@ Setelah hard constraints satisfied, selection MAY optimize:
 
 Canonical:
 
-\[ Select(a\^\*)=
-\arg\max\_{a\in EligibleAgents} Utility(a,t) \]
+```math
+\mathrm{Select}(a^{*})=
+\arg\max_{a\in \mathrm{EligibleAgents}} \mathrm{Utility}(a,t)
+```
 
 Utility optimization MUST NOT weaken hard governance constraints.
 
@@ -3911,7 +4261,9 @@ Utility optimization MUST NOT weaken hard governance constraints.
 Lower cost/latency MUST NOT justify selection Agent yang gagal mandatory
 eligibility.
 
-\[ CheaperAgent\not\Rightarrow EligibleAgent\]
+```math
+\mathrm{CheaperAgent}\not\Rightarrow \mathrm{EligibleAgent}
+```
 
 ------------------------------------------------------------------------
 
@@ -3955,7 +4307,9 @@ Assignment MUST NOT silently expand Agent governance envelope.
 
 Agent output default:
 
-\[ AgentOutput=UntrustedProposal \]
+```math
+\mathrm{AgentOutput}=\mathrm{UntrustedProposal}
+```
 
 Proposal MAY include plan, answer, code, Decision recommendation, Action
 request, Evidence claim, atau delegation request.
@@ -3967,7 +4321,9 @@ source Agent is trusted/capable.
 
 ## 10.36 Agent Claim
 
-\[ AgentClaim\neq VerifiedFact\]
+```math
+\mathrm{AgentClaim}\neq \mathrm{VerifiedFact}
+```
 
 Agent-generated factual claim MAY become Evidence candidate jika
 provenance/content meet Evidence requirements, tetapi claim itself tidak
@@ -4001,7 +4357,9 @@ Agent MAY recommend Decision.
 Only authorized Control Plane/governance mechanism MAY convert proposal
 menjadi executable Decision sesuai Architecture.
 
-\[ ReasoningOutput\neq ControlDecision\]
+```math
+\mathrm{ReasoningOutput}\neq \mathrm{ControlDecision}
+```
 
 ------------------------------------------------------------------------
 
@@ -4012,7 +4370,9 @@ menghasilkan eligible Decision.
 
 Tool/API availability tidak cukup.
 
-\[ TechnicalAccess\neq Authority\]
+```math
+\mathrm{TechnicalAccess}\neq \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -4041,9 +4401,9 @@ Authority mediation.
 Possession of credential/token/API key tidak membuktikan governance
 Authority.
 
-\[
-CredentialPossession\not\Rightarrow GovernanceAuthority
-\]
+```math
+\mathrm{CredentialPossession}\not\Rightarrow \mathrm{GovernanceAuthority}
+```
 
 Credential SHOULD be scoped/issued/mediated sesuai least privilege.
 
@@ -4068,7 +4428,9 @@ Delegation MUST preserve:
 
 ## 10.43 Delegation Authority Conservation
 
-\[ Authority\_{delegatee} \subset eq Authority\_{delegator} \]
+```math
+\mathrm{Authority}_{\mathrm{delegatee}} \subseteq \mathrm{Authority}_{\mathrm{delegator}}
+```
 
 untuk Authority yang diturunkan melalui delegation chain, kecuali
 independent Authority grant berasal dari separate legitimate issuer.
@@ -4081,8 +4443,10 @@ Delegation MUST NOT create Authority ex nihilo.
 
 Delegatee SHOULD menerima minimum necessary Context.
 
-\[ Context\_{delegatee} \subset eq
-PermittedContext\_{delegation} \]
+```math
+\mathrm{Context}_{\mathrm{delegatee}} \subseteq
+\mathrm{PermittedContext}_{\mathrm{delegation}}
+```
 
 Delegation MUST NOT be used untuk bypass disclosure restrictions.
 
@@ -4093,8 +4457,10 @@ Delegation MUST NOT be used untuk bypass disclosure restrictions.
 Child Task/delegated responsibility MUST inherit applicable parent
 constraints kecuali valid governance change explicitly modifies them.
 
-\[ Constraints(child)\supset eq
-MandatoryInheritedConstraints(parent) \]
+```math
+\mathrm{Constraints}(\mathrm{child})\supseteq
+\mathrm{MandatoryInheritedConstraints}(\mathrm{parent})
+```
 
 ------------------------------------------------------------------------
 
@@ -4103,7 +4469,9 @@ MandatoryInheritedConstraints(parent) \]
 Agent MUST NOT use another Agent/tool/service untuk obtain effect yang
 tidak authorized melalui original governance path.
 
-\[ DelegationChain\not\Rightarrow PrivilegeExpansion\]
+```math
+\mathrm{DelegationChain}\not\Rightarrow \mathrm{PrivilegeExpansion}
+```
 
 ------------------------------------------------------------------------
 
@@ -4129,7 +4497,9 @@ Unbounded recursive Agent spawning SHOULD NOT be permitted.
 Authority untuk execute Task tidak otomatis memberikan Authority untuk
 disclose result kepada arbitrary recipient.
 
-\[ ExecutionAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ExecutionAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 Result routing MUST respect Context/data Policy.
 
@@ -4210,7 +4580,9 @@ become compromised, manipulated, faulty, or adversarial.
 
 Therefore Safety Kernel MUST NOT rely solely on Agent self-restraint.
 
-\[ AgentCompliance\neq SecurityBoundary\]
+```math
+\mathrm{AgentCompliance}\neq \mathrm{SecurityBoundary}
+```
 
 ------------------------------------------------------------------------
 
@@ -4220,7 +4592,9 @@ Policy embedded dalam Agent prompt MAY guide behavior.
 
 Namun:
 
-\[ PolicyPrompt\neq PolicyEnforcement\]
+```math
+\mathrm{PolicyPrompt}\neq \mathrm{PolicyEnforcement}
+```
 
 Mandatory consequential controls SHOULD be enforced outside sole
 probabilistic Agent reasoning.
@@ -4302,7 +4676,9 @@ Human Agent tetap subject to applicable:
 -   Trace;
 -   separation of duties.
 
-\[ HumanPresence\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 Detailed governance semantics berada di Section 17.
 
@@ -4327,7 +4703,9 @@ Planner MAY decompose Goal dan propose Task graph.
 
 Planner MUST NOT assume planning Authority equals execution Authority.
 
-\[ PlanningAuthority\neq ExecutionAuthority\]
+```math
+\mathrm{PlanningAuthority}\neq \mathrm{ExecutionAuthority}
+```
 
 Plan remains proposal until governed.
 
@@ -4338,7 +4716,9 @@ Plan remains proposal until governed.
 Jika Orchestrator diwujudkan sebagai Agent, Orchestrator Agent MUST NOT
 menjadi implicit root of Authority.
 
-\[ OrchestratorAgent\neq RootOfTrust\]
+```math
+\mathrm{OrchestratorAgent}\neq \mathrm{RootOfTrust}
+```
 
 Control Plane/Safety Kernel enforcement SHOULD remain independently
 governable.
@@ -4363,8 +4743,10 @@ access, dan independence.
 
 Reference:
 
-\[ VerifierEligible(a,t)= EligibleAgent(a,t) \land
-VerificationCapability(a,t) \land IndependenceSatisfied(a,t) \]
+```math
+\mathrm{VerifierEligible}(a,t)= \mathrm{EligibleAgent}(a,t) \land
+\mathrm{VerificationCapability}(a,t) \land \mathrm{IndependenceSatisfied}(a,t)
+```
 
 ------------------------------------------------------------------------
 
@@ -4386,7 +4768,9 @@ Required level ditentukan oleh Verification Profile/Risk.
 Self-check MAY improve quality tetapi MUST NOT satisfy independent
 Verification requirement.
 
-\[ SelfCheck\neq IndependentVerification\]
+```math
+\mathrm{SelfCheck}\neq \mathrm{IndependentVerification}
+```
 
 Agent MUST NOT mark own output as independently verified jika
 independence requirement tidak terpenuhi.
@@ -4494,7 +4878,9 @@ semantics.
 Agent local state/memory MUST NOT supersede authoritative orchestration
 State.
 
-\[ AgentLocalState\neq AuthoritativeState\]
+```math
+\mathrm{AgentLocalState}\neq \mathrm{AuthoritativeState}
+```
 
 Before consequential Action, current State reference MUST be validated
 according to Section 9/16.
@@ -4515,7 +4901,9 @@ Resume SHOULD reload/revalidate:
 -   Context;
 -   pending Decision.
 
-\[ AgentRestart\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{AgentRestart}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 ------------------------------------------------------------------------
 
@@ -4544,7 +4932,9 @@ Implementation MAY request concise rationale/decision basis.
 
 Rationale is not equivalent to hidden reasoning transcript.
 
-\[ Rationale\neq PrivateChainOfThought\]
+```math
+\mathrm{Rationale}\neq \mathrm{PrivateChainOfThought}
+```
 
 Conformance SHOULD evaluate observable governed behavior, not private
 reasoning tokens.
@@ -4574,7 +4964,9 @@ Metrics MUST NOT independently expand Authority.
 Historical success MAY influence soft selection criteria atau Risk
 treatment.
 
-\[ PastSuccess\not\Rightarrow FutureAuthorization\]
+```math
+\mathrm{PastSuccess}\not\Rightarrow \mathrm{FutureAuthorization}
+```
 
 Current Authority/Policy/State remain mandatory.
 
@@ -4649,7 +5041,9 @@ force governance bypass.
 Agent MAY retry reasoning internally sesuai bounded policy, tetapi
 consequential Action retry MUST mengikuti Section 9/18 Retry semantics.
 
-\[ ReasoningRetry\neq EffectRetry\]
+```math
+\mathrm{ReasoningRetry}\neq \mathrm{EffectRetry}
+```
 
 ------------------------------------------------------------------------
 
@@ -4761,87 +5155,125 @@ root of Authority.
 
 ### AGT-INV-01 --- Bounded Agency
 
-\[ Agency(a)\subset eq GovernanceEnvelope(a) \]
+```math
+\mathrm{Agency}(a)\subseteq \mathrm{GovernanceEnvelope}(a)
+```
 
 ### AGT-INV-02 --- Capability-Authority Separation
 
-\[ Capability\neq Authority\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}
+```
 
 ### AGT-INV-03 --- Role-Authority Separation
 
-\[ Role\neq Authority\]
+```math
+\mathrm{Role}\neq \mathrm{Authority}
+```
 
 ### AGT-INV-04 --- No Self-Authorization
 
-\[ SelfDeclaredAuthority\neq EffectiveAuthority\]
+```math
+\mathrm{SelfDeclaredAuthority}\neq \mathrm{EffectiveAuthority}
+```
 
 ### AGT-INV-05 --- Context Non-Authority
 
-\[ ContextPossession\not\Rightarrow Authority\]
+```math
+\mathrm{ContextPossession}\not\Rightarrow \mathrm{Authority}
+```
 
 ### AGT-INV-06 --- Memory Non-Authority
 
-\[ Memory\neq Authority\]
+```math
+\mathrm{Memory}\neq \mathrm{Authority}
+```
 
 ### AGT-INV-07 --- Trust Non-Authority
 
-\[ TrustIncrease\not\Rightarrow AuthorityIncrease\]
+```math
+\mathrm{TrustIncrease}\not\Rightarrow \mathrm{AuthorityIncrease}
+```
 
 ### AGT-INV-08 --- Confidence Non-Verification
 
-\[ Confidence\neq Verification\]
+```math
+\mathrm{Confidence}\neq \mathrm{Verification}
+```
 
 ### AGT-INV-09 --- Proposal Non-Decision
 
-\[ AgentOutput\neq AuthorizedDecision\]
+```math
+\mathrm{AgentOutput}\neq \mathrm{AuthorizedDecision}
+```
 
 ### AGT-INV-10 --- Technical Access Non-Authority
 
-\[ TechnicalAccess\neq Authority\]
+```math
+\mathrm{TechnicalAccess}\neq \mathrm{Authority}
+```
 
 ### AGT-INV-11 --- Delegation Conservation
 
-\[ Authority\_{delegatee}\subset eq Authority\_{delegator} \]
+```math
+\mathrm{Authority}_{\mathrm{delegatee}}\subseteq \mathrm{Authority}_{\mathrm{delegator}}
+```
 
 untuk inherited delegated Authority.
 
 ### AGT-INV-12 --- No Authority Laundering
 
-\[ DelegationChain\not\Rightarrow PrivilegeExpansion\]
+```math
+\mathrm{DelegationChain}\not\Rightarrow \mathrm{PrivilegeExpansion}
+```
 
 ### AGT-INV-13 --- Execution/Disclosure Separation
 
-\[ ExecutionAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ExecutionAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 ### AGT-INV-14 --- Policy Enforcement Independence
 
-\[ PolicyPrompt\neq PolicyEnforcement\]
+```math
+\mathrm{PolicyPrompt}\neq \mathrm{PolicyEnforcement}
+```
 
 ### AGT-INV-15 --- Agent Non-Root
 
-\[ AIAgent\not\Rightarrow GovernanceRoot\]
+```math
+\mathrm{AIAgent}\not\Rightarrow \mathrm{GovernanceRoot}
+```
 
 ### AGT-INV-16 --- State Authority
 
-\[ AgentLocalState\neq AuthoritativeState\]
+```math
+\mathrm{AgentLocalState}\neq \mathrm{AuthoritativeState}
+```
 
 ### AGT-INV-17 --- Restart Freshness
 
-\[ AgentRestart\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{AgentRestart}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 ### AGT-INV-18 --- Verification Independence
 
-\[ SelfCheck\neq IndependentVerification\]
+```math
+\mathrm{SelfCheck}\neq \mathrm{IndependentVerification}
+```
 
 ### AGT-INV-19 --- Human Non-Omnipotence
 
-\[ HumanPresence\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 ### AGT-INV-20 --- Optimization Bound
 
-\[
-UtilityOptimization\not\Rightarrow GovernanceWeakening
-\]
+```math
+\mathrm{UtilityOptimization}\not\Rightarrow \mathrm{GovernanceWeakening}
+```
 
 ------------------------------------------------------------------------
 
@@ -4975,30 +5407,47 @@ Section 10 MAY dinyatakan `Freeze Candidate` jika:
 
 Canonical Agent semantics:
 
-\[ Agent=BoundedOperationalActor \]
+```math
+\mathrm{Agent}=\mathrm{BoundedOperationalActor}
+```
 
-\[ EligibleAgent(a,t)= CapabilityCompatible \land
-AuthorityCompatible \land PolicyCompatible \land
-RiskCompatible \land ContextCompatible \land
-StateCompatible \]
+```math
+\mathrm{EligibleAgent}(a,t)= \mathrm{CapabilityCompatible} \land
+\mathrm{AuthorityCompatible} \land \mathrm{PolicyCompatible} \land
+\mathrm{RiskCompatible} \land \mathrm{ContextCompatible} \land
+\mathrm{StateCompatible}
+```
 
-\[ VerifierEligible= EligibleAgent \land VerificationCapability
-\land IndependenceSatisfied \]
+```math
+\mathrm{VerifierEligible}= \mathrm{EligibleAgent} \land \mathrm{VerificationCapability}
+\land \mathrm{IndependenceSatisfied}
+```
 
 dengan:
 
-\[ \boxed{ Capability\neq Authority } \]
+```math
+\boxed{ \mathrm{Capability}\neq \mathrm{Authority} }
+```
 
-\[ \boxed{ AgentOutput=UntrustedProposal } \]
+```math
+\boxed{ \mathrm{AgentOutput}=\mathrm{UntrustedProposal} }
+```
 
-\[ \boxed{ TechnicalAccess\neq Authority } \]
+```math
+\boxed{ \mathrm{TechnicalAccess}\neq \mathrm{Authority} }
+```
 
-\[ \boxed{ DelegationChain\not\Rightarrow PrivilegeExpansion }
-\]
+```math
+\boxed{ \mathrm{DelegationChain}\not\Rightarrow \mathrm{PrivilegeExpansion} }
+```
 
-\[ \boxed{ AgentLocalState\neq AuthoritativeState } \]
+```math
+\boxed{ \mathrm{AgentLocalState}\neq \mathrm{AuthoritativeState} }
+```
 
-\[ \boxed{ AIAgent\not\Rightarrow GovernanceRoot } \]
+```math
+\boxed{ \mathrm{AIAgent}\not\Rightarrow \mathrm{GovernanceRoot} }
+```
 
 Section 10 dengan demikian menjadi canonical Agent contract yang
 konsisten dengan Section 9 Lifecycle dan seluruh
@@ -5019,13 +5468,15 @@ Authority merupakan control primitive yang berbeda dari `Capability`,
 
 Canonical separation:
 
-\[
-Capability\neq Role\neq Trust\neq Authority\neq Policy\neq Approval
-\]
+```math
+\mathrm{Capability}\neq \mathrm{Role}\neq \mathrm{Trust}\neq \mathrm{Authority}\neq \mathrm{Policy}\neq \mathrm{Approval}
+```
 
 dan:
 
-\[ Capability(a,x)\not\Rightarrow Authorized(a,x) \]
+```math
+\mathrm{Capability}(a,x)\not\Rightarrow \mathrm{Authorized}(a,x)
+```
 
 Tujuan model ini adalah mencegah implicit permission, privilege
 amplification, authority laundering, uncontrolled delegation, stale
@@ -5037,9 +5488,11 @@ authorization, dan execution yang melampaui governance envelope.
 
 Canonical authority grant:
 
-\[ h= \langle id, subject, operations, resources, scope,
-constraints, issuer, delegable, validity, status, provenance,
-parentGrant \rangle\]
+```math
+h= \langle \mathrm{id}, \mathrm{subject}, \mathrm{operations}, \mathrm{resources}, \mathrm{scope},
+\mathrm{constraints}, \mathrm{issuer}, \mathrm{delegable}, \mathrm{validity}, \mathrm{status}, \mathrm{provenance},
+\mathrm{parentGrant} \rangle
+```
 
 dengan:
 
@@ -5058,7 +5511,9 @@ dengan:
 
 Authority evaluation:
 
-\[ AuthEval(a,x,s)\rightarrow{Allow,Deny,Escalate,Pending} \]
+```math
+\mathrm{AuthEval}(a,x,s)\rightarrow{\mathrm{Allow},\mathrm{Deny},\mathrm{Escalate},\mathrm{Pending}}
+```
 
 `Pending` digunakan jika required authority information belum cukup atau
 validity tidak dapat ditentukan.
@@ -5069,7 +5524,9 @@ validity tidak dapat ditentukan.
 
 AOF menggunakan positive authorization untuk authority-sensitive action.
 
-\[ NoApplicableGrant\Rightarrow Deny\]
+```math
+\mathrm{NoApplicableGrant}\Rightarrow \mathrm{Deny}
+```
 
 Absence of explicit deny MUST NOT diperlakukan sebagai allow.
 
@@ -5087,8 +5544,10 @@ MUST NOT menghasilkan implicit `Allow`.
 Authority SHOULD dapat dibatasi setidaknya pada dimensions berikut bila
 applicable:
 
-\[ Scope= { Task, Resource, Operation, Environment, Time, Risk, Quantity
-} \]
+```math
+\mathrm{Scope}= \{ \mathrm{Task}, \mathrm{Resource}, \mathrm{Operation}, \mathrm{Environment}, \mathrm{Time}, \mathrm{Risk}, \mathrm{Quantity}
+\}
+```
 
 Contoh:
 
@@ -5180,18 +5639,24 @@ MAY memenuhi authority predicate.
 
 Authority validity merupakan conjunction dari applicable predicates:
 
-\[ Valid(h,a,x,s,t)= SubjectMatch \land OperationMatch
-\land ResourceMatch\land ScopeMatch
-\land ConstraintMatch\land TimeValid
-\land StatusActive\]
+```math
+\mathrm{Valid}(h,a,x,s,t)= \mathrm{SubjectMatch} \land \mathrm{OperationMatch}
+\land \mathrm{ResourceMatch}\land \mathrm{ScopeMatch}
+\land \mathrm{ConstraintMatch}\land \mathrm{TimeValid}
+\land \mathrm{StatusActive}
+```
 
 Jika salah satu mandatory predicate false:
 
-\[ Valid=false \]
+```math
+\mathrm{Valid}=\mathrm{false}
+```
 
 Jika mandatory predicate tidak dapat ditentukan:
 
-\[ Valid=Pending \]
+```math
+\mathrm{Valid}=\mathrm{Pending}
+```
 
 ------------------------------------------------------------------------
 
@@ -5201,21 +5666,31 @@ Base authority MAY berasal dari lebih dari satu bounded source.
 
 Reference model:
 
-\[ H\_{base}= H\_{granted} \cap H\_{task}
-\cap H\_{session} \cap H\_{environment}
-\cap H\_{time} \]
+```math
+H_{\mathrm{base}}= H_{\mathrm{granted}} \cap H_{\mathrm{task}}
+\cap H_{\mathrm{session}} \cap H_{\mathrm{environment}}
+\cap H_{\mathrm{time}}
+```
 
 Effective usability kemudian dibatasi oleh governance state:
 
-\[ H\_{usable}=Constrain(H\_{base},P,Risk,State) \]
+```math
+H_{\mathrm{usable}}=\mathrm{Constrain}(H_{\mathrm{base}},P,\mathrm{Risk},\mathrm{State})
+```
 
 Penting:
 
-\[ Policy does not create Authority \]
+```math
+\mathrm{Policy}\ \mathrm{does}\ \mathrm{not}\ \mathrm{create}\ \mathrm{Authority}
+```
 
-\[ Risk does not create Authority \]
+```math
+\mathrm{Risk}\ \mathrm{does}\ \mathrm{not}\ \mathrm{create}\ \mathrm{Authority}
+```
 
-\[ State does not create Authority \]
+```math
+\mathrm{State}\ \mathrm{does}\ \mathrm{not}\ \mathrm{create}\ \mathrm{Authority}
+```
 
 Ketiganya dapat membuat authority yang secara nominal tersedia menjadi
 tidak usable.
@@ -5235,11 +5710,15 @@ tidak usable.
 
 Karena itu:
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 dan:
 
-\[ AuthorityGrant\not\Rightarrow PolicyAllow\]
+```math
+\mathrm{AuthorityGrant}\not\Rightarrow \mathrm{PolicyAllow}
+```
 
 Execution memerlukan keduanya bila applicable.
 
@@ -5253,15 +5732,19 @@ sebagai pengganti missing authority grant.
 `Approval` adalah decision atau consent event. `Authority` adalah
 bounded permission relation.
 
-\[ Approval\neq Authority\]
+```math
+\mathrm{Approval}\neq \mathrm{Authority}
+```
 
 Approval MAY menjadi required condition bagi penggunaan authority,
 tetapi approval tidak otomatis menciptakan unlimited grant.
 
 Contoh:
 
-\[ ExecuteAllowed= AuthorityValid \land PolicySatisfied
-\land ApprovalSatisfied\]
+```math
+\mathrm{ExecuteAllowed}= \mathrm{AuthorityValid} \land \mathrm{PolicySatisfied}
+\land \mathrm{ApprovalSatisfied}
+```
 
 jika approval required.
 
@@ -5273,13 +5756,17 @@ approval semantics yang diberikan.
 
 ## 11.10 Authority vs Capability and Technical Access
 
-\[ Capability\not\Rightarrow Authority\]
+```math
+\mathrm{Capability}\not\Rightarrow \mathrm{Authority}
+```
 
-\[
-CredentialPossession\not\Rightarrow GovernanceAuthority
-\]
+```math
+\mathrm{CredentialPossession}\not\Rightarrow \mathrm{GovernanceAuthority}
+```
 
-\[ ToolAccess\not\Rightarrow AuthorizedUse\]
+```math
+\mathrm{ToolAccess}\not\Rightarrow \mathrm{AuthorizedUse}
+```
 
 Jika underlying platform hanya menyediakan broad credential, AOF
 implementation SHOULD menyediakan logical enforcement yang mempersempit
@@ -5294,7 +5781,9 @@ satu-satunya authority decision mechanism untuk consequential operation.
 
 Authority grant MUST berasal dari valid issuer atau governance source.
 
-\[ Issue(i,h)\Rightarrow AuthorizedToIssue(i,h) \]
+```math
+\mathrm{Issue}(i,h)\Rightarrow \mathrm{AuthorizedToIssue}(i,h)
+```
 
 Issuer MUST NOT memberikan authority yang melebihi authority yang dapat
 diterbitkannya menurut governance model.
@@ -5315,22 +5804,30 @@ dan authorization basis.
 
 Delegation:
 
-\[ delegate(a_i,a_j,h_d) \]
+```math
+\mathrm{delegate}(a_i,a_j,h_d)
+```
 
 valid hanya jika:
 
-\[ h_d\subset eq Authority(a_i) \]
+```math
+h_d\subseteq \mathrm{Authority}(a_i)
+```
 
 dan:
 
-\[ Delegable(h_d)=true \]
+```math
+\mathrm{Delegable}(h_d)=\mathrm{true}
+```
 
 serta applicable policy mengizinkan delegation.
 
 Canonical chain:
 
-\[ Authority(a_3)\subset eq Authority(a_2)\subset eq
-Authority(a_1) \]
+```math
+\mathrm{Authority}(a_3)\subseteq \mathrm{Authority}(a_2)\subseteq
+\mathrm{Authority}(a_1)
+```
 
 Ini adalah **Authority Conservation Principle**.
 
@@ -5358,7 +5855,9 @@ Possible attenuation dimensions:
 -   narrower environment;
 -   additional constraints.
 
-\[ H\_{child}\subset eq H\_{parent} \]
+```math
+H_{\mathrm{child}}\subseteq H_{\mathrm{parent}}
+```
 
 ------------------------------------------------------------------------
 
@@ -5367,7 +5866,9 @@ Possible attenuation dimensions:
 Implementation SHOULD menetapkan maximum delegation depth untuk
 workflows yang memungkinkan recursive delegation.
 
-\[ DelegationDepth\leq DelegationLimit\]
+```math
+\mathrm{DelegationDepth}\leq \mathrm{DelegationLimit}
+```
 
 Melebihi limit MUST menghasilkan `Deny`, `Replan`, atau `Escalate`.
 
@@ -5385,8 +5886,10 @@ governance rules.
 
 Canonical prohibition:
 
-\[ NoAuthority(a,x) \land DelegateVia(b)
-\not\Rightarrow Authorized(a,x) \]
+```math
+\mathrm{NoAuthority}(a,x) \land \mathrm{DelegateVia}(b)
+\not\Rightarrow \mathrm{Authorized}(a,x)
+```
 
 **AOF-AUTH-011** --- Delegation chain MUST preserve provenance dan MUST
 NOT menghasilkan privilege amplification.
@@ -5400,8 +5903,10 @@ memiliki deterministic rule untuk menentukan effective authority.
 
 Reference conservative rule:
 
-\[ H\_{eff}= \bigcupApplicablePositiveGrants-
-ExplicitRestrictions \]
+```math
+H_{\mathrm{eff}}= \bigcup \mathrm{ApplicablePositiveGrants}-
+\mathrm{ExplicitRestrictions}
+```
 
 tetapi only within common applicable governance constraints.
 
@@ -5443,11 +5948,15 @@ tidak dimaksudkan permanent.
 
 Reference:
 
-\[ Validity(h)= \[validFrom,validUntil\] \]
+```math
+\mathrm{Validity}(h)= [\mathrm{validFrom},\mathrm{validUntil}]
+```
 
 Jika current time berada di luar validity:
 
-\[ AuthorityValid=false \]
+```math
+\mathrm{AuthorityValid}=\mathrm{false}
+```
 
 Clock uncertainty yang material terhadap high-risk action SHOULD
 menghasilkan `Pending` atau stronger validation.
@@ -5468,7 +5977,9 @@ constraints:
 
 Jika limit tercapai:
 
-\[ Status(h)=Consumed \]
+```math
+\mathrm{Status}(h)=\mathrm{Consumed}
+```
 
 atau remaining authority diperbarui secara atomic/equivalently
 controlled.
@@ -5483,9 +5994,9 @@ yang mencegah silent over-consumption pada concurrent execution.
 Authority pada `development` atau `staging` MUST NOT diasumsikan berlaku
 pada `production`.
 
-\[
-Authority\_{staging}\not\Rightarrow Authority\_{production}
-\]
+```math
+\mathrm{Authority}_{\mathrm{staging}}\not\Rightarrow \mathrm{Authority}_{\mathrm{production}}
+```
 
 Environment transition MAY memerlukan separate grant, approval,
 verification, atau risk evaluation.
@@ -5510,15 +6021,25 @@ identity material terhadap authorization.
 Permission untuk satu operation tidak otomatis memberikan permission
 untuk operation lain.
 
-\[ Read\not\Rightarrow Write\]
+```math
+\mathrm{Read}\not\Rightarrow \mathrm{Write}
+```
 
-\[ Write\not\Rightarrow Delete\]
+```math
+\mathrm{Write}\not\Rightarrow \mathrm{Delete}
+```
 
-\[ Generate\not\Rightarrow Execute\]
+```math
+\mathrm{Generate}\not\Rightarrow \mathrm{Execute}
+```
 
-\[ Execute\not\Rightarrow Approve\]
+```math
+\mathrm{Execute}\not\Rightarrow \mathrm{Approve}
+```
 
-\[ Read\not\Rightarrow Disclose\]
+```math
+\mathrm{Read}\not\Rightarrow \mathrm{Disclose}
+```
 
 ------------------------------------------------------------------------
 
@@ -5527,7 +6048,9 @@ untuk operation lain.
 Authority untuk mengakses data berbeda dari authority untuk memindahkan,
 mengungkapkan, merangkum, atau mengirim data kepada actor/domain lain.
 
-\[ ReadAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ReadAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 Cross-boundary disclosure MUST dievaluasi sebagai operation tersendiri
 jika consequential.
@@ -5541,7 +6064,9 @@ authorized disclosure.
 
 Agent MAY mengusulkan atau meminta authority tambahan.
 
-\[ RequestAuthority\neq GrantAuthority\]
+```math
+\mathrm{RequestAuthority}\neq \mathrm{GrantAuthority}
+```
 
 Request SHOULD memuat:
 
@@ -5562,7 +6087,9 @@ diterbitkan.
 
 ## 11.25 Self-Authorization Prohibition
 
-\[ Agent\not\Rightarrow SelfGrant\]
+```math
+\mathrm{Agent}\not\Rightarrow \mathrm{SelfGrant}
+```
 
 kecuali agent secara eksplisit bertindak sebagai authorized authority
 issuer dalam governance model dan issuance tersebut tetap tunduk pada
@@ -5580,14 +6107,18 @@ technical necessity semata.
 
 Revocation:
 
-\[ revoke(i,h) \]
+```math
+\mathrm{revoke}(i,h)
+```
 
 MUST hanya dilakukan oleh actor/control yang authorized untuk revoke
 grant tersebut.
 
 Setelah revocation committed:
 
-\[ Revoked(h)\Rightarrow\neg NewExecutionUsing(h) \]
+```math
+\mathrm{Revoked}(h)\Rightarrow\neg \mathrm{NewExecutionUsing}(h)
+```
 
 Architecture MUST menerapkan propagation sebagaimana Section 8.
 
@@ -5600,7 +6131,9 @@ direevaluasi.
 
 Suspension bersifat reversible dan tidak identik dengan revocation.
 
-\[ Suspended(h)\Rightarrow\neg Usable(h) \]
+```math
+\mathrm{Suspended}(h)\Rightarrow\neg \mathrm{Usable}(h)
+```
 
 Resume dari `Suspended` ke `Active` MUST merupakan controlled authority
 transition dan traceable.
@@ -5645,9 +6178,9 @@ Authority SHOULD direvalidasi:
 
 Reference:
 
-\[
-AuthorityValid\_{t_1}\not\Rightarrow AuthorityValid\_{t_2}
-\]
+```math
+\mathrm{AuthorityValid}_{t_1}\not\Rightarrow \mathrm{AuthorityValid}_{t_2}
+```
 
 ------------------------------------------------------------------------
 
@@ -5673,7 +6206,9 @@ Replan dapat mengubah:
 
 Karena itu:
 
-\[ Replan\Rightarrow ReevaluateAuthority\]
+```math
+\mathrm{Replan}\Rightarrow \mathrm{ReevaluateAuthority}
+```
 
 jika perubahan material terhadap authority scope terjadi.
 
@@ -5684,9 +6219,9 @@ jika perubahan material terhadap authority scope terjadi.
 Replacement agent tidak mewarisi authority dari previous agent secara
 implicit.
 
-\[
-Replace(a_i,a_j)\not\Rightarrow Authority(a_j)=Authority(a_i)
-\]
+```math
+\mathrm{Replace}(a_i,a_j)\not\Rightarrow \mathrm{Authority}(a_j)=\mathrm{Authority}(a_i)
+```
 
 **AOF-AUTH-015** --- Replacement actor MUST melalui eligibility dan
 authority evaluation baru.
@@ -5700,9 +6235,9 @@ authority yang applicable terhadap own operation.
 
 Authority supervisor tidak otomatis mengalir ke worker.
 
-\[
-Authority(supervisor)\not\Rightarrow Authority(worker)
-\]
+```math
+\mathrm{Authority}(\mathrm{supervisor})\not\Rightarrow \mathrm{Authority}(\mathrm{worker})
+```
 
 Assignment hanya memberikan task responsibility; assignment bukan
 authority grant kecuali governance model secara eksplisit menggabungkan
@@ -5717,7 +6252,9 @@ replan, escalation, atau termination sesuai governance model.
 
 Namun:
 
-\[ OrchestratorRole\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{OrchestratorRole}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 `Orchestrator` MUST tunduk pada authority boundaries yang sama untuk
 consequential effect.
@@ -5742,11 +6279,15 @@ Human approval atau override MUST traceable.
 
 Framework membedakan:
 
-\[ OrganizationalGovernanceAuthority \]
+```math
+\mathrm{OrganizationalGovernanceAuthority}
+```
 
 dari:
 
-\[ DelegatedOperationalAuthority \]
+```math
+\mathrm{DelegatedOperationalAuthority}
+```
 
 AI Agent MAY menerima bounded operational authority, tetapi root
 governance conditions berasal dari valid organizational/governance
@@ -5787,7 +6328,9 @@ Setiap grant SHOULD dapat menjawab:
 -   parent grant apa;
 -   apakah telah diubah, suspended, revoked, expired, atau consumed.
 
-\[ Authority\Rightarrow Provenance\]
+```math
+\mathrm{Authority}\Rightarrow \mathrm{Provenance}
+```
 
 untuk consequential use.
 
@@ -5970,55 +6513,76 @@ Numbering final akan direkonsiliasi pada canonical Invariant Registry.
 
 ### AUTH-INV-01 --- Authority Bound
 
-\[ Execute(a,x)\Rightarrow Authorized(a,x) \]
+```math
+\mathrm{Execute}(a,x)\Rightarrow \mathrm{Authorized}(a,x)
+```
 
 ### AUTH-INV-02 --- Positive Authorization
 
-\[ NoGrant\Rightarrow NoAuthoritySensitiveExecution\]
+```math
+\mathrm{NoGrant}\Rightarrow \mathrm{NoAuthoritySensitiveExecution}
+```
 
 ### AUTH-INV-03 --- Capability-Authority Separation
 
-\[ Capability(a,x)\not\Rightarrow Authority(a,x) \]
+```math
+\mathrm{Capability}(a,x)\not\Rightarrow \mathrm{Authority}(a,x)
+```
 
 ### AUTH-INV-04 --- Delegation Conservation
 
-\[ Delegate(a_i,a_j,h)\Rightarrow h\subset eq
-DelegableAuthority(a_i) \]
+```math
+\mathrm{Delegate}(a_i,a_j,h)\Rightarrow h\subseteq
+\mathrm{DelegableAuthority}(a_i)
+```
 
 ### AUTH-INV-05 --- No Self-Elevation
 
-\[ AgentReasoning\not\Rightarrow AuthorityIncrease\]
+```math
+\mathrm{AgentReasoning}\not\Rightarrow \mathrm{AuthorityIncrease}
+```
 
 ### AUTH-INV-06 --- Revocation Enforcement
 
-\[ Revoked(h)\Rightarrow\neg NewExecutionUsing(h) \]
+```math
+\mathrm{Revoked}(h)\Rightarrow\neg \mathrm{NewExecutionUsing}(h)
+```
 
 ### AUTH-INV-07 --- Policy Non-Creation
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 ### AUTH-INV-08 --- Approval Non-Expansion
 
-\[ Approval\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{Approval}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 ### AUTH-INV-09 --- Information-Flow Separation
 
-\[ ReadAuthority\not\Rightarrow DisclosureAuthority\]
+```math
+\mathrm{ReadAuthority}\not\Rightarrow \mathrm{DisclosureAuthority}
+```
 
 ### AUTH-INV-10 --- Replacement Non-Inheritance
 
-\[
-Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
-\]
+```math
+\mathrm{Replace}(a_i,a_j)\not\Rightarrow \mathrm{InheritAuthority}(a_j,a_i)
+```
 
 ### AUTH-INV-11 --- Temporal Validity
 
-\[ Expired(h)\Rightarrow\neg Usable(h) \]
+```math
+\mathrm{Expired}(h)\Rightarrow\neg \mathrm{Usable}(h)
+```
 
 ### AUTH-INV-12 --- Authority Provenance
 
-\[ ConsequentialAuthorityUse\Rightarrow TraceableAuthorityBasis
-\]
+```math
+\mathrm{ConsequentialAuthorityUse}\Rightarrow \mathrm{TraceableAuthorityBasis}
+```
 
 ------------------------------------------------------------------------
 
@@ -6056,9 +6620,11 @@ Authority Result
 
 Authority `Allow` belum cukup untuk execution:
 
-\[ AuthorityAllow \land Policy\land Risk
-\land State\land Verification
-\Rightarrow CandidatePermit\]
+```math
+\mathrm{AuthorityAllow} \land \mathrm{Policy}\land \mathrm{Risk}
+\land \mathrm{State}\land \mathrm{Verification}
+\Rightarrow \mathrm{CandidatePermit}
+```
 
 ------------------------------------------------------------------------
 
@@ -6086,26 +6652,36 @@ Authority area MAY dinyatakan `Freeze Candidate` jika:
 
 Authority v1.0 RC-Authority diringkas sebagai:
 
-\[ Authority= Explicit + Scoped + Constrained + TimeBounded +
-Traceable + Revocable + ConservativeDelegation \]
+```math
+\mathrm{Authority}= \mathrm{Explicit} + \mathrm{Scoped} + \mathrm{Constrained} + \mathrm{TimeBounded} +
+\mathrm{Traceable} + \mathrm{Revocable} + \mathrm{ConservativeDelegation}
+```
 
 dengan:
 
-\[ \boxed{ No\ Grant\Rightarrow No\ Authority } \]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Grant}\Rightarrow \mathrm{No}\ \mathrm{Authority} }
+```
 
-\[ \boxed{ Capability\neq Authority } \]
+```math
+\boxed{ \mathrm{Capability}\neq \mathrm{Authority} }
+```
 
-\[ \boxed{ Delegation\ Cannot\ Create\ New\ Authority } \]
+```math
+\boxed{ \mathrm{Delegation}\ \mathrm{Cannot}\ \mathrm{Create}\ \mathrm{New}\ \mathrm{Authority} }
+```
 
-\[
-\boxed{ Policy\ Can\ Restrict\ Authority,\ But\ Cannot\ Create\ It }
-\]
+```math
+\boxed{ \mathrm{Policy}\ \mathrm{Can}\ \mathrm{Restrict}\ \mathrm{Authority},\ \mathrm{But}\ \mathrm{Cannot}\ \mathrm{Create}\ \mathrm{It} }
+```
 
 dan:
 
-\[
-\boxed{ Agent\ Autonomy\subset eq Effective\ Authority\subset eq Governance\ Envelope }
-\] \# 12. Policy Requirements
+```math
+\boxed{ \mathrm{Agent}\ \mathrm{Autonomy}\subseteq \mathrm{Effective}\ \mathrm{Authority}\subseteq \mathrm{Governance}\ \mathrm{Envelope} }
+```
+
+ # 12. Policy Requirements
 
 ## 12.1 Purpose
 
@@ -6118,11 +6694,15 @@ Policy merupakan governance constraint, bukan authority source.
 
 Canonical separation:
 
-\[ Policy\neq Authority\neq Approval\neq Risk\]
+```math
+\mathrm{Policy}\neq \mathrm{Authority}\neq \mathrm{Approval}\neq \mathrm{Risk}
+```
 
 dan:
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 Policy MAY membatasi penggunaan authority, mensyaratkan control
 tambahan, atau menolak action. Policy MUST NOT menciptakan authority
@@ -6134,9 +6714,11 @@ yang tidak pernah diberikan.
 
 Canonical policy:
 
-\[ p= \langle id, version, scope, subject, resource, action,
-condition, effect, priority, source, validity, status, provenance
-\rangle\]
+```math
+p= \langle \mathrm{id}, \mathrm{version}, \mathrm{scope}, \mathrm{subject}, \mathrm{resource}, \mathrm{action},
+\mathrm{condition}, \mathrm{effect}, \mathrm{priority}, \mathrm{source}, \mathrm{validity}, \mathrm{status}, \mathrm{provenance}
+\rangle
+```
 
 dengan:
 
@@ -6156,8 +6738,10 @@ dengan:
 
 Reference effects:
 
-\[ PolicyEffect= { Allow, Deny, RequireVerification, RequireApproval,
-Escalate } \]
+```math
+\mathrm{PolicyEffect}= \{ \mathrm{Allow}, \mathrm{Deny}, \mathrm{RequireVerification}, \mathrm{RequireApproval},
+\mathrm{Escalate} \}
+```
 
 Implementation MAY menambahkan effects seperti `RequireReplan`,
 `RequireConstraint`, atau domain-specific effect melalui extension,
@@ -6169,13 +6753,15 @@ selama core semantics tidak dilemahkan.
 
 Policy evaluation:
 
-\[ Evaluate(P,x,c,s)\rightarrow d_p \]
+```math
+\mathrm{Evaluate}(P,x,c,s)\rightarrow d_p
+```
 
 dengan:
 
-\[
-d_p\in { Allow, Deny, RequireVerification, RequireApproval, Escalate, Pending }
-\]
+```math
+d_p\in { \mathrm{Allow}, \mathrm{Deny}, \mathrm{RequireVerification}, \mathrm{RequireApproval}, \mathrm{Escalate}, \mathrm{Pending} }
+```
 
 `Pending` digunakan jika mandatory policy context belum tersedia atau
 tidak dapat ditentukan.
@@ -6192,7 +6778,9 @@ MUST NOT diperlakukan sebagai `Allow`.
 
 Applicability:
 
-\[ Applicable(p,x,c,s)\rightarrow{true,false,unknown} \]
+```math
+\mathrm{Applicable}(p,x,c,s)\rightarrow{\mathrm{true},\mathrm{false},\mathrm{unknown}}
+```
 
 Policy applicability MAY bergantung pada:
 
@@ -6221,8 +6809,10 @@ menghasilkan `Pending`, `Escalate`, atau conservative equivalent.
 
 Reference scope dimensions:
 
-\[ PolicyScope= { Organization, Domain, Environment, Session, Task,
-Agent, Resource, Action, Data, Risk, Time } \]
+```math
+\mathrm{PolicyScope}= \{ \mathrm{Organization}, \mathrm{Domain}, \mathrm{Environment}, \mathrm{Session}, \mathrm{Task},
+\mathrm{Agent}, \mathrm{Resource}, \mathrm{Action}, \mathrm{Data}, \mathrm{Risk}, \mathrm{Time} \}
+```
 
 Narrower policy MAY menambahkan restrictions terhadap broader policy.
 
@@ -6294,13 +6884,15 @@ decision MUST dapat diidentifikasi atau direkonstruksi.
 
 Policy change dapat mengubah validitas pending decision.
 
-\[ Policy\_{v1}\neq Policy\_{v2} \]
+```math
+\mathrm{Policy}_{v1}\neq \mathrm{Policy}_{v2}
+```
 
 Jika material policy change terjadi antara decision dan Effect Boundary:
 
-\[
-Decision\_{v1}\not\Rightarrow ValidUnder(Policy\_{v2})
-\]
+```math
+\mathrm{Decision}_{v1}\not\Rightarrow \mathrm{ValidUnder}(\mathrm{Policy}_{v2})
+```
 
 Consequential pending action SHOULD direevaluasi sesuai revalidation
 policy.
@@ -6311,8 +6903,9 @@ policy.
 
 Default restrictive precedence:
 
-\[ Deny \> Escalate \> RequireApproval \> RequireVerification \> Allow
-\]
+```math
+\mathrm{Deny} > \mathrm{Escalate} > \mathrm{RequireApproval} > \mathrm{RequireVerification} > \mathrm{Allow}
+```
 
 Jika beberapa applicable policies menghasilkan outcomes berbeda,
 implementation MUST menggunakan deterministic conflict-resolution rule.
@@ -6358,8 +6951,10 @@ Policy sets MAY disusun secara hierarchical atau compositional.
 
 Reference:
 
-\[ P\_{effective} = Compose( P\_{framework}, P\_{organization},
-P\_{domain}, P\_{environment}, P\_{session}, P\_{task} ) \]
+```math
+P_{\mathrm{effective}} = \mathrm{Compose}( P_{\mathrm{framework}}, P_{\mathrm{organization}},
+P_{\mathrm{domain}}, P_{\mathrm{environment}}, P_{\mathrm{session}}, P_{\mathrm{task}} )
+```
 
 Composition MUST mempertahankan applicable mandatory constraints.
 
@@ -6372,8 +6967,10 @@ policy.
 
 Child task SHOULD mewarisi applicable parent policy constraints.
 
-\[ ApplicablePolicy(t\_{child}) \supset eq
-InheritedMandatoryPolicy(t\_{parent}) \]
+```math
+\mathrm{ApplicablePolicy}(t_{\mathrm{child}}) \supseteq
+\mathrm{InheritedMandatoryPolicy}(t_{\mathrm{parent}})
+```
 
 Delegation, retry, replan, atau agent replacement MUST NOT menghilangkan
 applicable mandatory policy secara implicit.
@@ -6401,7 +6998,9 @@ Override MUST memiliki:
 -   trace;
 -   residual risk handling jika applicable.
 
-\[ Override\neq Ignore\]
+```math
+\mathrm{Override}\neq \mathrm{Ignore}
+```
 
 **AOF-POL-007** --- Policy MUST NOT diabaikan hanya karena agent,
 orchestrator, atau Human menganggapnya inconvenient.
@@ -6435,9 +7034,11 @@ Authority evaluation dan policy evaluation MUST tetap distinguishable.
 
 Reference execution:
 
-\[ CandidatePermit= AuthorityValid \land PolicySatisfied
-\land RiskAcceptable\land StateValid
-\land VerificationSatisfied\]
+```math
+\mathrm{CandidatePermit}= \mathrm{AuthorityValid} \land \mathrm{PolicySatisfied}
+\land \mathrm{RiskAcceptable}\land \mathrm{StateValid}
+\land \mathrm{VerificationSatisfied}
+```
 
 Policy MAY:
 
@@ -6458,12 +7059,16 @@ Policy MUST NOT:
 
 Policy MAY menggunakan `Risk` sebagai input:
 
-\[ Risk(x)\geq T_h \Rightarrow
-RequireIndependentVerification \]
+```math
+\mathrm{Risk}(x)\geq T_h \Rightarrow
+\mathrm{RequireIndependentVerification}
+```
 
 Risk assessment sendiri bukan policy decision.
 
-\[ RiskResult\neq PolicyResult\]
+```math
+\mathrm{RiskResult}\neq \mathrm{PolicyResult}
+```
 
 Policy menentukan governance response terhadap risk.
 
@@ -6524,8 +7129,9 @@ Policy MAY bergantung pada orchestration state.
 
 Example:
 
-\[ State(t)\neq Verifying\Rightarrow Deny(Complete(t))
-\]
+```math
+\mathrm{State}(t)\neq \mathrm{Verifying}\Rightarrow \mathrm{Deny}(\mathrm{Complete}(t))
+```
 
 Policy yang bergantung pada state MUST menggunakan authoritative state
 atau controlled state projection.
@@ -6543,7 +7149,9 @@ diperhatikan.
 Untrusted context MUST NOT dapat secara langsung mengubah policy
 semantics.
 
-\[ UntrustedContent\not\Rightarrow PolicyMutation\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{PolicyMutation}
+```
 
 Jika untrusted input digunakan sebagai policy evaluation fact,
 implementation SHOULD melakukan validation atau classification sesuai
@@ -6583,9 +7191,9 @@ Policy untuk read dan disclosure SHOULD dapat dibedakan.
 
 Policy SHOULD dapat membedakan operations:
 
-\[
-Read\neq Write\neq Modify\neq Delete\neq Execute\neq Deploy\neq Disclose
-\]
+```math
+\mathrm{Read}\neq \mathrm{Write}\neq \mathrm{Modify}\neq \mathrm{Delete}\neq \mathrm{Execute}\neq \mathrm{Deploy}\neq \mathrm{Disclose}
+```
 
 Policy allow untuk `Read` MUST NOT secara implicit berlaku untuk `Write`
 atau `Disclose`.
@@ -6622,7 +7230,9 @@ Retry MAY memerlukan reevaluation jika:
 
 Policy MAY menetapkan:
 
-\[ RetryCount\geq N\Rightarrow Escalate\]
+```math
+\mathrm{RetryCount}\geq N\Rightarrow \mathrm{Escalate}
+```
 
 ------------------------------------------------------------------------
 
@@ -6631,7 +7241,9 @@ Policy MAY menetapkan:
 Replan MAY mengubah applicable policies karena task, resource, agent,
 operation, atau environment berubah.
 
-\[ Replan\Rightarrow RecomputeApplicablePolicy\]
+```math
+\mathrm{Replan}\Rightarrow \mathrm{RecomputeApplicablePolicy}
+```
 
 jika material policy scope berubah.
 
@@ -6710,7 +7322,9 @@ mandatory enforcement MUST tetap bounded dan traceable.
 Policy yang hanya disampaikan melalui prompt tidak cukup untuk
 consequential enforcement.
 
-\[ PolicyPrompt\neq PolicyEnforcement\]
+```math
+\mathrm{PolicyPrompt}\neq \mathrm{PolicyEnforcement}
+```
 
 Prompt MAY digunakan sebagai preventive behavioral guidance.
 
@@ -6802,7 +7416,9 @@ Policy provenance SHOULD menjawab:
 Consequential policy MUST dapat dibedakan dari dynamically generated
 agent suggestion.
 
-\[ GeneratedSuggestion\neq GovernancePolicy\]
+```math
+\mathrm{GeneratedSuggestion}\neq \mathrm{GovernancePolicy}
+```
 
 ------------------------------------------------------------------------
 
@@ -6970,47 +7586,65 @@ Numbering final akan direkonsiliasi pada canonical Invariant Registry.
 
 ### POL-INV-01 --- Policy Mediation
 
-\[ Consequential(x)\Rightarrow PolicyEvaluated(x) \]
+```math
+\mathrm{Consequential}(x)\Rightarrow \mathrm{PolicyEvaluated}(x)
+```
 
 ### POL-INV-02 --- Policy Non-Authority
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 ### POL-INV-03 --- Restrictive Dominance
 
-\[ Conflict(P)\Rightarrow DeterministicRestrictiveResolution\]
+```math
+\mathrm{Conflict}(P)\Rightarrow \mathrm{DeterministicRestrictiveResolution}
+```
 
 secara default.
 
 ### POL-INV-04 --- No Implicit Allow
 
-\[ UnknownMandatoryPolicy\Rightarrow\neg Allow\]
+```math
+\mathrm{UnknownMandatoryPolicy}\Rightarrow\neg \mathrm{Allow}
+```
 
 ### POL-INV-05 --- Policy Inheritance
 
-\[ ChildTask\Rightarrow PreserveApplicableMandatoryPolicy\]
+```math
+\mathrm{ChildTask}\Rightarrow \mathrm{PreserveApplicableMandatoryPolicy}
+```
 
 ### POL-INV-06 --- Override Control
 
-\[
-Override(p)\Rightarrow Authorized\land Scoped\land Traceable
-\]
+```math
+\mathrm{Override}(p)\Rightarrow \mathrm{Authorized}\land \mathrm{Scoped}\land \mathrm{Traceable}
+```
 
 ### POL-INV-07 --- Prompt Non-Enforcement
 
-\[ PromptPolicy\not\equiv EnforcedPolicy\]
+```math
+\mathrm{PromptPolicy}\not\equiv \mathrm{EnforcedPolicy}
+```
 
 ### POL-INV-08 --- Policy Version Traceability
 
-\[ ConsequentialDecision\Rightarrow TraceablePolicyVersion\]
+```math
+\mathrm{ConsequentialDecision}\Rightarrow \mathrm{TraceablePolicyVersion}
+```
 
 ### POL-INV-09 --- Untrusted Context Non-Mutation
 
-\[ UntrustedContent\not\Rightarrow PolicyMutation\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{PolicyMutation}
+```
 
 ### POL-INV-10 --- Replan Reevaluation
 
-\[ MaterialPolicyScopeChange\Rightarrow ReevaluatePolicy\]
+```math
+\mathrm{MaterialPolicyScopeChange}\Rightarrow \mathrm{ReevaluatePolicy}
+```
 
 ------------------------------------------------------------------------
 
@@ -7018,7 +7652,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 Policy Evaluator merupakan logical component dari `Safety Kernel`.
 
-\[ K\supset eq PolicyEvaluator\]
+```math
+K\supseteq \mathrm{PolicyEvaluator}
+```
 
 Reference interaction:
 
@@ -7073,25 +7709,33 @@ Policy area MAY dinyatakan `Freeze Candidate` jika:
 
 Policy v1.0 RC-Policy diringkas sebagai:
 
-\[ Policy= ExplicitRules + Applicability + DeterministicEvaluation +
-ConflictResolution + ControlledOverride + VersionedEnforcement +
-Traceability \]
+```math
+\mathrm{Policy}= \mathrm{ExplicitRules} + \mathrm{Applicability} + \mathrm{DeterministicEvaluation} +
+\mathrm{ConflictResolution} + \mathrm{ControlledOverride} + \mathrm{VersionedEnforcement} +
+\mathrm{Traceability}
+```
 
 dengan:
 
-\[
-\boxed{ Policy\ Constrains\ Authority,\ But\ Does\ Not\ Create\ It }
-\]
+```math
+\boxed{ \mathrm{Policy}\ \mathrm{Constrains}\ \mathrm{Authority},\ \mathrm{But}\ \mathrm{Does}\ \mathrm{Not}\ \mathrm{Create}\ \mathrm{It} }
+```
 
-\[ \boxed{ Unknown\ Mandatory\ Policy\ State\neq Allow } \]
+```math
+\boxed{ \mathrm{Unknown}\ \mathrm{Mandatory}\ \mathrm{Policy}\ \mathrm{State}\neq \mathrm{Allow} }
+```
 
-\[ \boxed{ Policy\ in\ Prompt\neq Policy\ Enforcement } \]
+```math
+\boxed{ \mathrm{Policy}\ \mathrm{in}\ \mathrm{Prompt}\neq \mathrm{Policy}\ \mathrm{Enforcement} }
+```
 
 dan:
 
-\[
-\boxed{ Consequential\ Action\Rightarrow Applicable\ Policy\ Evaluation }
-\] \# 13. Risk Requirements
+```math
+\boxed{ \mathrm{Consequential}\ \mathrm{Action}\Rightarrow \mathrm{Applicable}\ \mathrm{Policy}\ \mathrm{Evaluation} }
+```
+
+ \# 13. Risk Requirements
 
 ## 13.1 Purpose
 
@@ -7102,17 +7746,21 @@ uncertainty serta potential harm yang terkait dengan `Task`, `Decision`,
 
 Risk tidak memberikan permission.
 
-\[ Risk\neq Authority\neq Policy\]
+```math
+\mathrm{Risk}\neq \mathrm{Authority}\neq \mathrm{Policy}
+```
 
 Risk mempengaruhi tingkat control yang diperlukan:
 
-\[
-Risk\uparrow\Rightarrow ControlStrength\uparrow
-\]
+```math
+\mathrm{Risk}\uparrow\Rightarrow \mathrm{ControlStrength}\uparrow
+```
 
 Canonical principle:
 
-\[ Autonomy\propto\frac{1}{Risk} \]
+```math
+\mathrm{Autonomy}\propto\frac{1}{\mathrm{Risk}}
+```
 
 sebagai conceptual relation, bukan mandatory numeric formula.
 
@@ -7122,9 +7770,11 @@ sebagai conceptual relation, bukan mandatory numeric formula.
 
 Canonical risk object:
 
-\[ \rho= \langle id, subject, hazard, likelihood,
-impact, exposure, classification, controls, residual, owner, acceptance,
-state, provenance \rangle\]
+```math
+\rho= \langle \mathrm{id}, \mathrm{subject}, \mathrm{hazard}, \mathrm{likelihood},
+\mathrm{impact}, \mathrm{exposure}, \mathrm{classification}, \mathrm{controls}, \mathrm{residual}, \mathrm{owner}, \mathrm{acceptance},
+\mathrm{state}, \mathrm{provenance} \rangle
+```
 
 dengan:
 
@@ -7201,7 +7851,9 @@ quantitative.
 
 Reference conceptual function:
 
-\[ Risk=f(Likelihood,Impact,Exposure) \]
+```math
+\mathrm{Risk}=f(\mathrm{Likelihood},\mathrm{Impact},\mathrm{Exposure})
+```
 
 AOF tidak mewajibkan satu scoring formula universal.
 
@@ -7237,8 +7889,10 @@ Risk assessment MUST memiliki identifiable subject.
 
 Possible subjects:
 
-\[ RiskSubject= { Task, Action, Decision, Resource, AgentAssignment,
-ContextTransfer, Delegation, Outcome } \]
+```math
+\mathrm{RiskSubject}= \{ \mathrm{Task}, \mathrm{Action}, \mathrm{Decision}, \mathrm{Resource}, \mathrm{AgentAssignment},
+\mathrm{ContextTransfer}, \mathrm{Delegation}, \mathrm{Outcome} \}
+```
 
 Session-level risk MAY merupakan aggregation dari component risks.
 
@@ -7248,11 +7902,15 @@ Session-level risk MAY merupakan aggregation dari component risks.
 
 AOF membedakan:
 
-\[ Risk\_{inherent} \]
+```math
+\mathrm{Risk}_{\mathrm{inherent}}
+```
 
 dan:
 
-\[ Risk\_{residual} = Risk\_{inherent}-Effectiveness(Controls) \]
+```math
+\mathrm{Risk}_{\mathrm{residual}} = \mathrm{Risk}_{\mathrm{inherent}}-\mathrm{Effectiveness}(\mathrm{Controls})
+```
 
 Notasi subtraction bersifat conceptual.
 
@@ -7287,9 +7945,13 @@ Classification MUST traceable untuk High/Critical consequential action.
 
 Risk tidak dapat menciptakan authority.
 
-\[ LowRisk\not\Rightarrow Authority\]
+```math
+\mathrm{LowRisk}\not\Rightarrow \mathrm{Authority}
+```
 
-\[ CriticalRisk\not\Rightarrow EmergencyAuthority\]
+```math
+\mathrm{CriticalRisk}\not\Rightarrow \mathrm{EmergencyAuthority}
+```
 
 Risk MAY menyebabkan authority lebih sempit atau tidak usable melalui
 policy/control decision.
@@ -7305,9 +7967,13 @@ Policy menentukan response terhadap risk.
 
 Example:
 
-\[ Risk=High\Rightarrow RequireIndependentVerification\]
+```math
+\mathrm{Risk}=\mathrm{High}\Rightarrow \mathrm{RequireIndependentVerification}
+```
 
-\[ Risk=Critical\Rightarrow RequireApproval\]
+```math
+\mathrm{Risk}=\mathrm{Critical}\Rightarrow \mathrm{RequireApproval}
+```
 
 Risk Gate menghasilkan risk evaluation; Policy Evaluator menentukan
 applicable governance rule jika policy-based mapping digunakan.
@@ -7323,8 +7989,10 @@ Effective autonomy MUST bounded oleh risk.
 
 Reference:
 
-\[ A\_{eff} = min( A\_{configured}, A\_{authority}, A\_{policy},
-A\_{risk} ) \]
+```math
+A_{\mathrm{eff}} = \mathrm{min}( A_{\mathrm{configured}}, A_{\mathrm{authority}}, A_{\mathrm{policy}},
+A_{\mathrm{risk}} )
+```
 
 Higher risk MAY:
 
@@ -7382,7 +8050,9 @@ Examples:
 -   external service ditambahkan;
 -   blast radius meningkat.
 
-\[ ContextChange\Rightarrow PotentialRiskChange\]
+```math
+\mathrm{ContextChange}\Rightarrow \mathrm{PotentialRiskChange}
+```
 
 Material context change MUST memicu reassessment sesuai Risk Profile.
 
@@ -7392,7 +8062,9 @@ Material context change MUST memicu reassessment sesuai Risk Profile.
 
 Risk merupakan bagian consequential orchestration state.
 
-\[ s_t\supset eq Risks_t \]
+```math
+s_t\supseteq \mathrm{Risks}_t
+```
 
 Risk change yang mempengaruhi control MUST committed melalui controlled
 transition dan traceable.
@@ -7406,7 +8078,9 @@ risk state harus melalui applicable governance mechanism.
 
 Risk tidak immutable selama session.
 
-\[ Risk\_{t_0}\neq Risk\_{t_1} \]
+```math
+\mathrm{Risk}_{t_0}\neq \mathrm{Risk}_{t_1}
+```
 
 Dynamic triggers MAY mencakup:
 
@@ -7432,8 +8106,9 @@ reevaluation sebelum new consequential effect.
 
 Jika risk melewati configured threshold:
 
-\[ Risk\geq Threshold\_{escalation} \Rightarrow Escalate
-\]
+```math
+\mathrm{Risk}\geq \mathrm{Threshold}_{\mathrm{escalation}} \Rightarrow \mathrm{Escalate}
+```
 
 atau stronger control sesuai profile.
 
@@ -7454,7 +8129,9 @@ Escalation package SHOULD mencakup:
 Risk acceptance adalah explicit governance decision untuk menerima
 residual risk.
 
-\[ RiskAcceptance\neq RiskAssessment\]
+```math
+\mathrm{RiskAcceptance}\neq \mathrm{RiskAssessment}
+```
 
 Acceptance MUST dilakukan oleh actor dengan valid acceptance authority.
 
@@ -7501,7 +8178,9 @@ jika acceptance diperbolehkan.
 
 Policy/profile MAY mendefinisikan risk yang tidak dapat diterima.
 
-\[ Risk\in NonAcceptableSet\Rightarrow Reject/Abort \]
+```math
+\mathrm{Risk}\in \mathrm{NonAcceptableSet}\Rightarrow \mathrm{Reject}/\mathrm{Abort}
+```
 
 No approval SHOULD dapat mengubah prohibited risk menjadi allowed
 kecuali governance model secara explicit menyediakan
@@ -7579,7 +8258,9 @@ likelihood rendah.
 
 Risk SHOULD mempertimbangkan potential blast radius.
 
-\[ BlastRadius= AffectedResources+AffectedUsers+AffectedDomains \]
+```math
+\mathrm{BlastRadius}= \mathrm{AffectedResources}+\mathrm{AffectedUsers}+\mathrm{AffectedDomains}
+```
 
 Broad blast radius SHOULD meningkatkan control strength atau mendorong
 staged execution.
@@ -7621,7 +8302,9 @@ material.
 
 Agent selection SHOULD mempertimbangkan risk compatibility.
 
-\[ Assignable(a,t) \Rightarrow RiskProfileCompatible(a,t) \]
+```math
+\mathrm{Assignable}(a,t) \Rightarrow \mathrm{RiskProfileCompatible}(a,t)
+```
 
 High-risk task MAY mensyaratkan:
 
@@ -7652,9 +8335,9 @@ mensyaratkannya.
 
 Repeated failure dapat meningkatkan risk.
 
-\[
-RetryCount\uparrow\Rightarrow PotentialRisk\uparrow
-\]
+```math
+\mathrm{RetryCount}\uparrow\Rightarrow \mathrm{PotentialRisk}\uparrow
+```
 
 Risk Profile SHOULD menentukan retry thresholds yang memicu:
 
@@ -7670,7 +8353,9 @@ Risk Profile SHOULD menentukan retry thresholds yang memicu:
 Replan MUST mempertahankan atau memperbarui risk assessment jika plan
 materially berubah.
 
-\[ MaterialPlanChange\Rightarrow ReassessRisk\]
+```math
+\mathrm{MaterialPlanChange}\Rightarrow \mathrm{ReassessRisk}
+```
 
 New plan MUST NOT mewarisi old risk classification secara blind.
 
@@ -7696,7 +8381,9 @@ Jika partial effect terdeteksi:
 Verification failure atau inconclusive result MAY meningkatkan residual
 risk.
 
-\[ Verification=Rejected \Rightarrow NoSuccessfulCompletion \]
+```math
+\mathrm{Verification}=\mathrm{Rejected} \Rightarrow \mathrm{NoSuccessfulCompletion}
+```
 
 dan MAY memicu:
 
@@ -7713,7 +8400,9 @@ dan MAY memicu:
 Deployment MAY menggunakan risk budget untuk membatasi cumulative
 exposure.
 
-\[ CumulativeExposure\leq RiskBudget\]
+```math
+\mathrm{CumulativeExposure}\leq \mathrm{RiskBudget}
+```
 
 Risk budget MAY diterapkan pada:
 
@@ -7737,7 +8426,9 @@ Failure budget berbeda dari risk budget.
 
 Keduanya MAY berinteraksi:
 
-\[ FailureCount\uparrow\Rightarrow RiskReassessment \]
+```math
+\mathrm{FailureCount}\uparrow\Rightarrow \mathrm{RiskReassessment}
+```
 
 ------------------------------------------------------------------------
 
@@ -7745,8 +8436,9 @@ Keduanya MAY berinteraksi:
 
 Cost optimization MUST NOT menurunkan mandatory safety control.
 
-\[ CostOptimization\not\Rightarrow SafetyControlRemoval
-\]
+```math
+\mathrm{CostOptimization}\not\Rightarrow \mathrm{SafetyControlRemoval}
+```
 
 Policy MAY memilih cheaper model/tool untuk Low risk, tetapi
 High/Critical control requirements tetap berlaku.
@@ -7765,7 +8457,9 @@ Risk assessment SHOULD mempertahankan:
 -   prior assessment;
 -   change reason.
 
-\[ RiskDecision\Rightarrow Provenance\]
+```math
+\mathrm{RiskDecision}\Rightarrow \mathrm{Provenance}
+```
 
 untuk consequential High/Critical operations.
 
@@ -7871,13 +8565,15 @@ INPUT:
 
 `Risk Gate` adalah logical Safety Kernel component.
 
-\[ K\supset eq RiskGate\]
+```math
+K\supseteq \mathrm{RiskGate}
+```
 
 Reference result:
 
-\[
-RiskGate(x,s)\rightarrow { Acceptable, ControlRequired, Escalate, Reject, Pending }
-\]
+```math
+\mathrm{RiskGate}(x,s)\rightarrow { \mathrm{Acceptable}, \mathrm{ControlRequired}, \mathrm{Escalate}, \mathrm{Reject}, \mathrm{Pending} }
+```
 
 `Acceptable` berarti risk predicate satisfied; bukan authority grant.
 
@@ -7942,55 +8638,67 @@ revalidation behavior pada Effect Boundary untuk dynamic risk.
 
 ### RISK-INV-01 --- Risk-Proportional Control
 
-\[
-Risk\uparrow\Rightarrow ControlStrength\uparrow
-\]
+```math
+\mathrm{Risk}\uparrow\Rightarrow \mathrm{ControlStrength}\uparrow
+```
 
 ### RISK-INV-02 --- Risk Non-Authority
 
-\[ RiskResult\not\Rightarrow Authority\]
+```math
+\mathrm{RiskResult}\not\Rightarrow \mathrm{Authority}
+```
 
 ### RISK-INV-03 --- Dynamic Reassessment
 
-\[ MaterialRiskTrigger\Rightarrow Reassess\]
+```math
+\mathrm{MaterialRiskTrigger}\Rightarrow \mathrm{Reassess}
+```
 
 ### RISK-INV-04 --- Acceptance Separation
 
-\[ AssessRisk\neq AcceptRisk\]
+```math
+\mathrm{AssessRisk}\neq \mathrm{AcceptRisk}
+```
 
 ### RISK-INV-05 --- Residual Risk Accountability
 
-\[ AcceptedResidualRisk\Rightarrow AuthorizedAcceptance\]
+```math
+\mathrm{AcceptedResidualRisk}\Rightarrow \mathrm{AuthorizedAcceptance}
+```
 
 ### RISK-INV-06 --- High-Risk Assurance
 
-\[ HighRisk\Rightarrow IndependentVerification\]
+```math
+\mathrm{HighRisk}\Rightarrow \mathrm{IndependentVerification}
+```
 
 sesuai reference profile.
 
 ### RISK-INV-07 --- Critical-Risk Governance
 
-\[
-CriticalRisk\Rightarrow IndependentVerification\land ExplicitApproval
-\]
+```math
+\mathrm{CriticalRisk}\Rightarrow \mathrm{IndependentVerification}\land \mathrm{ExplicitApproval}
+```
 
 sesuai reference profile.
 
 ### RISK-INV-08 --- No Stale Risk
 
-\[
-MaterialContextChange\Rightarrow\neg BlindReuse(RiskAssessment)
-\]
+```math
+\mathrm{MaterialContextChange}\Rightarrow\neg \mathrm{BlindReuse}(\mathrm{RiskAssessment})
+```
 
 ### RISK-INV-09 --- Partial Effect Reassessment
 
-\[ PartialEffect\Rightarrow Reconcile+Reassess \]
+```math
+\mathrm{PartialEffect}\Rightarrow \mathrm{Reconcile}+\mathrm{Reassess}
+```
 
 ### RISK-INV-10 --- Cost Non-Dominance
 
-\[
-CostOptimization\not\Rightarrow MandatoryControlRemoval
-\]
+```math
+\mathrm{CostOptimization}\not\Rightarrow \mathrm{MandatoryControlRemoval}
+```
 
 ------------------------------------------------------------------------
 
@@ -8016,9 +8724,10 @@ Namun semantic ordering MAY dioptimalkan.
 
 Canonical condition tetap:
 
-\[ ExecuteAllowed=
+```math
+\mathrm{ExecuteAllowed}=
 C\land H\land P\land S\land R\land V
-\]
+```
 
 Risk Gate tidak menggantikan predicate lain.
 
@@ -8047,22 +8756,32 @@ Risk area MAY dinyatakan `Freeze Candidate` jika:
 
 Risk v1.0 RC-Risk diringkas sebagai:
 
-\[ RiskGovernance= Assess + Classify + Control + Reassess +
-Accept/Escalate + Trace \]
+```math
+\mathrm{RiskGovernance}= \mathrm{Assess} + \mathrm{Classify} + \mathrm{Control} + \mathrm{Reassess} +
+\mathrm{Accept}/\mathrm{Escalate} + \mathrm{Trace}
+```
 
 dengan:
 
-\[ \boxed{ Risk\ Does\ Not\ Grant\ Authority } \]
+```math
+\boxed{ \mathrm{Risk}\ \mathrm{Does}\ \mathrm{Not}\ \mathrm{Grant}\ \mathrm{Authority} }
+```
 
-\[ \boxed{ Higher\ Risk\ Requires\ Stronger\ Control } \]
+```math
+\boxed{ \mathrm{Higher}\ \mathrm{Risk}\ \mathrm{Requires}\ \mathrm{Stronger}\ \mathrm{Control} }
+```
 
-\[ \boxed{ Material\ Change\ Requires\ Risk\ Reassessment } \]
+```math
+\boxed{ \mathrm{Material}\ \mathrm{Change}\ \mathrm{Requires}\ \mathrm{Risk}\ \mathrm{Reassessment} }
+```
 
 dan:
 
-\[
-\boxed{ Residual\ Risk\ Acceptance\ Requires\ Valid\ Governance\ Authority }
-\] \# 14. Evidence Requirements
+```math
+\boxed{ \mathrm{Residual}\ \mathrm{Risk}\ \mathrm{Acceptance}\ \mathrm{Requires}\ \mathrm{Valid}\ \mathrm{Governance}\ \mathrm{Authority} }
+```
+
+ \# 14. Evidence Requirements
 
 ## 14.1 Purpose
 
@@ -8073,13 +8792,17 @@ menunjukkan `Conformance`.
 
 Canonical principle:
 
-\[ Claim\neq Evidence\neq Verification\]
+```math
+\mathrm{Claim}\neq \mathrm{Evidence}\neq \mathrm{Verification}
+```
 
 `Claim` menyatakan sesuatu. `Evidence` menyediakan support material.
 `Verification` mengevaluasi claim terhadap criteria menggunakan
 evidence.
 
-\[ Evidence\not\Rightarrow Verified\]
+```math
+\mathrm{Evidence}\not\Rightarrow \mathrm{Verified}
+```
 
 Evidence dapat valid tetapi insufficient, irrelevant, stale, dependent,
 atau contradictory.
@@ -8090,9 +8813,11 @@ atau contradictory.
 
 Canonical evidence object:
 
-\[ e= \langle id, source, claim, content, provenance, integrity,
-freshness, confidence, classification, scope, timestamp, relations
-\rangle\]
+```math
+e= \langle \mathrm{id}, \mathrm{source}, \mathrm{claim}, \mathrm{content}, \mathrm{provenance}, \mathrm{integrity},
+\mathrm{freshness}, \mathrm{confidence}, \mathrm{classification}, \mathrm{scope}, \mathrm{timestamp}, \mathrm{relations}
+\rangle
+```
 
 dengan:
 
@@ -8137,7 +8862,9 @@ Possible Evidence:
 
 Satu claim MAY memerlukan multiple evidence items.
 
-\[ Claim(c)\rightarrow{e_1,e_2,\ldots,e_n} \]
+```math
+\mathrm{Claim}(c)\rightarrow{e_1,e_2,\ldots,e_n}
+```
 
 ------------------------------------------------------------------------
 
@@ -8162,7 +8889,9 @@ Evidence source MAY berupa:
 
 Source type MUST NOT dengan sendirinya menentukan truth.
 
-\[ SourceIdentity\neq TruthGuarantee\]
+```math
+\mathrm{SourceIdentity}\neq \mathrm{TruthGuarantee}
+```
 
 ------------------------------------------------------------------------
 
@@ -8180,7 +8909,9 @@ Evidence provenance SHOULD menjawab:
 
 Conceptual:
 
-\[ Provenance(e)= Origin+Derivation+Transformation+Custody \]
+```math
+\mathrm{Provenance}(e)= \mathrm{Origin}+\mathrm{Derivation}+\mathrm{Transformation}+\mathrm{Custody}
+```
 
 **AOF-EVD-002** --- Derived evidence MUST preserve reference ke relevant
 source evidence atau derivation basis jika derivation material terhadap
@@ -8214,7 +8945,9 @@ untuk consequential evidence.
 
 Evidence dapat menjadi stale.
 
-\[ ValidAt(e,t_1)\not\Rightarrow ValidAt(e,t_2) \]
+```math
+\mathrm{ValidAt}(e,t_1)\not\Rightarrow \mathrm{ValidAt}(e,t_2)
+```
 
 Evidence profile SHOULD menentukan freshness requirement jika
 state/resource berubah seiring waktu.
@@ -8236,7 +8969,9 @@ support jika applicable criteria mensyaratkan fresher observation.
 
 Evidence harus relevan terhadap claim.
 
-\[ Relevant(e,c)\rightarrow{true,false,partial} \]
+```math
+\mathrm{Relevant}(e,c)\rightarrow{\mathrm{true},\mathrm{false},\mathrm{partial}}
+```
 
 Evidence bahwa build berhasil tidak otomatis membuktikan security
 requirements terpenuhi.
@@ -8268,7 +9003,9 @@ keduanya dapat berinteraksi.
 
 Confidence MAY digunakan sebagai metadata, tetapi:
 
-\[ Confidence\neq Verification\]
+```math
+\mathrm{Confidence}\neq \mathrm{Verification}
+```
 
 Agent-reported confidence MUST NOT menggantikan required evidence.
 
@@ -8281,8 +9018,9 @@ automated governance.
 
 Reference quality function:
 
-\[ Q_e= f( Provenance, Integrity, Relevance, Freshness, Independence )
-\]
+```math
+Q_e= f( \mathrm{Provenance}, \mathrm{Integrity}, \mathrm{Relevance}, \mathrm{Freshness}, \mathrm{Independence} )
+```
 
 Implementation MAY menambahkan completeness, precision, reproducibility,
 atau domain-specific dimensions.
@@ -8296,7 +9034,9 @@ AOF tidak mewajibkan universal numeric score.
 `Admissibility` menentukan apakah evidence boleh digunakan untuk
 verification tertentu.
 
-\[ Admissible(e,c,k)\rightarrow{true,false,conditional} \]
+```math
+\mathrm{Admissible}(e,c,k)\rightarrow{\mathrm{true},\mathrm{false},\mathrm{conditional}}
+```
 
 dengan (k) sebagai verification criteria/profile.
 
@@ -8321,14 +9061,18 @@ evidence sebagai sufficient evidence.
 
 Sufficiency adalah property dari evidence set terhadap claim/criteria.
 
-\[ Sufficient(E,c,k)\rightarrow{true,false,inconclusive} \]
+```math
+\mathrm{Sufficient}(E,c,k)\rightarrow{\mathrm{true},\mathrm{false},\mathrm{inconclusive}}
+```
 
 Satu high-quality evidence item MAY cukup untuk simple deterministic
 claim.
 
 Complex/high-risk claim MAY membutuhkan corroboration.
 
-\[ EvidencePresent\not\Rightarrow EvidenceSufficient\]
+```math
+\mathrm{EvidencePresent}\not\Rightarrow \mathrm{EvidenceSufficient}
+```
 
 ------------------------------------------------------------------------
 
@@ -8337,7 +9081,9 @@ Complex/high-risk claim MAY membutuhkan corroboration.
 Corroboration menggunakan multiple evidence items yang independently
 mendukung claim.
 
-\[ Corroborated(c)=Support(e_1,c)\land Support(e_2,c) \]
+```math
+\mathrm{Corroborated}(c)=\mathrm{Support}(e_1,c)\land \mathrm{Support}(e_2,c)
+```
 
 Jika (e_1) dan (e_2) berasal dari same underlying source, independence
 MAY rendah walaupun jumlah evidence dua.
@@ -8350,7 +9096,9 @@ Implementation SHOULD menghindari false corroboration.
 
 Evidence set dapat mengandung contradiction.
 
-\[ Support(e_i,c)\land Reject(e_j,c) \]
+```math
+\mathrm{Support}(e_i,c)\land \mathrm{Reject}(e_j,c)
+```
 
 Contradiction MUST NOT silently diabaikan jika material.
 
@@ -8372,7 +9120,9 @@ dengan traceable rationale.
 
 Absence of evidence berbeda dari evidence of absence.
 
-\[ NoEvidence(c)\neq Evidence(\neg c) \]
+```math
+\mathrm{NoEvidence}(c)\neq \mathrm{Evidence}(\neg c)
+```
 
 Missing expected evidence MAY menjadi failure condition jika evidence
 tersebut mandatory.
@@ -8415,7 +9165,9 @@ Consequential `Action` SHOULD menghasilkan evidence yang membedakan:
 -   intended effect confirmed;
 -   unintended effect observed.
 
-\[ ExecutionResult\neq EffectEvidence\]
+```math
+\mathrm{ExecutionResult}\neq \mathrm{EffectEvidence}
+```
 
 Contoh API `200 OK` tidak selalu membuktikan intended downstream effect.
 
@@ -8524,7 +9276,9 @@ Agent-generated output MAY menjadi evidence candidate.
 
 Default:
 
-\[ AgentOutput=UntrustedProposal \]
+```math
+\mathrm{AgentOutput}=\mathrm{UntrustedProposal}
+```
 
 untuk control semantics.
 
@@ -8561,7 +9315,9 @@ normalization, atau extraction.
 
 Derived evidence:
 
-\[ e_d=Transform(e_s) \]
+```math
+e_d=\mathrm{Transform}(e_s)
+```
 
 SHOULD mempertahankan:
 
@@ -8583,7 +9339,9 @@ Evidence aggregation MAY menghasilkan summary atau composite evidence.
 Aggregation MUST NOT menghilangkan material contradiction atau
 provenance yang diperlukan.
 
-\[ Aggregate(E)\not\Rightarrow Erase(Provenance(E)) \]
+```math
+\mathrm{Aggregate}(E)\not\Rightarrow \mathrm{Erase}(\mathrm{Provenance}(E))
+```
 
 ------------------------------------------------------------------------
 
@@ -8657,7 +9415,9 @@ governance obligations.
 System SHOULD mengumpulkan evidence secukupnya untuk assurance dan
 accountability, bukan tanpa batas.
 
-\[ EvidenceCollection\approx MinimumSufficientEvidence\]
+```math
+\mathrm{EvidenceCollection}\approx \mathrm{MinimumSufficientEvidence}
+```
 
 Evidence minimization membantu privacy, cost, dan security.
 
@@ -8698,7 +9458,9 @@ jika governance mengizinkan.
 Authority untuk menyimpan/read evidence berbeda dari authority untuk
 disclose evidence.
 
-\[ EvidenceReadAuthority\neq EvidenceDisclosureAuthority\]
+```math
+\mathrm{EvidenceReadAuthority}\neq \mathrm{EvidenceDisclosureAuthority}
+```
 
 Cross-boundary evidence transfer MUST tunduk pada Authority, Policy,
 Risk, dan Context controls.
@@ -8712,7 +9474,9 @@ Evidence SHOULD tidak silently overwritten.
 Jika correction diperlukan, implementation SHOULD mempertahankan
 supersession relationship:
 
-\[ e\_{new} supersedes e\_{old} \]
+```math
+e_{\mathrm{new}}\ \mathrm{supersedes}\ e_{\mathrm{old}}
+```
 
 tanpa menghapus historical governance meaning kecuali retention/privacy
 policy secara sah mensyaratkan deletion.
@@ -8744,7 +9508,9 @@ time tidak cukup.
 
 Evidence MAY memicu state transition hanya melalui governed decision.
 
-\[ Evidence\not\Rightarrow DirectStateMutation\]
+```math
+\mathrm{Evidence}\not\Rightarrow \mathrm{DirectStateMutation}
+```
 
 Evidence ingestion itself MAY menjadi state event jika implementation
 memodelkannya demikian.
@@ -8975,47 +9741,63 @@ direkonstruksi dari claim ke source dan verification result.
 
 ### EVD-INV-01 --- Provenance
 
-\[ ConsequentialEvidence\Rightarrow Provenance\]
+```math
+\mathrm{ConsequentialEvidence}\Rightarrow \mathrm{Provenance}
+```
 
 ### EVD-INV-02 --- Claim Separation
 
-\[ Claim\neq Evidence\]
+```math
+\mathrm{Claim}\neq \mathrm{Evidence}
+```
 
 ### EVD-INV-03 --- Verification Separation
 
-\[ Evidence\neq Verification\]
+```math
+\mathrm{Evidence}\neq \mathrm{Verification}
+```
 
 ### EVD-INV-04 --- Sufficiency
 
-\[ EvidencePresent\not\Rightarrow EvidenceSufficient\]
+```math
+\mathrm{EvidencePresent}\not\Rightarrow \mathrm{EvidenceSufficient}
+```
 
 ### EVD-INV-05 --- Freshness
 
-\[
-Stale(e)\land FreshRequired\Rightarrow\neg Sufficient(e)
-\]
+```math
+\mathrm{Stale}(e)\land \mathrm{FreshRequired}\Rightarrow\neg \mathrm{Sufficient}(e)
+```
 
 ### EVD-INV-06 --- Contradiction Visibility
 
-\[ MaterialContradiction\Rightarrow VisibleToVerification\]
+```math
+\mathrm{MaterialContradiction}\Rightarrow \mathrm{VisibleToVerification}
+```
 
 ### EVD-INV-07 --- Derived Provenance
 
-\[ DerivedEvidence\Rightarrow SourceReference\]
+```math
+\mathrm{DerivedEvidence}\Rightarrow \mathrm{SourceReference}
+```
 
 ### EVD-INV-08 --- No False Corroboration
 
-\[
-SameUnderlyingSource\not\Rightarrow IndependentCorroboration
-\]
+```math
+\mathrm{SameUnderlyingSource}\not\Rightarrow \mathrm{IndependentCorroboration}
+```
 
 ### EVD-INV-09 --- Disclosure Control
 
-\[ EvidenceAccess\not\Rightarrow EvidenceDisclosure\]
+```math
+\mathrm{EvidenceAccess}\not\Rightarrow \mathrm{EvidenceDisclosure}
+```
 
 ### EVD-INV-10 --- Historical Preservation
 
-\[ Correction(e)\Rightarrow SupersessionOrTrace\]
+```math
+\mathrm{Correction}(e)\Rightarrow \mathrm{SupersessionOrTrace}
+```
 
 ------------------------------------------------------------------------
 
@@ -9071,21 +9853,32 @@ Evidence area MAY dinyatakan `Freeze Candidate` jika:
 
 Evidence v1.0 RC-Evidence diringkas sebagai:
 
-\[ EvidenceAssurance= Capture + Provenance + Integrity + Freshness +
-Relevance + Admissibility + Sufficiency + Traceability \]
+```math
+\mathrm{EvidenceAssurance}= \mathrm{Capture} + \mathrm{Provenance} + \mathrm{Integrity} + \mathrm{Freshness} +
+\mathrm{Relevance} + \mathrm{Admissibility} + \mathrm{Sufficiency} + \mathrm{Traceability}
+```
 
 dengan:
 
-\[ \boxed{ Claim\neq Evidence\neq Verification } \]
+```math
+\boxed{ \mathrm{Claim}\neq \mathrm{Evidence}\neq \mathrm{Verification} }
+```
 
-\[ \boxed{ Evidence\ Present\neq Evidence\ Sufficient } \]
+```math
+\boxed{ \mathrm{Evidence}\ \mathrm{Present}\neq \mathrm{Evidence}\ \mathrm{Sufficient} }
+```
 
-\[ \boxed{ Consequential\ Evidence\Rightarrow Provenance } \]
+```math
+\boxed{ \mathrm{Consequential}\ \mathrm{Evidence}\Rightarrow \mathrm{Provenance} }
+```
 
 dan:
 
-\[ \boxed{ Verification\ Trust\ Depends\ On\ Evidence\ Quality }
-\] \# 15. Verification Requirements
+```math
+\boxed{ \mathrm{Verification}\ \mathrm{Trust}\ \mathrm{Depends}\ \mathrm{On}\ \mathrm{Evidence}\ \mathrm{Quality} }
+```
+
+ \# 15. Verification Requirements
 
 ## 15.1 Purpose
 
@@ -9096,16 +9889,20 @@ sufficient `Evidence`.
 
 Canonical separation:
 
-\[
-Claim\neq Evidence\neq Verification\neq Approval
-\]
+```math
+\mathrm{Claim}\neq \mathrm{Evidence}\neq \mathrm{Verification}\neq \mathrm{Approval}
+```
 
 Verification adalah assurance process. Verification tidak memberikan
 authority dan tidak menggantikan policy atau risk acceptance.
 
-\[ Verified(x)\not\Rightarrow Authorized(x) \]
+```math
+\mathrm{Verified}(x)\not\Rightarrow \mathrm{Authorized}(x)
+```
 
-\[ Verified(x)\not\Rightarrow Approved(x) \]
+```math
+\mathrm{Verified}(x)\not\Rightarrow \mathrm{Approved}(x)
+```
 
 ------------------------------------------------------------------------
 
@@ -9113,9 +9910,11 @@ authority dan tidak menggantikan policy atau risk acceptance.
 
 Canonical verification object:
 
-\[ v= \langle id, claim, criteria, evidence, verifier, method,
-profile, independence, result, confidence, limitations, timestamp,
-provenance \rangle\]
+```math
+v= \langle \mathrm{id}, \mathrm{claim}, \mathrm{criteria}, \mathrm{evidence}, \mathrm{verifier}, \mathrm{method},
+\mathrm{profile}, \mathrm{independence}, \mathrm{result}, \mathrm{confidence}, \mathrm{limitations}, \mathrm{timestamp},
+\mathrm{provenance} \rangle
+```
 
 dengan:
 
@@ -9135,7 +9934,9 @@ dengan:
 
 Reference result:
 
-\[ VerificationResult= { Verified, Rejected, Inconclusive } \]
+```math
+\mathrm{VerificationResult}= \{ \mathrm{Verified}, \mathrm{Rejected}, \mathrm{Inconclusive} \}
+```
 
 **AOF-VER-001** --- Required verification MUST menghasilkan explicit
 normalized result dan MUST NOT diasumsikan berhasil hanya karena
@@ -9147,16 +9948,22 @@ evidence tersedia.
 
 Canonical function:
 
-\[ V: \langle claim,evidence,criteria\rangle
-\rightarrow result\]
+```math
+V: \langle \mathrm{claim},\mathrm{evidence},\mathrm{criteria}\rangle
+\rightarrow \mathrm{result}
+```
 
 dengan:
 
-\[ result\in{Verified,Rejected,Inconclusive} \]
+```math
+\mathrm{result}\in{\mathrm{Verified},\mathrm{Rejected},\mathrm{Inconclusive}}
+```
 
 Jika verification required untuk execution/completion:
 
-\[ V=Verified \]
+```math
+V=\mathrm{Verified}
+```
 
 harus terpenuhi sebelum governed transition yang mensyaratkannya.
 
@@ -9178,7 +9985,9 @@ Criteria SHOULD:
 -   berasal dari valid specification, policy, profile, requirement, atau
     governance source.
 
-\[ VerificationWithoutCriteria\Rightarrow AmbiguousAssurance\]
+```math
+\mathrm{VerificationWithoutCriteria}\Rightarrow \mathrm{AmbiguousAssurance}
+```
 
 **AOF-VER-002** --- Consequential verification MUST memiliki
 identifiable criteria.
@@ -9232,8 +10041,10 @@ Human reviewer mengevaluasi evidence dan criteria.
 
 Gabungan dua atau lebih mechanisms.
 
-\[ VerificationMode= { Self, IndependentAgent, Deterministic, Human,
-Composite } \]
+```math
+\mathrm{VerificationMode}= \{ \mathrm{Self}, \mathrm{IndependentAgent}, \mathrm{Deterministic}, \mathrm{Human},
+\mathrm{Composite} \}
+```
 
 ------------------------------------------------------------------------
 
@@ -9249,7 +10060,9 @@ Reference independence levels:
 
 Independence requirement ditentukan oleh Risk/Profile/Policy.
 
-\[ HighRisk\Rightarrow VI\geq RequiredLevel\]
+```math
+\mathrm{HighRisk}\Rightarrow \mathrm{VI}\geq \mathrm{RequiredLevel}
+```
 
 AOF reference profile mensyaratkan independent verification untuk High
 risk.
@@ -9260,7 +10073,9 @@ risk.
 
 Distinct agent IDs tidak otomatis berarti independent.
 
-\[ DifferentID\not\Rightarrow Independent\]
+```math
+\mathrm{DifferentID}\not\Rightarrow \mathrm{Independent}
+```
 
 Independence SHOULD mempertimbangkan:
 
@@ -9281,8 +10096,10 @@ Independence SHOULD mempertimbangkan:
 Verification MUST mengevaluasi evidence admissibility dan sufficiency
 sesuai Section 14.
 
-\[ Verified(c) \Rightarrow Admissible(E,c) \land
-Sufficient(E,c) \]
+```math
+\mathrm{Verified}(c) \Rightarrow \mathrm{Admissible}(E,c) \land
+\mathrm{Sufficient}(E,c)
+```
 
 sesuai applicable profile.
 
@@ -9307,7 +10124,9 @@ Verifier MAY memiliki authority untuk:
 Verification role MUST NOT otomatis memberikan authority untuk execute
 atau approve.
 
-\[ VerifyAuthority\not\Rightarrow ExecuteAuthority\]
+```math
+\mathrm{VerifyAuthority}\not\Rightarrow \mathrm{ExecuteAuthority}
+```
 
 ------------------------------------------------------------------------
 
@@ -9321,11 +10140,15 @@ Approval menjawab:
 
 > Apakah authorized approver mengizinkan governed progression/action?
 
-\[ Verification\neq Approval\]
+```math
+\mathrm{Verification}\neq \mathrm{Approval}
+```
 
 Critical risk MAY memerlukan keduanya:
 
-\[ Verified\land Approved\]
+```math
+\mathrm{Verified}\land \mathrm{Approved}
+```
 
 ------------------------------------------------------------------------
 
@@ -9391,13 +10214,15 @@ Verification result MUST committed melalui controlled transition.
 
 `Verification Gate` merupakan Safety Kernel component.
 
-\[ K\supset eq VerificationGate\]
+```math
+K\supseteq \mathrm{VerificationGate}
+```
 
 Reference:
 
-\[
-VerificationGate(x,s)\rightarrow { Satisfied, Required, Rejected, Inconclusive, Pending }
-\]
+```math
+\mathrm{VerificationGate}(x,s)\rightarrow { \mathrm{Satisfied}, \mathrm{Required}, \mathrm{Rejected}, \mathrm{Inconclusive}, \mathrm{Pending} }
+```
 
 `Satisfied` hanya valid jika applicable verification obligations telah
 dipenuhi.
@@ -9416,7 +10241,9 @@ Examples:
 -   verify change plan;
 -   verify authorization package.
 
-\[ PreVerify(x)=Required \Rightarrow VerifiedBeforeEffect(x) \]
+```math
+\mathrm{PreVerify}(x)=\mathrm{Required} \Rightarrow \mathrm{VerifiedBeforeEffect}(x)
+```
 
 ------------------------------------------------------------------------
 
@@ -9432,8 +10259,9 @@ Examples:
 -   verify security controls;
 -   confirm intended file modification.
 
-\[ ExecutionSuccess\not\Rightarrow PostConditionVerified
-\]
+```math
+\mathrm{ExecutionSuccess}\not\Rightarrow \mathrm{PostConditionVerified}
+```
 
 ------------------------------------------------------------------------
 
@@ -9442,7 +10270,9 @@ Examples:
 Long-running workflow MAY memerlukan repeated verification pada
 checkpoints.
 
-\[ Checkpoint_i\Rightarrow V_i \]
+```math
+\mathrm{Checkpoint}_i\Rightarrow V_i
+```
 
 Continuous verification SHOULD digunakan jika state/risk dapat berubah
 material selama execution.
@@ -9503,8 +10333,9 @@ Jika claim dapat diverifikasi secara deterministic dengan reliable
 mechanism, deterministic verification SHOULD diprioritaskan dibanding
 probabilistic judgment untuk enforcement-critical claims.
 
-\[ DeterministicCheckAvailable \Rightarrow PreferDeterministic
-\]
+```math
+\mathrm{DeterministicCheckAvailable} \Rightarrow \mathrm{PreferDeterministic}
+```
 
 bukan absolute requirement jika deterministic mechanism sendiri
 insufficient.
@@ -9515,7 +10346,9 @@ insufficient.
 
 Composite verification:
 
-\[ V_c=f(V_1,V_2,\ldots,V_n) \]
+```math
+V_c=f(V_1,V_2,\ldots,V_n)
+```
 
 Composition rule MUST explicit.
 
@@ -9538,7 +10371,9 @@ component.
 
 Profile MAY menggunakan quorum:
 
-\[ Verified\iffCount(IndependentPositiveResults)\geq q\]
+```math
+\mathrm{Verified}\iff \mathrm{Count}(\mathrm{IndependentPositiveResults})\geq q
+```
 
 Quorum semantics MUST menentukan:
 
@@ -9555,7 +10390,9 @@ Quorum semantics MUST menentukan:
 
 Jika verifier berbeda menghasilkan conflicting results:
 
-\[ V_1=Verified,\quadV\_2=Rejected \]
+```math
+V_1=\mathrm{Verified},\quad V_2=\mathrm{Rejected}
+```
 
 system MUST NOT memilih positive result secara arbitrary.
 
@@ -9577,7 +10414,9 @@ menggunakan explicit resolution rule.
 Confidence MAY menjadi metadata tetapi tidak menggantikan result
 semantics.
 
-\[ HighConfidence\not\Rightarrow Verified\]
+```math
+\mathrm{HighConfidence}\not\Rightarrow \mathrm{Verified}
+```
 
 Jika confidence threshold digunakan, threshold MUST defined dalam
 profile.
@@ -9604,7 +10443,9 @@ Material limitation MAY menyebabkan `Inconclusive`.
 
 Verification dapat menjadi stale jika verified subject berubah.
 
-\[ Verified(x\_{v1})\not\Rightarrow Verified(x\_{v2}) \]
+```math
+\mathrm{Verified}(x_{v1})\not\Rightarrow \mathrm{Verified}(x_{v2})
+```
 
 Artifact/resource identity SHOULD diikat pada verification result.
 
@@ -9645,7 +10486,9 @@ Triggers MAY mencakup:
 -   partial failure;
 -   expiry/freshness threshold.
 
-\[ MaterialSubjectChange\Rightarrow Reverify\]
+```math
+\mathrm{MaterialSubjectChange}\Rightarrow \mathrm{Reverify}
+```
 
 ------------------------------------------------------------------------
 
@@ -9716,7 +10559,9 @@ accepted melalui applicable control path jika profile memerlukan.
 
 Jika verification tool gagal:
 
-\[ ToolFailure\neq Verified\]
+```math
+\mathrm{ToolFailure}\neq \mathrm{Verified}
+```
 
 Outcome SHOULD menjadi `Inconclusive`, `Pending`, `Rejected`, atau
 escalation sesuai profile.
@@ -9730,7 +10575,9 @@ verification.
 
 Jika mandatory evidence missing:
 
-\[ MissingRequiredEvidence\Rightarrow\neg Verified\]
+```math
+\mathrm{MissingRequiredEvidence}\Rightarrow\neg \mathrm{Verified}
+```
 
 Possible result:
 
@@ -9840,7 +10687,9 @@ decision.
 
 Verification non-circularity:
 
-\[ Verify(c,e) \]
+```math
+\mathrm{Verify}(c,e)
+```
 
 MUST NOT bergantung solely pada evidence yang validitasnya hanya berasal
 dari claim (c) sendiri.
@@ -9863,7 +10712,9 @@ self-referential.
 
 Verification result adalah governed input.
 
-\[ VerificationResult\rightarrow ControlDecision\]
+```math
+\mathrm{VerificationResult}\rightarrow \mathrm{ControlDecision}
+```
 
 Result MUST NOT langsung menyebabkan consequential effect tanpa
 applicable Authority, Policy, Risk, dan State controls.
@@ -9875,8 +10726,10 @@ applicable Authority, Policy, Risk, dan State controls.
 Task/session MUST NOT mencapai successful terminal state jika mandatory
 completion verification belum satisfied.
 
-\[ Completed \Rightarrow GoalSatisfied
-\land RequiredVerificationSatisfied\]
+```math
+\mathrm{Completed} \Rightarrow \mathrm{GoalSatisfied}
+\land \mathrm{RequiredVerificationSatisfied}
+```
 
 sesuai lifecycle semantics.
 
@@ -9886,7 +10739,9 @@ sesuai lifecycle semantics.
 
 Goal satisfaction SHOULD diverifikasi terhadap `SuccessCriteria`.
 
-\[ GoalSatisfied(g) = Verify( Outcome, Evidence, SuccessCriteria(g) ) \]
+```math
+\mathrm{GoalSatisfied}(g) = \mathrm{Verify}( \mathrm{Outcome}, \mathrm{Evidence}, \mathrm{SuccessCriteria}(g) )
+```
 
 Agent declaration "task selesai" bukan sufficient proof jika explicit
 success criteria tersedia.
@@ -10009,47 +10864,67 @@ insufficiency.
 
 ### VER-INV-01 --- Criteria Requirement
 
-\[ Verification\Rightarrow Criteria\]
+```math
+\mathrm{Verification}\Rightarrow \mathrm{Criteria}
+```
 
 ### VER-INV-02 --- Evidence Requirement
 
-\[ Verified(c)\Rightarrow SufficientAdmissibleEvidence(c) \]
+```math
+\mathrm{Verified}(c)\Rightarrow \mathrm{SufficientAdmissibleEvidence}(c)
+```
 
 ### VER-INV-03 --- Inconclusive Non-Success
 
-\[ Inconclusive\not\Rightarrow Verified\]
+```math
+\mathrm{Inconclusive}\not\Rightarrow \mathrm{Verified}
+```
 
 ### VER-INV-04 --- Independence
 
-\[ IndependentVerificationRequired \Rightarrow
-SelfVerificationInsufficient \]
+```math
+\mathrm{IndependentVerificationRequired} \Rightarrow
+\mathrm{SelfVerificationInsufficient}
+```
 
 ### VER-INV-05 --- Subject Binding
 
-\[ Verified(x)\not\Rightarrow Verified(y) \]
+```math
+\mathrm{Verified}(x)\not\Rightarrow \mathrm{Verified}(y)
+```
 
 untuk materially different subject (y).
 
 ### VER-INV-06 --- Reverification
 
-\[ MaterialSubjectChange\Rightarrow Reverify\]
+```math
+\mathrm{MaterialSubjectChange}\Rightarrow \mathrm{Reverify}
+```
 
 ### VER-INV-07 --- Verification Non-Authority
 
-\[ Verified\not\Rightarrow Authorized\]
+```math
+\mathrm{Verified}\not\Rightarrow \mathrm{Authorized}
+```
 
 ### VER-INV-08 --- Verification Non-Approval
 
-\[ Verified\not\Rightarrow Approved\]
+```math
+\mathrm{Verified}\not\Rightarrow \mathrm{Approved}
+```
 
 ### VER-INV-09 --- Non-Circularity
 
-\[ Verification\not\Rightarrow PureSelfReference\]
+```math
+\mathrm{Verification}\not\Rightarrow \mathrm{PureSelfReference}
+```
 
 ### VER-INV-10 --- Completion Assurance
 
-\[ SuccessfulCompletion \Rightarrow
-RequiredVerificationSatisfied \]
+```math
+\mathrm{SuccessfulCompletion} \Rightarrow
+\mathrm{RequiredVerificationSatisfied}
+```
 
 ------------------------------------------------------------------------
 
@@ -10057,16 +10932,20 @@ RequiredVerificationSatisfied \]
 
 Section 14 dan Section 15 membentuk contract:
 
-\[ EvidenceProfile \rightarrow AdmissibleEvidenceSet
-\rightarrow VerificationProfile \rightarrow
-VerificationResult \]
+```math
+\mathrm{EvidenceProfile} \rightarrow \mathrm{AdmissibleEvidenceSet}
+\rightarrow \mathrm{VerificationProfile} \rightarrow
+\mathrm{VerificationResult}
+```
 
 Evidence menentukan support material.
 
 Verification menentukan evaluation.
 
-\[ EvidenceQuality + CriteriaQuality + VerifierSuitability
-\rightarrow AssuranceQuality \]
+```math
+\mathrm{EvidenceQuality} + \mathrm{CriteriaQuality} + \mathrm{VerifierSuitability}
+\rightarrow \mathrm{AssuranceQuality}
+```
 
 ------------------------------------------------------------------------
 
@@ -10122,25 +11001,36 @@ Verification area MAY dinyatakan `Freeze Candidate` jika:
 
 Verification v1.0 RC-Verification diringkas sebagai:
 
-\[ Verification= Criteria + AdmissibleEvidence + SufficientEvidence +
-SuitableVerifier + Method + Independence + ExplicitResult + Traceability
-\]
+```math
+\mathrm{Verification}= \mathrm{Criteria} + \mathrm{AdmissibleEvidence} + \mathrm{SufficientEvidence} +
+\mathrm{SuitableVerifier} + \mathrm{Method} + \mathrm{Independence} + \mathrm{ExplicitResult} + \mathrm{Traceability}
+```
 
 dengan:
 
-\[ \boxed{ Evidence\neq Verification } \]
+```math
+\boxed{ \mathrm{Evidence}\neq \mathrm{Verification} }
+```
 
-\[ \boxed{ Inconclusive\neq Verified } \]
+```math
+\boxed{ \mathrm{Inconclusive}\neq \mathrm{Verified} }
+```
 
-\[ \boxed{ HighRisk\Rightarrow IndependentVerification } \]
+```math
+\boxed{ \mathrm{HighRisk}\Rightarrow \mathrm{IndependentVerification} }
+```
 
-\[ \boxed{ Verification\ Does\ Not\ Create\ Authority } \]
+```math
+\boxed{ \mathrm{Verification}\ \mathrm{Does}\ \mathrm{Not}\ \mathrm{Create}\ \mathrm{Authority} }
+```
 
 dan:
 
-\[
-\boxed{ SuccessfulCompletion\Rightarrow RequiredVerificationSatisfied }
-\] \# 16. State & Trace Requirements
+```math
+\boxed{ \mathrm{SuccessfulCompletion}\Rightarrow \mathrm{RequiredVerificationSatisfied} }
+```
+
+ \# 16. State & Trace Requirements
 
 ## 16.1 Purpose
 
@@ -10151,13 +11041,17 @@ accountability, recovery, verification, audit, dan conformance.
 
 Canonical separation:
 
-\[ State\neq Trace\neq AgentMemory\]
+```math
+\mathrm{State}\neq \mathrm{Trace}\neq \mathrm{AgentMemory}
+```
 
 `State` menjawab kondisi authoritative sistem saat ini. `Trace` menjawab
 bagaimana kondisi tersebut dicapai melalui events, decisions, actions,
 evidence, dan transitions.
 
-\[ AuthoritativeState\neq AgentPrivateMemory\]
+```math
+\mathrm{AuthoritativeState}\neq \mathrm{AgentPrivateMemory}
+```
 
 ------------------------------------------------------------------------
 
@@ -10165,9 +11059,11 @@ evidence, dan transitions.
 
 Canonical orchestration state:
 
-\[ s_t= \langle Tasks, Agents, Context, Authority, Policies,
-Evidence, Risks, Resources, Verification, Approvals, History
-\rangle\_t \]
+```math
+s_t= \langle \mathrm{Tasks}, \mathrm{Agents}, \mathrm{Context}, \mathrm{Authority}, \mathrm{Policies},
+\mathrm{Evidence}, \mathrm{Risks}, \mathrm{Resources}, \mathrm{Verification}, \mathrm{Approvals}, \mathrm{History}
+\rangle_t
+```
 
 Deployment MAY memecah state ke beberapa stores selama semantic
 consistency tetap dipertahankan.
@@ -10204,12 +11100,16 @@ Consequential state SHOULD memiliki identity dan version/revision.
 
 Reference:
 
-\[ StateRef=\langle scope,id,version\rangle\]
+```math
+\mathrm{StateRef}=\langle \mathrm{scope},\mathrm{id},\mathrm{version}\rangle
+```
 
 Decision yang bergantung pada mutable state SHOULD bind ke relevant
 state version.
 
-\[ Decision(d,s_v) \]
+```math
+\mathrm{Decision}(d,s_v)
+```
 
 Perubahan material setelah decision MAY membuat decision stale.
 
@@ -10219,12 +11119,16 @@ Perubahan material setelah decision MAY membuat decision stale.
 
 Canonical transition:
 
-\[ \Delta:S\times D\rightarrow S' \]
+```math
+\Delta:S\times D\rightarrow S'
+```
 
 Expanded:
 
-\[ transition= \langle id, stateBefore, decision, action,
-evidence, stateAfter, actor, timestamp \rangle\]
+```math
+\mathrm{transition}= \langle \mathrm{id}, \mathrm{stateBefore}, \mathrm{decision}, \mathrm{action},
+\mathrm{evidence}, \mathrm{stateAfter}, \mathrm{actor}, \mathrm{timestamp} \rangle
+```
 
 Transition MUST memenuhi applicable lifecycle, authority, policy, risk,
 dan verification constraints.
@@ -10233,7 +11137,9 @@ dan verification constraints.
 
 ## 16.6 No Silent State Mutation
 
-\[ ConsequentialStateChange\Rightarrow ControlledTransition\]
+```math
+\mathrm{ConsequentialStateChange}\Rightarrow \mathrm{ControlledTransition}
+```
 
 **AOF-ST-002** --- Consequential state mutation MUST NOT terjadi secara
 silent di luar controlled transition path.
@@ -10248,11 +11154,15 @@ source of authoritative governance state.
 
 `State Validator` adalah Safety Kernel component.
 
-\[ K\supset eq StateValidator\]
+```math
+K\supseteq \mathrm{StateValidator}
+```
 
 Reference:
 
-\[ StateValid(s,x)\rightarrow{Pass,Fail,Pending} \]
+```math
+\mathrm{StateValid}(s,x)\rightarrow{\mathrm{Pass},\mathrm{Fail},\mathrm{Pending}}
+```
 
 Validation MAY memeriksa:
 
@@ -10276,7 +11186,9 @@ Task/session transitions MUST mengikuti allowed transition model.
 
 Example invalid transition:
 
-\[ Created\rightarrow Completed\]
+```math
+\mathrm{Created}\rightarrow \mathrm{Completed}
+```
 
 tanpa required intermediate control jika lifecycle/profile
 mensyaratkannya.
@@ -10291,12 +11203,16 @@ consequential semantics MUST equivalent.
 Action SHOULD mendefinisikan relevant preconditions dan expected
 postconditions.
 
-\[ Execute(x)\Rightarrow Preconditions(x)=true \]
+```math
+\mathrm{Execute}(x)\Rightarrow \mathrm{Preconditions}(x)=\mathrm{true}
+```
 
 Postconditions SHOULD diuji melalui result/effect evidence jika
 material.
 
-\[ ExpectedEffect\neq ObservedEffect\]
+```math
+\mathrm{ExpectedEffect}\neq \mathrm{ObservedEffect}
+```
 
 ------------------------------------------------------------------------
 
@@ -10325,7 +11241,9 @@ defined interface/control.
 
 Agent SHOULD menerima minimum necessary state projection:
 
-\[ Projection(a,t)=S\_{a,t}\subset eq S\]
+```math
+\mathrm{Projection}(a,t)=S_{a,t}\subseteq S
+```
 
 Projection MAY omit sensitive atau irrelevant fields.
 
@@ -10338,7 +11256,9 @@ proposal yang perlu current-state validation.
 
 ## 16.12 Stale State
 
-\[ StateVersion\_{decision}\<StateVersion\_{current} \]
+```math
+\mathrm{StateVersion}_{\mathrm{decision}}<\mathrm{StateVersion}_{\mathrm{current}}
+```
 
 tidak selalu berarti decision invalid, tetapi material change MUST
 diperiksa.
@@ -10353,7 +11273,9 @@ consequential actions.
 
 Implementation MAY menggunakan optimistic concurrency:
 
-\[ Commit\iffExpectedVersion=CurrentVersion \]
+```math
+\mathrm{Commit}\iff \mathrm{ExpectedVersion}=\mathrm{CurrentVersion}
+```
 
 Jika version mismatch:
 
@@ -10383,9 +11305,9 @@ AOF tidak mewajibkan specific concurrency technology.
 
 Concurrent transitions yang incompatible MUST NOT silently committed.
 
-\[
-Conflict(\Delta\_1,\Delta\_2)\Rightarrow ResolveBeforeCommit
-\]
+```math
+\mathrm{Conflict}(\Delta_1,\Delta_2)\Rightarrow \mathrm{ResolveBeforeCommit}
+```
 
 Resolution MAY berupa:
 
@@ -10405,7 +11327,9 @@ conflict-control mechanism.
 Retryable consequential operation SHOULD memiliki idempotency semantics
 jika practical.
 
-\[ Repeat(x,key)\Rightarrow NoDuplicateUnintendedEffect\]
+```math
+\mathrm{Repeat}(x,\mathrm{key})\Rightarrow \mathrm{NoDuplicateUnintendedEffect}
+```
 
 Idempotency MAY menggunakan:
 
@@ -10433,7 +11357,9 @@ Replay adalah reprocessing event/request/decision lama.
 Replay MUST memvalidasi current Authority, Policy, State, Risk, dan
 verification obligations jika replay dapat menghasilkan new effect.
 
-\[ HistoricalPermit\not\Rightarrow CurrentPermit\]
+```math
+\mathrm{HistoricalPermit}\not\Rightarrow \mathrm{CurrentPermit}
+```
 
 ------------------------------------------------------------------------
 
@@ -10485,7 +11411,9 @@ data.
 
 ## 16.22 TOCTOU State Control
 
-\[ Check(s\_{t_1})\not\Rightarrow Valid(s\_{t_2}) \]
+```math
+\mathrm{Check}(s_{t_1})\not\Rightarrow \mathrm{Valid}(s_{t_2})
+```
 
 Material state changes antara control evaluation dan Effect Boundary
 SHOULD memicu revalidation.
@@ -10499,7 +11427,9 @@ atau equivalent freshness guarantee.
 
 Reconciliation membandingkan intended state dan observed actual state.
 
-\[ Reconcile= Compare(IntendedState,ObservedState) \]
+```math
+\mathrm{Reconcile}= \mathrm{Compare}(\mathrm{IntendedState},\mathrm{ObservedState})
+```
 
 Possible results:
 
@@ -10560,7 +11490,9 @@ Verification result MUST bind ke verified subject/version.
 
 If subject state changes materially:
 
-\[ Verified(s_v)\not\Rightarrow Verified(s\_{v+1}) \]
+```math
+\mathrm{Verified}(s_v)\not\Rightarrow \mathrm{Verified}(s_{v+1})
+```
 
 unless Verification Profile explicitly permits reuse.
 
@@ -10581,7 +11513,9 @@ changed plan version 2.
 Retry MUST consider current authoritative state, prior effect, prior
 evidence, authority consumption, and idempotency.
 
-\[ Retry\neq BlindRepeat\]
+```math
+\mathrm{Retry}\neq \mathrm{BlindRepeat}
+```
 
 ------------------------------------------------------------------------
 
@@ -10608,7 +11542,9 @@ Cancellation does not guarantee external effect reversal.
 
 System MUST distinguish:
 
-\[ CancelledWorkflow\neq RevertedEffects\]
+```math
+\mathrm{CancelledWorkflow}\neq \mathrm{RevertedEffects}
+```
 
 ------------------------------------------------------------------------
 
@@ -10627,9 +11563,11 @@ Terminal transition MUST memiliki basis yang traceable.
 
 Canonical trace event:
 
-\[ x_i= \langle id, timestamp, actor, event, input, decision,
-action, evidence, stateBefore, stateAfter, result, correlation
-\rangle\]
+```math
+x_i= \langle \mathrm{id}, \mathrm{timestamp}, \mathrm{actor}, \mathrm{event}, \mathrm{input}, \mathrm{decision},
+\mathrm{action}, \mathrm{evidence}, \mathrm{stateBefore}, \mathrm{stateAfter}, \mathrm{result}, \mathrm{correlation}
+\rangle
+```
 
 Trace MAY store references rather than full payload.
 
@@ -10774,8 +11712,10 @@ Sensitive parameters MAY redacted atau referenced.
 
 Transition trace SHOULD merekam:
 
-\[ stateBeforeRef \rightarrow decision \rightarrow
-stateAfterRef \]
+```math
+\mathrm{stateBeforeRef} \rightarrow \mathrm{decision} \rightarrow
+\mathrm{stateAfterRef}
+```
 
 Jika full state terlalu besar, versioned references MAY digunakan.
 
@@ -10816,7 +11756,9 @@ Trace event SHOULD tidak silently overwritten.
 Correction SHOULD menggunakan new event, annotation, supersession, atau
 equivalent append-preserving mechanism.
 
-\[ Correction\Rightarrow HistoricalVisibility\]
+```math
+\mathrm{Correction}\Rightarrow \mathrm{HistoricalVisibility}
+```
 
 ------------------------------------------------------------------------
 
@@ -10873,7 +11815,9 @@ references, atau equivalent mechanism.
 Trace SHOULD merekam sufficient governance data tanpa unnecessary
 sensitive content.
 
-\[ TraceData\approx MinimumSufficientAuditData\]
+```math
+\mathrm{TraceData}\approx \mathrm{MinimumSufficientAuditData}
+```
 
 Private chain-of-thought MUST NOT disimpan sebagai conformance
 requirement.
@@ -10914,7 +11858,9 @@ tunduk pada Authority, Policy, Risk, dan data classification.
 
 ## 16.54 Trace and Evidence
 
-\[ Trace\neq EvidenceStore\]
+```math
+\mathrm{Trace}\neq \mathrm{EvidenceStore}
+```
 
 Tetapi trace event MAY itself menjadi evidence.
 
@@ -10959,8 +11905,10 @@ Ini mendukung learning loop tanpa menghapus historical failures.
 Conformance test MAY menggunakan trace sebagai proof bahwa requirement
 dipenuhi.
 
-\[ Requirement \rightarrow Test \rightarrow
-Trace/Evidence \]
+```math
+\mathrm{Requirement} \rightarrow \mathrm{Test} \rightarrow
+\mathrm{Trace}/\mathrm{Evidence}
+```
 
 Trace alone MAY insufficient jika control effectiveness perlu evidence
 lain.
@@ -11245,36 +12193,51 @@ silently normalized.
 
 ### ST-INV-01 --- Authoritative State
 
-\[ AuthoritativeState\neq AgentPrivateMemory\]
+```math
+\mathrm{AuthoritativeState}\neq \mathrm{AgentPrivateMemory}
+```
 
 ### ST-INV-02 --- Controlled Mutation
 
-\[ ConsequentialStateChange\Rightarrow ControlledTransition\]
+```math
+\mathrm{ConsequentialStateChange}\Rightarrow \mathrm{ControlledTransition}
+```
 
 ### ST-INV-03 --- State Validity
 
-\[ Commit(\Delta)\Rightarrow StateValid(\Delta)
-\]
+```math
+\mathrm{Commit}(\Delta)\Rightarrow \mathrm{StateValid}(\Delta)
+```
 
 ### ST-INV-04 --- Conflict Control
 
-\[ ConcurrentConflict\Rightarrow NoSilentCommit\]
+```math
+\mathrm{ConcurrentConflict}\Rightarrow \mathrm{NoSilentCommit}
+```
 
 ### ST-INV-05 --- Replay Revalidation
 
-\[ ReplayWithEffect\Rightarrow CurrentControlValidation\]
+```math
+\mathrm{ReplayWithEffect}\Rightarrow \mathrm{CurrentControlValidation}
+```
 
 ### ST-INV-06 --- Partial Effect Honesty
 
-\[ PartialEffect\not\Rightarrow AtomicSuccess\]
+```math
+\mathrm{PartialEffect}\not\Rightarrow \mathrm{AtomicSuccess}
+```
 
 ### ST-INV-07 --- Replan Consistency
 
-\[ MaterialReplan\Rightarrow ReevaluateAffectedState\]
+```math
+\mathrm{MaterialReplan}\Rightarrow \mathrm{ReevaluateAffectedState}
+```
 
 ### ST-INV-08 --- TOCTOU Control
 
-\[ MaterialStateChange\Rightarrow RevalidateBeforeEffect\]
+```math
+\mathrm{MaterialStateChange}\Rightarrow \mathrm{RevalidateBeforeEffect}
+```
 
 sesuai profile/risk.
 
@@ -11284,40 +12247,55 @@ sesuai profile/risk.
 
 ### TRC-INV-01 --- Trace Completeness
 
-\[ ConsequentialTransition\Rightarrow SufficientTrace\]
+```math
+\mathrm{ConsequentialTransition}\Rightarrow \mathrm{SufficientTrace}
+```
 
 ### TRC-INV-02 --- Attribution
 
-\[ ConsequentialEvent\Rightarrow IdentifiableActor\]
+```math
+\mathrm{ConsequentialEvent}\Rightarrow \mathrm{IdentifiableActor}
+```
 
 ### TRC-INV-03 --- Correlation
 
-\[ TraceEvent\Rightarrow ReconstructableContext\]
+```math
+\mathrm{TraceEvent}\Rightarrow \mathrm{ReconstructableContext}
+```
 
 untuk consequential events.
 
 ### TRC-INV-04 --- Historical Preservation
 
-\[ Correction\Rightarrow NoSilentHistoricalErase\]
+```math
+\mathrm{Correction}\Rightarrow \mathrm{NoSilentHistoricalErase}
+```
 
 ### TRC-INV-05 --- Trace Integrity
 
-\[ UnauthorizedMutation\Rightarrow PreventedOrDetectable\]
+```math
+\mathrm{UnauthorizedMutation}\Rightarrow \mathrm{PreventedOrDetectable}
+```
 
 sesuai profile.
 
 ### TRC-INV-06 --- No Fabrication
 
-\[ MissingTrace\not\Rightarrow InventedTrace\]
+```math
+\mathrm{MissingTrace}\not\Rightarrow \mathrm{InventedTrace}
+```
 
 ### TRC-INV-07 --- Trace Confidentiality
 
-\[ TraceAccess\Rightarrow AuthorizedAccess\]
+```math
+\mathrm{TraceAccess}\Rightarrow \mathrm{AuthorizedAccess}
+```
 
 ### TRC-INV-08 --- Chain-of-Thought Independence
 
-\[ ConformanceTrace\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{ConformanceTrace}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 ------------------------------------------------------------------------
 
@@ -11325,13 +12303,16 @@ sesuai profile.
 
 Canonical invariant:
 
-\[ CommittedTransition(s_i,s_j) \Rightarrow Traceable(s_i,s_j)
-\]
+```math
+\mathrm{CommittedTransition}(s_i,s_j) \Rightarrow \mathrm{Traceable}(s_i,s_j)
+```
 
 dan:
 
-\[ TraceClaimsTransition(x) \Rightarrow
-ConsistentWithAuthoritativeState(x) \]
+```math
+\mathrm{TraceClaimsTransition}(x) \Rightarrow
+\mathrm{ConsistentWithAuthoritativeState}(x)
+```
 
 State dan Trace MAY disimpan terpisah, tetapi contradiction yang
 material MUST detectable/reconciled.
@@ -11400,28 +12381,37 @@ Area ini MAY dinyatakan `Freeze Candidate` jika:
 
 State & Trace v1.0 RC-State-Trace diringkas sebagai:
 
-\[ StateGovernance= AuthoritativeState + ControlledTransition +
-Versioning + Consistency + Reconciliation \]
+```math
+\mathrm{StateGovernance}= \mathrm{AuthoritativeState} + \mathrm{ControlledTransition} +
+\mathrm{Versioning} + \mathrm{Consistency} + \mathrm{Reconciliation}
+```
 
-\[ TraceGovernance= Attribution + Correlation + Ordering + Integrity +
-Retention + Confidentiality + Reconstruction \]
+```math
+\mathrm{TraceGovernance}= \mathrm{Attribution} + \mathrm{Correlation} + \mathrm{Ordering} + \mathrm{Integrity} +
+\mathrm{Retention} + \mathrm{Confidentiality} + \mathrm{Reconstruction}
+```
 
 dengan:
 
-\[ \boxed{ AgentMemory\neq AuthoritativeState } \]
+```math
+\boxed{ \mathrm{AgentMemory}\neq \mathrm{AuthoritativeState} }
+```
 
-\[
-\boxed{ No\ Consequential\ State\ Change\ Without\ Controlled\ Transition }
-\]
+```math
+\boxed{ \mathrm{No}\ \mathrm{Consequential}\ \mathrm{State}\ \mathrm{Change}\ \mathrm{Without}\ \mathrm{Controlled}\ \mathrm{Transition} }
+```
 
-\[ \boxed{ Committed\ Transition\Rightarrow Sufficient\ Trace }
-\]
+```math
+\boxed{ \mathrm{Committed}\ \mathrm{Transition}\Rightarrow \mathrm{Sufficient}\ \mathrm{Trace} }
+```
 
 dan:
 
-\[
-\boxed{ Traceability\ Does\ Not\ Require\ Private\ Chain\ of\ Thought }
-\] \# 17. Human Governance
+```math
+\boxed{ \mathrm{Traceability}\ \mathrm{Does}\ \mathrm{Not}\ \mathrm{Require}\ \mathrm{Private}\ \mathrm{Chain}\ \mathrm{of}\ \mathrm{Thought} }
+```
+
+ \# 17. Human Governance
 
 ## 17.1 Purpose
 
@@ -11432,9 +12422,9 @@ accountability, approval, override, dan emergency authority.
 
 AOF membedakan secara tegas:
 
-\[
-Human/Organization Governance\neq Human In Every Execution Loop
-\]
+```math
+\mathrm{Human}/\mathrm{Organization}\ \mathrm{Governance}\neq \mathrm{Human}\ \mathrm{In}\ \mathrm{Every}\ \mathrm{Execution}\ \mathrm{Loop}
+```
 
 AOF tidak mensyaratkan Human approval untuk setiap Action. Sebaliknya,
 Human/Organization menetapkan `Governance Envelope` di mana bounded
@@ -11442,12 +12432,18 @@ operational autonomy dapat berlangsung.
 
 Canonical formulation:
 
-\[ Human/Organization=GovernanceRoot \]
+```math
+\mathrm{Human}/\mathrm{Organization}=\mathrm{GovernanceRoot}
+```
 
-\[ Agent=BoundedOperationalActor \]
+```math
+\mathrm{Agent}=\mathrm{BoundedOperationalActor}
+```
 
-\[ AgentAutonomy\subset eq
-Human/OrganizationalGovernanceEnvelope \]
+```math
+\mathrm{AgentAutonomy}\subseteq
+\mathrm{Human}/\mathrm{OrganizationalGovernanceEnvelope}
+```
 
 ------------------------------------------------------------------------
 
@@ -11468,7 +12464,9 @@ Governance Root MAY diwujudkan melalui:
 
 AOF tidak mengasumsikan satu Human memiliki unlimited power.
 
-\[ GovernanceRoot\neq OmnipotentHuman\]
+```math
+\mathrm{GovernanceRoot}\neq \mathrm{OmnipotentHuman}
+```
 
 **AOF-HG-001** --- Deployment MUST identify authoritative
 Human/organizational governance root atau equivalent accountable
@@ -11483,9 +12481,9 @@ dan Task creation.
 
 Reference chain:
 
-\[
-Intent\rightarrow Goal\rightarrow Task\rightarrow Decision\rightarrow Action\rightarrow Outcome
-\]
+```math
+\mathrm{Intent}\rightarrow \mathrm{Goal}\rightarrow \mathrm{Task}\rightarrow \mathrm{Decision}\rightarrow \mathrm{Action}\rightarrow \mathrm{Outcome}
+```
 
 Intent SHOULD mencakup sufficient purpose, constraints, dan success
 boundaries untuk consequential workflows.
@@ -11500,8 +12498,9 @@ replace governing Intent.
 Material change terhadap governing Intent MUST diperlakukan sebagai
 governance change, bukan ordinary planning optimization.
 
-\[ OperationalOptimization\not\Rightarrow IntentMutation
-\]
+```math
+\mathrm{OperationalOptimization}\not\Rightarrow \mathrm{IntentMutation}
+```
 
 Jika proposed plan tidak dapat memenuhi Intent tanpa mengubah material
 constraints, system SHOULD `Escalate`, `Reject`, atau request authorized
@@ -11534,14 +12533,18 @@ Agent MUST NOT self-legitimize a new organizational Goal.
 
 `Governance Envelope` mendefinisikan bounded operating space:
 
-\[ GE= \langle Intent, Authority, Policy, RiskLimits,
-ContextScope, ResourceScope, VerificationRequirements, ApprovalRules,
-TemporalLimits \rangle\]
+```math
+\mathrm{GE}= \langle \mathrm{Intent}, \mathrm{Authority}, \mathrm{Policy}, \mathrm{RiskLimits},
+\mathrm{ContextScope}, \mathrm{ResourceScope}, \mathrm{VerificationRequirements}, \mathrm{ApprovalRules},
+\mathrm{TemporalLimits} \rangle
+```
 
 Operational Agent autonomy MUST remain inside applicable Governance
 Envelope.
 
-\[ Agency(a)\subset eq GE_a \]
+```math
+\mathrm{Agency}(a)\subseteq \mathrm{GE}_a
+```
 
 ------------------------------------------------------------------------
 
@@ -11550,8 +12553,10 @@ Envelope.
 Human/Organization MAY delegate operational Authority kepada Agent
 sesuai Authority Model.
 
-\[ DelegatedOperationalAuthority \subset eq
-OrganizationalGovernanceAuthority \]
+```math
+\mathrm{DelegatedOperationalAuthority} \subseteq
+\mathrm{OrganizationalGovernanceAuthority}
+```
 
 Delegation MAY memungkinkan Agent menjalankan Action tanpa per-action
 Human approval jika:
@@ -11582,8 +12587,10 @@ operational actions.
 
 Canonical separation:
 
-\[ OrganizationalGovernanceAuthority \neq
-DelegatedOperationalAuthority \]
+```math
+\mathrm{OrganizationalGovernanceAuthority} \neq
+\mathrm{DelegatedOperationalAuthority}
+```
 
 Operational delegation MUST NOT automatically transfer governance-root
 status.
@@ -11595,9 +12602,9 @@ status.
 Operational execution dapat didelegasikan; organizational accountability
 mengikuti applicable governance, policy, contract, dan law.
 
-\[
-DelegatedExecution\not\Rightarrow AutomaticAccountabilityTransfer
-\]
+```math
+\mathrm{DelegatedExecution}\not\Rightarrow \mathrm{AutomaticAccountabilityTransfer}
+```
 
 AOF tidak menentukan legal liability. AOF menyediakan Trace dan
 accountability chain agar responsibility dapat direkonstruksi.
@@ -11632,9 +12639,13 @@ bagian dari same State, Decision, Evidence, dan Trace model.
 Human participation tidak otomatis menghilangkan Authority, Policy,
 Risk, State, atau Trace requirements.
 
-\[ HumanPresence\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
-\[ HumanAction\not\Rightarrow PolicyExemption\]
+```math
+\mathrm{HumanAction}\not\Rightarrow \mathrm{PolicyExemption}
+```
 
 Profile MAY memberikan Human role broader Authority, tetapi grant
 tersebut MUST explicit atau berasal dari documented governance source.
@@ -11666,12 +12677,16 @@ high-impact approval/override.
 
 Human role title tidak otomatis membuktikan Authority.
 
-\[ Role\neq Authority\]
+```math
+\mathrm{Role}\neq \mathrm{Authority}
+```
 
 System SHOULD resolve:
 
-\[ HumanIdentity + Role + AuthorityGrant + Scope \rightarrow
-EffectiveHumanAuthority \]
+```math
+\mathrm{HumanIdentity} + \mathrm{Role} + \mathrm{AuthorityGrant} + \mathrm{Scope} \rightarrow
+\mathrm{EffectiveHumanAuthority}
+```
 
 ------------------------------------------------------------------------
 
@@ -11685,8 +12700,10 @@ Approval MUST NOT dianggap generic unlimited permission.
 
 Canonical:
 
-\[ Approval= \langle subject, approver, authority, scope,
-conditions, version, validity, decision \rangle\]
+```math
+\mathrm{Approval}= \langle \mathrm{subject}, \mathrm{approver}, \mathrm{authority}, \mathrm{scope},
+\mathrm{conditions}, \mathrm{version}, \mathrm{validity}, \mathrm{decision} \rangle
+```
 
 ------------------------------------------------------------------------
 
@@ -11694,12 +12711,16 @@ conditions, version, validity, decision \rangle\]
 
 Approval dan Authority adalah constructs berbeda.
 
-\[ Approval\neq AuthorityGrant\]
+```math
+\mathrm{Approval}\neq \mathrm{AuthorityGrant}
+```
 
 Approval MAY satisfy a required gate, tetapi tidak menciptakan unrelated
 Authority.
 
-\[ Approved(x)\not\Rightarrow Authorized(y) \]
+```math
+\mathrm{Approved}(x)\not\Rightarrow \mathrm{Authorized}(y)
+```
 
 untuk unrelated (y).
 
@@ -11727,7 +12748,9 @@ explicitly permitted oleh profile dan bounded governance policy.
 
 ## 17.17 Approval Freshness
 
-\[ Approval\_{t_1}\not\Rightarrow Approval\_{t_2} \]
+```math
+\mathrm{Approval}_{t_1}\not\Rightarrow \mathrm{Approval}_{t_2}
+```
 
 jika material conditions berubah.
 
@@ -11793,7 +12816,9 @@ rationale required by policy.
 Rejection MUST NOT silently converted menjadi approval melalui retry
 atau alternate Agent.
 
-\[ RejectedApproval\not\Rightarrow RetryUntilApproved\]
+```math
+\mathrm{RejectedApproval}\not\Rightarrow \mathrm{RetryUntilApproved}
+```
 
 Alternate approver MAY digunakan hanya jika governance policy
 mengizinkan dan Authority valid.
@@ -11822,8 +12847,9 @@ Unknown conflict MUST NOT implicit Allow.
 
 Profile MAY require quorum:
 
-\[ ApprovalSatisfied \iffCount(EligibleApprovals)\geq q
-\]
+```math
+\mathrm{ApprovalSatisfied} \iff \mathrm{Count}(\mathrm{EligibleApprovals})\geq q
+```
 
 Quorum MUST evaluate eligible independent approvers sesuai policy.
 
@@ -11838,9 +12864,13 @@ High-risk governance SHOULD memisahkan incompatible roles.
 
 Examples:
 
-\[ Proposer\neq Approver\]
+```math
+\mathrm{Proposer}\neq \mathrm{Approver}
+```
 
-\[ Approver\neq IndependentVerifier\]
+```math
+\mathrm{Approver}\neq \mathrm{IndependentVerifier}
+```
 
 jika profile requires independence.
 
@@ -11854,7 +12884,9 @@ melarang circular assurance.
 
 Risk acceptance adalah governance Decision berbeda dari risk assessment.
 
-\[ RiskAssessment\neq RiskAcceptance\]
+```math
+\mathrm{RiskAssessment}\neq \mathrm{RiskAcceptance}
+```
 
 Human/organizational role MAY accept residual risk hanya jika memiliki
 applicable acceptance Authority.
@@ -11874,7 +12906,9 @@ Risk acceptance SHOULD bind ke:
 
 ## 17.25 Risk Acceptance Is Not Control Removal
 
-\[ RiskAccepted\not\Rightarrow AllControlsDisabled\]
+```math
+\mathrm{RiskAccepted}\not\Rightarrow \mathrm{AllControlsDisabled}
+```
 
 Acceptance MAY permit progression terhadap explicitly accepted residual
 risk, tetapi mandatory security/legal/policy controls tetap berlaku
@@ -11900,7 +12934,9 @@ Override MUST:
 -   be traceable;
 -   preserve non-overridable constraints.
 
-\[ Override\neq ControlBypass\]
+```math
+\mathrm{Override}\neq \mathrm{ControlBypass}
+```
 
 ------------------------------------------------------------------------
 
@@ -11932,7 +12968,9 @@ Examples dari potentially non-overridable constraints MAY berasal dari:
 
 Authority untuk ordinary approval tidak otomatis mencakup override.
 
-\[ ApprovalAuthority\not\Rightarrow OverrideAuthority\]
+```math
+\mathrm{ApprovalAuthority}\not\Rightarrow \mathrm{OverrideAuthority}
+```
 
 Override Authority SHOULD lebih sempit dan explicitly granted untuk
 high-risk contexts.
@@ -11990,7 +13028,9 @@ tidak dapat memenuhi urgent safety/business/security need.
 
 Break-Glass bukan universal superuser mode.
 
-\[ BreakGlass\neq UnlimitedAuthority\]
+```math
+\mathrm{BreakGlass}\neq \mathrm{UnlimitedAuthority}
+```
 
 ------------------------------------------------------------------------
 
@@ -12014,8 +13054,10 @@ trigger.
 
 Reference:
 
-\[ BG= \langle subject, emergency, operations, resources, scope,
-issuer, constraints, validity, monitoring, review \rangle\]
+```math
+\mathrm{BG}= \langle \mathrm{subject}, \mathrm{emergency}, \mathrm{operations}, \mathrm{resources}, \mathrm{scope},
+\mathrm{issuer}, \mathrm{constraints}, \mathrm{validity}, \mathrm{monitoring}, \mathrm{review} \rangle
+```
 
 Break-Glass Authority SHOULD:
 
@@ -12030,7 +13072,9 @@ Break-Glass Authority SHOULD:
 
 ## 17.34 Break-Glass Does Not Disable Audit
 
-\[ BreakGlass\not\Rightarrow NoAudit\]
+```math
+\mathrm{BreakGlass}\not\Rightarrow \mathrm{NoAudit}
+```
 
 Jika normal Trace subsystem unavailable, implementation SHOULD preserve
 alternative emergency evidence dan reconcile ke authoritative Trace
@@ -12046,7 +13090,9 @@ governance evidence.
 Emergency context dapat meningkatkan accepted risk tetapi tidak mengubah
 risk menjadi zero.
 
-\[ Emergency\not\Rightarrow RiskFree\]
+```math
+\mathrm{Emergency}\not\Rightarrow \mathrm{RiskFree}
+```
 
 Residual risk SHOULD explicit dan post-event review SHOULD assess
 consequences.
@@ -12058,8 +13104,9 @@ consequences.
 Emergency Authority MUST expire atau be explicitly revoked ketika
 emergency scope berakhir.
 
-\[ EmergencyEnded\Rightarrow RevokeOrExpire(BreakGlassAuthority)
-\]
+```math
+\mathrm{EmergencyEnded}\Rightarrow \mathrm{RevokeOrExpire}(\mathrm{BreakGlassAuthority})
+```
 
 Persistent emergency privilege tanpa review merupakan governance
 failure.
@@ -12088,7 +13135,9 @@ Required Human decision MAY unavailable.
 
 System MUST NOT fabricate approval.
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 Possible outcomes:
 
@@ -12110,7 +13159,9 @@ Approval request SHOULD memiliki timeout/expiry behavior sesuai risk.
 
 Timeout MUST NOT default to approval.
 
-\[ ApprovalTimeout\Rightarrow\neg ImplicitApproval\]
+```math
+\mathrm{ApprovalTimeout}\Rightarrow\neg \mathrm{ImplicitApproval}
+```
 
 ------------------------------------------------------------------------
 
@@ -12146,8 +13197,10 @@ Semua modes tetap berada di bawah organizational governance.
 
 Higher operational autonomy MUST NOT imply removal of governance root.
 
-\[ AutonomyLevel\uparrow\not\Rightarrow
-GovernanceAuthority\uparrow\]
+```math
+\mathrm{AutonomyLevel}\uparrow\not\Rightarrow
+\mathrm{GovernanceAuthority}\uparrow
+```
 
 Autonomy increase SHOULD require sufficient Authority, Policy, Risk
 controls, Verification, observability, dan recovery.
@@ -12179,13 +13232,17 @@ Human/Agent MUST NOT use delegation chain untuk memperoleh effect yang
 original actor tidak authorized untuk initiate jika Authority Model
 melarangnya.
 
-\[ DelegationChain\not\Rightarrow PrivilegeExpansion\]
+```math
+\mathrm{DelegationChain}\not\Rightarrow \mathrm{PrivilegeExpansion}
+```
 
 ------------------------------------------------------------------------
 
 ## 17.45 AI Cannot Self-Appoint Governance Root
 
-\[ AIAgent\not\Rightarrow GovernanceRoot\]
+```math
+\mathrm{AIAgent}\not\Rightarrow \mathrm{GovernanceRoot}
+```
 
 Agent MUST NOT self-assign:
 
@@ -12221,11 +13278,13 @@ luar AOF determination.
 
 Reference:
 
-\[ Intent \rightarrow Goal\rightarrow Task
-\rightarrow Decision\rightarrow Authority
-\rightarrow Policy\rightarrow Action
-\rightarrow Evidence\rightarrow Verification
-\rightarrow Outcome\]
+```math
+\mathrm{Intent} \rightarrow \mathrm{Goal}\rightarrow \mathrm{Task}
+\rightarrow \mathrm{Decision}\rightarrow \mathrm{Authority}
+\rightarrow \mathrm{Policy}\rightarrow \mathrm{Action}
+\rightarrow \mathrm{Evidence}\rightarrow \mathrm{Verification}
+\rightarrow \mathrm{Outcome}
+```
 
 Human governance SHOULD dapat ditelusuri pada points yang memerlukan
 organizational decision.
@@ -12253,7 +13312,9 @@ separation-of-duties requirements tetap satisfied.
 
 ## 17.49 Accountability Cannot Be Erased by Automation
 
-\[ Automation\not\Rightarrow AccountabilityErasure\]
+```math
+\mathrm{Automation}\not\Rightarrow \mathrm{AccountabilityErasure}
+```
 
 Absence of Human interaction pada individual Action tidak berarti
 absence of organizational governance/accountability.
@@ -12267,7 +13328,9 @@ process.
 
 Runtime Human request MUST NOT automatically override active Policy.
 
-\[ HumanRequest\neq PolicyMutation\]
+```math
+\mathrm{HumanRequest}\neq \mathrm{PolicyMutation}
+```
 
 Policy mutation SHOULD menggunakan defined Policy lifecycle.
 
@@ -12307,7 +13370,9 @@ Human decisions SHOULD menggunakan sufficient Evidence sesuai risk.
 Human assertion sendiri MAY menjadi Evidence untuk facts within Human
 authority/knowledge, tetapi:
 
-\[ HumanAssertion\not\Rightarrow UniversalVerifiedFact\]
+```math
+\mathrm{HumanAssertion}\not\Rightarrow \mathrm{UniversalVerifiedFact}
+```
 
 Evidence quality/provenance rules tetap berlaku.
 
@@ -12334,7 +13399,9 @@ Human identity tidak otomatis membuat verification independent.
 Human governance Decision yang consequential MUST masuk authoritative
 State melalui controlled transition.
 
-\[ HumanDecision\not\Rightarrow SilentStateMutation\]
+```math
+\mathrm{HumanDecision}\not\Rightarrow \mathrm{SilentStateMutation}
+```
 
 ------------------------------------------------------------------------
 
@@ -12382,7 +13449,9 @@ Excessive low-value approval gates dapat mengurangi governance quality.
 
 AOF SHOULD menggunakan risk-proportional approval.
 
-\[ MoreApprovals\not\Rightarrow BetterGovernance\]
+```math
+\mathrm{MoreApprovals}\not\Rightarrow \mathrm{BetterGovernance}
+```
 
 Design SHOULD prefer meaningful approval points dengan adequate
 evidence/context.
@@ -12425,7 +13494,9 @@ Controls MAY mencakup:
 -   post-action monitoring;
 -   reversal/compensation.
 
-\[ HumanDecision\neq GuaranteedCorrectDecision\]
+```math
+\mathrm{HumanDecision}\neq \mathrm{GuaranteedCorrectDecision}
+```
 
 ------------------------------------------------------------------------
 
@@ -12737,63 +13808,89 @@ dan traceable.
 
 ### HG-INV-01 --- Governance Root
 
-\[ AgentAutonomy\subset eq
-Human/OrganizationalGovernanceEnvelope \]
+```math
+\mathrm{AgentAutonomy}\subseteq
+\mathrm{Human}/\mathrm{OrganizationalGovernanceEnvelope}
+```
 
 ### HG-INV-02 --- Human Non-Omnipotence
 
-\[ HumanPresence\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 ### HG-INV-03 --- Intent Integrity
 
-\[ AgentOptimization\not\Rightarrow IntentMutation\]
+```math
+\mathrm{AgentOptimization}\not\Rightarrow \mathrm{IntentMutation}
+```
 
 ### HG-INV-04 --- Delegation Bound
 
-\[ DelegatedOperationalAuthority \subset eq
-OrganizationalGovernanceAuthority \]
+```math
+\mathrm{DelegatedOperationalAuthority} \subseteq
+\mathrm{OrganizationalGovernanceAuthority}
+```
 
 ### HG-INV-05 --- Accountability Persistence
 
-\[
-DelegatedExecution\not\Rightarrow AccountabilityErasure
-\]
+```math
+\mathrm{DelegatedExecution}\not\Rightarrow \mathrm{AccountabilityErasure}
+```
 
 ### HG-INV-06 --- Approval Separation
 
-\[ Approval\neq AuthorityGrant\]
+```math
+\mathrm{Approval}\neq \mathrm{AuthorityGrant}
+```
 
 ### HG-INV-07 --- Approval Freshness
 
-\[ MaterialSubjectChange\Rightarrow ReevaluateApproval\]
+```math
+\mathrm{MaterialSubjectChange}\Rightarrow \mathrm{ReevaluateApproval}
+```
 
 ### HG-INV-08 --- Override Governance
 
-\[ Override\neq ControlBypass\]
+```math
+\mathrm{Override}\neq \mathrm{ControlBypass}
+```
 
 ### HG-INV-09 --- Break-Glass Auditability
 
-\[ BreakGlass\not\Rightarrow NoAudit\]
+```math
+\mathrm{BreakGlass}\not\Rightarrow \mathrm{NoAudit}
+```
 
 ### HG-INV-10 --- No Fabricated Approval
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 ### HG-INV-11 --- Risk Acceptance Separation
 
-\[ RiskAssessment\neq RiskAcceptance\]
+```math
+\mathrm{RiskAssessment}\neq \mathrm{RiskAcceptance}
+```
 
 ### HG-INV-12 --- Automation Accountability
 
-\[ Automation\not\Rightarrow AccountabilityErasure\]
+```math
+\mathrm{Automation}\not\Rightarrow \mathrm{AccountabilityErasure}
+```
 
 ### HG-INV-13 --- Human Decision Fallibility
 
-\[ HumanDecision\neq GuaranteedCorrectDecision\]
+```math
+\mathrm{HumanDecision}\neq \mathrm{GuaranteedCorrectDecision}
+```
 
 ### HG-INV-14 --- Policy Integrity
 
-\[ HumanRequest\neq PolicyMutation\]
+```math
+\mathrm{HumanRequest}\neq \mathrm{PolicyMutation}
+```
 
 ------------------------------------------------------------------------
 
@@ -12843,7 +13940,9 @@ Given Human actor has technical access but no applicable Authority:
 
 Expected:
 
-\[ ExecuteAllowed=false \]
+```math
+\mathrm{ExecuteAllowed}=\mathrm{false}
+```
 
 untuk governed consequential Action.
 
@@ -12921,26 +14020,36 @@ Human Governance MAY dinyatakan `Freeze Candidate` jika:
 
 Human Governance v1.0 RC-Human-Governance diringkas sebagai:
 
-\[ HumanGovernance= Intent + GovernanceRoot + Delegation + Approval +
-RiskAcceptance + Override + BreakGlass + Accountability \]
+```math
+\mathrm{HumanGovernance}= \mathrm{Intent} + \mathrm{GovernanceRoot} + \mathrm{Delegation} + \mathrm{Approval} +
+\mathrm{RiskAcceptance} + \mathrm{Override} + \mathrm{BreakGlass} + \mathrm{Accountability}
+```
 
 dengan:
 
-\[ \boxed{ Human/Organization=GovernanceRoot } \]
+```math
+\boxed{ \mathrm{Human}/\mathrm{Organization}=\mathrm{GovernanceRoot} }
+```
 
-\[ \boxed{ Agent=BoundedOperationalActor } \]
+```math
+\boxed{ \mathrm{Agent}=\mathrm{BoundedOperationalActor} }
+```
 
-\[
-\boxed{ AgentAutonomy\subset eq Human/OrganizationalGovernanceEnvelope }
-\]
+```math
+\boxed{ \mathrm{AgentAutonomy}\subseteq \mathrm{Human}/\mathrm{OrganizationalGovernanceEnvelope} }
+```
 
-\[ \boxed{ Approval\neq AuthorityGrant } \]
+```math
+\boxed{ \mathrm{Approval}\neq \mathrm{AuthorityGrant} }
+```
 
-\[ \boxed{ Override\neq ControlBypass } \]
+```math
+\boxed{ \mathrm{Override}\neq \mathrm{ControlBypass} }
+```
 
-\[
-\boxed{ DelegatedExecution\not\Rightarrow AccountabilityErasure }
-\]
+```math
+\boxed{ \mathrm{DelegatedExecution}\not\Rightarrow \mathrm{AccountabilityErasure} }
+```
 
 AOF v1.x dengan demikian mempertahankan `Human-Directed` governance
 tanpa mensyaratkan Human micromanagement terhadap setiap operational
@@ -12955,11 +14064,17 @@ Verification, State, atau Trace semantics.
 
 Canonical principles:
 
-\[ Failure\neq PermissionToBypassControl\]
+```math
+\mathrm{Failure}\neq \mathrm{PermissionToBypassControl}
+```
 
-\[ Recovery\neq BlindRetry\]
+```math
+\mathrm{Recovery}\neq \mathrm{BlindRetry}
+```
 
-\[ FailedAction\not\Rightarrow NoEffect\]
+```math
+\mathrm{FailedAction}\not\Rightarrow \mathrm{NoEffect}
+```
 
 Failure adalah governed state, bukan exceptional condition yang berada
 di luar framework.
@@ -12970,9 +14085,11 @@ di luar framework.
 
 Canonical failure object:
 
-\[ f= \langle id, subject, type, severity, cause, state, effect,
-evidence, risk, containment, recoverability, attempts, owner, timestamp,
-provenance \rangle\]
+```math
+f= \langle \mathrm{id}, \mathrm{subject}, \mathrm{type}, \mathrm{severity}, \mathrm{cause}, \mathrm{state}, \mathrm{effect},
+\mathrm{evidence}, \mathrm{risk}, \mathrm{containment}, \mathrm{recoverability}, \mathrm{attempts}, \mathrm{owner}, \mathrm{timestamp},
+\mathrm{provenance} \rangle
+```
 
 dengan:
 
@@ -13097,7 +14214,9 @@ Possible controls:
 -   quarantine artifact;
 -   escalate to Human.
 
-\[ FailureDetected\Rightarrow EvaluateContainment\]
+```math
+\mathrm{FailureDetected}\Rightarrow \mathrm{EvaluateContainment}
+```
 
 High/Critical failure SHOULD evaluate containment before retry.
 
@@ -13109,7 +14228,9 @@ Recovery adalah governed process untuk membawa system dari
 failed/degraded state ke safe known state atau explicitly accepted
 degraded state.
 
-\[ Recovery: S\_{failed}\rightarrow S\_{safe/known} \]
+```math
+\mathrm{Recovery}: S_{\mathrm{failed}}\rightarrow S_{\mathrm{safe}/\mathrm{known}}
+```
 
 Recovery success MUST berdasarkan observed state/evidence, bukan hanya
 absence of error.
@@ -13141,7 +14262,9 @@ Authority, Policy, Risk, Evidence, dan Verification.
 Retry adalah reattempt terhadap operation atau semantically equivalent
 operation.
 
-\[ Retry\neq ReplayWithoutValidation\]
+```math
+\mathrm{Retry}\neq \mathrm{ReplayWithoutValidation}
+```
 
 Retry MUST mempertimbangkan:
 
@@ -13164,9 +14287,11 @@ permit atau stale state.
 
 Reference:
 
-\[ RetryEligible= Recoverable \land StateKnown
-\land AuthorityValid\land PolicyValid
-\land RiskAcceptable\land BudgetAvailable\]
+```math
+\mathrm{RetryEligible}= \mathrm{Recoverable} \land \mathrm{StateKnown}
+\land \mathrm{AuthorityValid}\land \mathrm{PolicyValid}
+\land \mathrm{RiskAcceptable}\land \mathrm{BudgetAvailable}
+```
 
 Verification MAY juga required.
 
@@ -13179,7 +14304,9 @@ reconciliation cukup.
 
 Retry MUST bounded untuk consequential operation.
 
-\[ RetryCount\leq RetryBudget\]
+```math
+\mathrm{RetryCount}\leq \mathrm{RetryBudget}
+```
 
 Budget MAY bergantung pada:
 
@@ -13212,8 +14339,10 @@ policy validity, dan state freshness.
 Replan mengubah execution plan karena original plan tidak lagi
 valid/optimal/safe.
 
-\[ Replan\Rightarrow Reevaluate( Authority, Policy, Risk, State,
-Verification ) \]
+```math
+\mathrm{Replan}\Rightarrow \mathrm{Reevaluate}( \mathrm{Authority}, \mathrm{Policy}, \mathrm{Risk}, \mathrm{State},
+\mathrm{Verification} )
+```
 
 untuk materially affected dimensions.
 
@@ -13248,7 +14377,9 @@ termination_condition
 Compensation adalah action yang mengurangi/membalik business effect
 ketika transactional rollback tidak tersedia.
 
-\[ Compensation\neq ExactRollback\]
+```math
+\mathrm{Compensation}\neq \mathrm{ExactRollback}
+```
 
 Compensation merupakan consequential action dan MUST melalui normal
 control evaluation.
@@ -13261,7 +14392,9 @@ Rollback mencoba mengembalikan prior known state.
 
 Rollback MUST NOT diasumsikan possible atau complete.
 
-\[ RollbackRequested\not\Rightarrow RollbackSucceeded\]
+```math
+\mathrm{RollbackRequested}\not\Rightarrow \mathrm{RollbackSucceeded}
+```
 
 Rollback result SHOULD diverifikasi.
 
@@ -13317,7 +14450,9 @@ Degraded mode MUST NOT menjadi implicit bypass.
 
 Canonical rule:
 
-\[ PartialEffect\not\Rightarrow FailureWithoutEffect\]
+```math
+\mathrm{PartialEffect}\not\Rightarrow \mathrm{FailureWithoutEffect}
+```
 
 Jika action gagal setelah sebagian effect:
 
@@ -13338,7 +14473,9 @@ retry jika duplicate/additional effect dapat material.
 
 Jika effect tidak dapat ditentukan:
 
-\[ Effect=Unknown \Rightarrow NoBlindRetry \]
+```math
+\mathrm{Effect}=\mathrm{Unknown} \Rightarrow \mathrm{NoBlindRetry}
+```
 
 System SHOULD observe/reconcile target state atau escalate.
 
@@ -13407,7 +14544,9 @@ consequence level.
 
 Failure MAY meningkatkan risk:
 
-\[ Failure\Rightarrow ReassessRisk\]
+```math
+\mathrm{Failure}\Rightarrow \mathrm{ReassessRisk}
+```
 
 jika failure material terhadap likelihood, impact, exposure, control
 effectiveness, atau uncertainty.
@@ -13420,7 +14559,9 @@ Repeated failure SHOULD menjadi reassessment trigger.
 
 Failure tidak memperluas authority.
 
-\[ Failure\not\Rightarrow EmergencyAuthority\]
+```math
+\mathrm{Failure}\not\Rightarrow \mathrm{EmergencyAuthority}
+```
 
 Recovery action MUST memiliki valid Authority.
 
@@ -13450,7 +14591,9 @@ Policy failure itself MUST fail-controlled.
 
 Recovery MUST diverifikasi jika recovery effect consequential.
 
-\[ RecoveryClaim\neq RecoveryVerified\]
+```math
+\mathrm{RecoveryClaim}\neq \mathrm{RecoveryVerified}
+```
 
 High-risk recovery SHOULD menggunakan independent verification sesuai
 applicable profile.
@@ -13563,7 +14706,9 @@ Cached fallback MUST respect freshness and policy.
 
 Jika required Human approval/review unavailable:
 
-\[ RequiredHumanUnavailable\Rightarrow Pending/Escalate \]
+```math
+\mathrm{RequiredHumanUnavailable}\Rightarrow \mathrm{Pending}/\mathrm{Escalate}
+```
 
 bukan implicit approval.
 
@@ -13595,7 +14740,9 @@ decision required
 
 ## 18.38 Escalation Is Not Failure Resolution
 
-\[ Escalated\neq Resolved\]
+```math
+\mathrm{Escalated}\neq \mathrm{Resolved}
+```
 
 Escalated task tetap unresolved sampai valid decision/action mengubah
 state.
@@ -13624,7 +14771,9 @@ Abort tidak otomatis rollback prior effects.
 Cancellation berasal dari governance/user/system request untuk
 menghentikan workflow.
 
-\[ Cancel\neq Abort\neq Rollback\]
+```math
+\mathrm{Cancel}\neq \mathrm{Abort}\neq \mathrm{Rollback}
+```
 
 Cancellation SHOULD menggunakan same safety principles untuk in-flight
 effects dan reconciliation.
@@ -13654,8 +14803,10 @@ jika applicable.
 
 Reference:
 
-\[ RecoverySuccessful= SafeStateObserved
-\land RequiredVerificationSatisfied\]
+```math
+\mathrm{RecoverySuccessful}= \mathrm{SafeStateObserved}
+\land \mathrm{RequiredVerificationSatisfied}
+```
 
 Absence of new error tidak cukup.
 
@@ -13676,13 +14827,13 @@ stronger state reconciliation.
 
 Recovery MAY memerlukan authority berbeda dari original action.
 
-\[
-Authority\_{execute}\not\Rightarrow Authority\_{rollback}
-\]
+```math
+\mathrm{Authority}_{\mathrm{execute}}\not\Rightarrow \mathrm{Authority}_{\mathrm{rollback}}
+```
 
-\[
-Authority\_{deploy}\not\Rightarrow Authority\_{restore}
-\]
+```math
+\mathrm{Authority}_{\mathrm{deploy}}\not\Rightarrow \mathrm{Authority}_{\mathrm{restore}}
+```
 
 Recovery Plan MUST resolve required authority explicitly untuk
 consequential recovery.
@@ -13693,7 +14844,9 @@ consequential recovery.
 
 Recovery action sendiri memiliki risk.
 
-\[ Risk(recovery)\neq Risk(original) \]
+```math
+\mathrm{Risk}(\mathrm{recovery})\neq \mathrm{Risk}(\mathrm{original})
+```
 
 System SHOULD compare:
 
@@ -13737,8 +14890,10 @@ controls.
 
 Reference:
 
-\[ FailureBudget= \langle scope, maxAttempts, maxDuration,
-maxCost, maxRiskIncrease \rangle\]
+```math
+\mathrm{FailureBudget}= \langle \mathrm{scope}, \mathrm{maxAttempts}, \mathrm{maxDuration},
+\mathrm{maxCost}, \mathrm{maxRiskIncrease} \rangle
+```
 
 Exhaustion MUST menghasilkan governed decision.
 
@@ -13789,7 +14944,9 @@ Jika digunakan, each compensating action tetap governed Action.
 Failure MAY diklasifikasikan irrecoverable jika safe automated recovery
 tidak tersedia.
 
-\[ Irrecoverable\Rightarrow Escalate/Abort/Fail \]
+```math
+\mathrm{Irrecoverable}\Rightarrow \mathrm{Escalate}/\mathrm{Abort}/\mathrm{Fail}
+```
 
 sesuai policy.
 
@@ -13832,9 +14989,9 @@ Learning MUST distinguish:
 -   proposed improvement;
 -   validated improvement.
 
-\[
-Failure\rightarrow Evidence\rightarrow Analysis\rightarrow ImprovementProposal
-\]
+```math
+\mathrm{Failure}\rightarrow \mathrm{Evidence}\rightarrow \mathrm{Analysis}\rightarrow \mathrm{ImprovementProposal}
+```
 
 Improvement proposal tidak otomatis mengubah Policy atau Authority.
 
@@ -14046,44 +15203,63 @@ degraded mode.
 
 ### FR-INV-01 --- Controlled Failure
 
-\[ Failure\not\Rightarrow ControlBypass\]
+```math
+\mathrm{Failure}\not\Rightarrow \mathrm{ControlBypass}
+```
 
 ### FR-INV-02 --- No Blind Retry
 
-\[ Retry\Rightarrow CurrentStateValidation\]
+```math
+\mathrm{Retry}\Rightarrow \mathrm{CurrentStateValidation}
+```
 
 ### FR-INV-03 --- Partial Effect Honesty
 
-\[ PartialEffect\not\Rightarrow NoEffect\]
+```math
+\mathrm{PartialEffect}\not\Rightarrow \mathrm{NoEffect}
+```
 
 ### FR-INV-04 --- Recovery Authority
 
-\[ RecoveryAction\Rightarrow ValidAuthority\]
+```math
+\mathrm{RecoveryAction}\Rightarrow \mathrm{ValidAuthority}
+```
 
 ### FR-INV-05 --- Recovery Verification
 
-\[ RecoverySuccess\Rightarrow RequiredVerificationSatisfied\]
+```math
+\mathrm{RecoverySuccess}\Rightarrow \mathrm{RequiredVerificationSatisfied}
+```
 
 ### FR-INV-06 --- Bounded Retry
 
-\[ RetryCount\leq RetryBudget\]
+```math
+\mathrm{RetryCount}\leq \mathrm{RetryBudget}
+```
 
 ### FR-INV-07 --- Safety Kernel Fail-Controlled
 
-\[ MandatoryControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatoryControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 ### FR-INV-08 --- Escalation Non-Resolution
 
-\[ Escalated\not\Rightarrow Resolved\]
+```math
+\mathrm{Escalated}\not\Rightarrow \mathrm{Resolved}
+```
 
 ### FR-INV-09 --- Historical Preservation
 
-\[ Recovered\Rightarrow PreserveMaterialFailureHistory\]
+```math
+\mathrm{Recovered}\Rightarrow \mathrm{PreserveMaterialFailureHistory}
+```
 
 ### FR-INV-10 --- Goal Integrity Under Replan
 
-\[ Replan\Rightarrow PreserveGoalAndConstraints\]
+```math
+\mathrm{Replan}\Rightarrow \mathrm{PreserveGoalAndConstraints}
+```
 
 kecuali valid governance change.
 
@@ -14150,22 +15326,34 @@ Area ini MAY dinyatakan `Freeze Candidate` jika:
 
 Failure & Recovery v1.0 RC-Failure-Recovery diringkas sebagai:
 
-\[ FailureHandling= Detect + Contain + Reconcile + Reassess + Recover +
-Verify + Trace \]
+```math
+\mathrm{FailureHandling}= \mathrm{Detect} + \mathrm{Contain} + \mathrm{Reconcile} + \mathrm{Reassess} + \mathrm{Recover} +
+\mathrm{Verify} + \mathrm{Trace}
+```
 
 dengan:
 
-\[ \boxed{ Failure\ Does\ Not\ Suspend\ Governance } \]
+```math
+\boxed{ \mathrm{Failure}\ \mathrm{Does}\ \mathrm{Not}\ \mathrm{Suspend}\ \mathrm{Governance} }
+```
 
-\[ \boxed{ Retry\neq Blind\ Replay } \]
+```math
+\boxed{ \mathrm{Retry}\neq \mathrm{Blind}\ \mathrm{Replay} }
+```
 
-\[ \boxed{ Partial\ Effect\neq No\ Effect } \]
+```math
+\boxed{ \mathrm{Partial}\ \mathrm{Effect}\neq \mathrm{No}\ \mathrm{Effect} }
+```
 
-\[ \boxed{ Recovery\ Success\ Requires\ Verification } \]
+```math
+\boxed{ \mathrm{Recovery}\ \mathrm{Success}\ \mathrm{Requires}\ \mathrm{Verification} }
+```
 
 dan:
 
-\[ \boxed{ Mandatory\ Control\ Failure\neq Implicit\ Permit } \]
+```math
+\boxed{ \mathrm{Mandatory}\ \mathrm{Control}\ \mathrm{Failure}\neq \mathrm{Implicit}\ \mathrm{Permit} }
+```
 # 19. Security Requirements
 
 ## 19.1 Purpose
@@ -14180,17 +15368,25 @@ juga merupakan property dari orchestration system itu sendiri.
 
 Canonical objective:
 
-\[ SecureOrchestration= GovernanceIntegrity + LeastAuthority +
-TrustedControl + BoundedContext + EffectControl + Assurance +
-Traceability \]
+```math
+\mathrm{SecureOrchestration}= \mathrm{GovernanceIntegrity} + \mathrm{LeastAuthority} +
+\mathrm{TrustedControl} + \mathrm{BoundedContext} + \mathrm{EffectControl} + \mathrm{Assurance} +
+\mathrm{Traceability}
+```
 
 Security controls MUST mempertahankan separation:
 
-\[ UntrustedInput\neq ControlInstruction\]
+```math
+\mathrm{UntrustedInput}\neq \mathrm{ControlInstruction}
+```
 
-\[ TechnicalAccess\neq Authority\]
+```math
+\mathrm{TechnicalAccess}\neq \mathrm{Authority}
+```
 
-\[ AgentOutput\neq SystemDecision\]
+```math
+\mathrm{AgentOutput}\neq \mathrm{SystemDecision}
+```
 
 ------------------------------------------------------------------------
 
@@ -14221,13 +15417,17 @@ AOF menggunakan explicit trust boundaries.
 
 Default:
 
-\[ AgentOutput=UntrustedProposal \]
+```math
+\mathrm{AgentOutput}=\mathrm{UntrustedProposal}
+```
 
 External content, tool output, retrieved documents, user-controlled
 data, Agent messages, dan external service responses MUST NOT memperoleh
 control authority hanya karena masuk ke context.
 
-\[ Content\not\Rightarrow Authority\]
+```math
+\mathrm{Content}\not\Rightarrow \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -14284,15 +15484,15 @@ Deployment SHOULD instantiate threats yang relevant.
 
 Security profile SHOULD mendokumentasikan:
 
-\[
-Threat\rightarrow Control\rightarrow Requirement\rightarrow Evidence
-\]
+```math
+\mathrm{Threat}\rightarrow \mathrm{Control}\rightarrow \mathrm{Requirement}\rightarrow \mathrm{Evidence}
+```
 
 Untuk High-Assurance:
 
-\[
-Threat\rightarrow Control\rightarrow Test\rightarrow Evidence
-\]
+```math
+\mathrm{Threat}\rightarrow \mathrm{Control}\rightarrow \mathrm{Test}\rightarrow \mathrm{Evidence}
+```
 
 SHOULD dapat direkonstruksi.
 
@@ -14321,7 +15521,9 @@ Cross-boundary data/action MUST tunduk pada applicable controls.
 
 ## 19.8 Context as Security Boundary
 
-\[ C_a\subset eq C\]
+```math
+C_a\subseteq C
+```
 
 Agent MUST menerima minimum necessary Context sesuai role/task.
 
@@ -14345,7 +15547,9 @@ Untrusted data MAY berisi text yang menyerupai instruction.
 
 Canonical rule:
 
-\[ ExternalContent\neq GovernanceInstruction\]
+```math
+\mathrm{ExternalContent}\neq \mathrm{GovernanceInstruction}
+```
 
 System SHOULD preserve distinction antara:
 
@@ -14390,9 +15594,9 @@ logs, atau tool responses MAY membawa indirect instructions.
 Such content MUST remain data unless valid governance channel explicitly
 promotes it.
 
-\[
-RetrievedInstruction\not\Rightarrow AuthorizedInstruction
-\]
+```math
+\mathrm{RetrievedInstruction}\not\Rightarrow \mathrm{AuthorizedInstruction}
+```
 
 ------------------------------------------------------------------------
 
@@ -14409,8 +15613,9 @@ Security design SHOULD mengasumsikan bahwa individual Agent MAY:
 
 Safety MUST tidak bergantung pada perfect Agent behavior.
 
-\[ CompromisedAgent\not\Rightarrow CompromisedGovernance
-\]
+```math
+\mathrm{CompromisedAgent}\not\Rightarrow \mathrm{CompromisedGovernance}
+```
 
 merupakan target architectural property.
 
@@ -14420,8 +15625,10 @@ merupakan target architectural property.
 
 Safety Kernel:
 
-\[ K= { AuthorityEvaluator, PolicyEvaluator, StateValidator, RiskGate,
-VerificationGate, TraceRecorder } \]
+```math
+K= \{ \mathrm{AuthorityEvaluator}, \mathrm{PolicyEvaluator}, \mathrm{StateValidator}, \mathrm{RiskGate},
+\mathrm{VerificationGate}, \mathrm{TraceRecorder} \}
+```
 
 MUST berada dalam trusted control boundary yang lebih kuat daripada
 ordinary Agent execution.
@@ -14462,7 +15669,9 @@ Authority security MUST mempertahankan:
 -   provenance;
 -   no self-elevation.
 
-\[ Authority\_{delegatee}\subset eq Authority\_{delegator} \]
+```math
+\mathrm{Authority}_{\mathrm{delegatee}}\subseteq \mathrm{Authority}_{\mathrm{delegator}}
+```
 
 Threat examples:
 
@@ -14479,7 +15688,9 @@ Threat examples:
 Credential possession memberikan technical capability, bukan governance
 permission.
 
-\[ CredentialPossession\not\Rightarrow AuthorizedUse\]
+```math
+\mathrm{CredentialPossession}\not\Rightarrow \mathrm{AuthorizedUse}
+```
 
 Credentials SHOULD scoped, protected, rotated/revoked sesuai applicable
 security policy.
@@ -14504,7 +15715,9 @@ intermediary memiliki broader access.
 Policy source, activation, version, override, dan mutation SHOULD
 dilindungi.
 
-\[ UntrustedContent\not\Rightarrow PolicyMutation\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{PolicyMutation}
+```
 
 Unauthorized policy change MUST prevented/detectable sesuai profile.
 
@@ -14648,7 +15861,9 @@ AOF tidak mewajibkan specific token technology.
 
 ## 19.26 TOCTOU Security
 
-\[ Permit\_{t_1}\not\Rightarrow Permit\_{t_2} \]
+```math
+\mathrm{Permit}_{t_1}\not\Rightarrow \mathrm{Permit}_{t_2}
+```
 
 jika material security state berubah.
 
@@ -14688,7 +15903,9 @@ effect.
 High-risk action SHOULD resolve canonical target identity sebelum
 effect.
 
-\[ RequestedResource\stackrel{?}{=}AuthorizedResource \]
+```math
+\mathrm{RequestedResource}\stackrel{?}{=}\mathrm{AuthorizedResource}
+```
 
 ------------------------------------------------------------------------
 
@@ -14809,7 +16026,9 @@ Sensitive data handling SHOULD mengikuti:
 -   redaction;
 -   cross-boundary restrictions.
 
-\[ ReadAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ReadAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 ------------------------------------------------------------------------
 
@@ -14860,7 +16079,9 @@ handling, behavior, dan risk.
 
 Material substitution SHOULD trigger applicable reassessment.
 
-\[ Substitute(component)\Rightarrow ReevaluateAffectedControls\]
+```math
+\mathrm{Substitute}(\mathrm{component})\Rightarrow \mathrm{ReevaluateAffectedControls}
+```
 
 ------------------------------------------------------------------------
 
@@ -14884,7 +16105,9 @@ evidence/context, dan timestamp.
 
 Approval MUST NOT reusable di luar intended scope.
 
-\[ Approval(plan_v1)\not\Rightarrow Approval(plan_v2) \]
+```math
+\mathrm{Approval}(\mathrm{plan}_v1)\not\Rightarrow \mathrm{Approval}(\mathrm{plan}_v2)
+```
 
 jika material change.
 
@@ -14899,9 +16122,13 @@ jika profile requires.
 
 Example:
 
-\[ Proposer\neq Approver\]
+```math
+\mathrm{Proposer}\neq \mathrm{Approver}
+```
 
-\[ Executor\neq IndependentVerifier\]
+```math
+\mathrm{Executor}\neq \mathrm{IndependentVerifier}
+```
 
 No single Agent SHOULD solely decide, grant authority, execute, verify,
 dan audit same high-risk action.
@@ -14932,7 +16159,9 @@ degradation/escalation.
 Attack/failure yang membuat Safety Kernel unavailable MUST NOT
 menghasilkan fail-open.
 
-\[ ControlUnavailable\Rightarrow Pending/Deny/Escalate \]
+```math
+\mathrm{ControlUnavailable}\Rightarrow \mathrm{Pending}/\mathrm{Deny}/\mathrm{Escalate}
+```
 
 sesuai profile.
 
@@ -14973,9 +16202,9 @@ credible compromise.
 
 Incident handling SHOULD integrate Section 18:
 
-\[
-Detect\rightarrow Contain\rightarrow PreserveEvidence\rightarrow Reconcile\rightarrow Recover\rightarrow Verify
-\]
+```math
+\mathrm{Detect}\rightarrow \mathrm{Contain}\rightarrow \mathrm{PreserveEvidence}\rightarrow \mathrm{Reconcile}\rightarrow \mathrm{Recover}\rightarrow \mathrm{Verify}
+```
 
 ------------------------------------------------------------------------
 
@@ -15013,8 +16242,9 @@ integrity belum dipulihkan.
 
 Unknown mandatory security state MUST NOT menghasilkan implicit permit.
 
-\[ UnknownSecurityCondition\Rightarrow\neg ImplicitAllow
-\]
+```math
+\mathrm{UnknownSecurityCondition}\Rightarrow\neg \mathrm{ImplicitAllow}
+```
 
 Possible outcomes: `Pending`, `Deny`, `Escalate`.
 
@@ -15374,62 +16604,77 @@ incident containment dan governance recovery behavior.
 
 ### SEC-INV-01 --- Untrusted Content Non-Authority
 
-\[ UntrustedContent\not\Rightarrow Authority\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{Authority}
+```
 
 ### SEC-INV-02 --- Agent Non-Root-of-Trust
 
-\[ Agent\neq AutonomousRootOfTrust\]
+```math
+\mathrm{Agent}\neq \mathrm{AutonomousRootOfTrust}
+```
 
 ### SEC-INV-03 --- Safety Kernel Non-Bypass
 
-\[
-ConsequentialEffect\Rightarrow ApplicableSafetyKernelEvaluation
-\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{ApplicableSafetyKernelEvaluation}
+```
 
 ### SEC-INV-04 --- Credential Non-Authority
 
-\[
-CredentialPossession\not\Rightarrow GovernanceAuthority
-\]
+```math
+\mathrm{CredentialPossession}\not\Rightarrow \mathrm{GovernanceAuthority}
+```
 
 ### SEC-INV-05 --- Prompt Non-Enforcement
 
-\[ PromptPolicy\neq EnforcedPolicy\]
+```math
+\mathrm{PromptPolicy}\neq \mathrm{EnforcedPolicy}
+```
 
 ### SEC-INV-06 --- Context Least Privilege
 
-\[ Context(a,t)\subset eq NecessaryContext(a,t) \]
+```math
+\mathrm{Context}(a,t)\subseteq \mathrm{NecessaryContext}(a,t)
+```
 
 ### SEC-INV-07 --- TOCTOU Control
 
-\[ MaterialSecurityStateChange\Rightarrow RevalidateBeforeEffect
-\]
+```math
+\mathrm{MaterialSecurityStateChange}\Rightarrow \mathrm{RevalidateBeforeEffect}
+```
 
 ### SEC-INV-08 --- Replay Control
 
-\[ HistoricalPermit\not\Rightarrow UnlimitedReuse\]
+```math
+\mathrm{HistoricalPermit}\not\Rightarrow \mathrm{UnlimitedReuse}
+```
 
 ### SEC-INV-09 --- Evidence/Trace Integrity
 
-\[
-UnauthorizedMutation(Evidence/Trace)\Rightarrow PreventedOrDetectable
-\]
+```math
+\mathrm{UnauthorizedMutation}(\mathrm{Evidence}/\mathrm{Trace})\Rightarrow \mathrm{PreventedOrDetectable}
+```
 
 sesuai profile.
 
 ### SEC-INV-10 --- Fail-Controlled Security
 
-\[
-MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatorySecurityControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 ### SEC-INV-11 --- Information-Flow Separation
 
-\[ ReadAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ReadAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 ### SEC-INV-12 --- Security Recovery Governance
 
-\[ SecurityFailure\not\Rightarrow GovernanceSuspension\]
+```math
+\mathrm{SecurityFailure}\not\Rightarrow \mathrm{GovernanceSuspension}
+```
 
 ------------------------------------------------------------------------
 
@@ -15477,29 +16722,37 @@ Security area MAY dinyatakan `Freeze Candidate` jika:
 
 Security v1.0 RC-Security diringkas sebagai:
 
-\[ Security= TrustBoundaries + LeastAuthority + ControlIntegrity +
-ContextIsolation + EffectProtection + DataProtection +
-AssuranceIntegrity + IncidentRecovery \]
+```math
+\mathrm{Security}= \mathrm{TrustBoundaries} + \mathrm{LeastAuthority} + \mathrm{ControlIntegrity} +
+\mathrm{ContextIsolation} + \mathrm{EffectProtection} + \mathrm{DataProtection} +
+\mathrm{AssuranceIntegrity} + \mathrm{IncidentRecovery}
+```
 
 dengan:
 
-\[ \boxed{ Untrusted\ Content\neq Control\ Authority } \]
+```math
+\boxed{ \mathrm{Untrusted}\ \mathrm{Content}\neq \mathrm{Control}\ \mathrm{Authority} }
+```
 
-\[ \boxed{ Agent\neq Autonomous\ Root\ of\ Trust } \]
+```math
+\boxed{ \mathrm{Agent}\neq \mathrm{Autonomous}\ \mathrm{Root}\ \mathrm{of}\ \mathrm{Trust} }
+```
 
-\[
-\boxed{ Consequential\ Effect\Rightarrow Governed\ Effect\ Boundary }
-\]
+```math
+\boxed{ \mathrm{Consequential}\ \mathrm{Effect}\Rightarrow \mathrm{Governed}\ \mathrm{Effect}\ \mathrm{Boundary} }
+```
 
-\[
-\boxed{ Mandatory\ Security\ Control\ Failure\neq Implicit\ Permit }
-\]
+```math
+\boxed{ \mathrm{Mandatory}\ \mathrm{Security}\ \mathrm{Control}\ \mathrm{Failure}\neq \mathrm{Implicit}\ \mathrm{Permit} }
+```
 
 dan:
 
-\[
-\boxed{ Security\ Is\ A\ Property\ Of\ The\ Orchestration\ System,\ Not\ Only\ Its\ Output }
-\] \# 20. Conformance
+```math
+\boxed{ \mathrm{Security}\ \mathrm{Is}\ A\ \mathrm{Property}\ \mathrm{Of}\ \mathrm{The}\ \mathrm{Orchestration}\ \mathrm{System},\ \mathrm{Not}\ \mathrm{Only}\ \mathrm{Its}\ \mathrm{Output} }
+```
+
+ \# 20. Conformance
 
 ## 20.1 Purpose
 
@@ -15510,13 +16763,15 @@ repeatable, dan scope-bounded.
 
 Canonical chain:
 
-\[
-Requirement\rightarrow Test\rightarrow Evidence\rightarrow ConformanceResult
-\]
+```math
+\mathrm{Requirement}\rightarrow \mathrm{Test}\rightarrow \mathrm{Evidence}\rightarrow \mathrm{ConformanceResult}
+```
 
 Conformance bukan self-declaration tanpa basis.
 
-\[ ClaimedConformance\neq DemonstratedConformance\]
+```math
+\mathrm{ClaimedConformance}\neq \mathrm{DemonstratedConformance}
+```
 
 ------------------------------------------------------------------------
 
@@ -15544,7 +16799,9 @@ profile, scope, dan applicable specification version.
 
 Canonical separation:
 
-\[ Conformance\neq Maturity\]
+```math
+\mathrm{Conformance}\neq \mathrm{Maturity}
+```
 
 `Conformance` menjawab apakah mandatory requirements untuk claimed
 scope/profile dipenuhi.
@@ -15652,9 +16909,9 @@ related_requirements
 
 Canonical traceability:
 
-\[
-Invariant\rightarrow Requirement\rightarrow Test\rightarrow Evidence
-\]
+```math
+\mathrm{Invariant}\rightarrow \mathrm{Requirement}\rightarrow \mathrm{Test}\rightarrow \mathrm{Evidence}
+```
 
 ------------------------------------------------------------------------
 
@@ -15680,11 +16937,14 @@ profile tanpa memenuhi canonical profile definition.
 
 Reference dependency:
 
-\[ AOF\text{-}Governed\supset eq AOF\text{-}Core
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Governed}\supseteq \mathrm{AOF}\text{-}\mathrm{Core}
+```
 
-\[ AOF\text{-}Assured\supset eq
-AOF\text{-}Governed \]
+```math
+\mathrm{AOF}\text{-}\mathrm{Assured}\supseteq
+\mathrm{AOF}\text{-}\mathrm{Governed}
+```
 
 `AOF-Secure-SDLC` merupakan domain profile yang MUST include
 `AOF-Governed` dan applicable assurance/security requirements.
@@ -15718,7 +16978,9 @@ Conformance claim MUST NOT digeneralisasi di luar tested scope.
 
 Requirement evaluation menghasilkan:
 
-\[ Applicability\in{Applicable,NotApplicable,Conditional} \]
+```math
+\mathrm{Applicability}\in{\mathrm{Applicable},\mathrm{NotApplicable},\mathrm{Conditional}}
+```
 
 `NotApplicable` MUST memiliki rationale yang dapat direview.
 
@@ -15731,8 +16993,10 @@ menghindari failed test jika profile/scope sebenarnya memerlukannya.
 
 Canonical test case:
 
-\[ ct= \langle id, requirements, preconditions, inputs,
-procedure, expected, evidence, result, environment \rangle\]
+```math
+\mathrm{ct}= \langle \mathrm{id}, \mathrm{requirements}, \mathrm{preconditions}, \mathrm{inputs},
+\mathrm{procedure}, \mathrm{expected}, \mathrm{evidence}, \mathrm{result}, \mathrm{environment} \rangle
+```
 
 Reference fields:
 
@@ -15777,7 +17041,9 @@ Test IDs SHOULD stable dalam same major conformance specification.
 
 Normalized test result:
 
-\[ TestResult= { Pass, Fail, Blocked, NotApplicable, Inconclusive } \]
+```math
+\mathrm{TestResult}= \{ \mathrm{Pass}, \mathrm{Fail}, \mathrm{Blocked}, \mathrm{NotApplicable}, \mathrm{Inconclusive} \}
+```
 
 `Inconclusive` dan `Blocked` MUST NOT dihitung sebagai `Pass`.
 
@@ -15787,7 +17053,9 @@ Normalized test result:
 
 Requirement result MAY berasal dari satu atau multiple tests.
 
-\[ RequirementResult(r)=Aggregate(Tests(r)) \]
+```math
+\mathrm{RequirementResult}(r)=\mathrm{Aggregate}(\mathrm{Tests}(r))
+```
 
 Reference:
 
@@ -15805,14 +17073,18 @@ conditions terpenuhi.
 
 Reference result:
 
-\[ ConformanceResult= { Conformant, NonConformant, Conditional,
-Inconclusive } \]
+```math
+\mathrm{ConformanceResult}= \{ \mathrm{Conformant}, \mathrm{NonConformant}, \mathrm{Conditional},
+\mathrm{Inconclusive} \}
+```
 
 `Conformant` hanya jika seluruh applicable mandatory requirements
 satisfied.
 
-\[ Conformant(P) \iff
-\forall r\in Mandatory(P), Result(r)=Satisfied \]
+```math
+\mathrm{Conformant}(P) \iff
+\forall r\in \mathrm{Mandatory}(P),\ \mathrm{Result}(r)=\mathrm{Satisfied}
+```
 
 **AOF-CONF-003** --- Failed applicable `MUST` atau `MUST NOT`
 requirement MUST prevent unconditional `Conformant` result.
@@ -15857,7 +17129,9 @@ Evidence MUST memiliki sufficient provenance sesuai Evidence Model.
 Conformance evidence MUST cukup untuk membuktikan requirement dalam
 tested scope.
 
-\[ EvidencePresent\not\Rightarrow ConformanceSatisfied\]
+```math
+\mathrm{EvidencePresent}\not\Rightarrow \mathrm{ConformanceSatisfied}
+```
 
 Evidence SHOULD bind ke:
 
@@ -15895,11 +17169,15 @@ Negative tests sangat penting untuk governance/security requirements.
 Given Agent memiliki capability tetapi tidak memiliki applicable
 Authority:
 
-\[ Capability=true,\quadAuthority=false \]
+```math
+\mathrm{Capability}=\mathrm{true},\quad \mathrm{Authority}=\mathrm{false}
+```
 
 Expected:
 
-\[ ExecuteAllowed=false \]
+```math
+\mathrm{ExecuteAllowed}=\mathrm{false}
+```
 
 Maps to Authority requirements.
 
@@ -16019,8 +17297,10 @@ Agentic/probabilistic components MAY menghasilkan variable proposals,
 tetapi governance outcome untuk mandatory deterministic controls SHOULD
 tetap testable.
 
-\[ ProbabilisticReasoning \not\Rightarrow
-ProbabilisticMandatoryControl \]
+```math
+\mathrm{ProbabilisticReasoning} \not\Rightarrow
+\mathrm{ProbabilisticMandatoryControl}
+```
 
 ------------------------------------------------------------------------
 
@@ -16031,10 +17311,10 @@ bounded-verifiable tests jika practical.
 
 Examples:
 
--   no grant -\> deny;
--   revoked grant -\> deny;
--   stale permit -\> revalidate;
--   required verification missing -\> block.
+-   no grant → deny;
+-   revoked grant → deny;
+-   stale permit → revalidate;
+-   required verification missing → block.
 
 ------------------------------------------------------------------------
 
@@ -16173,8 +17453,10 @@ Environment metadata SHOULD mencakup:
 
 Conformance dapat invalid jika material configuration berubah.
 
-\[ Conformant(config_v1) \not\Rightarrow
-Conformant(config_v2) \]
+```math
+\mathrm{Conformant}(\mathrm{config}_v1) \not\Rightarrow
+\mathrm{Conformant}(\mathrm{config}_v2)
+```
 
 Deployment SHOULD menentukan change classes yang memerlukan retest.
 
@@ -16279,7 +17561,9 @@ explicitly mengizinkan exception.
 Mandatory requirement tanpa exception semantics tidak dapat di-waive
 lalu tetap diklaim fully conformant.
 
-\[ WaivedMandatoryViolation\not\Rightarrow Conformant\]
+```math
+\mathrm{WaivedMandatoryViolation}\not\Rightarrow \mathrm{Conformant}
+```
 
 ------------------------------------------------------------------------
 
@@ -16335,7 +17619,9 @@ Non-conformance report SHOULD menunjukkan:
 
 Jika evidence/test tidak cukup:
 
-\[ Assessment=Inconclusive \]
+```math
+\mathrm{Assessment}=\mathrm{Inconclusive}
+```
 
 System MUST NOT default ke `Conformant`.
 
@@ -16378,12 +17664,16 @@ Machine-readable equivalent SHOULD tersedia pada final release package.
 
 Reference coverage:
 
-\[ RequirementCoverage= \frac{MandatoryRequirementsWithTests}
-{ApplicableMandatoryRequirements} \]
+```math
+\mathrm{RequirementCoverage}= \frac{\mathrm{MandatoryRequirementsWithTests}}
+{\mathrm{ApplicableMandatoryRequirements}}
+```
 
-\[ EvidenceCoverage=
-\frac{TestedRequirementsWithSufficientEvidence}
-{ApplicableMandatoryRequirements} \]
+```math
+\mathrm{EvidenceCoverage}=
+\frac{\mathrm{TestedRequirementsWithSufficientEvidence}}
+{\mathrm{ApplicableMandatoryRequirements}}
+```
 
 Full conformance SHOULD require 100% applicable mandatory requirement
 coverage.
@@ -16392,8 +17682,10 @@ coverage.
 
 ## 20.52 Test Coverage Is Not Assurance Completeness
 
-\[ 100% RequirementCoverage \not\Rightarrow
-ZeroResidualRisk \]
+```math
+100%\ \mathrm{RequirementCoverage} \not\Rightarrow
+\mathrm{ZeroResidualRisk}
+```
 
 Conformance membuktikan specification requirements dalam tested scope,
 bukan absence of all defects/threats.
@@ -16417,7 +17709,9 @@ Profile MAY menambahkan mandatory requirements.
 Conformance engine MUST resolve complete inherited requirement set
 sebelum assessment.
 
-\[ Mandatory(P)= Mandatory(Base(P)) \cup Mandatory(Local(P)) \]
+```math
+\mathrm{Mandatory}(P)= \mathrm{Mandatory}(\mathrm{Base}(P)) \cup \mathrm{Mandatory}(\mathrm{Local}(P))
+```
 
 ------------------------------------------------------------------------
 
@@ -16438,7 +17732,9 @@ terhadap:
 
 Schema validity sendiri tidak membuktikan semantic conformance.
 
-\[ SchemaValid\not\Rightarrow SemanticallyConformant\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{SemanticallyConformant}
+```
 
 ------------------------------------------------------------------------
 
@@ -16611,54 +17907,65 @@ regression/recertification triggers.
 
 ### CONF-INV-01 --- Requirement Traceability
 
-\[ MandatoryRequirement\Rightarrow IdentifiableTestOrAssessment
-\]
+```math
+\mathrm{MandatoryRequirement}\Rightarrow \mathrm{IdentifiableTestOrAssessment}
+```
 
 ### CONF-INV-02 --- Evidence
 
-\[ ConformancePass\Rightarrow SufficientEvidence\]
+```math
+\mathrm{ConformancePass}\Rightarrow \mathrm{SufficientEvidence}
+```
 
 ### CONF-INV-03 --- No Inconclusive Success
 
-\[ Inconclusive\not\Rightarrow Pass\]
+```math
+\mathrm{Inconclusive}\not\Rightarrow \mathrm{Pass}
+```
 
 ### CONF-INV-04 --- Mandatory Violation
 
-\[
-MandatoryViolation\Rightarrow\neg UnconditionalConformant
-\]
+```math
+\mathrm{MandatoryViolation}\Rightarrow\neg \mathrm{UnconditionalConformant}
+```
 
 ### CONF-INV-05 --- Scope Integrity
 
-\[
-Conformance(scope_a)\not\Rightarrow Conformance(scope_b)
-\]
+```math
+\mathrm{Conformance}(\mathrm{scope}_a)\not\Rightarrow \mathrm{Conformance}(\mathrm{scope}_b)
+```
 
 ### CONF-INV-06 --- Version Integrity
 
-\[ Conformance(v_1)\not\Rightarrow Conformance(v_2) \]
+```math
+\mathrm{Conformance}(v_1)\not\Rightarrow \mathrm{Conformance}(v_2)
+```
 
 jika material change.
 
 ### CONF-INV-07 --- Profile Inheritance
 
-\[
-Conformant(Profile)\Rightarrow Conformant(MandatoryBase(Profile))
-\]
+```math
+\mathrm{Conformant}(\mathrm{Profile})\Rightarrow \mathrm{Conformant}(\mathrm{MandatoryBase}(\mathrm{Profile}))
+```
 
 ### CONF-INV-08 --- Schema Non-Sufficiency
 
-\[ SchemaValid\not\Rightarrow SemanticConformance\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{SemanticConformance}
+```
 
 ### CONF-INV-09 --- No Chain-of-Thought Requirement
 
-\[
-ConformanceEvidence\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{ConformanceEvidence}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 ### CONF-INV-10 --- Conformance Non-Zero-Risk
 
-\[ Conformant\not\Rightarrow ZeroResidualRisk\]
+```math
+\mathrm{Conformant}\not\Rightarrow \mathrm{ZeroResidualRisk}
+```
 
 ------------------------------------------------------------------------
 
@@ -16703,24 +18010,36 @@ Conformance area MAY dinyatakan `Freeze Candidate` jika:
 
 Conformance v1.0 RC-Conformance diringkas sebagai:
 
-\[ Conformance= Scope + Profile + Requirements + Tests + Evidence +
-Coverage + Report \]
+```math
+\mathrm{Conformance}= \mathrm{Scope} + \mathrm{Profile} + \mathrm{Requirements} + \mathrm{Tests} + \mathrm{Evidence} +
+\mathrm{Coverage} + \mathrm{Report}
+```
 
 dengan:
 
-\[
-\boxed{ Requirement\rightarrow Test\rightarrow Evidence\rightarrow Result }
-\]
+```math
+\boxed{ \mathrm{Requirement}\rightarrow \mathrm{Test}\rightarrow \mathrm{Evidence}\rightarrow \mathrm{Result} }
+```
 
-\[ \boxed{ Conformance\neq Maturity } \]
+```math
+\boxed{ \mathrm{Conformance}\neq \mathrm{Maturity} }
+```
 
-\[ \boxed{ Inconclusive\neq Pass } \]
+```math
+\boxed{ \mathrm{Inconclusive}\neq \mathrm{Pass} }
+```
 
-\[ \boxed{ MandatoryViolation\Rightarrow NonConformant } \]
+```math
+\boxed{ \mathrm{MandatoryViolation}\Rightarrow \mathrm{NonConformant} }
+```
 
 dan:
 
-\[ \boxed{ Conformant\neq ZeroResidualRisk } \] \# 21. Framework
+```math
+\boxed{ \mathrm{Conformant}\neq \mathrm{ZeroResidualRisk} }
+```
+
+ \# 21. Framework
 Profiles
 
 AOF v1.0 mendefinisikan reference profiles untuk menyatakan bundles of
@@ -16730,7 +18049,9 @@ applicable controls tanpa mengubah core semantics.
 
 Profile adalah named conformance scope, bukan maturity score.
 
-\[ Profile\neq Maturity\]
+```math
+\mathrm{Profile}\neq \mathrm{Maturity}
+```
 
 Profile applicability MUST dinyatakan secara explicit oleh
 implementation/conformance claim.
@@ -16738,9 +18059,11 @@ implementation/conformance claim.
 AOF v1.0 tidak memaksakan satu total linear inheritance chain untuk
 seluruh profiles. Hubungan canonical yang aman adalah:
 
-\[ AOF\text{-}Core \subset eq
-AOF\text{-}Governed \subset eq
-AOF\text{-}Assured \]
+```math
+\mathrm{AOF}\text{-}\mathrm{Core} \subseteq
+\mathrm{AOF}\text{-}\mathrm{Governed} \subseteq
+\mathrm{AOF}\text{-}\mathrm{Assured}
+```
 
 `AOF-Secure-SDLC` adalah domain profile yang membangun di atas
 applicable governed/assurance semantics untuk secure software
@@ -16750,14 +18073,16 @@ domain profile.
 
 Dengan demikian:
 
-\[
-AOF\text{-}Secure\text{-}SDLC\neq AutomaticallyHigherThan(AOF\text{-}Assured)
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Secure}\text{-}\mathrm{SDLC}\neq \mathrm{AutomaticallyHigherThan}(\mathrm{AOF}\text{-}\mathrm{Assured})
+```
 
 dan:
 
-\[ AOF\text{-}High\text{-}Assurance =
-StrongerControls(ApplicableBaseProfile) \]
+```math
+\mathrm{AOF}\text{-}\mathrm{High}\text{-}\mathrm{Assurance} =
+\mathrm{StrongerControls}(\mathrm{ApplicableBaseProfile})
+```
 
 Profile composition MUST NOT remove mandatory requirements dari
 base/applicable profile.
@@ -16791,8 +18116,9 @@ AOF-Governed includes AOF-Core dan menambahkan stronger governance:
 -   approval/escalation;
 -   failure budgets.
 
-\[ AOF\text{-}Core\subset eq AOF\text{-}Governed
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Core}\subseteq \mathrm{AOF}\text{-}\mathrm{Governed}
+```
 
 ## 21.4 AOF-Assured
 
@@ -16805,8 +18131,10 @@ AOF-Assured includes AOF-Governed dan menambahkan assurance:
 -   completion gate;
 -   accountability chain.
 
-\[ AOF\text{-}Governed\subset eq
-AOF\text{-}Assured \]
+```math
+\mathrm{AOF}\text{-}\mathrm{Governed}\subseteq
+\mathrm{AOF}\text{-}\mathrm{Assured}
+```
 
 ## 21.5 AOF-Secure-SDLC
 
@@ -16854,8 +18182,10 @@ base/domain profile.
 
 Reference composition:
 
-\[ EffectiveProfile= BaseProfile \cup DomainProfile \cup
-StrengtheningProfile \]
+```math
+\mathrm{EffectiveProfile}= \mathrm{BaseProfile} \cup \mathrm{DomainProfile} \cup
+\mathrm{StrengtheningProfile}
+```
 
 where applicable.
 
@@ -16906,25 +18236,27 @@ to obtain a more favorable conformance result.
 
 ### PRF-INV-01 --- Core Preservation
 
-\[
-StrongerProfile\Rightarrow Preserve(ApplicableCoreRequirements)
-\]
+```math
+\mathrm{StrongerProfile}\Rightarrow \mathrm{Preserve}(\mathrm{ApplicableCoreRequirements})
+```
 
 ### PRF-INV-02 --- No Profile Weakening
 
-\[
-ProfileComposition\not\Rightarrow MandatoryControlRemoval
-\]
+```math
+\mathrm{ProfileComposition}\not\Rightarrow \mathrm{MandatoryControlRemoval}
+```
 
 ### PRF-INV-03 --- Explicit Claim
 
-\[ ProfileClaim\Rightarrow DeclaredProfileScope\]
+```math
+\mathrm{ProfileClaim}\Rightarrow \mathrm{DeclaredProfileScope}
+```
 
 ### PRF-INV-04 --- Domain Profile Non-Linearity
 
-\[
-AOF\text{-}Secure\text{-}SDLC\neq LinearMaturityLevel
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Secure}\text{-}\mathrm{SDLC}\neq \mathrm{LinearMaturityLevel}
+```
 
 ## 21.11 Reference Profile Conformance Tests
 
@@ -17285,7 +18617,9 @@ Relevance:
 AOF Evidence dan Secure-SDLC profiles MAY consume SLSA provenance
 sebagai evidence, tetapi:
 
-\[ SLSAProvenance\neq AOFVerification\]
+```math
+\mathrm{SLSAProvenance}\neq \mathrm{AOFVerification}
+```
 
 tanpa applicable AOF criteria/evaluation.
 
@@ -17366,7 +18700,9 @@ Relevance:
 AOF memperlakukan ReAct sebagai optional technique di Reasoning/Agent
 layer, bukan governance mechanism.
 
-\[ ReAct\neq AuthorityModel\]
+```math
+\mathrm{ReAct}\neq \mathrm{AuthorityModel}
+```
 
 ------------------------------------------------------------------------
 
@@ -17407,7 +18743,9 @@ Relevance:
 AOF memperlakukan retrieved content sebagai Context/Evidence candidate
 sesuai provenance dan trust rules.
 
-\[ RetrievedContent\neq VerifiedFact\]
+```math
+\mathrm{RetrievedContent}\neq \mathrm{VerifiedFact}
+```
 
 ------------------------------------------------------------------------
 
@@ -17449,7 +18787,9 @@ Relevance:
 AOF Policy enforcement berbeda secara fundamental dari
 prompt/training-level behavioral guidance:
 
-\[ PolicyPrompt\neq PolicyEnforcement\]
+```math
+\mathrm{PolicyPrompt}\neq \mathrm{PolicyEnforcement}
+```
 
 ------------------------------------------------------------------------
 
@@ -17709,25 +19049,35 @@ Area ini MAY dinyatakan `Freeze Candidate` jika:
 
 References/Prior Art v1.0 RC-References diringkas sebagai:
 
-\[ AOFContribution= Composition + Formalization +
-GovernanceIntegration + CrossDomainContracts + Conformance \]
+```math
+\mathrm{AOFContribution}= \mathrm{Composition} + \mathrm{Formalization} +
+\mathrm{GovernanceIntegration} + \mathrm{CrossDomainContracts} + \mathrm{Conformance}
+```
 
 bukan:
 
-\[ AOFContribution= InventionOfEstablishedTechniques \]
+```math
+\mathrm{AOFContribution}= \mathrm{InventionOfEstablishedTechniques}
+```
 
 Canonical release position:
 
-\[ \boxed{ PriorArt\ Must\ Be\ Acknowledged } \]
+```math
+\boxed{ \mathrm{PriorArt}\ \mathrm{Must}\ \mathrm{Be}\ \mathrm{Acknowledged} }
+```
 
-\[ \boxed{ Composition\ Claim\neq Novelty\ Claim } \]
+```math
+\boxed{ \mathrm{Composition}\ \mathrm{Claim}\neq \mathrm{Novelty}\ \mathrm{Claim} }
+```
 
-\[
-\boxed{ External\ Standard\ Alignment\neq Certification\ Equivalence }
-\]
+```math
+\boxed{ \mathrm{External}\ \mathrm{Standard}\ \mathrm{Alignment}\neq \mathrm{Certification}\ \mathrm{Equivalence} }
+```
 
-\[
-\boxed{ Absence\ Of\ Known\ Prior\ Art\neq Proof\ Of\ Novelty }
+```math
+\boxed{ \mathrm{Absence}\ \mathrm{Of}\ \mathrm{Known}\ \mathrm{Prior}\ \mathrm{Art}\neq \mathrm{Proof}\ \mathrm{Of}\ \mathrm{Novelty} }
+```
+
 # Appendix A --- Master Invariant Registry
 
 ## A.1 Public Canonical Registry
@@ -18532,7 +19882,9 @@ diisi secara heuristik.
 
 **Canonical/source formula:**
 
-\[ RP\neq CP\neq EP\neq AP\]
+```math
+\mathrm{RP}\neq \mathrm{CP}\neq \mathrm{EP}\neq \mathrm{AP}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18547,7 +19899,9 @@ diisi secara heuristik.
 
 **Canonical/source formula:**
 
-\[ Consequential(x)\Rightarrow MediatedBy(K,x) \]
+```math
+\mathrm{Consequential}(x)\Rightarrow \mathrm{MediatedBy}(K,x)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18562,7 +19916,9 @@ diisi secara heuristik.
 
 **Canonical/source formula:**
 
-\[ Agent\not\supset eq GovernanceRoot\]
+```math
+\mathrm{Agent}\not\supseteq \mathrm{GovernanceRoot}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18577,7 +19933,9 @@ diisi secara heuristik.
 
 **Canonical/source formula:**
 
-\[ Effect(x)\Rightarrow ValidControlDecision(x) \]
+```math
+\mathrm{Effect}(x)\Rightarrow \mathrm{ValidControlDecision}(x)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18593,7 +19951,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ConsequentialState\neq UncontrolledAgentPrivateState\]
+```math
+\mathrm{ConsequentialState}\neq \mathrm{UncontrolledAgentPrivateState}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18608,7 +19968,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ StateChange\Rightarrow TraceRecord\]
+```math
+\mathrm{StateChange}\Rightarrow \mathrm{TraceRecord}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18623,7 +19985,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ UnknownMandatoryControl\Rightarrow\neg Permit\]
+```math
+\mathrm{UnknownMandatoryControl}\Rightarrow\neg \mathrm{Permit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18638,7 +20002,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Revoked(h)\Rightarrow\neg NewExecutionUsing(h) \]
+```math
+\mathrm{Revoked}(h)\Rightarrow\neg \mathrm{NewExecutionUsing}(h)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18654,7 +20020,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ContextContent\not\Rightarrow ControlAuthority\]
+```math
+\mathrm{ContextContent}\not\Rightarrow \mathrm{ControlAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18669,7 +20037,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ToolReachability\not\Rightarrow AuthorizedUse\]
+```math
+\mathrm{ToolReachability}\not\Rightarrow \mathrm{AuthorizedUse}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18686,7 +20056,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ConsequentialEffect\Rightarrow ObservableResult\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{ObservableResult}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18703,7 +20075,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ConcurrentConsequentialCommit\Rightarrow ConflictControlled\]
+```math
+\mathrm{ConcurrentConsequentialCommit}\Rightarrow \mathrm{ConflictControlled}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18718,7 +20092,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Proposal\not\Rightarrow Action\]
+```math
+\mathrm{Proposal}\not\Rightarrow \mathrm{Action}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18733,7 +20109,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ ConsequentialEffect\Rightarrow GovernedTransition\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{GovernedTransition}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18748,7 +20126,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Pending\neq Pass\]
+```math
+\mathrm{Pending}\neq \mathrm{Pass}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18763,7 +20143,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ MaterialStateChange\Rightarrow ReevaluateDecision\]
+```math
+\mathrm{MaterialStateChange}\Rightarrow \mathrm{ReevaluateDecision}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18778,7 +20160,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Inconclusive\neq Verified\]
+```math
+\mathrm{Inconclusive}\neq \mathrm{Verified}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18793,7 +20177,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Failure\neq PermissionToBypassControl\]
+```math
+\mathrm{Failure}\neq \mathrm{PermissionToBypassControl}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18808,7 +20194,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ FailedAction\not\Rightarrow NoEffect\]
+```math
+\mathrm{FailedAction}\not\Rightarrow \mathrm{NoEffect}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18823,7 +20211,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Retry\Rightarrow ReevaluateEligibility\]
+```math
+\mathrm{Retry}\Rightarrow \mathrm{ReevaluateEligibility}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18838,7 +20228,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Replan\not\Rightarrow PreserveOldPermit\]
+```math
+\mathrm{Replan}\not\Rightarrow \mathrm{PreserveOldPermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18853,7 +20245,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ RecoveryAction\Rightarrow GovernedAction\]
+```math
+\mathrm{RecoveryAction}\Rightarrow \mathrm{GovernedAction}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18868,7 +20262,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[ Cancel\neq Rollback\]
+```math
+\mathrm{Cancel}\neq \mathrm{Rollback}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18883,9 +20279,9 @@ Orchestrator.
 
 **Canonical/source formula:**
 
-\[
-Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
-\]
+```math
+\mathrm{Completed}\Rightarrow \mathrm{GoalSatisfied}\land \mathrm{RequiredAssuranceSatisfied}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18900,7 +20296,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ ConsequentialTransition\Rightarrow TraceRecord\]
+```math
+\mathrm{ConsequentialTransition}\Rightarrow \mathrm{TraceRecord}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18915,7 +20313,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Resume\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{Resume}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18930,8 +20330,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ MandatoryControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatoryControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18948,7 +20349,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18963,7 +20366,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Agency(a)\subset eq GovernanceEnvelope(a) \]
+```math
+\mathrm{Agency}(a)\subseteq \mathrm{GovernanceEnvelope}(a)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18978,7 +20383,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Capability\neq Authority\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -18993,7 +20400,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Role\neq Authority\]
+```math
+\mathrm{Role}\neq \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19008,7 +20417,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ SelfDeclaredAuthority\neq EffectiveAuthority\]
+```math
+\mathrm{SelfDeclaredAuthority}\neq \mathrm{EffectiveAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19023,7 +20434,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Memory\neq Authority\]
+```math
+\mathrm{Memory}\neq \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19038,7 +20451,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ TrustIncrease\not\Rightarrow AuthorityIncrease\]
+```math
+\mathrm{TrustIncrease}\not\Rightarrow \mathrm{AuthorityIncrease}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19053,7 +20468,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Confidence\neq Verification\]
+```math
+\mathrm{Confidence}\neq \mathrm{Verification}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19068,7 +20485,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ AgentOutput\neq AuthorizedDecision\]
+```math
+\mathrm{AgentOutput}\neq \mathrm{AuthorizedDecision}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19083,7 +20502,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ TechnicalAccess\neq Authority\]
+```math
+\mathrm{TechnicalAccess}\neq \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19100,7 +20521,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ Authority\_{delegatee}\subset eq Authority\_{delegator} \]
+```math
+\mathrm{Authority}_{\mathrm{delegatee}}\subseteq \mathrm{Authority}_{\mathrm{delegator}}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19115,7 +20538,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ DelegationChain\not\Rightarrow PrivilegeExpansion\]
+```math
+\mathrm{DelegationChain}\not\Rightarrow \mathrm{PrivilegeExpansion}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19130,7 +20555,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ ExecutionAuthority\neq DisclosureAuthority\]
+```math
+\mathrm{ExecutionAuthority}\neq \mathrm{DisclosureAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19145,7 +20572,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ PolicyPrompt\neq PolicyEnforcement\]
+```math
+\mathrm{PolicyPrompt}\neq \mathrm{PolicyEnforcement}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19160,7 +20589,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ AIAgent\not\Rightarrow GovernanceRoot\]
+```math
+\mathrm{AIAgent}\not\Rightarrow \mathrm{GovernanceRoot}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19175,7 +20606,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ AgentRestart\not\Rightarrow ReuseStalePermit\]
+```math
+\mathrm{AgentRestart}\not\Rightarrow \mathrm{ReuseStalePermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19190,7 +20623,9 @@ Completed\Rightarrow GoalSatisfied\land RequiredAssuranceSatisfied
 
 **Canonical/source formula:**
 
-\[ SelfCheck\neq IndependentVerification\]
+```math
+\mathrm{SelfCheck}\neq \mathrm{IndependentVerification}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19206,7 +20641,9 @@ Plane.
 
 **Canonical/source formula:**
 
-\[ HumanPresence\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{HumanPresence}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19223,9 +20660,9 @@ Plane.
 
 **Canonical/source formula:**
 
-\[
-UtilityOptimization\not\Rightarrow GovernanceWeakening
-\]
+```math
+\mathrm{UtilityOptimization}\not\Rightarrow \mathrm{GovernanceWeakening}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19240,7 +20677,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ Execute(a,x)\Rightarrow Authorized(a,x) \]
+```math
+\mathrm{Execute}(a,x)\Rightarrow \mathrm{Authorized}(a,x)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19255,7 +20694,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ NoGrant\Rightarrow NoAuthoritySensitiveExecution\]
+```math
+\mathrm{NoGrant}\Rightarrow \mathrm{NoAuthoritySensitiveExecution}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19270,7 +20711,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ AgentReasoning\not\Rightarrow AuthorityIncrease\]
+```math
+\mathrm{AgentReasoning}\not\Rightarrow \mathrm{AuthorityIncrease}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19285,7 +20728,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19300,7 +20745,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ Approval\not\Rightarrow UnlimitedAuthority\]
+```math
+\mathrm{Approval}\not\Rightarrow \mathrm{UnlimitedAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19315,7 +20762,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[ ReadAuthority\not\Rightarrow DisclosureAuthority\]
+```math
+\mathrm{ReadAuthority}\not\Rightarrow \mathrm{DisclosureAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19330,9 +20779,9 @@ UtilityOptimization\not\Rightarrow GovernanceWeakening
 
 **Canonical/source formula:**
 
-\[
-Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
-\]
+```math
+\mathrm{Replace}(a_i,a_j)\not\Rightarrow \mathrm{InheritAuthority}(a_j,a_i)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19347,7 +20796,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ Expired(h)\Rightarrow\neg Usable(h) \]
+```math
+\mathrm{Expired}(h)\Rightarrow\neg \mathrm{Usable}(h)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19364,8 +20815,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ ConsequentialAuthorityUse\Rightarrow TraceableAuthorityBasis
-\]
+```math
+\mathrm{ConsequentialAuthorityUse}\Rightarrow \mathrm{TraceableAuthorityBasis}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19380,7 +20832,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ Consequential(x)\Rightarrow PolicyEvaluated(x) \]
+```math
+\mathrm{Consequential}(x)\Rightarrow \mathrm{PolicyEvaluated}(x)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19395,7 +20849,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ PolicyAllow\not\Rightarrow AuthorityGrant\]
+```math
+\mathrm{PolicyAllow}\not\Rightarrow \mathrm{AuthorityGrant}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19412,7 +20868,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ Conflict(P)\Rightarrow DeterministicRestrictiveResolution\]
+```math
+\mathrm{Conflict}(P)\Rightarrow \mathrm{DeterministicRestrictiveResolution}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19427,7 +20885,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[ ChildTask\Rightarrow PreserveApplicableMandatoryPolicy\]
+```math
+\mathrm{ChildTask}\Rightarrow \mathrm{PreserveApplicableMandatoryPolicy}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19442,9 +20902,9 @@ Replace(a_i,a_j)\not\Rightarrow InheritAuthority(a_j,a_i)
 
 **Canonical/source formula:**
 
-\[
-Override(p)\Rightarrow Authorized\land Scoped\land Traceable
-\]
+```math
+\mathrm{Override}(p)\Rightarrow \mathrm{Authorized}\land \mathrm{Scoped}\land \mathrm{Traceable}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19459,7 +20919,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 **Canonical/source formula:**
 
-\[ PromptPolicy\not\equiv EnforcedPolicy\]
+```math
+\mathrm{PromptPolicy}\not\equiv \mathrm{EnforcedPolicy}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19474,7 +20936,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 **Canonical/source formula:**
 
-\[ ConsequentialDecision\Rightarrow TraceablePolicyVersion\]
+```math
+\mathrm{ConsequentialDecision}\Rightarrow \mathrm{TraceablePolicyVersion}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19489,7 +20953,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 **Canonical/source formula:**
 
-\[ UntrustedContent\not\Rightarrow PolicyMutation\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{PolicyMutation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19506,7 +20972,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 **Canonical/source formula:**
 
-\[ MaterialPolicyScopeChange\Rightarrow ReevaluatePolicy\]
+```math
+\mathrm{MaterialPolicyScopeChange}\Rightarrow \mathrm{ReevaluatePolicy}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19521,9 +20989,9 @@ Override(p)\Rightarrow Authorized\land Scoped\land Traceable
 
 **Canonical/source formula:**
 
-\[
-Risk\uparrow\Rightarrow ControlStrength\uparrow
-\]
+```math
+\mathrm{Risk}\uparrow\Rightarrow \mathrm{ControlStrength}\uparrow
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19538,7 +21006,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[ RiskResult\not\Rightarrow Authority\]
+```math
+\mathrm{RiskResult}\not\Rightarrow \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19553,7 +21023,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[ MaterialRiskTrigger\Rightarrow Reassess\]
+```math
+\mathrm{MaterialRiskTrigger}\Rightarrow \mathrm{Reassess}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19568,7 +21040,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[ AssessRisk\neq AcceptRisk\]
+```math
+\mathrm{AssessRisk}\neq \mathrm{AcceptRisk}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19583,7 +21057,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[ AcceptedResidualRisk\Rightarrow AuthorizedAcceptance\]
+```math
+\mathrm{AcceptedResidualRisk}\Rightarrow \mathrm{AuthorizedAcceptance}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19600,7 +21076,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[ HighRisk\Rightarrow IndependentVerification\]
+```math
+\mathrm{HighRisk}\Rightarrow \mathrm{IndependentVerification}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19617,9 +21095,9 @@ Risk\uparrow\Rightarrow ControlStrength\uparrow
 
 **Canonical/source formula:**
 
-\[
-CriticalRisk\Rightarrow IndependentVerification\land ExplicitApproval
-\]
+```math
+\mathrm{CriticalRisk}\Rightarrow \mathrm{IndependentVerification}\land \mathrm{ExplicitApproval}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19634,9 +21112,9 @@ CriticalRisk\Rightarrow IndependentVerification\land ExplicitApproval
 
 **Canonical/source formula:**
 
-\[
-MaterialContextChange\Rightarrow\neg BlindReuse(RiskAssessment)
-\]
+```math
+\mathrm{MaterialContextChange}\Rightarrow\neg \mathrm{BlindReuse}(\mathrm{RiskAssessment})
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19651,7 +21129,9 @@ MaterialContextChange\Rightarrow\neg BlindReuse(RiskAssessment)
 
 **Canonical/source formula:**
 
-\[ PartialEffect\Rightarrow Reconcile+Reassess \]
+```math
+\mathrm{PartialEffect}\Rightarrow \mathrm{Reconcile}+\mathrm{Reassess}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19668,9 +21148,9 @@ MaterialContextChange\Rightarrow\neg BlindReuse(RiskAssessment)
 
 **Canonical/source formula:**
 
-\[
-CostOptimization\not\Rightarrow MandatoryControlRemoval
-\]
+```math
+\mathrm{CostOptimization}\not\Rightarrow \mathrm{MandatoryControlRemoval}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19685,7 +21165,9 @@ CostOptimization\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[ ConsequentialEvidence\Rightarrow Provenance\]
+```math
+\mathrm{ConsequentialEvidence}\Rightarrow \mathrm{Provenance}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19700,7 +21182,9 @@ CostOptimization\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[ Claim\neq Evidence\]
+```math
+\mathrm{Claim}\neq \mathrm{Evidence}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19715,7 +21199,9 @@ CostOptimization\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[ Evidence\neq Verification\]
+```math
+\mathrm{Evidence}\neq \mathrm{Verification}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19730,7 +21216,9 @@ CostOptimization\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[ EvidencePresent\not\Rightarrow EvidenceSufficient\]
+```math
+\mathrm{EvidencePresent}\not\Rightarrow \mathrm{EvidenceSufficient}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19745,9 +21233,9 @@ CostOptimization\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[
-Stale(e)\land FreshRequired\Rightarrow\neg Sufficient(e)
-\]
+```math
+\mathrm{Stale}(e)\land \mathrm{FreshRequired}\Rightarrow\neg \mathrm{Sufficient}(e)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19762,7 +21250,9 @@ Stale(e)\land FreshRequired\Rightarrow\neg Sufficient(e)
 
 **Canonical/source formula:**
 
-\[ MaterialContradiction\Rightarrow VisibleToVerification\]
+```math
+\mathrm{MaterialContradiction}\Rightarrow \mathrm{VisibleToVerification}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19777,7 +21267,9 @@ Stale(e)\land FreshRequired\Rightarrow\neg Sufficient(e)
 
 **Canonical/source formula:**
 
-\[ DerivedEvidence\Rightarrow SourceReference\]
+```math
+\mathrm{DerivedEvidence}\Rightarrow \mathrm{SourceReference}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19792,9 +21284,9 @@ Stale(e)\land FreshRequired\Rightarrow\neg Sufficient(e)
 
 **Canonical/source formula:**
 
-\[
-SameUnderlyingSource\not\Rightarrow IndependentCorroboration
-\]
+```math
+\mathrm{SameUnderlyingSource}\not\Rightarrow \mathrm{IndependentCorroboration}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19809,7 +21301,9 @@ SameUnderlyingSource\not\Rightarrow IndependentCorroboration
 
 **Canonical/source formula:**
 
-\[ EvidenceAccess\not\Rightarrow EvidenceDisclosure\]
+```math
+\mathrm{EvidenceAccess}\not\Rightarrow \mathrm{EvidenceDisclosure}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19827,7 +21321,9 @@ Recovery Control.
 
 **Canonical/source formula:**
 
-\[ Correction(e)\Rightarrow SupersessionOrTrace\]
+```math
+\mathrm{Correction}(e)\Rightarrow \mathrm{SupersessionOrTrace}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19842,7 +21338,9 @@ Recovery Control.
 
 **Canonical/source formula:**
 
-\[ Verification\Rightarrow Criteria\]
+```math
+\mathrm{Verification}\Rightarrow \mathrm{Criteria}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19857,7 +21355,9 @@ Recovery Control.
 
 **Canonical/source formula:**
 
-\[ Verified(c)\Rightarrow SufficientAdmissibleEvidence(c) \]
+```math
+\mathrm{Verified}(c)\Rightarrow \mathrm{SufficientAdmissibleEvidence}(c)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19872,7 +21372,9 @@ Recovery Control.
 
 **Canonical/source formula:**
 
-\[ Inconclusive\not\Rightarrow Verified\]
+```math
+\mathrm{Inconclusive}\not\Rightarrow \mathrm{Verified}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19887,8 +21389,10 @@ Recovery Control.
 
 **Canonical/source formula:**
 
-\[ IndependentVerificationRequired \Rightarrow
-SelfVerificationInsufficient \]
+```math
+\mathrm{IndependentVerificationRequired} \Rightarrow
+\mathrm{SelfVerificationInsufficient}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19905,7 +21409,9 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ Verified(x)\not\Rightarrow Verified(y) \]
+```math
+\mathrm{Verified}(x)\not\Rightarrow \mathrm{Verified}(y)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19920,7 +21426,9 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ MaterialSubjectChange\Rightarrow Reverify\]
+```math
+\mathrm{MaterialSubjectChange}\Rightarrow \mathrm{Reverify}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19935,7 +21443,9 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ Verified\not\Rightarrow Authorized\]
+```math
+\mathrm{Verified}\not\Rightarrow \mathrm{Authorized}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19950,7 +21460,9 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ Verified\not\Rightarrow Approved\]
+```math
+\mathrm{Verified}\not\Rightarrow \mathrm{Approved}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19965,7 +21477,9 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ Verification\not\Rightarrow PureSelfReference\]
+```math
+\mathrm{Verification}\not\Rightarrow \mathrm{PureSelfReference}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19982,8 +21496,10 @@ SelfVerificationInsufficient \]
 
 **Canonical/source formula:**
 
-\[ SuccessfulCompletion \Rightarrow
-RequiredVerificationSatisfied \]
+```math
+\mathrm{SuccessfulCompletion} \Rightarrow
+\mathrm{RequiredVerificationSatisfied}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -19998,7 +21514,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ AuthoritativeState\neq AgentPrivateMemory\]
+```math
+\mathrm{AuthoritativeState}\neq \mathrm{AgentPrivateMemory}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20013,7 +21531,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ConsequentialStateChange\Rightarrow ControlledTransition\]
+```math
+\mathrm{ConsequentialStateChange}\Rightarrow \mathrm{ControlledTransition}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20028,8 +21548,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ Commit(\Delta)\Rightarrow StateValid(\Delta)
-\]
+```math
+\mathrm{Commit}(\Delta)\Rightarrow \mathrm{StateValid}(\Delta)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20044,7 +21565,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ConcurrentConflict\Rightarrow NoSilentCommit\]
+```math
+\mathrm{ConcurrentConflict}\Rightarrow \mathrm{NoSilentCommit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20059,7 +21582,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ReplayWithEffect\Rightarrow CurrentControlValidation\]
+```math
+\mathrm{ReplayWithEffect}\Rightarrow \mathrm{CurrentControlValidation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20074,7 +21599,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ PartialEffect\not\Rightarrow AtomicSuccess\]
+```math
+\mathrm{PartialEffect}\not\Rightarrow \mathrm{AtomicSuccess}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20089,7 +21616,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ MaterialReplan\Rightarrow ReevaluateAffectedState\]
+```math
+\mathrm{MaterialReplan}\Rightarrow \mathrm{ReevaluateAffectedState}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20106,7 +21635,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ MaterialStateChange\Rightarrow RevalidateBeforeEffect\]
+```math
+\mathrm{MaterialStateChange}\Rightarrow \mathrm{RevalidateBeforeEffect}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20121,7 +21652,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ConsequentialTransition\Rightarrow SufficientTrace\]
+```math
+\mathrm{ConsequentialTransition}\Rightarrow \mathrm{SufficientTrace}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20136,7 +21669,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ConsequentialEvent\Rightarrow IdentifiableActor\]
+```math
+\mathrm{ConsequentialEvent}\Rightarrow \mathrm{IdentifiableActor}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20153,7 +21688,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ TraceEvent\Rightarrow ReconstructableContext\]
+```math
+\mathrm{TraceEvent}\Rightarrow \mathrm{ReconstructableContext}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20170,7 +21707,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ UnauthorizedMutation\Rightarrow PreventedOrDetectable\]
+```math
+\mathrm{UnauthorizedMutation}\Rightarrow \mathrm{PreventedOrDetectable}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20185,7 +21724,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ MissingTrace\not\Rightarrow InventedTrace\]
+```math
+\mathrm{MissingTrace}\not\Rightarrow \mathrm{InventedTrace}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20200,7 +21741,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ TraceAccess\Rightarrow AuthorizedAccess\]
+```math
+\mathrm{TraceAccess}\Rightarrow \mathrm{AuthorizedAccess}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20217,8 +21760,9 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ ConformanceTrace\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{ConformanceTrace}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20233,8 +21777,10 @@ RequiredVerificationSatisfied \]
 
 **Canonical/source formula:**
 
-\[ AgentAutonomy\subset eq
-Human/OrganizationalGovernanceEnvelope \]
+```math
+\mathrm{AgentAutonomy}\subseteq
+\mathrm{Human}/\mathrm{OrganizationalGovernanceEnvelope}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20249,7 +21795,9 @@ Human/OrganizationalGovernanceEnvelope \]
 
 **Canonical/source formula:**
 
-\[ AgentOptimization\not\Rightarrow IntentMutation\]
+```math
+\mathrm{AgentOptimization}\not\Rightarrow \mathrm{IntentMutation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20264,8 +21812,10 @@ Human/OrganizationalGovernanceEnvelope \]
 
 **Canonical/source formula:**
 
-\[ DelegatedOperationalAuthority \subset eq
-OrganizationalGovernanceAuthority \]
+```math
+\mathrm{DelegatedOperationalAuthority} \subseteq
+\mathrm{OrganizationalGovernanceAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20280,9 +21830,9 @@ OrganizationalGovernanceAuthority \]
 
 **Canonical/source formula:**
 
-\[
-DelegatedExecution\not\Rightarrow AccountabilityErasure
-\]
+```math
+\mathrm{DelegatedExecution}\not\Rightarrow \mathrm{AccountabilityErasure}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20297,7 +21847,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Approval\neq AuthorityGrant\]
+```math
+\mathrm{Approval}\neq \mathrm{AuthorityGrant}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20312,7 +21864,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ MaterialSubjectChange\Rightarrow ReevaluateApproval\]
+```math
+\mathrm{MaterialSubjectChange}\Rightarrow \mathrm{ReevaluateApproval}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20327,7 +21881,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Override\neq ControlBypass\]
+```math
+\mathrm{Override}\neq \mathrm{ControlBypass}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20342,7 +21898,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ BreakGlass\not\Rightarrow NoAudit\]
+```math
+\mathrm{BreakGlass}\not\Rightarrow \mathrm{NoAudit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20357,7 +21915,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ HumanUnavailable\not\Rightarrow Approved\]
+```math
+\mathrm{HumanUnavailable}\not\Rightarrow \mathrm{Approved}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20372,7 +21932,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ RiskAssessment\neq RiskAcceptance\]
+```math
+\mathrm{RiskAssessment}\neq \mathrm{RiskAcceptance}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20387,7 +21949,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Automation\not\Rightarrow AccountabilityErasure\]
+```math
+\mathrm{Automation}\not\Rightarrow \mathrm{AccountabilityErasure}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20402,7 +21966,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ HumanDecision\neq GuaranteedCorrectDecision\]
+```math
+\mathrm{HumanDecision}\neq \mathrm{GuaranteedCorrectDecision}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20419,7 +21985,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ HumanRequest\neq PolicyMutation\]
+```math
+\mathrm{HumanRequest}\neq \mathrm{PolicyMutation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20434,7 +22002,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Failure\not\Rightarrow ControlBypass\]
+```math
+\mathrm{Failure}\not\Rightarrow \mathrm{ControlBypass}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20449,7 +22019,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Retry\Rightarrow CurrentStateValidation\]
+```math
+\mathrm{Retry}\Rightarrow \mathrm{CurrentStateValidation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20464,7 +22036,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ RecoveryAction\Rightarrow ValidAuthority\]
+```math
+\mathrm{RecoveryAction}\Rightarrow \mathrm{ValidAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20479,7 +22053,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ RecoverySuccess\Rightarrow RequiredVerificationSatisfied\]
+```math
+\mathrm{RecoverySuccess}\Rightarrow \mathrm{RequiredVerificationSatisfied}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20494,7 +22070,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ RetryCount\leq RetryBudget\]
+```math
+\mathrm{RetryCount}\leq \mathrm{RetryBudget}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20509,8 +22087,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ MandatoryControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatoryControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20525,7 +22104,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Escalated\not\Rightarrow Resolved\]
+```math
+\mathrm{Escalated}\not\Rightarrow \mathrm{Resolved}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20542,7 +22123,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Replan\Rightarrow PreserveGoalAndConstraints\]
+```math
+\mathrm{Replan}\Rightarrow \mathrm{PreserveGoalAndConstraints}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20557,7 +22140,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ UntrustedContent\not\Rightarrow Authority\]
+```math
+\mathrm{UntrustedContent}\not\Rightarrow \mathrm{Authority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20572,7 +22157,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[ Agent\neq AutonomousRootOfTrust\]
+```math
+\mathrm{Agent}\neq \mathrm{AutonomousRootOfTrust}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20587,9 +22174,9 @@ DelegatedExecution\not\Rightarrow AccountabilityErasure
 
 **Canonical/source formula:**
 
-\[
-ConsequentialEffect\Rightarrow ApplicableSafetyKernelEvaluation
-\]
+```math
+\mathrm{ConsequentialEffect}\Rightarrow \mathrm{ApplicableSafetyKernelEvaluation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20604,9 +22191,9 @@ ConsequentialEffect\Rightarrow ApplicableSafetyKernelEvaluation
 
 **Canonical/source formula:**
 
-\[
-CredentialPossession\not\Rightarrow GovernanceAuthority
-\]
+```math
+\mathrm{CredentialPossession}\not\Rightarrow \mathrm{GovernanceAuthority}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20621,7 +22208,9 @@ CredentialPossession\not\Rightarrow GovernanceAuthority
 
 **Canonical/source formula:**
 
-\[ Context(a,t)\subset eq NecessaryContext(a,t) \]
+```math
+\mathrm{Context}(a,t)\subseteq \mathrm{NecessaryContext}(a,t)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20636,7 +22225,9 @@ CredentialPossession\not\Rightarrow GovernanceAuthority
 
 **Canonical/source formula:**
 
-\[ HistoricalPermit\not\Rightarrow UnlimitedReuse\]
+```math
+\mathrm{HistoricalPermit}\not\Rightarrow \mathrm{UnlimitedReuse}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20653,9 +22244,9 @@ CredentialPossession\not\Rightarrow GovernanceAuthority
 
 **Canonical/source formula:**
 
-\[
-UnauthorizedMutation(Evidence/Trace)\Rightarrow PreventedOrDetectable
-\]
+```math
+\mathrm{UnauthorizedMutation}(\mathrm{Evidence}/\mathrm{Trace})\Rightarrow \mathrm{PreventedOrDetectable}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20670,9 +22261,9 @@ UnauthorizedMutation(Evidence/Trace)\Rightarrow PreventedOrDetectable
 
 **Canonical/source formula:**
 
-\[
-MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
-\]
+```math
+\mathrm{MandatorySecurityControlFailure}\Rightarrow\neg \mathrm{ImplicitPermit}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20689,7 +22280,9 @@ MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
 
 **Canonical/source formula:**
 
-\[ SecurityFailure\not\Rightarrow GovernanceSuspension\]
+```math
+\mathrm{SecurityFailure}\not\Rightarrow \mathrm{GovernanceSuspension}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20704,8 +22297,9 @@ MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
 
 **Canonical/source formula:**
 
-\[ MandatoryRequirement\Rightarrow IdentifiableTestOrAssessment
-\]
+```math
+\mathrm{MandatoryRequirement}\Rightarrow \mathrm{IdentifiableTestOrAssessment}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20720,7 +22314,9 @@ MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
 
 **Canonical/source formula:**
 
-\[ ConformancePass\Rightarrow SufficientEvidence\]
+```math
+\mathrm{ConformancePass}\Rightarrow \mathrm{SufficientEvidence}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20735,7 +22331,9 @@ MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
 
 **Canonical/source formula:**
 
-\[ Inconclusive\not\Rightarrow Pass\]
+```math
+\mathrm{Inconclusive}\not\Rightarrow \mathrm{Pass}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20750,9 +22348,9 @@ MandatorySecurityControlFailure\Rightarrow\neg ImplicitPermit
 
 **Canonical/source formula:**
 
-\[
-MandatoryViolation\Rightarrow\neg UnconditionalConformant
-\]
+```math
+\mathrm{MandatoryViolation}\Rightarrow\neg \mathrm{UnconditionalConformant}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20767,9 +22365,9 @@ MandatoryViolation\Rightarrow\neg UnconditionalConformant
 
 **Canonical/source formula:**
 
-\[
-Conformance(scope_a)\not\Rightarrow Conformance(scope_b)
-\]
+```math
+\mathrm{Conformance}(\mathrm{scope}_a)\not\Rightarrow \mathrm{Conformance}(\mathrm{scope}_b)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20786,7 +22384,9 @@ Conformance(scope_a)\not\Rightarrow Conformance(scope_b)
 
 **Canonical/source formula:**
 
-\[ Conformance(v_1)\not\Rightarrow Conformance(v_2) \]
+```math
+\mathrm{Conformance}(v_1)\not\Rightarrow \mathrm{Conformance}(v_2)
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20801,9 +22401,9 @@ Conformance(scope_a)\not\Rightarrow Conformance(scope_b)
 
 **Canonical/source formula:**
 
-\[
-Conformant(Profile)\Rightarrow Conformant(MandatoryBase(Profile))
-\]
+```math
+\mathrm{Conformant}(\mathrm{Profile})\Rightarrow \mathrm{Conformant}(\mathrm{MandatoryBase}(\mathrm{Profile}))
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20818,7 +22418,9 @@ Conformant(Profile)\Rightarrow Conformant(MandatoryBase(Profile))
 
 **Canonical/source formula:**
 
-\[ SchemaValid\not\Rightarrow SemanticConformance\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{SemanticConformance}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20833,9 +22435,9 @@ Conformant(Profile)\Rightarrow Conformant(MandatoryBase(Profile))
 
 **Canonical/source formula:**
 
-\[
-ConformanceEvidence\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{ConformanceEvidence}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20852,7 +22454,9 @@ ConformanceEvidence\not\Rightarrow PrivateChainOfThought
 
 **Canonical/source formula:**
 
-\[ Conformant\not\Rightarrow ZeroResidualRisk\]
+```math
+\mathrm{Conformant}\not\Rightarrow \mathrm{ZeroResidualRisk}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20870,8 +22474,9 @@ MUST remain representationally distinct.
 
 **Canonical/source formula:**
 
-\[
-Capability\neq Authority\neq Policy\neq Risk\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}\neq \mathrm{Policy}\neq \mathrm{Risk}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20886,7 +22491,9 @@ Capability\neq Authority\neq Policy\neq Risk\]
 
 **Canonical/source formula:**
 
-\[ SchemaValid\not\Rightarrow Authorized\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{Authorized}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20901,7 +22508,9 @@ Capability\neq Authority\neq Policy\neq Risk\]
 
 **Canonical/source formula:**
 
-\[ SchemaValid\not\Rightarrow Conformant\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{Conformant}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20916,7 +22525,9 @@ Capability\neq Authority\neq Policy\neq Risk\]
 
 **Canonical/source formula:**
 
-\[ UnknownMandatoryValue\not\Rightarrow Allow\]
+```math
+\mathrm{UnknownMandatoryValue}\not\Rightarrow \mathrm{Allow}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20931,7 +22542,9 @@ Capability\neq Authority\neq Policy\neq Risk\]
 
 **Canonical/source formula:**
 
-\[ GovernanceReference\Rightarrow UnambiguousResolution\]
+```math
+\mathrm{GovernanceReference}\Rightarrow \mathrm{UnambiguousResolution}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20946,9 +22559,9 @@ Capability\neq Authority\neq Policy\neq Risk\]
 
 **Canonical/source formula:**
 
-\[
-Extension\not\Rightarrow CanonicalSemanticRedefinition
-\]
+```math
+\mathrm{Extension}\not\Rightarrow \mathrm{CanonicalSemanticRedefinition}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20963,7 +22576,9 @@ Extension\not\Rightarrow CanonicalSemanticRedefinition
 
 **Canonical/source formula:**
 
-\[ CompatibleMigration\Rightarrow SemanticPreservation\]
+```math
+\mathrm{CompatibleMigration}\Rightarrow \mathrm{SemanticPreservation}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20978,7 +22593,9 @@ Extension\not\Rightarrow CanonicalSemanticRedefinition
 
 **Canonical/source formula:**
 
-\[ ConsequentialDecisionObject\Rightarrow GovernanceReferences\]
+```math
+\mathrm{ConsequentialDecisionObject}\Rightarrow \mathrm{GovernanceReferences}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -20995,9 +22612,9 @@ Extension\not\Rightarrow CanonicalSemanticRedefinition
 
 **Canonical/source formula:**
 
-\[
-MachineReadableGovernance\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{MachineReadableGovernance}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 **Traceability:**
 `No direct mapping asserted; consult Appendix F verification disposition`.
@@ -21012,9 +22629,9 @@ MachineReadableGovernance\not\Rightarrow PrivateChainOfThought
 
 **Canonical/source formula:**
 
-\[
-StrongerProfile\Rightarrow Preserve(ApplicableCoreRequirements)
-\]
+```math
+\mathrm{StrongerProfile}\Rightarrow \mathrm{Preserve}(\mathrm{ApplicableCoreRequirements})
+```
 
 **Traceability:** Section 21 / Appendix F.
 
@@ -21028,9 +22645,9 @@ StrongerProfile\Rightarrow Preserve(ApplicableCoreRequirements)
 
 **Canonical/source formula:**
 
-\[
-ProfileComposition\not\Rightarrow MandatoryControlRemoval
-\]
+```math
+\mathrm{ProfileComposition}\not\Rightarrow \mathrm{MandatoryControlRemoval}
+```
 
 **Traceability:** Section 21 / Appendix F.
 
@@ -21044,7 +22661,9 @@ ProfileComposition\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[ ProfileClaim\Rightarrow DeclaredProfileScope \]
+```math
+\mathrm{ProfileClaim}\Rightarrow \mathrm{DeclaredProfileScope}
+```
 
 **Traceability:** Section 21 / Appendix F.
 
@@ -21058,9 +22677,9 @@ ProfileComposition\not\Rightarrow MandatoryControlRemoval
 
 **Canonical/source formula:**
 
-\[
-AOF\text{-}Secure\text{-}SDLC\neq LinearMaturityLevel
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Secure}\text{-}\mathrm{SDLC}\neq \mathrm{LinearMaturityLevel}
+```
 
 **Traceability:** Section 21 / Appendix F.
 
@@ -21291,15 +22910,21 @@ Human / External Governance
 
 # Appendix C --- Core Framework Statement
 
-\[
-\boxed{ Reason\rightarrow Propose\rightarrow Govern\rightarrow Act\rightarrow Verify\rightarrow Update }
-\]
+```math
+\boxed{ \mathrm{Reason}\rightarrow \mathrm{Propose}\rightarrow \mathrm{Govern}\rightarrow \mathrm{Act}\rightarrow \mathrm{Verify}\rightarrow \mathrm{Update} }
+```
 
-\[ \boxed{ Agent\ Reasoning\neq Orchestration\ Authority } \]
+```math
+\boxed{ \mathrm{Agent}\ \mathrm{Reasoning}\neq \mathrm{Orchestration}\ \mathrm{Authority} }
+```
 
-\[ \boxed{ Autonomy\neq Authority } \]
+```math
+\boxed{ \mathrm{Autonomy}\neq \mathrm{Authority} }
+```
 
-\[ \boxed{ Capability\neq Authority } \]
+```math
+\boxed{ \mathrm{Capability}\neq \mathrm{Authority} }
+```
 
 AOF tidak bertujuan menghilangkan autonomy. AOF memformalkan **Governed
 Autonomous Orchestration** melalui explicit `Authority`, `Policy`,
@@ -21342,13 +22967,17 @@ implementation tanpa mengubah normative semantics.
 
 Canonical separation:
 
-\[ SchemaValidity\neq SemanticValidity\neq Conformance\]
+```math
+\mathrm{SchemaValidity}\neq \mathrm{SemanticValidity}\neq \mathrm{Conformance}
+```
 
 Schema membuktikan structural validity. Control Plane tetap bertanggung
 jawab atas Authority, Policy, Risk, State, Verification, dan other
 semantic predicates.
 
-\[ ValidSchema(x)\not\Rightarrow ExecuteAllowed(x) \]
+```math
+\mathrm{ValidSchema}(x)\not\Rightarrow \mathrm{ExecuteAllowed}(x)
+```
 
 ------------------------------------------------------------------------
 
@@ -21517,9 +23146,9 @@ Goal:
 
 Formal correspondence:
 
-\[
-g=\langle id,description,successCriteria,constraints,priority\rangle
-\]
+```math
+g=\langle \mathrm{id},\mathrm{description},\mathrm{successCriteria},\mathrm{constraints},\mathrm{priority}\rangle
+```
 
 Success criteria MUST NOT silently mutated.
 
@@ -21547,9 +23176,9 @@ Task:
 
 Formal correspondence:
 
-\[
-t=\langle id,parent,goal,input,preconditions,postconditions,constraints,requirements,risk,state\rangle
-\]
+```math
+t=\langle \mathrm{id},\mathrm{parent},\mathrm{goal},\mathrm{input},\mathrm{preconditions},\mathrm{postconditions},\mathrm{constraints},\mathrm{requirements},\mathrm{risk},\mathrm{state}\rangle
+```
 
 **AOF-SCH-003** --- Child Task representation MUST preserve inherited
 mandatory constraints or references thereto.
@@ -21577,7 +23206,9 @@ Agent:
 
 `capability_refs` dan `authority_refs` MUST remain separate.
 
-\[ Capability\neq Authority\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}
+```
 
 ------------------------------------------------------------------------
 
@@ -21762,7 +23393,9 @@ ActionProposal:
 Proposal MUST NOT contain field yang semantically means self-granted
 permission.
 
-\[ Proposal\neq AuthorizedDecision\]
+```math
+\mathrm{Proposal}\neq \mathrm{AuthorizedDecision}
+```
 
 ------------------------------------------------------------------------
 
@@ -21824,7 +23457,9 @@ ExecutionContract:
   single_use: boolean
 ```
 
-\[ ExecutionContract\neq AuthorityGrant\]
+```math
+\mathrm{ExecutionContract}\neq \mathrm{AuthorityGrant}
+```
 
 Contract hanya merepresentasikan bounded execution eligibility
 berdasarkan underlying controls.
@@ -22165,7 +23800,9 @@ Behavior MUST deterministic untuk claimed profile.
 Unknown enum pada mandatory governance field SHOULD menghasilkan
 validation failure atau `Pending`/controlled handling.
 
-\[ UnknownMandatoryEnum\not\Rightarrow Allow\]
+```math
+\mathrm{UnknownMandatoryEnum}\not\Rightarrow \mathrm{Allow}
+```
 
 ------------------------------------------------------------------------
 
@@ -22228,7 +23865,9 @@ Governance Evaluation
 Conformance Evaluation
 ```
 
-\[ StructuralValid\not\Rightarrow GovernanceValid\]
+```math
+\mathrm{StructuralValid}\not\Rightarrow \mathrm{GovernanceValid}
+```
 
 ------------------------------------------------------------------------
 
@@ -22360,8 +23999,10 @@ Deprecated field MUST NOT silently change meaning.
 
 Migration SHOULD preserve governance meaning.
 
-\[ Migrate(x\_{v1}\rightarrow x\_{v2})
-\Rightarrow SemanticPreservation\]
+```math
+\mathrm{Migrate}(x_{v1}\rightarrow x_{v2})
+\Rightarrow \mathrm{SemanticPreservation}
+```
 
 Jika semantic preservation tidak possible, migration MUST require
 explicit review/revalidation.
@@ -22522,53 +24163,66 @@ cases.
 
 ### SCH-INV-01 --- Construct Separation
 
-\[
-Capability\neq Authority\neq Policy\neq Risk\]
+```math
+\mathrm{Capability}\neq \mathrm{Authority}\neq \mathrm{Policy}\neq \mathrm{Risk}
+```
 
 Capability, Authority, Policy, and Risk MUST remain representationally
 distinct.
 
 ### SCH-INV-02 --- Structural Non-Authority
 
-\[ SchemaValid\not\Rightarrow Authorized\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{Authorized}
+```
 
 ### SCH-INV-03 --- Structural Non-Conformance
 
-\[ SchemaValid\not\Rightarrow Conformant\]
+```math
+\mathrm{SchemaValid}\not\Rightarrow \mathrm{Conformant}
+```
 
 ### SCH-INV-04 --- Safe Unknown
 
-\[ UnknownMandatoryValue\not\Rightarrow Allow\]
+```math
+\mathrm{UnknownMandatoryValue}\not\Rightarrow \mathrm{Allow}
+```
 
 ### SCH-INV-05 --- Reference Integrity
 
-\[ GovernanceReference\Rightarrow UnambiguousResolution\]
+```math
+\mathrm{GovernanceReference}\Rightarrow \mathrm{UnambiguousResolution}
+```
 
 ### SCH-INV-06 --- Version Integrity
 
-\[
-SchemaVersion\neq ObjectVersion\neq SpecificationVersion
-\]
+```math
+\mathrm{SchemaVersion}\neq \mathrm{ObjectVersion}\neq \mathrm{SpecificationVersion}
+```
 
 ### SCH-INV-07 --- Extension Non-Override
 
-\[
-Extension\not\Rightarrow CanonicalSemanticRedefinition
-\]
+```math
+\mathrm{Extension}\not\Rightarrow \mathrm{CanonicalSemanticRedefinition}
+```
 
 ### SCH-INV-08 --- Migration Preservation
 
-\[ CompatibleMigration\Rightarrow SemanticPreservation\]
+```math
+\mathrm{CompatibleMigration}\Rightarrow \mathrm{SemanticPreservation}
+```
 
 ### SCH-INV-09 --- Decision Traceability
 
-\[ ConsequentialDecisionObject\Rightarrow GovernanceReferences\]
+```math
+\mathrm{ConsequentialDecisionObject}\Rightarrow \mathrm{GovernanceReferences}
+```
 
 ### SCH-INV-10 --- No Private Reasoning Requirement
 
-\[
-MachineReadableGovernance\not\Rightarrow PrivateChainOfThought
-\]
+```math
+\mathrm{MachineReadableGovernance}\not\Rightarrow \mathrm{PrivateChainOfThought}
+```
 
 ------------------------------------------------------------------------
 
@@ -22634,25 +24288,30 @@ Schemas area MAY dinyatakan `Freeze Candidate` jika:
 
 Schemas v1.0 RC-Schemas diringkas sebagai:
 
-\[ MachineReadableAOF= CanonicalObjects + StableIdentity + Versioning +
-References + Validation + SafeExtension + Evolution \]
+```math
+\mathrm{MachineReadableAOF}= \mathrm{CanonicalObjects} + \mathrm{StableIdentity} + \mathrm{Versioning} +
+\mathrm{References} + \mathrm{Validation} + \mathrm{SafeExtension} + \mathrm{Evolution}
+```
 
 dengan:
 
-\[ \boxed{ SchemaValidity\neq SemanticValidity\neq Conformance }
-\]
+```math
+\boxed{ \mathrm{SchemaValidity}\neq \mathrm{SemanticValidity}\neq \mathrm{Conformance} }
+```
 
-\[ \boxed{ Unknown\ Mandatory\ Value\neq Allow } \]
+```math
+\boxed{ \mathrm{Unknown}\ \mathrm{Mandatory}\ \mathrm{Value}\neq \mathrm{Allow} }
+```
 
-\[
-\boxed{ Machine\ Representation\ Must\ Preserve\ Governance\ Semantics }
-\]
+```math
+\boxed{ \mathrm{Machine}\ \mathrm{Representation}\ \mathrm{Must}\ \mathrm{Preserve}\ \mathrm{Governance}\ \mathrm{Semantics} }
+```
 
 dan:
 
-\[
-\boxed{ Schema\ Evolution\ Must\ Not\ Silently\ Change\ Meaning }
-\]
+```math
+\boxed{ \mathrm{Schema}\ \mathrm{Evolution}\ \mathrm{Must}\ \mathrm{Not}\ \mathrm{Silently}\ \mathrm{Change}\ \mathrm{Meaning} }
+```
 
 ------------------------------------------------------------------------
 
@@ -22665,9 +24324,9 @@ canonical requirement identifiers `AOF-*-*` pada AOF v1.0 Release
 Candidate. Tujuannya adalah memastikan bahwa setiap explicit normative
 requirement memiliki verification path yang dapat diaudit.
 
-\[
-Requirement\rightarrow Invariant\rightarrow VerificationMethod\rightarrow Test\rightarrow Evidence
-\]
+```math
+\mathrm{Requirement}\rightarrow \mathrm{Invariant}\rightarrow \mathrm{VerificationMethod}\rightarrow \mathrm{Test}\rightarrow \mathrm{Evidence}
+```
 
 Appendix ini **tidak menginvent mapping**. Explicit `CT-*` dan
 `AOF-INV-*` hanya dipetakan ketika hubungan same-domain memiliki
@@ -24113,9 +25772,9 @@ Negative/adversarial tests SHOULD diprioritaskan untuk:
 
 Canonical objective:
 
-\[
-ForbiddenEffect\Rightarrow Prevented\lor Contained\lor Detected
-\]
+```math
+\mathrm{ForbiddenEffect}\Rightarrow \mathrm{Prevented}\lor \mathrm{Contained}\lor \mathrm{Detected}
+```
 
 dan bukan hanya pembuktian happy path.
 
@@ -24129,9 +25788,10 @@ dan applicability tidak diasumsikan dari domain name.
 
 Target relationship:
 
-\[ AOF\text{-}Core\subset eq
-AOF\text{-}Governed\subset eq AOF\text{-}Assured
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Core}\subseteq
+\mathrm{AOF}\text{-}\mathrm{Governed}\subseteq \mathrm{AOF}\text{-}\mathrm{Assured}
+```
 
 dengan `AOF-Secure-SDLC` dan `AOF-High-Assurance` mengikuti semantics
 yang benar-benar didefinisikan oleh Section 21, bukan dipaksakan oleh
@@ -24328,9 +25988,10 @@ profiles membentuk satu linear maturity chain.
 
 Canonical base relationship:
 
-\[ AOF\text{-}Core\subset eq
-AOF\text{-}Governed\subset eq AOF\text{-}Assured
-\]
+```math
+\mathrm{AOF}\text{-}\mathrm{Core}\subseteq
+\mathrm{AOF}\text{-}\mathrm{Governed}\subseteq \mathrm{AOF}\text{-}\mathrm{Assured}
+```
 
 `AOF-Secure-SDLC` sekarang explicit sebagai domain profile, sedangkan
 `AOF-High-Assurance` sebagai strengthening profile. Composition MUST
@@ -24598,7 +26259,9 @@ atau documented inspection justification.
 
 Existing domain IDs MUST remain stable through freeze reconciliation.
 
-\[ StableID + CorrectiveMapping \> DestructiveRenumbering \]
+```math
+\mathrm{StableID} + \mathrm{CorrectiveMapping} > \mathrm{DestructiveRenumbering}
+```
 
 New profile identifiers introduced by this review (`AOF-PRF-*`,
 `PRF-INV-*`, `CT-PRF-*`) MUST be added to Master Registry/Traceability
@@ -24659,8 +26322,10 @@ menghasilkan direct input untuk `RC-Final`.
 Freeze Reconciliation menutup explicit blockers yang ditemukan pada
 Appendix G tanpa membuka kembali framework design.
 
-\[ FreezeReconciliation = IdentifierStability + TraceabilityClosure +
-ProfileReconciliation + GapDisposition \]
+```math
+\mathrm{FreezeReconciliation} = \mathrm{IdentifierStability} + \mathrm{TraceabilityClosure} +
+\mathrm{ProfileReconciliation} + \mathrm{GapDisposition}
+```
 
 Tidak ada semantic domain baru pada pass ini.
 
@@ -24684,8 +26349,10 @@ Hasil setelah reconciliation:
 
 Prinsip:
 
-\[ OneStableRequirementID
-\Rightarrow OneCanonicalNormativeMeaning \]
+```math
+\mathrm{OneStableRequirementID}
+\Rightarrow \mathrm{OneCanonicalNormativeMeaning}
+```
 
 Historical/local wording MAY remain only as non-normative context.
 
@@ -24717,7 +26384,9 @@ karena berada di specification. Supplemental tests tetap valid sebagai
 assurance assets, tetapi conformance credit membutuhkan explicit
 Requirement mapping.
 
-\[ TestPresence\neq RequirementCoverage \]
+```math
+\mathrm{TestPresence}\neq \mathrm{RequirementCoverage}
+```
 
 ------------------------------------------------------------------------
 
@@ -24806,7 +26475,9 @@ Recommended next artifact:
 QA ini memeriksa cumulative specification setelah Freeze Reconciliation
 dengan prinsip:
 
-\[ EditorialCorrection \not\Rightarrow SemanticChange \]
+```math
+\mathrm{EditorialCorrection} \not\Rightarrow \mathrm{SemanticChange}
+```
 
 Perubahan dibatasi pada mechanical repair, editorial consistency, dan
 release-hygiene correction. Semantic-sensitive findings tidak diubah
@@ -24893,9 +26564,11 @@ freeze-gate criteria.
 `RC-Final Validation` dilakukan secara adversarial terhadap artifact
 Editorial & Mechanical QA. Pass ini tidak menambah framework semantics.
 
-\[ RCFinalEligible = IdentifierIntegrity
-\land CrossReferenceIntegrity \land EditorialIntegrity
-\land FreezeGatePass \]
+```math
+\mathrm{RCFinalEligible} = \mathrm{IdentifierIntegrity}
+\land \mathrm{CrossReferenceIntegrity} \land \mathrm{EditorialIntegrity}
+\land \mathrm{FreezeGatePass}
+```
 
 ## J.2 E3 Contextual Review
 
@@ -24982,8 +26655,10 @@ Blocking findings: **4**.
 Pass ini memperbaiki blockers yang ditemukan oleh `RC-Final Validation`
 tanpa mengubah framework semantics.
 
-\[ RemediationScope = FormulaSerialization + AppendixHeadingIntegrity +
-EditorialClarification \]
+```math
+\mathrm{RemediationScope} = \mathrm{FormulaSerialization} + \mathrm{AppendixHeadingIntegrity} +
+\mathrm{EditorialClarification}
+```
 
 ## K.2 Confirmed Root Causes
 
@@ -25011,7 +26686,9 @@ Tidak ada Requirement, Invariant, Authority rule, Policy rule, Risk
 rule, profile relationship, orchestration semantics, atau conformance
 meaning yang diubah oleh remediation ini.
 
-\[ MechanicalRepair \not\Rightarrow SemanticChange \]
+```math
+\mathrm{MechanicalRepair} \not\Rightarrow \mathrm{SemanticChange}
+```
 
 ------------------------------------------------------------------------
 
@@ -25074,11 +26751,15 @@ conservative lexical mapping. Those labels are now superseded.
 
 Canonical interpretation:
 
-\[ NoDirectInvariantMapping \neq UnresolvedSemanticDefect \]
+```math
+\mathrm{NoDirectInvariantMapping} \neq \mathrm{UnresolvedSemanticDefect}
+```
 
 and:
 
-\[ NoDirectReferenceCT \neq NoVerificationPath \]
+```math
+\mathrm{NoDirectReferenceCT} \neq \mathrm{NoVerificationPath}
+```
 
 A Requirement without a direct `AOF-INV-*` link MUST NOT be assigned a
 fabricated invariant. A Requirement without a direct reference `CT-*`
@@ -25096,8 +26777,10 @@ The specification distinguishes:
 
 These are related but not identical.
 
-\[ SpecificationComplete
-\not\Rightarrow ExhaustiveExecutableTestSuite \]
+```math
+\mathrm{SpecificationComplete}
+\not\Rightarrow \mathrm{ExhaustiveExecutableTestSuite}
+```
 
 Public testing MAY discover new tests, implementation defects, ambiguity
 reports, or extension proposals without invalidating Semantic Freeze
@@ -25213,7 +26896,9 @@ Status:
 RC-Final is derived directly from the cumulative artifact that passed
 the clean adversarial RC-Final Validation gate.
 
-\[ RCFinal = ValidatedSpecification + ReleaseMetadata \]
+```math
+\mathrm{RCFinal} = \mathrm{ValidatedSpecification} + \mathrm{ReleaseMetadata}
+```
 
 Packaging MUST NOT introduce new framework semantics.
 
@@ -25236,7 +26921,9 @@ The immediately preceding validation closure reported:
 
 RC-Final is a **Semantic Freeze Candidate**.
 
-\[ RCFinal \neq SemanticFreeze \]
+```math
+\mathrm{RCFinal} \neq \mathrm{SemanticFreeze}
+```
 
 Semantic Freeze requires an explicit release decision. Until that
 decision is recorded, RC-Final remains the final validated Release
@@ -25247,17 +26934,18 @@ Candidate baseline.
 Any proposed change after RC-Final MUST be classified before
 incorporation:
 
-\[ Change \rightarrow
+```math
+\mathrm{Change} \rightarrow
 
 \begin{cases}
-Editorial\\
-Clarification\\
-Semantic\\
-Security\\
-Conformance\\
-Extension
+\mathrm{Editorial}\\
+\mathrm{Clarification}\\
+\mathrm{Semantic}\\
+\mathrm{Security}\\
+\mathrm{Conformance}\\
+\mathrm{Extension}
 \end{cases}
-\]
+```
 
 A Semantic change MUST NOT be silently incorporated into the frozen v1.0
 lineage.
@@ -25284,9 +26972,11 @@ Pass ini memisahkan internal editorial history dari public normative
 reading path tanpa mengubah stable Requirement IDs atau framework
 semantics.
 
-\[ PublicReleaseReady = InternalConsistency
-\land EditorialCanonicality \land TraceabilityUsability
-\land ReaderClarity \]
+```math
+\mathrm{PublicReleaseReady} = \mathrm{InternalConsistency}
+\land \mathrm{EditorialCanonicality} \land \mathrm{TraceabilityUsability}
+\land \mathrm{ReaderClarity}
+```
 
 ## Q.2 Reconciliation Residue
 
@@ -25312,11 +27002,15 @@ Jika explicit direct mapping tidak didukung oleh current specification
 evidence, registry menyatakan `No direct ... mapping asserted` daripada
 menginvent hubungan heuristik.
 
-\[ NoDirectMapping \neq MissingInvariantSemantics \]
+```math
+\mathrm{NoDirectMapping} \neq \mathrm{MissingInvariantSemantics}
+```
 
 dan:
 
-\[ NoDirectReferenceCT \neq NoVerificationPath \]
+```math
+\mathrm{NoDirectReferenceCT} \neq \mathrm{NoVerificationPath}
+```
 
 ## Q.4 Historical Audit Separation
 

@@ -6,6 +6,14 @@ Bahasa Indonesia digunakan sebagai bahasa utama. Istilah teknis kanonis, identif
 
 ## Belum dirilis
 
+### Kompatibilitas formula — LTS-Editorial-2
+
+- Mengonversi 985 display formula ke fenced code block `math` yang didukung GitHub.
+- Memperbaiki satu formula tanpa delimiter penutup, satu interval waktu dengan delimiter bersarang, dan satu heading yang masih ter-escape.
+- Memulihkan notasi LaTeX yang rusak, termasuk `\subseteq`, `\supseteq`, subscript, operator perbandingan, kurung himpunan, dan pemisahan command dari identifier.
+- Menulis canonical identifier sebagai upright text agar formula lebih mudah dibaca tanpa mengubah nama atau urutannya.
+- Menambahkan ledger perubahan sebelum–sesudah dan validasi MathJax untuk seluruh formula.
+
 ### Konsistensi metadata — LTS-Editorial-1
 
 - Menyeragamkan status rilis aktif menjadi `v1.0 LTS — RELEASED` dengan tanggal rilis tetap `2026-09-05`.

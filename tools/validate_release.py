@@ -40,13 +40,31 @@ def validate_checksums(path):
 
 
 def compare_baseline(manifest, specification):
+    ledger = load("release/math-revision/formula-changes.json")
+    math_baseline = subprocess.check_output(
+        ["git", "show", f'{ledger["baseline_commit"]}:specification/AOF-v1.0-Framework-Specification.md'],
+        cwd=ROOT,
+    )
+    require(hashlib.sha256(math_baseline).hexdigest() == ledger["baseline_specification_sha256"],
+            "Math revision baseline hash mismatch")
+    reconstructed = math_baseline.decode("utf-8")
+    for change in sorted(ledger["changes"], key=lambda item: item["offset"], reverse=True):
+        offset = change["offset"]
+        before = change["before"]
+        require(reconstructed[offset:offset + len(before)] == before,
+                f'Math ledger source mismatch at source line {change["source_line"]}')
+        reconstructed = reconstructed[:offset] + change["after"] + reconstructed[offset + len(before):]
+    require(reconstructed == specification, "Current specification differs from the math revision ledger")
+    require(hashlib.sha256(specification.encode("utf-8")).hexdigest() == ledger["current_specification_sha256"],
+            "Math revision current hash mismatch")
+
     baseline = manifest["original_baseline"]["repository_commit"]
     relative = manifest["normative_specification"]["path"]
     original = subprocess.check_output(["git", "show", f"{baseline}:{relative}"], cwd=ROOT)
     require(hashlib.sha256(original).hexdigest() == manifest["original_baseline"]["specification_sha256"],
             "Original baseline specification hash mismatch")
-    # Reverse only the declared editorial operations, then require byte identity.
-    restored = specification.replace("## Framework Specification v1.0 LTS", "## Framework Specification v1.0", 1)
+    # Reverse LTS-Editorial-1 operations from the verified LTS-Editorial-1 baseline.
+    restored = math_baseline.decode("utf-8").replace("## Framework Specification v1.0 LTS", "## Framework Specification v1.0", 1)
     restored = restored.replace(
         "**Status:** RELEASED\n**Version:** v1.0 LTS\n**Release date:** 2026-09-05\n**Editorial revision:** LTS-Editorial-1",
         "**Status:** Release Candidate — Public-Readiness Hardened / Semantic Freeze Candidate\n"
@@ -72,6 +90,7 @@ def main():
     manifest = load("release/AOF-v1.0-LTS-Release-Manifest.json")
     require((manifest["release"], manifest["status"], manifest["release_date"]) ==
             ("v1.0 LTS", "RELEASED", "2026-09-05"), "Inconsistent release identity")
+    require(manifest["editorial_revision"] == "LTS-Editorial-2", "Stale editorial revision")
     current = manifest["normative_specification"]
     require(digest(ROOT / current["path"]) == current["sha256"], "Active specification hash mismatch")
     specification = (ROOT / current["path"]).read_text(encoding="utf-8")
@@ -91,7 +110,19 @@ def main():
         component = load(path)
         require((component["release"], component["release_status"], component["release_date"]) ==
                 (manifest["release"], manifest["status"], manifest["release_date"]), f"Stale component: {path}")
+        require(component["editorial_revision"] == manifest["editorial_revision"], f"Stale editorial revision: {path}")
         require(component["current_specification"]["sha256"] == current["sha256"], f"Stale specification reference: {path}")
+    math_report = load("release/math-revision/mathjax-validation.json")
+    require(math_report["revision"] == manifest["editorial_revision"], "Stale math validation revision")
+    require(math_report["specification_sha256"] == current["sha256"], "Stale math validation hash")
+    require(math_report["formula_count"] == math_report["parsed_and_rendered"] == 985,
+            "Math validation is incomplete")
+    require(not math_report["errors"], "Math validation contains errors")
+    github_math = load("release/math-revision/github-rendering-validation.json")
+    require(github_math["revision"] == manifest["editorial_revision"], "Stale GitHub math validation revision")
+    require(github_math["specification_sha256"] == current["sha256"], "Stale GitHub math validation hash")
+    require(github_math["result"] == "PASS" and github_math["observed_output_element"] == "math-renderer",
+            "GitHub math rendering validation failed")
     require(load("conformance/release/manifest.json")["lts_audit_result"] == "PASS", "Incorrect A4 result")
     require(load("reference-implementation/release/manifest.json")["lts_audit_result"] ==
             "PASS_WITH_RELEASE_CLAIM_CONSTRAINT", "Incorrect A5 result")

@@ -4,7 +4,7 @@
 **Status:** RELEASED\
 **Tanggal rilis:** 2026-09-05
 
-Revisi metadata saat ini: `LTS-Editorial-1`. Hasil validasi di bawah berasal dari rilis asli. Lihat [catatan revisi editorial](EDITORIAL-REVISION.md) untuk perubahan metadata dan checksum.
+Revisi editorial saat ini: `LTS-Editorial-2`. Revisi ini menyelaraskan metadata dan membuat formula kompatibel dengan math rendering GitHub tanpa mengubah semantik normatif. Hasil validasi rilis di bawah berasal dari baseline asli. Lihat [catatan revisi editorial](EDITORIAL-REVISION.md) untuk perubahan, provenance, dan checksum.
 
 AOF v1.0 LTS is the first frozen long-term-support release baseline of the AI Orchestration
 Framework.

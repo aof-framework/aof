@@ -1,0 +1,13 @@
+{
+  "revision": "LTS-Editorial-2",
+  "checked_at": "2026-09-07",
+  "specification_sha256": "6197f71416984cca1811d5cd0cdd30327cccb9026acc5b92509f8f2a3a137974",
+  "endpoint": "POST /markdown",
+  "mode": "gfm",
+  "input_format": "fenced code block with language math",
+  "sample": "\\mathrm{Reasoning} \\neq \\mathrm{Decision} \\neq \\mathrm{Authority} \\neq \\mathrm{Action}",
+  "observed_output_element": "math-renderer",
+  "observed_display_class": "js-display-math",
+  "result": "PASS",
+  "scope": "Confirms GitHub recognizes the selected block syntax. Full-document syntax and SVG rendering are covered by mathjax-validation.json."
+}

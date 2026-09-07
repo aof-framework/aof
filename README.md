@@ -57,7 +57,7 @@ CHANGELOG.md               Riwayat perubahan yang terdokumentasi
 SHA256SUMS.txt             Checksum berkas repository saat ini
 ```
 
-Checkout ini berisi komponen hasil ekstraksi dengan metadata `LTS-Editorial-1`. [Manifest aktif](release/AOF-v1.0-LTS-Release-Manifest.json) dan [checksum aktif](SHA256SUMS.txt) menunjuk berkas saat ini. Metadata serta checksum paket asli disimpan terpisah dalam [arsip provenance](release/provenance/original-v1.0-LTS/README.md); ZIP historis tidak tersedia dalam checkout ini. [Catatan revisi editorial](release/EDITORIAL-REVISION.md) menjelaskan perubahan tanpa perubahan semantik AOF.
+Checkout ini berisi komponen hasil ekstraksi dengan metadata `LTS-Editorial-2`. Revisi ini membuat 985 formula kompatibel dengan math rendering GitHub tanpa mengubah makna normatifnya. [Manifest aktif](release/AOF-v1.0-LTS-Release-Manifest.json) dan [checksum aktif](SHA256SUMS.txt) menunjuk berkas saat ini. Metadata serta checksum paket asli disimpan terpisah dalam [arsip provenance](release/provenance/original-v1.0-LTS/README.md); ZIP historis tidak tersedia dalam checkout ini. [Catatan revisi editorial](release/EDITORIAL-REVISION.md) menjelaskan perubahan dan provenance-nya.
 
 ## Adopsi dan Conformance
 
