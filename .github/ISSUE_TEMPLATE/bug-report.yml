@@ -1,0 +1,63 @@
+name: Bug report
+description: Laporkan perilaku implementasi, test, schema, atau dokumentasi yang tidak sesuai.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Jangan gunakan template ini untuk kerentanan. Ikuti SECURITY.md untuk pelaporan privat.
+  - type: input
+    id: version
+    attributes:
+      label: Versi atau commit
+      placeholder: v1.0 LTS atau SHA commit
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Komponen
+      options:
+        - Specification
+        - Schemas
+        - Conformance Suite
+        - Reference Implementation
+        - Release metadata / provenance
+        - Dokumentasi
+        - Lainnya
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Deskripsi masalah
+      description: Jelaskan perilaku aktual dan dampaknya.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Langkah reproduksi
+      placeholder: Berikan langkah, command, atau fixture minimal.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Hasil yang diharapkan
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence tambahan
+      description: Hapus secret, data pribadi, dan informasi sensitif sebelum mengirim.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pemeriksaan
+      options:
+        - label: Saya telah mencari issue serupa.
+          required: true
+        - label: Laporan ini tidak berisi kerentanan yang belum dikoordinasikan atau data sensitif.
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Laporan kerentanan privat
+    url: https://github.com/aof-framework/aof/security/advisories/new
+    about: Gunakan kanal privat ini untuk kerentanan yang belum dikoordinasikan.
+  - name: Diskusi komunitas
+    url: https://github.com/aof-framework/aof/discussions
+    about: Ajukan pertanyaan umum dan diskusikan penggunaan AOF.

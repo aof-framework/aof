@@ -6,6 +6,14 @@ Bahasa Indonesia digunakan sebagai bahasa utama. Istilah teknis kanonis, identif
 
 ## Belum dirilis
 
+### Kesiapan open source
+
+- Menambahkan Apache License 2.0, panduan kontribusi, Security Policy, Code of Conduct, dan ownership rules.
+- Menambahkan issue forms, pull request template, serta panduan maintainer dan statistik traffic.
+- Menambahkan CI untuk Python 3.11 dan 3.13, pemeriksaan release integrity, serta validasi seluruh formula.
+- Menambahkan CodeQL, Dependabot version updates, dependency manifest untuk development, dan konfigurasi editor.
+- Menambahkan checksum generator agar inventaris integritas dapat diverifikasi secara reproducible.
+
 ### Kompatibilitas formula — LTS-Editorial-2
 
 - Mengonversi 985 display formula ke fenced code block `math` yang didukung GitHub.

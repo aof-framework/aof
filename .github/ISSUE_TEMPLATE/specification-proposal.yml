@@ -1,0 +1,58 @@
+name: Proposal spesifikasi
+description: Usulkan Clarification, Semantic, Conformance, Security, atau Extension change.
+title: "[Specification]: "
+labels: ["specification", "triage"]
+body:
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Klasifikasi perubahan
+      options:
+        - Clarification
+        - Semantic
+        - Security
+        - Conformance
+        - Extension
+        - Editorial
+    validations:
+      required: true
+  - type: input
+    id: identifiers
+    attributes:
+      label: Identifier terkait
+      description: Requirement, Invariant, Test, Profile, atau schema identifier.
+      placeholder: AOF-..., AOF-INV-..., CT-...
+  - type: textarea
+    id: problem
+    attributes:
+      label: Masalah yang hendak diselesaikan
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Perubahan yang diusulkan
+      description: Jelaskan wording, perilaku, atau artefak yang berubah.
+    validations:
+      required: true
+  - type: textarea
+    id: semantic-impact
+    attributes:
+      label: Dampak semantik dan kompatibilitas
+      description: Jelaskan mengapa perubahan mempertahankan atau mengubah semantik v1.0 LTS.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence dan verification plan
+      description: Sertakan test, referensi, atau cara membuktikan perubahan tanpa data sensitif.
+    validations:
+      required: true
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Change control
+      options:
+        - label: Saya memahami bahwa Semantic change tidak dapat masuk diam-diam ke lini v1.0 LTS.
+          required: true

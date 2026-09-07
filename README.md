@@ -1,5 +1,8 @@
 # AI Orchestration Framework (AOF)
 
+[![CI](https://github.com/aof-framework/aof/actions/workflows/ci.yml/badge.svg)](https://github.com/aof-framework/aof/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/aof-framework/aof/actions/workflows/codeql.yml/badge.svg)](https://github.com/aof-framework/aof/actions/workflows/codeql.yml)
+
 **Versi:** v1.0 LTS · **Status:** RELEASED · **Tanggal rilis:** 2026-09-05
 
 AOF mendefinisikan model orkestrasi dengan tata kelola dan kontrol risiko untuk mengoordinasikan aktor AI dan non-AI melalui `Goal`, `Task`, `Authority`, `Policy`, `Decision`, `Action`, `Evidence`, dan `Verification` yang eksplisit. Manusia dan organisasi tetap menjadi Governance Root; Agent beroperasi dalam batas kewenangan yang didelegasikan dan dapat dipertanggungjawabkan.
@@ -29,6 +32,33 @@ Safety Kernel mengevaluasi enam gate: **Capability, Authority, Policy, State, Ri
 
 AOF mendukung otonomi terbatas dengan kontrol yang sebanding dengan risiko. Human governance tidak mengharuskan persetujuan manusia untuk setiap operasi berisiko rendah.
 
+## Mulai cepat
+
+Repository ini mendistribusikan spesifikasi, schema, Conformance Suite, dan Reference Implementation; bukan paket Python yang diinstal untuk production. Untuk menjalankan validasi lokal:
+
+```bash
+git clone https://github.com/aof-framework/aof.git
+cd aof
+python -m venv .venv
+```
+
+Aktifkan virtual environment dengan `. .venv/bin/activate` pada shell POSIX atau `.venv\Scripts\Activate.ps1` pada PowerShell, lalu pasang dependensi:
+
+```bash
+python -m pip install -r requirements-dev.txt
+```
+
+Jalankan kedua test suite dari direktori masing-masing:
+
+```bash
+cd conformance
+python -m pytest -q -p no:cacheprovider
+cd ../reference-implementation
+python -m pytest -q -p no:cacheprovider
+```
+
+Contoh evaluasi Safety Kernel tersedia dalam [test kernel](reference-implementation/tests/safety_kernel/test_kernel.py) dan [fixture SK-001](reference-implementation/fixtures/safety_kernel/SK-001.json). Keputusan `Allow` hanya dihasilkan ketika seluruh gate wajib berstatus `Pass`.
+
 ## Panduan membaca
 
 | Dokumen | Isi dan kegunaan |
@@ -52,8 +82,13 @@ conformance/               Engine evaluasi, test, profile, dan ketertelusuran
 reference-implementation/  Runtime, adapter, test, dan evidence
 audit/                     Temuan audit rilis dan catatan validasi
 release/                   Deklarasi LTS, catatan rilis, dan manifest
+.github/                   CI, security scanning, template, dan CODEOWNERS
+tools/                     Validator release, checksum, dan formula
 README.md                  Gambaran proyek dan panduan membaca
 CHANGELOG.md               Riwayat perubahan yang terdokumentasi
+CONTRIBUTING.md            Panduan kontribusi dan change control
+SECURITY.md                Prosedur pelaporan kerentanan
+LICENSE                    Apache License 2.0
 SHA256SUMS.txt             Checksum berkas repository saat ini
 ```
 
@@ -95,3 +130,13 @@ JSON Schema menjadi kontrak struktural kanonis. OpenAPI tidak termasuk dalam jal
 | Release blocker yang diketahui | 0 pada saat deklarasi |
 
 Angka tersebut merupakan hasil validasi rilis yang tercatat, bukan pernyataan bahwa test telah dijalankan ulang pada setiap checkout. Pemeliharaan berikutnya dalam lini v1.0 LTS harus mempertahankan semantik yang dibekukan, kecuali terdapat revisi spesifikasi melalui tata kelola perubahan yang eksplisit.
+
+## Berkontribusi dan keamanan
+
+Kontribusi diterima melalui issue dan pull request. Baca [panduan kontribusi](CONTRIBUTING.md) dan [Code of Conduct](CODE_OF_CONDUCT.md) sebelum mengirim perubahan. Untuk kerentanan, gunakan kanal privat yang dijelaskan dalam [Security Policy](SECURITY.md), bukan public issue.
+
+Pertanyaan penggunaan dan pembahasan komunitas dapat diajukan melalui [GitHub Discussions](https://github.com/aof-framework/aof/discussions). Informasi pemeliharaan repository dan statistik traffic tersedia dalam [panduan maintainer](docs/MAINTAINER-GUIDE.md).
+
+## Lisensi
+
+AOF dilisensikan berdasarkan [Apache License 2.0](LICENSE). Lisensi ini memberikan izin penggunaan, modifikasi, dan distribusi dengan syarat yang tercantum di dalamnya, termasuk explicit patent grant. Nama proyek dan merek tidak otomatis dilisensikan untuk penggunaan di luar ketentuan lisensi.

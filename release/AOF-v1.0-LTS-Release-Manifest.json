@@ -3,6 +3,7 @@
   "release": "v1.0 LTS",
   "release_date": "2026-09-05",
   "status": "RELEASED",
+  "license": "Apache-2.0",
   "normative_specification": {
     "path": "specification/AOF-v1.0-Framework-Specification.md",
     "sha256": "6197f71416984cca1811d5cd0cdd30327cccb9026acc5b92509f8f2a3a137974",

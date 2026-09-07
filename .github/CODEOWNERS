@@ -1,0 +1,10 @@
+# Default owner untuk seluruh repository.
+* @wahyusutejo1986
+
+# Area dengan dampak governance dan release yang tinggi.
+/specification/ @wahyusutejo1986
+/schemas/ @wahyusutejo1986
+/conformance/ @wahyusutejo1986
+/reference-implementation/ @wahyusutejo1986
+/release/ @wahyusutejo1986
+/.github/ @wahyusutejo1986
